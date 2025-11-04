@@ -40,8 +40,12 @@ const techTopics = [
 ];
 
 const startupTopics = [
-    { id: 'business-modeling', label: 'Business Modeling' },
     { id: 'entrepreneurship', label: 'Entrepreneurship' },
+    { id: 'niche-selection', label: 'Niche Selection & Personal Branding' },
+    { id: 'youtube-startup', label: 'YouTube Channel Startup Training' },
+    { id: 'instagram-growth', label: 'Instagram Growth & Business Strategy' },
+    { id: 'creator-tools', label: 'Tech & Tool Training for Digital Creators' },
+    { id: 'content-to-business', label: 'Content-to-Business Conversion' },
 ];
 
 const creativeTopics = [
@@ -251,5 +255,3 @@ export default function PartnerPage() {
     </div>
   );
 }
-
-    
