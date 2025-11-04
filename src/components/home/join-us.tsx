@@ -36,7 +36,7 @@ export default function JoinUs() {
         <Tabs defaultValue="enroll" className="w-full">
         <TabsList className="grid w-full grid-cols-2 max-w-md mx-auto h-auto">
             <TabsTrigger value="enroll" className="py-2"><UserPlus className="mr-2 h-4 w-4"/>Enroll in Program</TabsTrigger>
-            <TabsTrigger value="partner" className="py-2"><Briefcase className="mr-2 h-4 w-4"/>Become a Partner</TabsTrigger>
+            <TabsTrigger value="partner" className="py-2"><Briefcase className="mr-2 h-4 w-4"/>Become a Mentor/Trainer</TabsTrigger>
         </TabsList>
         <TabsContent value="enroll" className="mt-8">
             <Card className="max-w-2xl mx-auto shadow-lg">
@@ -85,7 +85,7 @@ export default function JoinUs() {
             <Card className="max-w-2xl mx-auto shadow-lg">
                  <form onSubmit={handleSubmit} data-form-type="Partnership application">
                     <CardHeader>
-                        <CardTitle>Partner with Us</CardTitle>
+                        <CardTitle>Become a Mentor/Trainer</CardTitle>
                         <CardDescription>Join us as a mentor, corporate partner, or collaborator.</CardDescription>
                     </CardHeader>
                     <CardContent className="space-y-4">
@@ -105,6 +105,7 @@ export default function JoinUs() {
                                 </SelectTrigger>
                                 <SelectContent>
                                     <SelectItem value="mentor">Mentor</SelectItem>
+                                    <SelectItem value="trainer">Trainer</SelectItem>
                                     <SelectItem value="corporate">Corporate Partner</SelectItem>
                                     <SelectItem value="ngo">NGO/Community Collaborator</SelectItem>
                                 </SelectContent>
