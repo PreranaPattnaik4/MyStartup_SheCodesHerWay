@@ -8,7 +8,7 @@ import React from 'react';
 
 const navLinks = [
   { href: '/#about', label: 'About' },
-  { href: '/#program', label: 'Program' },
+  { href: '/sangini-udaan', label: 'Sangini Udaan' },
   { href: '/#impact', label: 'Impact' },
   { href: '/community', label: 'Community' },
 ];

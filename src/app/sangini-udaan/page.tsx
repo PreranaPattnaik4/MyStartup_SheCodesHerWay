@@ -1,0 +1,119 @@
+import Header from '@/components/header';
+import Footer from '@/components/footer';
+import Image from 'next/image';
+import { PlaceHolderImages } from '@/lib/placeholder-images';
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
+import { Button } from '@/components/ui/button';
+import Link from 'next/link';
+
+const specializedPaths = [
+    {
+        title: "2️⃣ For Women in Tech Journeys",
+        description: "Learn coding, digital tools, and AI basics to build career confidence in technology. Includes mentorship, internships, and job-readiness sessions.",
+        cta: "Learn More about Tech Journeys",
+        href: "#",
+    },
+    {
+        title: "3️⃣ For Women Aspiring to Start Startups or Businesses",
+        description: "Build your dream startup or personal brand. Covers business modeling, entrepreneurship bootcamps, and funding preparation.",
+        cta: "Explore Startup Bootcamps",
+        href: "#",
+    },
+    {
+        title: "4️⃣ For Creative & Content Entrepreneurs",
+        description: "Express and earn through creativity — blogging, book publishing, Canva editing, art creation, and WordPress website design.",
+        cta: "Discover Creative Paths",
+        href: "#",
+    },
+    {
+        title: "5️⃣ For Emotional, Personal & Soft Skills Growth",
+        description: "Develop confidence, leadership, communication, and emotional intelligence for both life and work. 💫 Soft skills and emotional strength are included in every track as a core foundation for growth.",
+        cta: "Grow Your Soft Skills",
+        href: "#",
+    }
+]
+
+export default function SanginiUdaanPage() {
+    const bannerImage = PlaceHolderImages.find(p => p.id === 'program-community');
+
+    return (
+        <div className="flex min-h-dvh flex-col">
+            <Header />
+            <main className="flex-1">
+                <section className="relative h-80 w-full bg-secondary">
+                   {bannerImage && (
+                        <Image
+                            src={bannerImage.imageUrl}
+                            alt="Inspiring banner for Sangini Udaan"
+                            fill
+                            className="object-cover"
+                            priority
+                            data-ai-hint="women learning leading"
+                        />
+                   )}
+                    <div className="absolute inset-0 bg-gradient-to-t from-background via-background/60 to-transparent" />
+                    <div className="absolute inset-0 flex items-center justify-center">
+                        <div className="container mx-auto px-4 text-center text-foreground">
+                            <h1 className="font-headline text-4xl font-extrabold tracking-tight drop-shadow-md sm:text-5xl md:text-6xl">
+                                Sangini Udaan: Empower Her to Fly Beyond Limits.
+                            </h1>
+                            <p className="mt-6 max-w-3xl mx-auto text-lg font-medium drop-shadow-sm md:text-xl">
+                                Welcome, Sangini! Every woman’s journey is unique — choose how you want to grow, learn, and lead with SheCodesHerWay.
+                            </p>
+                        </div>
+                    </div>
+                </section>
+                
+                <section className="container mx-auto px-4 py-16 sm:px-6 lg:px-8">
+                    <div className="space-y-16">
+                        <div>
+                            <h2 className="text-center text-lg font-semibold text-primary">💖 Recommended:</h2>
+                            <Card className="mt-4 max-w-3xl mx-auto shadow-lg border-2 border-primary transform transition-transform hover:scale-105 duration-300">
+                                <CardHeader>
+                                    <CardTitle className="font-headline text-3xl">1️⃣ Complete Sangini Udaan Journey (All-in-One Track)</CardTitle>
+                                </CardHeader>
+                                <CardContent>
+                                    <p className="text-lg text-foreground/80">
+                                        Experience the entire empowerment journey — tech learning, business building, creativity, and emotional growth — all in one full program. ⭐ Best for women who want holistic growth, independence, and leadership.
+                                    </p>
+                                    <Button asChild size="lg" className="mt-6">
+                                        <Link href="/#partner-with-us">Enroll in Sangini Udaan All-in-One</Link>
+                                    </Button>
+                                </CardContent>
+                            </Card>
+                        </div>
+
+                        <div>
+                            <h2 className="text-center font-headline text-3xl font-bold md:text-4xl">Other Specialized Paths:</h2>
+                            <div className="mt-8 grid gap-8 sm:grid-cols-2 lg:grid-cols-2">
+                                {specializedPaths.map((path) => (
+                                    <Card key={path.title} className="flex flex-col shadow-lg">
+                                        <CardHeader>
+                                            <CardTitle className="text-2xl">{path.title}</CardTitle>
+                                        </CardHeader>
+                                        <CardContent className="flex-grow">
+                                            <p className="text-foreground/80">{path.description}</p>
+                                        </CardContent>
+                                        <CardFooter>
+                                            <Button asChild variant="outline">
+                                                <Link href={path.href}>{path.cta}</Link>
+                                            </Button>
+                                        </CardFooter>
+                                    </Card>
+                                ))}
+                            </div>
+                        </div>
+
+                        <div className="text-center">
+                            <p className="font-headline text-2xl">
+                                ✨ Choose your path and begin your journey to learn, lead, and rise with SheCodesHerWay. 🌷
+                            </p>
+                        </div>
+                    </div>
+                </section>
+
+            </main>
+            <Footer />
+        </div>
+    );
+}

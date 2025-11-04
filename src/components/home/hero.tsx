@@ -31,7 +31,7 @@ export default function Hero() {
           </p>
           <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
             <Button asChild size="lg">
-              <Link href="#program">
+              <Link href="/sangini-udaan">
                 Explore Sangini Udaan
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Link>
