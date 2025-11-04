@@ -8,7 +8,6 @@ import ImpactGoals from '@/components/home/impact-goals';
 import CoreActivities from '@/components/home/core-activities';
 import Roadmap from '@/components/home/roadmap';
 import JoinUs from '@/components/home/join-us';
-import ExecutiveSummaryGenerator from '@/components/home/executive-summary-generator';
 import { Separator } from '@/components/ui/separator';
 
 export default function Home() {
@@ -42,8 +41,6 @@ export default function Home() {
             <div id="join-us">
               <JoinUs />
             </div>
-            <Separator />
-            <ExecutiveSummaryGenerator />
           </div>
         </div>
       </main>
