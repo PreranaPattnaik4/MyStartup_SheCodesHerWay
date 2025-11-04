@@ -1,3 +1,4 @@
+
 "use client";
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
@@ -11,6 +12,7 @@ const navLinks = [
   { href: '/sangini-udaan', label: 'Sangini Udaan' },
   { href: '/#impact', label: 'Impact' },
   { href: '/community', label: 'Community' },
+  { href: '/partner', label: 'Partner with Us' },
 ];
 
 export default function Header() {

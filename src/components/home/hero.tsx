@@ -1,3 +1,4 @@
+
 import Image from 'next/image';
 import { Button } from '@/components/ui/button';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
@@ -37,7 +38,7 @@ export default function Hero() {
               </Link>
             </Button>
             <Button asChild size="lg" variant="outline" className="bg-background/80">
-              <Link href="#partner-with-us">
+              <Link href="/partner">
                 Partner with Us
               </Link>
             </Button>
