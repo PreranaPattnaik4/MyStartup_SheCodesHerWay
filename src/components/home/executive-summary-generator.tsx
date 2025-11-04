@@ -13,7 +13,7 @@ import { Textarea } from "@/components/ui/textarea"
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form"
 import { handleGenerateSummary, type ActionState } from "@/app/actions"
 import { brand } from "@/lib/brand"
-import { useToast } from "@/hooks/use-toast"
+import { useToast } from "@/components/ui/use-toast"
 import { Bot, Loader2, Copy } from "lucide-react"
 
 const formSchema = z.object({
