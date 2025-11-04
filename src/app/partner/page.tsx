@@ -14,10 +14,7 @@ import { useToast } from '@/hooks/use-toast';
 import { Linkedin } from 'lucide-react';
 
 const mentorTopics = [
-  { id: 'tech', label: 'Tech Journeys (Coding, AI, etc.)' },
-  { id: 'startup', label: 'Startups & Business' },
-  { id: 'creative', label: 'Creative & Content Entrepreneurship' },
-  { id: 'soft-skills', label: 'Emotional & Soft Skills Growth' },
+  { id: 'tech', label: 'Tech Journeys' },
 ];
 
 export default function PartnerPage() {
