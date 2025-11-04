@@ -49,6 +49,7 @@ export default function ApplyPage() {
       email: '',
       phone: '',
       location: '',
+      programPath: 'soft-skills',
       motivation: '',
       goals: '',
       terms: false,
