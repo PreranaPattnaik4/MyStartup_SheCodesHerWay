@@ -7,7 +7,7 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
 import { Separator } from '@/components/ui/separator';
-import { Laptop, Milestone, Feather, Globe, Users, Award, Briefcase, Bot, Megaphone, Search, HeartHandshake, Calendar, Clock, School, Gift } from 'lucide-react';
+import { Laptop, Milestone, Feather, Globe, Users, Award, Briefcase, Bot, Megaphone, Search, HeartHandshake, Calendar, Clock, School, Gift, DollarSign } from 'lucide-react';
 import { Badge } from '@/components/ui/badge';
 
 const aboutIcons = [
@@ -15,7 +15,7 @@ const aboutIcons = [
     { icon: HeartHandshake, text: 'Mentorship' },
     { icon: Award, text: 'Certificate' },
     { icon: Globe, text: 'Community' },
-    { icon: Gift, text: 'Growth Focused' , description: "This is an unpaid, learning-focused internship." },
+    { icon: DollarSign, text: 'No stipend', description: "This is an unpaid, learning-focused internship." },
 ];
 
 const domains = [
@@ -170,14 +170,6 @@ export default function InternshipPage() {
                         <Separator />
                         
                         <section className="grid md:grid-cols-2 gap-12 items-center">
-                            <div className="text-center md:text-left">
-                                <h2 className="font-headline text-3xl font-bold">Join our Sangini Circle</h2>
-                                <p className="mt-4 text-lg text-foreground/80">Become part of a digital sisterhood of learners and leaders, where you can connect, collaborate, and grow. Participate in exclusive events like the annual Udaan Summit.</p>
-                                <div className="flex justify-center md:justify-start gap-4 mt-6">
-                                    <span className="font-semibold font-headline text-lg text-primary">Udaan Summit</span>
-                                    <span className="font-semibold font-headline text-lg text-primary">Sangini Udaan</span>
-                                </div>
-                            </div>
                              {communityImage && (
                                 <div className="relative h-80 w-full rounded-lg overflow-hidden shadow-lg">
                                     <Image
@@ -189,11 +181,23 @@ export default function InternshipPage() {
                                     />
                                 </div>
                              )}
+                            <div className="text-center md:text-left">
+                                <h2 className="font-headline text-3xl font-bold">Join our Sangini Circle</h2>
+                                <p className="mt-4 text-lg text-foreground/80">Become part of a digital sisterhood of learners and leaders, where you can connect, collaborate, and grow. Participate in exclusive events like the annual Udaan Summit.</p>
+                                <div className="flex justify-center md:justify-start gap-4 mt-6">
+                                    <span className="font-semibold font-headline text-lg text-primary">Udaan Summit</span>
+                                    <span className="font-semibold font-headline text-lg text-primary">Sangini Udaan</span>
+                                </div>
+                            </div>
                         </section>
                         
                         <Separator />
 
                          <section className="grid md:grid-cols-2 gap-12 items-center">
+                            <div className="text-center md:text-left">
+                                <h2 className="font-headline text-3xl font-bold">Get Certified</h2>
+                                <p className="mt-4 text-lg text-foreground/80">Receive an official SheCodesHerWay Internship Certificate recognizing your valuable learning and contributions to our mission.</p>
+                            </div>
                              {certificateImage && (
                                 <div className="relative h-80 w-full rounded-lg overflow-hidden shadow-lg">
                                     <Image
@@ -205,10 +209,6 @@ export default function InternshipPage() {
                                     />
                                 </div>
                              )}
-                            <div className="text-center md:text-left">
-                                <h2 className="font-headline text-3xl font-bold">Get Certified</h2>
-                                <p className="mt-4 text-lg text-foreground/80">Receive an official SheCodesHerWay Internship Certificate recognizing your valuable learning and contributions to our mission.</p>
-                            </div>
                         </section>
 
                         <Separator />
