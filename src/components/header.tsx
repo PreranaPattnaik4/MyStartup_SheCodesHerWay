@@ -7,7 +7,7 @@ import { Menu } from 'lucide-react';
 import React from 'react';
 
 const navLinks = [
-  { href: '/#about', label: 'About' },
+  { href: '/', label: 'Home' },
   { href: '/sangini-udaan', label: 'Sangini Udaan' },
   { href: '/#impact', label: 'Impact' },
   { href: '/community', label: 'Community' },
