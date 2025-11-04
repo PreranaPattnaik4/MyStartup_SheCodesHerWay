@@ -25,9 +25,11 @@ import {
 } from "@/components/ui/alert-dialog"
 import { ScrollArea } from '@/components/ui/scroll-area';
 
-
 const mentorTopics = [
-  { id: 'tech', label: 'Tech Journeys' },
+    { id: 'tech', label: 'Tech Journeys (Coding, digital tools, AI basics)' },
+    { id: 'startup', label: 'Startup & Business (Business modeling, entrepreneurship)' },
+    { id: 'creative', label: 'Creative & Content (Blogging, design, content creation)' },
+    { id: 'soft-skills', label: 'Soft Skills (Confidence, leadership, communication)' },
 ];
 
 export default function PartnerPage() {
