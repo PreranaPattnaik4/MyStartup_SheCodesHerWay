@@ -10,26 +10,26 @@ const specializedPaths = [
     {
         title: "2️⃣ For Women in Tech Journeys",
         description: "Learn coding, digital tools, and AI basics to build career confidence in technology. Includes mentorship, internships, and job-readiness sessions.",
-        cta: "Learn More about Tech Journeys",
-        href: "#",
+        cta: "Learn More",
+        href: "/apply",
     },
     {
         title: "3️⃣ For Women Aspiring to Start Startups or Businesses",
         description: "Build your dream startup or personal brand. Covers business modeling, entrepreneurship bootcamps, and funding preparation.",
         cta: "Explore Startup Bootcamps",
-        href: "#",
+        href: "/apply",
     },
     {
         title: "4️⃣ For Creative & Content Entrepreneurs",
         description: "Express and earn through creativity — blogging, book publishing, Canva editing, art creation, and WordPress website design.",
         cta: "Discover Creative Paths",
-        href: "#",
+        href: "/apply",
     },
     {
         title: "5️⃣ For Emotional, Personal & Soft Skills Growth",
         description: "Develop confidence, leadership, communication, and emotional intelligence for both life and work. 💫 Soft skills and emotional strength are included in every track as a core foundation for growth.",
         cta: "Grow Your Soft Skills",
-        href: "#",
+        href: "/apply",
     }
 ]
 
@@ -77,7 +77,7 @@ export default function SanginiUdaanPage() {
                                         Experience the entire empowerment journey — tech learning, business building, creativity, and emotional growth — all in one full program. ⭐ Best for women who want holistic growth, independence, and leadership.
                                     </p>
                                     <Button asChild size="lg" className="mt-6">
-                                        <Link href="/#partner-with-us">Enroll in Sangini Udaan All-in-One</Link>
+                                        <Link href="/apply">Enroll in Sangini Udaan All-in-One</Link>
                                     </Button>
                                 </CardContent>
                             </Card>

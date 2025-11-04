@@ -4,11 +4,11 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { Textarea } from "@/components/ui/textarea"
 import { useToast } from "@/hooks/use-toast"
 import { UserPlus, Briefcase, Handshake, Linkedin } from "lucide-react"
+import Link from "next/link"
 
 export default function JoinUs() {
   const { toast } = useToast();
@@ -40,45 +40,15 @@ export default function JoinUs() {
         </TabsList>
         <TabsContent value="enroll" className="mt-8">
             <Card className="max-w-2xl mx-auto shadow-lg">
-                <form onSubmit={handleSubmit} data-form-type="Enrollment">
-                    <CardHeader>
-                    <CardTitle>Enroll in Sangini Udaan</CardTitle>
-                    <CardDescription>Begin your journey of empowerment. Fill out the form to apply.</CardDescription>
-                    </CardHeader>
-                    <CardContent className="space-y-4">
-                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                        <div className="space-y-2">
-                        <Label htmlFor="enroll-name">Full Name</Label>
-                        <Input id="enroll-name" placeholder="Your Name" required/>
-                        </div>
-                        <div className="space-y-2">
-                        <Label htmlFor="enroll-email">Email Address</Label>
-                        <Input id="enroll-email" type="email" placeholder="you@example.com" required/>
-                        </div>
-                    </div>
-                    <div className="space-y-2">
-                        <Label htmlFor="enroll-status">Current Status</Label>
-                        <Select required>
-                            <SelectTrigger id="enroll-status">
-                                <SelectValue placeholder="Select your status" />
-                            </SelectTrigger>
-                            <SelectContent>
-                                <SelectItem value="student">College/University Student</SelectItem>
-                                <SelectItem value="professional">Early-Career Professional</SelectItem>
-                                <SelectItem value="transitioning">Transitioning into Tech/Creative</SelectItem>
-                                <SelectItem value="other">Other</SelectItem>
-                            </SelectContent>
-                        </Select>
-                    </div>
-                    <div className="space-y-2">
-                        <Label htmlFor="enroll-motivation">Why do you want to join?</Label>
-                        <Textarea id="enroll-motivation" placeholder="Tell us about your goals and aspirations..." required/>
-                    </div>
-                    </CardContent>
-                    <CardFooter>
-                    <Button type="submit">Submit Application</Button>
-                    </CardFooter>
-                </form>
+                <CardHeader>
+                <CardTitle>Enroll in Sangini Udaan</CardTitle>
+                <CardDescription>Ready to begin your journey of empowerment? Apply now!</CardDescription>
+                </CardHeader>
+                <CardContent className="text-center">
+                    <Button asChild size="lg">
+                        <Link href="/apply">Apply to Sangini Udaan</Link>
+                    </Button>
+                </CardContent>
             </Card>
         </TabsContent>
         <TabsContent value="partner" className="mt-8">
