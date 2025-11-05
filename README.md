@@ -1,5 +1,7 @@
 # SheCodesHerWay 🌸
 
+[**View the Full Project Completion Report**](./PROJECT_REPORT.md)
+
 **Build Your Path. Lead Your Way. Leave Your Mark.**
 
 This is the official web application for **SheCodesHerWay**, a women-led startup dedicated to empowering women through digital learning, mentorship, and community. The platform is built with Next.js, React, Tailwind CSS, and Firebase.
