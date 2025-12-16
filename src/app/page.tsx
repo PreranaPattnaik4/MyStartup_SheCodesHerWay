@@ -15,6 +15,8 @@ import WhatWeOffer from '@/components/home/what-we-offer';
 import AboutProgram from '@/components/home/about-program';
 import StartupSchool from '@/components/home/startup-school';
 import Features from '@/components/home/features';
+import { Github, Linkedin, Twitter } from 'lucide-react';
+import Link from 'next/link';
 
 export default function Home() {
   return (
@@ -58,6 +60,20 @@ export default function Home() {
             <div id="partner-with-us" className="rounded-xl py-12 relative overflow-hidden">
                <div className="absolute inset-0 -z-10 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-primary/10 via-white/0 to-white/0"></div>
               <JoinUs />
+              <div className="text-center mt-12">
+                <p className="font-semibold text-lg">Follow Us</p>
+                <div className="mt-4 flex justify-center space-x-4">
+                  <Link href="#" aria-label="Twitter">
+                    <Twitter className="h-7 w-7 text-foreground/80 transition-colors hover:text-primary" />
+                  </Link>
+                  <Link href="#" aria-label="LinkedIn">
+                    <Linkedin className="h-7 w-7 text-foreground/80 transition-colors hover:text-primary" />
+                  </Link>
+                  <Link href="#" aria-label="GitHub">
+                    <Github className="h-7 w-7 text-foreground/80 transition-colors hover:text-primary" />
+                  </Link>
+                </div>
+              </div>
             </div>
             <Separator />
             <div id="impact" className="rounded-xl py-12 relative overflow-hidden">
