@@ -24,16 +24,6 @@ const categories = [
 
 const features = [
   {
-    id: 'feature-palai',
-    title: 'Chat with PalAI to get guidance',
-    image: PlaceHolderImages.find((p) => p.id === 'feature-palai'),
-    colSpan: 'col-span-1',
-    rowSpan: 'row-span-1',
-    href: '/chatbot',
-    category: 'ai-coaching',
-    height: 'h-64',
-  },
-  {
     id: 'feature-mentors',
     title: 'Find high-quality mentors',
     image: PlaceHolderImages.find((p) => p.id === 'feature-mentors'),
