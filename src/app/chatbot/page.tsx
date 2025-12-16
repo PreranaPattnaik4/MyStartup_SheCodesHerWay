@@ -232,7 +232,7 @@ export default function ChatbotPage() {
                     <div className="h-full flex items-center justify-center">
                         <div className="text-center">
                             <h2 className="mt-4 text-2xl font-bold text-gray-700">PalAI</h2>
-                             <p className="mt-2 text-muted-foreground">What are you working on?</p>
+                             <p className="mt-2 text-muted-foreground max-w-md mx-auto">Hi, I’m PalAI — your friendly guide to learning, careers, and opportunities, at your own pace.</p>
                         </div>
                     </div>
                 ) : (
