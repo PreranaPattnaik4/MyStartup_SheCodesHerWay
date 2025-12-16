@@ -12,7 +12,6 @@ import { ArrowRight } from 'lucide-react';
 
 const categories = [
   { id: 'all-features', name: 'All Features' },
-  { id: 'ai-tools', name: 'AI Tools' },
   { id: 'ai-coaching', name: 'AI Coaching' },
   { id: 'mentorship', name: 'Mentorship' },
   { id: 'community', name: 'Community' },
@@ -28,7 +27,7 @@ const features = [
     colSpan: 'col-span-1',
     rowSpan: 'row-span-1',
     href: '/chatbot',
-    category: 'ai-tools',
+    category: 'ai-coaching',
     height: 'h-64'
   },
   {
