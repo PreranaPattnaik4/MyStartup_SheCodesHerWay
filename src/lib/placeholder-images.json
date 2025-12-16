@@ -93,38 +93,38 @@
     {
       "id": "feature-summary",
       "description": "A person writing on a notebook, representing planning and summaries.",
-      "imageUrl": "https://images.unsplash.com/photo-1455390582262-044cdead277a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHx3cml0aW5nJTIwcGxhbm5pbmd8ZW58MHx8fHwxNzE3MDM0MjAxfDA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "writing planning"
+      "imageUrl": "https://images.unsplash.com/photo-1517842645767-c6f90405774b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxjcmVhdGl2ZSUyMHdyaXRpbmd8ZW58MHx8fHwxNzE4NzIwMjI5fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "creative writing"
     },
     {
       "id": "feature-palai",
       "description": "A vibrant lightbulb with colorful smoke, representing ideas and AI.",
-      "imageUrl": "https://images.unsplash.com/photo-1589578228254-6c34e99547b7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxpZGVhJTIwY2hhdGJvdHxlbnwwfHx8fDE3MTcwMzQyNTl8MA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "idea chatbot"
+      "imageUrl": "https://images.unsplash.com/photo-1521791136064-7986c2920216?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxhbiUyMGFpJTIwY2hhdGJvdHxlbnwwfHx8fDE3MTg3MjAyNzl8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "ai chatbot"
     },
     {
       "id": "feature-mentors",
       "description": "Portrait of a woman with a sunlit background, representing guidance.",
-      "imageUrl": "https://images.unsplash.com/photo-1593104547489-5cfb3839a3b5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxtZW50b3IlMjBwb3J0cmFpdHxlbnwwfHx8fDE3MTcwMzQzMDJ8MA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "mentor portrait"
+      "imageUrl": "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxtZW50b3J8ZW58MHx8fHwxNzE4NzIwMzEyfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "mentor"
     },
     {
       "id": "feature-community",
       "description": "Two people collaborating over a laptop, with yellow background.",
-      "imageUrl": "https://images.unsplash.com/photo-1543269865-cbf427effbad?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxjb21tdW5pdHklMjBjb2xsYWJvcmF0aW9ufGVufDB8fHx8fDE3MTcwMzQzMzh8MA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "community collaboration"
+      "imageUrl": "https://images.unsplash.com/photo-1543269664-56d93c1b41a6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxjb21tdW5pdHl8ZW58MHx8fHwxNzE4NzIwMzM5fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "community"
     },
     {
       "id": "feature-workshops",
       "description": "A group of people in a creative workshop setting.",
-      "imageUrl": "https://images.unsplash.com/photo-1515162816999-a0c474b6f7f7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHx3b3Jrc2hvcCUyMGNyZWF0aXZlfGVufDB8fHx8fDE3MTcwMzQzODJ8MA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "workshop creative"
+      "imageUrl": "https://images.unsplash.com/photo-1516321497487-e288fb19713f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHx3b3Jrc2hvcHxlbnwwfHx8fDE3MTg3MjAzNjl8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "workshop"
     },
     {
       "id": "feature-internships",
       "description": "A close-up shot of a plant with water droplets, representing growth.",
-      "imageUrl": "https://images.unsplash.com/photo-1492496913980-501348b61469?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxncm93dGglMjBwbGFudHxlbnwwfHx8fDE3MTcwMzQ0MTJ8MA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "growth plant"
+      "imageUrl": "https://images.unsplash.com/photo-1456428199391-a3b1cb8e35a3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxncm93dGglMjBleHBlcmllbmNlfGVufDB8fHx8MTcxODcyMDQwMHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "growth experience"
     }
   ]
 }
