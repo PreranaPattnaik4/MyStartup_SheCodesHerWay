@@ -39,7 +39,7 @@
     {
       "id": "forum-banner",
       "description": "An abstract banner for the community forum.",
-      "imageUrl": "https://images.unsplash.com/photo-1706791722468-1e52d64bd3e2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxhYnN0cmFjdCUyMGJhbm5lcnxlbnwwfHx8fDE3NjIxNjYwODl8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1706791722468-1e52d64bd3e2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxhYnN0cmFjdCUyMGJhbm5lcnxlbnwwfHx8fDE3NjIxNjYwODl8MA&ixlib-rb-4.1.0&q=80&w=1080",
       "imageHint": "abstract banner"
     },
     {
@@ -89,6 +89,42 @@
       "description": "A friendly, abstract avatar for a chatbot.",
       "imageUrl": "https://images.unsplash.com/photo-1615843423179-bea071facf96?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxib3QlMjBhdmF0YXJ8ZW58MHx8fHwxNzY1ODc4NTE3fDA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "bot avatar"
+    },
+    {
+      "id": "feature-summary",
+      "description": "A person writing on a notebook, representing planning and summaries.",
+      "imageUrl": "https://images.unsplash.com/photo-1455390582262-044cdead277a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHx3cml0aW5nJTIwcGxhbm5pbmd8ZW58MHx8fHwxNzE3MDM0MjAxfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "writing planning"
+    },
+    {
+      "id": "feature-palai",
+      "description": "A vibrant lightbulb with colorful smoke, representing ideas and AI.",
+      "imageUrl": "https://images.unsplash.com/photo-1589578228254-6c34e99547b7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxpZGVhJTIwY2hhdGJvdHxlbnwwfHx8fDE3MTcwMzQyNTl8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "idea chatbot"
+    },
+    {
+      "id": "feature-mentors",
+      "description": "Portrait of a woman with a sunlit background, representing guidance.",
+      "imageUrl": "https://images.unsplash.com/photo-1593104547489-5cfb3839a3b5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxtZW50b3IlMjBwb3J0cmFpdHxlbnwwfHx8fDE3MTcwMzQzMDJ8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "mentor portrait"
+    },
+    {
+      "id": "feature-community",
+      "description": "Two people collaborating over a laptop, with yellow background.",
+      "imageUrl": "https://images.unsplash.com/photo-1543269865-cbf427effbad?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxjb21tdW5pdHklMjBjb2xsYWJvcmF0aW9ufGVufDB8fHx8fDE3MTcwMzQzMzh8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "community collaboration"
+    },
+    {
+      "id": "feature-workshops",
+      "description": "A group of people in a creative workshop setting.",
+      "imageUrl": "https://images.unsplash.com/photo-1515162816999-a0c474b6f7f7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHx3b3Jrc2hvcCUyMGNyZWF0aXZlfGVufDB8fHx8fDE3MTcwMzQzODJ8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "workshop creative"
+    },
+    {
+      "id": "feature-internships",
+      "description": "A close-up shot of a plant with water droplets, representing growth.",
+      "imageUrl": "https://images.unsplash.com/photo-1492496913980-501348b61469?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxncm93dGglMjBwbGFudHxlbnwwfHx8fDE3MTcwMzQ0MTJ8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "growth plant"
     }
   ]
 }
