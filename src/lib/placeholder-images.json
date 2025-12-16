@@ -9,13 +9,13 @@
     {
       "id": "founder-portrait",
       "description": "A professional and friendly portrait of the founder, Prerana Kailash Pattnaik.",
-      "imageUrl": "https://images.unsplash.com/photo-1546961329-78bef0414d7c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHx3b21hbiUyMHBvcnRyYWl0fGVufDB8fHx8MTc2MjE1NDMxOHww&ixlib-rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1546961329-78bef0414d7c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHx3b21hbiUyMHBvcnRyYWl0fGVufDB8fHx8MTc2MjE1NDMxOHww&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "woman portrait"
     },
     {
       "id": "program-skill-dev",
       "description": "Women engaged in a coding workshop.",
-      "imageUrl": "https://images.unsplash.com/photo-1547860664-b8537ca5f833?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHx3b21lbiUyMGNvZGluZ3xlbnwwfHx8fDE3NjIyNDAxNDV8MA&ixlib-rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1547860664-b8537ca5f833?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHx3b21lbiUyMGNvZGluZ3xlbnwwfHx8fDE3NjIyNDAxNDV8MA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "women coding"
     },
     {
@@ -117,7 +117,7 @@
     {
       "id": "feature-internships",
       "description": "A person working on a laptop in a creative environment.",
-      "imageUrl": "https://images.unsplash.com/photo-1517048676732-d65bc937f952?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxoYW5kcyUyMG9uJTIwZXhwZXJpZW5jZXxlbnwwfHx8fDE3MjI0OTczMzd8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1517048676732-d65bc937f952?ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxoYW5kcyUyMG9uJTIwZXhwZXJpZW5jZXxlbnwwfHx8fDE3MjI0OTczMzd8MA&ixlib=rb-4.1.0&w=1080&fit=max&q=80&fm=jpg&crop=entropy&cs=tinysrgb",
       "imageHint": "hands-on experience"
     },
     {
@@ -131,6 +131,12 @@
       "description": "A team of diverse developers collaborating intensely during a hackathon event.",
       "imageUrl": "https://images.unsplash.com/photo-1587620962725-abab7fe55159?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxoYWNrYXRob258ZW58MHx8fHwxNzIyNDYwMjc0fDA&ixlib-rb-4.1.0&q=80&w=1080",
       "imageHint": "hackathon event"
+    },
+    {
+      "id": "feature-live-events",
+      "description": "A crowd of people at a live conference or event, looking engaged.",
+      "imageUrl": "https://images.unsplash.com/photo-1527529482837-4698179dc6ce?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxpbnRlcmFjdGl2ZSUyMGV2ZW50fGVufDB8fHx8MTcyMjQ2MTE0OHww&ixlib-rb-4.1.0&q=80&w=1080",
+      "imageHint": "interactive event"
     }
   ]
 }

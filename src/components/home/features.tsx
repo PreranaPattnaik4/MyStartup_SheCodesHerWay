@@ -19,6 +19,7 @@ const categories = [
   { id: 'workshops', name: 'Workshops' },
   { id: 'internships', name: 'Internships' },
   { id: 'hackathons', name: 'Hackathons' },
+  { id: 'live-events', name: 'LIVE Events!' },
 ];
 
 const features = [
@@ -91,6 +92,17 @@ const features = [
     rowSpan: 'row-span-1',
     href: '#',
     category: 'hackathons',
+    height: 'h-64',
+    comingSoon: true,
+  },
+  {
+    id: 'feature-live-events',
+    title: 'Join LIVE Events!',
+    image: PlaceHolderImages.find((p) => p.id === 'feature-live-events'),
+    colSpan: 'col-span-1',
+    rowSpan: 'row-span-1',
+    href: '#',
+    category: 'live-events',
     height: 'h-64',
     comingSoon: true,
   },
