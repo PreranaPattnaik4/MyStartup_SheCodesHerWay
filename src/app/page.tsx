@@ -4,7 +4,6 @@ import Footer from '@/components/footer';
 import Hero from '@/components/home/hero';
 import MissionVision from '@/components/home/mission-vision';
 import ProgramOverview from '@/components/home/program-overview';
-import AboutFounder from '@/components/home/about-founder';
 import ImpactGoals from '@/components/home/impact-goals';
 import CoreActivities from '@/components/home/core-activities';
 import Roadmap from '@/components/home/roadmap';
@@ -48,11 +47,6 @@ export default function Home() {
             <div id="program" className="rounded-xl bg-white py-12 relative overflow-hidden">
                <div className="absolute inset-0 -z-10 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-primary/10 via-white/0 to-white/0"></div>
               <ProgramOverview />
-            </div>
-            <Separator />
-            <div className="rounded-xl bg-white py-12 relative overflow-hidden">
-                <div className="absolute inset-0 -z-10 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-primary/10 via-white/0 to-white/0"></div>
-                <AboutFounder />
             </div>
             <Separator />
             <div id="impact" className="rounded-xl bg-white py-12 relative overflow-hidden">
