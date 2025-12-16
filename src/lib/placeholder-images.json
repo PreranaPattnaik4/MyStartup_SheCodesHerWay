@@ -59,6 +59,18 @@
       "description": "A mock certificate with floral borders.",
       "imageUrl": "https://images.unsplash.com/photo-1748712576506-000c01890275?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxjZXJ0aWZpY2F0ZSUyMGZsb3JhbHxlbnwwfHx8fDE3NjIyNDczNDF8MA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "certificate floral"
+    },
+    {
+      "id": "about-program-1",
+      "description": "A woman speaking and gesturing during a workshop.",
+      "imageUrl": "https://images.unsplash.com/photo-1595021247614-8920d4633d80?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8d29tYW4lMjBzcGVha2luZ3xlbnwwfHx8fDE3NjU4NzYwMjl8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "woman speaking"
+    },
+    {
+      "id": "about-program-2",
+      "description": "Two men collaborating over a laptop in a classroom setting.",
+      "imageUrl": "https://images.unsplash.com/photo-1671725779253-0a5a067cfac4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxtZW4lMjBjb2xsYWJvcmF0aW5nfGVufDB8fHx8MTc2NTg3NjAyOHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "men collaborating"
     }
   ]
 }

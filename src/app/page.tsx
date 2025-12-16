@@ -13,6 +13,7 @@ import { Separator } from '@/components/ui/separator';
 import Faq from '@/components/faq';
 import ExecutiveSummaryGenerator from '@/components/home/executive-summary-generator';
 import WhatWeOffer from '@/components/home/what-we-offer';
+import AboutProgram from '@/components/home/about-program';
 
 export default function Home() {
   return (
@@ -29,6 +30,11 @@ export default function Home() {
             </div>
             <Separator />
             <WhatWeOffer />
+            <Separator />
+            <div id="about-program" className="rounded-xl bg-white py-12 relative overflow-hidden">
+               <div className="absolute inset-0 -z-10 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-primary/10 via-white/0 to-white/0"></div>
+                <AboutProgram />
+            </div>
             <Separator />
             <div id="program" className="rounded-xl bg-white py-12 relative overflow-hidden">
                <div className="absolute inset-0 -z-10 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-primary/10 via-white/0 to-white/0"></div>
