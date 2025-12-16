@@ -1,4 +1,3 @@
-
 "use client";
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
@@ -10,13 +9,13 @@ import UserAuth from './auth/user-auth';
 
 const navLinks = [
   { href: '/', label: 'Home' },
-  { href: '/about', label: 'About' },
   { href: '/sangini-udaan', label: 'Sangini Udaan' },
   { href: '/internship', label: 'Internship' },
   { href: '/community', label: 'Community' },
   { href: '/ai-tools', label: 'AI Tools' },
   { href: '/faq', label: 'FAQs' },
   { href: '/partner', label: 'Partner with Us' },
+  { href: '/about', label: 'About' },
   { href: '/contact', label: 'Contact' },
 ];
 
