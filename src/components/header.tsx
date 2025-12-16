@@ -9,9 +9,9 @@ import UserAuth from './auth/user-auth';
 
 const navLinks = [
   { href: '/', label: 'Home' },
-  { href: '/chatbot', label: 'PalAI' },
   { href: '/sangini-udaan', label: 'Sangini Udaan' },
   { href: '/internship', label: 'Internship' },
+  { href: '/chatbot', label: 'PalAI' },
   { href: '/partner', label: 'Partner with Us' },
   { href: '/about', label: 'About' },
   { href: '/contact', label: 'Contact' },
