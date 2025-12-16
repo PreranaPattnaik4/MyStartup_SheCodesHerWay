@@ -11,7 +11,6 @@ const navLinks = [
   { href: '/', label: 'Home' },
   { href: '/sangini-udaan', label: 'Sangini Udaan' },
   { href: '/internship', label: 'Internship' },
-  { href: '/community', label: 'Community' },
   { href: '/ai-tools', label: 'AI Tools' },
   { href: '/partner', label: 'Partner with Us' },
   { href: '/chatbot', label: 'Chatbot' },
