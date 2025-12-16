@@ -6,8 +6,9 @@ import { PlaceHolderImages } from '@/lib/placeholder-images';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle, CardFooter } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
-import { Laptop, HeartHandshake, Award, Calendar, Users, Separator, School, Gift, DollarSign } from 'lucide-react';
+import { Laptop, HeartHandshake, Award, Calendar, Users, School, Gift, DollarSign } from 'lucide-react';
 import Faq from '@/components/faq';
+import { Separator } from '@/components/ui/separator';
 
 const specializedPaths = [
     {
