@@ -6,11 +6,10 @@ import { Input } from '@/components/ui/input';
 import { Button } from '@/components/ui/button';
 import { Bot, Send, User, Settings, Plus, MessageSquare } from 'lucide-react';
 import Header from '@/components/header';
-import Footer from '@/components/footer';
-import { Card, CardContent } from '@/components/ui/card';
-import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 import { ScrollArea } from '@/components/ui/scroll-area';
 import { cn } from '@/lib/utils';
+import { Avatar, AvatarFallback } from '@/components/ui/avatar';
+import ExecutiveSummaryGenerator from '@/components/home/executive-summary-generator';
 
 interface Message {
   text: string;
@@ -29,41 +28,35 @@ export default function ChatbotPage() {
   const [inputValue, setInputValue] = useState('');
   const scrollAreaRef = useRef<HTMLDivElement>(null);
 
-  // Function to get the current active chat
   const getActiveChat = () => {
     if (!activeChatId) return null;
     return chatHistory.find(chat => chat.id === activeChatId);
   };
   const activeChat = getActiveChat();
 
-  // Effect to scroll to the bottom of the chat on new messages
   useEffect(() => {
     if (scrollAreaRef.current) {
-      scrollAreaRef.current.scrollTo({
-        top: scrollAreaRef.current.scrollHeight,
-        behavior: 'smooth',
-      });
+      const scrollElement = scrollAreaRef.current.children[0] as HTMLElement;
+      if (scrollElement) {
+        scrollElement.scrollTo({
+            top: scrollElement.scrollHeight,
+            behavior: 'smooth',
+        });
+      }
     }
   }, [activeChat?.messages]);
   
-  // Start a new chat session
   const handleNewChat = () => {
     const newChatId = Date.now().toString();
     const newChat: ChatSession = {
       id: newChatId,
       title: 'New Chat',
-      messages: [
-        {
-          text: "Hello! I'm the SheCodesHerWay AI assistant. How can I help you today?",
-          sender: 'bot',
-        },
-      ],
+      messages: [],
     };
     setChatHistory(prev => [newChat, ...prev]);
     setActiveChatId(newChatId);
   };
   
-  // Start a new chat if none exists
   useEffect(() => {
     if (chatHistory.length === 0) {
       handleNewChat();
@@ -81,7 +74,6 @@ export default function ChatbotPage() {
     setChatHistory(prevHistory => {
       const updatedHistory = prevHistory.map(chat => {
         if (chat.id === activeChatId) {
-          // If this is the first user message, update the chat title
           const isFirstUserMessage = chat.messages.filter(m => m.sender === 'user').length === 0;
           const newTitle = isFirstUserMessage ? inputValue.substring(0, 30) + (inputValue.length > 30 ? '...' : '') : chat.title;
           
@@ -98,7 +90,6 @@ export default function ChatbotPage() {
 
     setInputValue('');
 
-    // Simulate bot response
     setTimeout(() => {
       const botMessage: Message = {
         text: 'This is a simulated response. In a real application, I would connect to an AI service to provide a helpful answer!',
@@ -113,6 +104,8 @@ export default function ChatbotPage() {
       );
     }, 1000);
   };
+
+  const isChatEmpty = !activeChat || activeChat.messages.length === 0;
 
   return (
     <div className="flex h-screen flex-col bg-white">
@@ -148,70 +141,72 @@ export default function ChatbotPage() {
         </aside>
         
         <div className="flex-1 flex flex-col bg-white">
-            {activeChat ? (
-                <>
-                <ScrollArea className="flex-1 p-4" ref={scrollAreaRef as any}>
-                    <div className="max-w-3xl mx-auto space-y-6">
-                        {activeChat.messages.map((message, index) => (
-                        <div
-                            key={index}
-                            className={cn(
-                            'flex items-start gap-4',
-                            message.sender === 'user' ? 'justify-end' : ''
-                            )}
-                        >
-                            {message.sender === 'bot' && (
-                            <Avatar className="h-8 w-8">
-                                <AvatarFallback><Bot size={20}/></AvatarFallback>
-                            </Avatar>
-                            )}
-                            <div
-                            className={cn(
-                                'max-w-[75%] rounded-lg p-3 text-sm shadow-sm',
-                                message.sender === 'user'
-                                ? 'bg-primary text-primary-foreground'
-                                : 'bg-secondary'
-                            )}
-                            >
-                            {message.text}
-                            </div>
-                             {message.sender === 'user' && (
-                            <Avatar className="h-8 w-8">
-                                <AvatarFallback><User size={20}/></AvatarFallback>
-                            </Avatar>
-                            )}
-                        </div>
-                        ))}
+          <div className="flex-1 flex flex-col items-center relative">
+            <ScrollArea className="w-full max-w-3xl flex-grow" ref={scrollAreaRef as any}>
+              <div className={cn("px-4 pb-20 pt-4", isChatEmpty ? "h-full flex items-center justify-center" : "space-y-6")}>
+                {isChatEmpty ? (
+                    <div className="text-center">
+                        <h2 className="text-2xl font-bold text-gray-700">What are you working on?</h2>
                     </div>
-                </ScrollArea>
+                ) : (
+                  activeChat?.messages.map((message, index) => (
+                    <div
+                        key={index}
+                        className={cn(
+                        'flex items-start gap-4',
+                        message.sender === 'user' ? 'justify-end' : ''
+                        )}
+                    >
+                        {message.sender === 'bot' && (
+                        <Avatar className="h-8 w-8">
+                            <AvatarFallback><Bot size={20}/></AvatarFallback>
+                        </Avatar>
+                        )}
+                        <div
+                        className={cn(
+                            'max-w-[75%] rounded-lg p-3 text-sm shadow-sm',
+                            message.sender === 'user'
+                            ? 'bg-primary text-primary-foreground'
+                            : 'bg-secondary'
+                        )}
+                        >
+                        {message.text}
+                        </div>
+                         {message.sender === 'user' && (
+                        <Avatar className="h-8 w-8">
+                            <AvatarFallback><User size={20}/></AvatarFallback>
+                        </Avatar>
+                        )}
+                    </div>
+                  ))
+                )}
+              </div>
+            </ScrollArea>
 
-                <div className="p-4 border-t bg-white">
-                    <div className="relative max-w-3xl mx-auto">
+            <div className="absolute bottom-0 w-full p-4 bg-gradient-to-t from-white to-transparent">
+              <div className="relative max-w-3xl mx-auto">
+                <div className='relative flex items-center'>
                     <Input
-                        type="text"
-                        placeholder="Type a message..."
-                        value={inputValue}
-                        onChange={(e) => setInputValue(e.target.value)}
-                        onKeyDown={(e) => e.key === 'Enter' && handleSendMessage()}
-                        className="pr-12 h-12"
+                      type="text"
+                      placeholder="Ask anything..."
+                      value={inputValue}
+                      onChange={(e) => setInputValue(e.target.value)}
+                      onKeyDown={(e) => e.key === 'Enter' && handleSendMessage()}
+                      className="pr-12 h-12 rounded-full shadow-md border-gray-300 focus:border-primary focus:ring-primary"
                     />
                     <Button 
                         onClick={handleSendMessage} 
                         disabled={!inputValue.trim()}
                         size="icon"
-                        className="absolute right-2.5 top-1/2 -translate-y-1/2"
+                        className="absolute right-2.5 top-1/2 -translate-y-1/2 rounded-full"
                     >
                         <Send className="w-5 h-5" />
                         <span className="sr-only">Send</span>
                     </Button>
-                    </div>
                 </div>
-                </>
-            ) : (
-                <div className="flex-1 flex items-center justify-center text-muted-foreground">
-                    <p>Select a chat or start a new one.</p>
-                </div>
-            )}
+              </div>
+            </div>
+          </div>
         </div>
       </main>
     </div>
