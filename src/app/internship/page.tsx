@@ -68,8 +68,8 @@ export default function InternshipPage() {
                              <p className="mt-2 max-w-2xl mx-auto text-base text-foreground/80 drop-shadow-sm">
                                 Gain real-world skills, mentorship, and certification — no stipend, just growth and guidance.
                             </p>
-                            <Button asChild size="lg" className="mt-8" disabled>
-                                <Link href="#">Apply for Internship</Link>
+                            <Button asChild size="lg" className="mt-8">
+                                <Link href="/startup-school">Apply for Internship</Link>
                             </Button>
                         </div>
                     </div>
@@ -224,8 +224,8 @@ export default function InternshipPage() {
                         <section className="text-center max-w-3xl mx-auto">
                              <p className="font-body text-2xl italic text-primary">“This internship is not about earning — it’s about becoming.”</p>
                              <h2 className="font-headline text-3xl font-bold mt-8">Ready to Start Your Journey?</h2>
-                             <Button asChild size="lg" className="mt-6" disabled>
-                                <Link href="#">Join as an Intern Today!</Link>
+                             <Button asChild size="lg" className="mt-6">
+                                <Link href="/startup-school">Join as an Intern Today!</Link>
                              </Button>
                         </section>
 

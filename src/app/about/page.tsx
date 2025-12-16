@@ -127,7 +127,7 @@ export default function AboutPage() {
                                 SheCodesHerWay isn’t just a startup — it’s a **movement of women who dare to dream, build, and rise together.** Whether you want to **learn a new skill**, **start your career**, or **launch your own venture**, we’re here to guide, mentor, and celebrate your journey.
                             </p>
                              <Button asChild size="lg" className="mt-8">
-                                <Link href="/apply">Join Us - Let's Build Your Path</Link>
+                                <Link href="/startup-school">Join Us - Let's Build Your Path</Link>
                             </Button>
                         </section>
 

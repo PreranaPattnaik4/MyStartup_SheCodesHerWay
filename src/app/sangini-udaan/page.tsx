@@ -1,3 +1,4 @@
+
 import Header from '@/components/header';
 import Footer from '@/components/footer';
 import Image from 'next/image';
@@ -77,7 +78,7 @@ export default function SanginiUdaanPage() {
                                         Experience the entire empowerment journey — tech learning, business building, creativity, and emotional growth — all in one full program. ⭐ Best for women who want holistic growth, independence, and leadership.
                                     </p>
                                     <Button asChild size="lg" className="mt-6">
-                                        <Link href="/apply">Enroll in Sangini Udaan All-in-One</Link>
+                                        <Link href="/startup-school">Enroll in Sangini Udaan All-in-One</Link>
                                     </Button>
                                 </CardContent>
                             </Card>
