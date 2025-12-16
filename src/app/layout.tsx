@@ -3,7 +3,6 @@ import { Toaster } from '@/components/ui/toaster';
 import { cn } from '@/lib/utils';
 import './globals.css';
 import { FirebaseClientProvider } from '@/firebase/client-provider';
-import Chatbot from '@/components/chatbot/chatbot';
 
 export const metadata: Metadata = {
   title: 'EmpowerFly by SheCodesHerWay',
@@ -25,7 +24,6 @@ export default function RootLayout({
       <body className={cn('min-h-screen bg-background text-foreground font-body antialiased')} suppressHydrationWarning>
         <FirebaseClientProvider>
           {children}
-          <Chatbot />
         </FirebaseClientProvider>
         <Toaster />
       </body>

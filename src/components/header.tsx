@@ -14,6 +14,7 @@ const navLinks = [
   { href: '/community', label: 'Community' },
   { href: '/ai-tools', label: 'AI Tools' },
   { href: '/partner', label: 'Partner with Us' },
+  { href: '/chatbot', label: 'Chatbot' },
   { href: '/about', label: 'About' },
   { href: '/contact', label: 'Contact' },
 ];
