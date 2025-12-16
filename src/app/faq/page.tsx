@@ -1,13 +1,7 @@
 
 import Header from '@/components/header';
 import Footer from '@/components/footer';
-import {
-  Accordion,
-  AccordionContent,
-  AccordionItem,
-  AccordionTrigger,
-} from "@/components/ui/accordion"
-import { faqData } from "@/lib/faq-data"
+import Faq from '@/components/faq';
 
 export default function FAQPage() {
   return (
@@ -24,18 +18,7 @@ export default function FAQPage() {
         </section>
 
         <section className="container mx-auto px-4 py-16 sm:px-6 lg:px-8">
-            <div className="max-w-4xl mx-auto">
-                <Accordion type="single" collapsible className="w-full">
-                    {faqData.map((faq, index) => (
-                    <AccordionItem value={`item-${index}`} key={index}>
-                        <AccordionTrigger className="text-left text-lg font-semibold">{faq.question}</AccordionTrigger>
-                        <AccordionContent className="text-base text-foreground/80">
-                            {faq.answer}
-                        </AccordionContent>
-                    </AccordionItem>
-                    ))}
-                </Accordion>
-            </div>
+            <Faq showAll={true} />
         </section>
       </main>
       <Footer />
