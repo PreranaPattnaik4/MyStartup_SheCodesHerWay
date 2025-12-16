@@ -17,6 +17,7 @@ import StartupSchool from '@/components/home/startup-school';
 import Features from '@/components/home/features';
 import { Github, Linkedin, Twitter } from 'lucide-react';
 import Link from 'next/link';
+import { brand } from '@/lib/brand';
 
 export default function Home() {
   return (
@@ -60,9 +61,10 @@ export default function Home() {
             <div id="partner-with-us" className="rounded-xl py-12 relative overflow-hidden">
                <div className="absolute inset-0 -z-10 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-primary/10 via-white/0 to-white/0"></div>
               <JoinUs />
-              <div className="text-center mt-12">
-                <p className="font-semibold text-lg">Follow Us</p>
-                <div className="mt-4 flex justify-center space-x-4">
+              <div className="text-center mt-16">
+                <p className="font-headline text-2xl font-bold">{brand.name}</p>
+                <p className="mt-2 text-foreground/80 max-w-md mx-auto">Follow our journey and join the conversation on social media.</p>
+                <div className="mt-6 flex justify-center space-x-4">
                   <Link href="#" aria-label="Twitter">
                     <Twitter className="h-7 w-7 text-foreground/80 transition-colors hover:text-primary" />
                   </Link>
