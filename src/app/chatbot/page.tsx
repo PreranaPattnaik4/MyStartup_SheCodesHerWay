@@ -2,7 +2,7 @@
 'use client';
 
 import React, { useState, useEffect, useRef } from 'react';
-import { Input } from '@/components/ui/input';
+import { Textarea } from '@/components/ui/textarea';
 import { Button, buttonVariants } from '@/components/ui/button';
 import { Bot, Send, User, Settings, Plus, MessageSquare, MoreHorizontal, Edit, Trash2 } from 'lucide-react';
 import Header from '@/components/header';
@@ -34,6 +34,7 @@ import {
   DialogClose,
 } from "@/components/ui/dialog";
 import { Label } from '@/components/ui/label';
+import { Input } from '@/components/ui/input';
 
 
 interface Message {
@@ -53,6 +54,7 @@ export default function ChatbotPage() {
   const [inputValue, setInputValue] = useState('');
   const scrollAreaRef = useRef<HTMLDivElement>(null);
   const [isSidebarOpen, setIsSidebarOpen] = useState(true);
+  const textareaRef = useRef<HTMLTextAreaElement>(null);
 
   // State for dialogs
   const [chatToDelete, setChatToDelete] = useState<string | null>(null);
@@ -64,6 +66,14 @@ export default function ChatbotPage() {
     return chatHistory.find(chat => chat.id === activeChatId);
   };
   const activeChat = getActiveChat();
+  
+  useEffect(() => {
+    if (textareaRef.current) {
+        textareaRef.current.style.height = 'auto';
+        textareaRef.current.style.height = `${textareaRef.current.scrollHeight}px`;
+    }
+  }, [inputValue]);
+
 
   useEffect(() => {
     if (scrollAreaRef.current) {
@@ -227,7 +237,7 @@ export default function ChatbotPage() {
         <div className="flex-1 flex flex-col bg-white">
           <div className="flex-1 relative flex flex-col">
             <ScrollArea className="flex-grow w-full" ref={scrollAreaRef as any}>
-              <div className="max-w-3xl mx-auto w-full px-4 pb-20 pt-4">
+              <div className="max-w-3xl mx-auto w-full px-4 pb-24 pt-4">
                 {isChatEmpty ? (
                     <div className="h-full flex items-center justify-center">
                         <div className="text-center">
@@ -274,20 +284,26 @@ export default function ChatbotPage() {
 
             <div className="absolute bottom-0 w-full p-4 bg-gradient-to-t from-white to-transparent">
               <div className="relative max-w-3xl mx-auto">
-                <div className='relative flex items-center'>
-                    <Input
-                      type="text"
+                <div className='relative flex items-end'>
+                    <Textarea
+                      ref={textareaRef}
+                      rows={1}
                       placeholder="Ask anything..."
                       value={inputValue}
                       onChange={(e) => setInputValue(e.target.value)}
-                      onKeyDown={(e) => e.key === 'Enter' && handleSendMessage()}
-                      className="pr-12 h-12 rounded-full shadow-md border-gray-300 focus:border-primary focus:ring-primary"
+                      onKeyDown={(e) => {
+                        if (e.key === 'Enter' && !e.shiftKey) {
+                            e.preventDefault();
+                            handleSendMessage();
+                        }
+                      }}
+                      className="pr-16 py-3 resize-none max-h-40 overflow-y-auto rounded-full shadow-md border-gray-300 focus:border-primary focus:ring-primary"
                     />
                     <Button 
                         onClick={handleSendMessage} 
                         disabled={!inputValue.trim()}
                         size="icon"
-                        className="absolute right-2.5 top-1/2 -translate-y-1/2 rounded-full"
+                        className="absolute right-2.5 bottom-2 rounded-full"
                     >
                         <Send className="w-5 h-5" />
                         <span className="sr-only">Send</span>
@@ -346,3 +362,5 @@ export default function ChatbotPage() {
     </>
   );
 }
+
+    
