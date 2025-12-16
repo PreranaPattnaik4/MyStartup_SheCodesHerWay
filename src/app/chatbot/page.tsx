@@ -115,10 +115,10 @@ export default function ChatbotPage() {
   };
 
   return (
-    <div className="flex h-screen flex-col bg-background">
+    <div className="flex h-screen flex-col bg-white">
       <Header />
       <main className="flex-1 flex overflow-hidden">
-        <aside className="w-64 flex flex-col p-4 bg-background border-r">
+        <aside className="w-64 flex flex-col p-4 bg-white border-r">
             <Button onClick={handleNewChat} className="w-full justify-start">
                 <Plus className="mr-2 h-4 w-4" />
                 New Chat
@@ -147,7 +147,7 @@ export default function ChatbotPage() {
             </div>
         </aside>
         
-        <div className="flex-1 flex flex-col">
+        <div className="flex-1 flex flex-col bg-white">
             {activeChat ? (
                 <>
                 <ScrollArea className="flex-1 p-4" ref={scrollAreaRef as any}>
@@ -170,7 +170,7 @@ export default function ChatbotPage() {
                                 'max-w-[75%] rounded-lg p-3 text-sm shadow-sm',
                                 message.sender === 'user'
                                 ? 'bg-primary text-primary-foreground'
-                                : 'bg-background'
+                                : 'bg-secondary'
                             )}
                             >
                             {message.text}
@@ -185,7 +185,7 @@ export default function ChatbotPage() {
                     </div>
                 </ScrollArea>
 
-                <div className="p-4 border-t bg-background">
+                <div className="p-4 border-t bg-white">
                     <div className="relative max-w-3xl mx-auto">
                     <Input
                         type="text"
