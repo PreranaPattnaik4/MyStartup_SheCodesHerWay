@@ -1,3 +1,4 @@
+
 'use client';
 
 import React, { useState } from 'react';
@@ -10,12 +11,12 @@ import Link from 'next/link';
 import { ArrowRight } from 'lucide-react';
 
 const categories = [
+  { id: 'all-features', name: 'All Features' },
   { id: 'ai-tools', name: 'AI Tools' },
   { id: 'mentorship', name: 'Mentorship' },
   { id: 'community', name: 'Community' },
   { id: 'workshops', name: 'Workshops' },
   { id: 'internships', name: 'Internships' },
-  { id: 'all-features', name: 'All Features' },
 ];
 
 const features = [
@@ -27,6 +28,7 @@ const features = [
     rowSpan: 'row-span-2',
     href: '/ai-tools',
     category: 'ai-tools',
+    height: 'h-96 md:h-full'
   },
   {
     id: 'feature-palai',
@@ -36,6 +38,7 @@ const features = [
     rowSpan: 'row-span-1',
     href: '/chatbot',
     category: 'ai-tools',
+    height: 'h-64'
   },
   {
     id: 'feature-mentors',
@@ -45,6 +48,7 @@ const features = [
     rowSpan: 'row-span-2',
     href: '/partner',
     category: 'mentorship',
+    height: 'h-96 md:h-full'
   },
   {
     id: 'feature-community',
@@ -54,6 +58,7 @@ const features = [
     rowSpan: 'row-span-1',
     href: '/community',
     category: 'community',
+    height: 'h-64'
   },
   {
     id: 'feature-workshops',
@@ -63,6 +68,7 @@ const features = [
     rowSpan: 'row-span-1',
     href: '/sangini-udaan',
     category: 'workshops',
+    height: 'h-64'
   },
   {
     id: 'feature-internships',
@@ -72,6 +78,7 @@ const features = [
     rowSpan: 'row-span-1',
     href: '/internship',
     category: 'internships',
+    height: 'h-64'
   },
 ];
 
@@ -112,7 +119,7 @@ export default function Features() {
         <main className="lg:col-span-3">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {filteredFeatures.map((feature) => (
-              <Link href={feature.href} key={feature.id} className={cn('group relative block', feature.colSpan, feature.rowSpan)}>
+               <Link href={feature.href} key={feature.id} className={cn('group relative block', feature.colSpan, feature.rowSpan, feature.height)}>
                 <Card className={cn('overflow-hidden h-full w-full shadow-lg transform transition-all duration-300 hover:scale-[1.02] hover:shadow-2xl')}>
                   {feature.image && (
                     <Image
