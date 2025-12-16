@@ -1,5 +1,7 @@
 
 import { Users, Handshake, Briefcase, Globe } from 'lucide-react';
+import Image from 'next/image';
+import { PlaceHolderImages } from '@/lib/placeholder-images';
 
 const goals = [
     {
@@ -28,42 +30,8 @@ const goals = [
     },
 ];
 
-const TargetIcon = () => (
-    <div className="relative w-64 h-64 md:w-80 md:h-80">
-        <div className="absolute inset-0 rounded-full bg-gray-200"></div>
-        <div className="absolute inset-[15%] rounded-full bg-gray-300"></div>
-        <div className="absolute inset-[30%] rounded-full bg-gray-200"></div>
-        <div className="absolute inset-[45%] rounded-full bg-gray-400 w-10 h-10 m-auto"></div>
-        <svg
-            className="absolute -bottom-8 -right-8 md:-bottom-10 md:-right-10 w-32 h-32 text-gray-700"
-            viewBox="0 0 100 100"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-            >
-            <path
-                d="M95 5L45 55"
-                stroke="currentColor"
-                strokeWidth="6"
-                strokeLinecap="round"
-            />
-            <path
-                d="M50 50L60 30"
-                stroke="currentColor"
-                strokeWidth="6"
-                strokeLinecap="round"
-            />
-             <path
-                d="M50 50L30 60"
-                stroke="currentColor"
-                strokeWidth="6"
-                strokeLinecap="round"
-            />
-        </svg>
-    </div>
-)
-
-
 export default function ImpactGoals() {
+    const targetImage = PlaceHolderImages.find(p => p.id === 'impact-goals-target');
   return (
     <section>
         <div className="text-center mb-16">
@@ -90,7 +58,16 @@ export default function ImpactGoals() {
                 </div>
             </div>
             <div className="hidden md:flex items-center justify-center">
-                <TargetIcon />
+                {targetImage && (
+                    <Image 
+                        src={targetImage.imageUrl}
+                        alt={targetImage.description}
+                        width={400}
+                        height={400}
+                        className="rounded-full"
+                        data-ai-hint={targetImage.imageHint}
+                    />
+                )}
             </div>
         </div>
     </section>
