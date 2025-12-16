@@ -6,11 +6,11 @@ import { Calendar, MapPin } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 
-export default function StartupSchoolPage() {
+export default function StartupSchool() {
   const heroImage = PlaceHolderImages.find((p) => p.id === "startup-school-hero");
   return (
-    <div>
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <section>
+       <div className="max-w-6xl mx-auto py-12">
         <p>India</p>
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div>
@@ -56,6 +56,6 @@ export default function StartupSchoolPage() {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 }

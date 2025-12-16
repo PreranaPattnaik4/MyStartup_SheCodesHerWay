@@ -9,7 +9,7 @@ import UserAuth from './auth/user-auth';
 
 const navLinks = [
   { href: '/', label: 'Home' },
-  { href: '/startup-school', label: 'Startup School' },
+  { href: '/#startup-school', label: 'Startup School' },
   { href: '/sangini-udaan', label: 'Sangini Udaan' },
   { href: '/internship', label: 'Internship' },
   { href: '/community', label: 'Community' },
