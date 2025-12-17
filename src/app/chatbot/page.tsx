@@ -48,6 +48,11 @@ interface ChatSession {
   messages: Message[];
 }
 
+const welcomeMessage: Message = {
+    text: "Hi, I’m PalAI — your friendly guide to learning, careers, and opportunities, at your own pace. How can I help you today?",
+    sender: 'bot',
+};
+
 export default function ChatbotPage() {
   const [chatHistory, setChatHistory] = useState<ChatSession[]>([]);
   const [activeChatId, setActiveChatId] = useState<string | null>(null);
@@ -92,7 +97,7 @@ export default function ChatbotPage() {
     const newChat: ChatSession = {
       id: newChatId,
       title: 'New Chat',
-      messages: [],
+      messages: [welcomeMessage],
     };
     setChatHistory(prev => [newChat, ...prev]);
     setActiveChatId(newChatId);
@@ -161,22 +166,18 @@ export default function ChatbotPage() {
   const handleDeleteChat = () => {
     if (!chatToDelete) return;
 
-    setChatHistory(prev => prev.filter(chat => chat.id !== chatToDelete));
+    const updatedHistory = chatHistory.filter(chat => chat.id !== chatToDelete);
+    setChatHistory(updatedHistory);
     
-    // If the active chat is the one being deleted, switch to another one or create a new one
     if (activeChatId === chatToDelete) {
-        const remainingChats = chatHistory.filter(chat => chat.id !== chatToDelete);
-        if (remainingChats.length > 0) {
-            setActiveChatId(remainingChats[0].id);
+        if (updatedHistory.length > 0) {
+            setActiveChatId(updatedHistory[0].id);
         } else {
             handleNewChat();
         }
     }
     setChatToDelete(null);
   };
-
-
-  const isChatEmpty = !activeChat || activeChat.messages.length === 0;
 
   return (
     <>
@@ -238,14 +239,6 @@ export default function ChatbotPage() {
           <div className="flex-1 relative flex flex-col">
             <ScrollArea className="flex-grow w-full" ref={scrollAreaRef as any}>
               <div className="max-w-3xl mx-auto w-full px-4 pb-24 pt-4">
-                {isChatEmpty ? (
-                    <div className="h-full flex items-center justify-center">
-                        <div className="text-center">
-                            <h2 className="mt-4 text-2xl font-bold text-gray-700">PalAI</h2>
-                             <p className="mt-2 text-muted-foreground max-w-md mx-auto">Hi, I’m PalAI — your friendly guide to learning, careers, and opportunities, at your own pace.</p>
-                        </div>
-                    </div>
-                ) : (
                   <div className="space-y-6">
                   {activeChat?.messages.map((message, index) => (
                     <div
@@ -278,7 +271,6 @@ export default function ChatbotPage() {
                     </div>
                   ))}
                   </div>
-                )}
               </div>
             </ScrollArea>
 
@@ -362,3 +354,5 @@ export default function ChatbotPage() {
     </>
   );
 }
+
+    
