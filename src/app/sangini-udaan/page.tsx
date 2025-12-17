@@ -113,7 +113,7 @@ export default function SanginiUdaanPage() {
                         <section className="space-y-16">
                             <div>
                                 <h2 className="text-center text-lg font-semibold text-primary">💖 Recommended:</h2>
-                                <Card className="mt-4 max-w-3xl mx-auto shadow-lg border-2 border-primary transform transition-transform hover:scale-105 duration-300">
+                                <Card className="mt-4 max-w-3xl mx-auto shadow-lg transform transition-transform hover:scale-105 duration-300">
                                     <CardHeader>
                                         <CardTitle className="font-headline text-3xl">Complete Sangini Udaan Journey (All-in-One Track)</CardTitle>
                                     </CardHeader>
