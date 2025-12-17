@@ -53,7 +53,7 @@ export default function SanginiUdaanPage() {
     return (
         <div className="flex min-h-dvh flex-col">
             <Header />
-            <main className="flex-1">
+            <main className="flex-1 bg-white">
                 <section className="relative h-80 w-full bg-secondary">
                    {bannerImage && (
                         <Image
