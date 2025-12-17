@@ -12,25 +12,25 @@ import { Separator } from '@/components/ui/separator';
 
 const specializedPaths = [
     {
-        title: "2️⃣ For Women in Tech Journeys",
+        title: "For Women in Tech Journeys",
         description: "Learn coding, digital tools, and AI basics to build career confidence in technology. Includes mentorship, internships, and job-readiness sessions.",
         cta: "Learn More",
         href: "/apply",
     },
     {
-        title: "3️⃣ For Women Aspiring to Start Startups or Businesses",
+        title: "For Women Aspiring to Start Startups or Businesses",
         description: "Build your dream startup or personal brand. Covers business modeling, entrepreneurship bootcamps, and funding preparation.",
         cta: "Explore Startup Bootcamps",
         href: "/apply",
     },
     {
-        title: "4️⃣ For Creative & Content Entrepreneurs",
+        title: "For Creative & Content Entrepreneurs",
         description: "Express and earn through creativity — blogging, book publishing, Canva editing, art creation, and WordPress website design.",
         cta: "Discover Creative Paths",
         href: "/apply",
     },
     {
-        title: "5️⃣ For Emotional, Personal & Soft Skills Growth",
+        title: "For Emotional, Personal & Soft Skills Growth",
         description: "Develop confidence, leadership, communication, and emotional intelligence for both life and work. 💫 Soft skills and emotional strength are included in every track as a core foundation for growth.",
         cta: "Grow Your Soft Skills",
         href: "/apply",
@@ -115,7 +115,7 @@ export default function SanginiUdaanPage() {
                                 <h2 className="text-center text-lg font-semibold text-primary">💖 Recommended:</h2>
                                 <Card className="mt-4 max-w-3xl mx-auto shadow-lg border-2 border-primary transform transition-transform hover:scale-105 duration-300">
                                     <CardHeader>
-                                        <CardTitle className="font-headline text-3xl">1️⃣ Complete Sangini Udaan Journey (All-in-One Track)</CardTitle>
+                                        <CardTitle className="font-headline text-3xl">Complete Sangini Udaan Journey (All-in-One Track)</CardTitle>
                                     </CardHeader>
                                     <CardContent>
                                         <p className="text-lg text-foreground/80">
