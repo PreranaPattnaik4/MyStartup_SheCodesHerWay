@@ -15,7 +15,7 @@
     {
       "id": "program-skill-dev",
       "description": "A woman focused on her laptop in a colorful, creative environment.",
-      "imageUrl": "https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHx3b21hbiUyMGxlYXJuaW5nJTIwb24lMjBsYXB0b3B8ZW58MHx8fHwxNzIyNTEzODQzfDA&ixlib=rb-4.1.0&w=1080&fit=max&q=80&fm=jpg&crop=entropy&cs=tinysrgb",
+      "imageUrl": "https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHx3b21hbiUyMGxlYXJuaW5nJTIwb24lMjBsYXB0b3B8ZW58MHx8fHwxNzIyNTEzODQzfDA&ixlib-rb-4.1.0&w=1080&fit=max&q=80&fm=jpg&crop=entropy&cs=tinysrgb",
       "imageHint": "woman learning"
     },
     {
@@ -32,9 +32,9 @@
     },
     {
       "id": "program-community",
-      "description": "A diverse group of cheerful women celebrating together.",
-      "imageUrl": "https://images.unsplash.com/photo-1588702547919-26089e690ecc?ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxkaXZlcnNlJTIwZ3JvdXAlMjBvZiUyMHdvbWVuJTIwY2VsZWJyYXRpbmd8ZW58MHx8fHwxNzIyNTEzOTIyfDA&ixlib-rb-4.1.0&w=1080&fit=max&q=80&fm=jpg&crop=entropy&cs=tinysrgb",
-      "imageHint": "women celebrating"
+      "description": "A woman focused on her laptop in a colorful, creative environment.",
+      "imageUrl": "https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHx3b21hbiUyMGxlYXJuaW5nJTIwb24lMjBsYXB0b3B8ZW58MHx8fHwxNzIyNTEzODQzfDA&ixlib-rb-4.1.0&w=1080&fit=max&q=80&fm=jpg&crop=entropy&cs=tinysrgb",
+      "imageHint": "women learning"
     },
     {
       "id": "forum-banner",
@@ -80,9 +80,9 @@
     },
     {
       "id": "impact-goals-target",
-      "description": "An illustration of a successful business woman, representing achieving goals.",
-      "imageUrl": "https://storage.googleapis.com/aifirebase-79ed5.appspot.com/users/pattnaikprerana7%40gmail.com/gen-1722880016393.png",
-      "imageHint": "successful woman"
+      "description": "A woman holding a bow and aiming at a target.",
+      "imageUrl": "https://images.unsplash.com/photo-1558546416-e8d2243e936b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHx3b21hbiUyMGFpbWluZyUyMGF0JTIwdGFyZ2V0fGVufDB8fHx8fDE3MjM1ODk2ODN8MA&ixlib-rb-4.1.0&q=80&w=1080",
+      "imageHint": "woman target"
     },
     {
       "id": "chatbot-avatar",
