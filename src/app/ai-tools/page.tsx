@@ -4,6 +4,9 @@ import Footer from '@/components/footer';
 import ExecutiveSummaryGenerator from '@/components/home/executive-summary-generator';
 import { Bot } from 'lucide-react';
 import { Badge } from '@/components/ui/badge';
+import Link from 'next/link';
+import { Button } from '@/components/ui/button';
+import { ArrowLeft } from 'lucide-react';
 
 export default function AiToolsPage() {
   return (
@@ -14,12 +17,17 @@ export default function AiToolsPage() {
             <div className="container mx-auto px-4 text-center">
                 <Bot className="mx-auto h-12 w-12 text-primary" />
                 <h1 className="mt-4 font-headline text-4xl font-bold md:text-6xl flex items-center justify-center gap-4">
-                    AI-Powered Tools
-                    <Badge variant="outline" className="text-lg">Beta</Badge>
+                    AI-Powered Executive Summary
                 </h1>
                 <p className="mt-4 max-w-3xl mx-auto text-lg text-foreground/80">
-                    Leverage the power of AI to streamline your work and craft compelling narratives for your startup journey.
+                    Generate a concise and compelling executive summary for your pitch deck using our AI tool.
                 </p>
+                <Button asChild variant="outline" className="mt-8">
+                    <Link href="/ai-coaching">
+                        <ArrowLeft className="mr-2 h-4 w-4" />
+                        Back to All AI Tools
+                    </Link>
+                </Button>
             </div>
         </section>
 
