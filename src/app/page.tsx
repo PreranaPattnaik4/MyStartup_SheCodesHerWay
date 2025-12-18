@@ -17,7 +17,6 @@ import { Github, Linkedin, Twitter } from 'lucide-react';
 import Link from 'next/link';
 import { brand } from '@/lib/brand';
 import CommunityVision from '@/components/home/community-vision';
-import ProgramOverview from '@/components/home/program-overview';
 
 export default function Home() {
   return (
@@ -41,11 +40,6 @@ export default function Home() {
             <div id="startup-school" className="rounded-xl py-12 relative overflow-hidden">
                <div className="absolute inset-0 -z-10 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-primary/10 via-white/0 to-white/0"></div>
                 <StartupSchool />
-            </div>
-            <Separator />
-            <div id="program" className="rounded-xl py-12 relative overflow-hidden">
-               <div className="absolute inset-0 -z-10 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-primary/10 via-white/0 to-white/0"></div>
-               <ProgramOverview />
             </div>
             <Separator />
             <div id="features" className="rounded-xl py-12 relative overflow-hidden">
