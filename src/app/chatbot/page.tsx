@@ -36,11 +36,11 @@ import {
 import { Label } from '@/components/ui/label';
 import { Input } from '@/components/ui/input';
 import LogoIcon from '@/components/logo-icon';
+import { chat } from '@/ai/flows/chat';
 
 interface Message {
   text: string;
   sender: 'user' | 'bot';
-  type?: 'suggestion';
 }
 
 interface ChatSession {
@@ -81,14 +81,18 @@ export default function ChatbotPage() {
     if (textareaRef.current) {
         textareaRef.current.style.height = 'auto';
         const scrollHeight = textareaRef.current.scrollHeight;
-        textareaRef.current.style.height = `${scrollHeight}px`;
+        textareaRef.current.style.height = `${Math.min(scrollHeight, 120)}px`;
     }
   }, [inputValue]);
   
   useEffect(() => {
     const viewport = scrollAreaRef.current?.querySelector('[data-radix-scroll-area-viewport]');
     if (viewport) {
-      viewport.scrollTo({ top: viewport.scrollHeight, behavior: 'smooth' });
+      if (activeChat?.messages.length === 1) {
+        viewport.scrollTo({ top: 0, behavior: 'smooth' });
+      } else {
+        viewport.scrollTo({ top: viewport.scrollHeight, behavior: 'smooth' });
+      }
     }
   }, [activeChat?.messages, isTyping]);
 
@@ -105,51 +109,85 @@ export default function ChatbotPage() {
   };
   
   useEffect(() => {
-    if (chatHistory.length === 0) {
-      handleNewChat();
-    } else if (!activeChatId && chatHistory.length > 0) {
-      setActiveChatId(chatHistory[0].id);
+    // Load chat history from local storage
+    const storedHistory = localStorage.getItem('chatHistory');
+    if (storedHistory) {
+        const parsedHistory = JSON.parse(storedHistory);
+        if (parsedHistory.length > 0) {
+            setChatHistory(parsedHistory);
+            const activeId = localStorage.getItem('activeChatId') || parsedHistory[0].id;
+            setActiveChatId(activeId);
+            return;
+        }
     }
+    // If no history, start a new chat
+    handleNewChat();
   }, []);
 
+  useEffect(() => {
+    // Save chat history to local storage
+    if (chatHistory.length > 0) {
+        localStorage.setItem('chatHistory', JSON.stringify(chatHistory));
+    }
+    if (activeChatId) {
+        localStorage.setItem('activeChatId', activeChatId);
+    }
+  }, [chatHistory, activeChatId]);
 
-  const sendMessage = (text: string) => {
+
+  const sendMessage = async (text: string) => {
     if (!text.trim() || !activeChatId || isTyping) return;
 
     const userMessage: Message = { text, sender: 'user' };
   
     setChatHistory(prevHistory => {
-      const isFirstUserMessage = prevHistory.find(c => c.id === activeChatId)?.messages.filter(m => m.sender === 'user').length === 0;
-      
-      return prevHistory.map(chat => {
-        if (chat.id === activeChatId) {
-          return {
-            ...chat,
-            title: isFirstUserMessage ? text.substring(0, 30) + (text.length > 30 ? '...' : '') : chat.title,
-            messages: [...chat.messages, userMessage],
-          };
-        }
-        return chat;
-      });
+        const isFirstUserMessage = prevHistory.find(c => c.id === activeChatId)?.messages.filter(m => m.sender === 'user').length === 0;
+        
+        return prevHistory.map(chat => {
+            if (chat.id === activeChatId) {
+                const newTitle = isFirstUserMessage ? text.substring(0, 30) + (text.length > 30 ? '...' : '') : chat.title;
+                return {
+                    ...chat,
+                    title: newTitle,
+                    messages: [...chat.messages, userMessage],
+                };
+            }
+            return chat;
+        });
     });
   
     setInputValue('');
     setIsTyping(true);
   
-    setTimeout(() => {
-      const botMessage: Message = {
-        text: `I'm still in training, but I'm learning to answer questions like: "${text}". Soon, I'll be able to help with your learning journey!`,
-        sender: 'bot',
-      };
-      setChatHistory(prevHistory =>
-        prevHistory.map(chat =>
-          chat.id === activeChatId
-            ? { ...chat, messages: [...chat.messages, botMessage] }
-            : chat
-        )
-      );
-      setIsTyping(false);
-    }, 2000);
+    try {
+        const response = await chat({ message: text });
+        const botMessage: Message = {
+            text: response.message,
+            sender: 'bot',
+        };
+        setChatHistory(prevHistory =>
+            prevHistory.map(chat =>
+            chat.id === activeChatId
+                ? { ...chat, messages: [...chat.messages, botMessage] }
+                : chat
+            )
+        );
+    } catch (error) {
+        console.error("Failed to get response from AI", error);
+        const errorMessage: Message = {
+            text: "Sorry, I'm having trouble connecting right now. Please try again later.",
+            sender: 'bot',
+        };
+        setChatHistory(prevHistory =>
+            prevHistory.map(chat =>
+            chat.id === activeChatId
+                ? { ...chat, messages: [...chat.messages, errorMessage] }
+                : chat
+            )
+        );
+    } finally {
+        setIsTyping(false);
+    }
   }
 
   const handleSendMessage = () => {
@@ -176,12 +214,20 @@ export default function ChatbotPage() {
     
     if (activeChatId === chatToDelete) {
         if (updatedHistory.length > 0) {
-            setActiveChatId(updatedHistory[0].id);
+            const newActiveId = updatedHistory[0].id;
+            setActiveChatId(newActiveId);
+            localStorage.setItem('activeChatId', newActiveId);
         } else {
             handleNewChat();
         }
     }
     setChatToDelete(null);
+
+    // Also remove from local storage if it was the last chat
+    if (updatedHistory.length === 0) {
+        localStorage.removeItem('chatHistory');
+        localStorage.removeItem('activeChatId');
+    }
   };
 
   return (
