@@ -41,21 +41,22 @@ const otherAiTools = [
         isReady: false,
         poweredBy: "Google Gemini"
     },
-    {
-        icon: FileText,
-        title: "Executive Summary Generator",
-        subtitle: "Craft the Perfect Pitch",
-        description: "Distill your startup's vision into a concise, powerful executive summary. Our AI helps you structure your ideas for maximum impact on investors and partners.",
-        features: [
-            "Guided input fields",
-            "Professional, structured output",
-            "Instantly ready for your pitch deck"
-        ],
-        href: "/ai-tools",
-        isReady: true,
-        poweredBy: "Google Gemini"
-    }
 ];
+
+const executiveSummaryTool = {
+    icon: FileText,
+    title: "Executive Summary Generator",
+    subtitle: "Craft the Perfect Pitch",
+    description: "Distill your startup's vision into a concise, powerful executive summary. Our AI helps you structure your ideas for maximum impact on investors and partners.",
+    features: [
+        "Guided input fields",
+        "Professional, structured output",
+        "Instantly ready for your pitch deck"
+    ],
+    href: "/ai-tools",
+    isReady: true,
+    poweredBy: "Google Gemini"
+};
 
 export default function AiCoachingPage() {
   const heroImage = PlaceHolderImages.find((p) => p.id === 'feature-ai-coaching');
@@ -105,6 +106,42 @@ export default function AiCoachingPage() {
                             </Link>
                         </Button>
                     </div>
+                </Card>
+
+                <Card key={executiveSummaryTool.title} className="flex flex-col shadow-lg transform transition-transform hover:-translate-y-2 duration-300">
+                    <CardHeader>
+                        <div className="flex items-center justify-between">
+                            <div className="bg-primary/10 text-primary p-3 rounded-full">
+                                <executiveSummaryTool.icon className="h-7 w-7" />
+                            </div>
+                            {!executiveSummaryTool.isReady && <Badge variant="outline">Coming Soon</Badge>}
+                        </div>
+                        <CardTitle className="pt-4">{executiveSummaryTool.title}</CardTitle>
+                        <CardDescription>{executiveSummaryTool.subtitle}</CardDescription>
+                    </CardHeader>
+                    <CardContent className="flex-grow space-y-4">
+                        <p className="text-foreground/80">{executiveSummaryTool.description}</p>
+                        <div>
+                            <h4 className="font-semibold mb-2">Key Features:</h4>
+                            <ul className="space-y-2">
+                                {executiveSummaryTool.features.map((feature, index) => (
+                                    <li key={index} className="flex items-start gap-2">
+                                        <CheckCircle2 className="h-5 w-5 text-primary mt-0.5 flex-shrink-0" />
+                                        <span className="text-sm text-foreground/80">{feature}</span>
+                                    </li>
+                                ))}
+                            </ul>
+                        </div>
+                    </CardContent>
+                    <CardFooter className="flex-col items-start gap-4">
+                        <Badge variant="secondary">Powered by {executiveSummaryTool.poweredBy}</Badge>
+                        <Button asChild variant="outline" className="w-full" disabled={!executiveSummaryTool.isReady}>
+                            <Link href={executiveSummaryTool.isReady ? executiveSummaryTool.href : '#'}>
+                                {executiveSummaryTool.isReady ? 'Use Tool' : 'Coming Soon'}
+                                {executiveSummaryTool.isReady && <ArrowRight className="ml-2 h-4 w-4" />}
+                            </Link>
+                        </Button>
+                    </CardFooter>
                 </Card>
 
 
