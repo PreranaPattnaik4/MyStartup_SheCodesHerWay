@@ -1,10 +1,9 @@
-
 'use client';
 
 import React, { useState, useEffect, useRef } from 'react';
 import { Textarea } from '@/components/ui/textarea';
-import { Button, buttonVariants } from '@/components/ui/button';
-import { Bot, Send, User, Settings, Plus, MessageSquare, MoreHorizontal, Edit, Trash2 } from 'lucide-react';
+import { Button } from '@/components/ui/button';
+import { Send, Plus, Settings, MessageSquare, MoreHorizontal, Edit, Trash2, Bot, User } from 'lucide-react';
 import Header from '@/components/header';
 import { ScrollArea } from '@/components/ui/scroll-area';
 import { cn } from '@/lib/utils';
@@ -36,11 +35,12 @@ import {
 import { Label } from '@/components/ui/label';
 import { Input } from '@/components/ui/input';
 import LogoIcon from '@/components/logo-icon';
-
+import { buttonVariants } from '../ui/button';
 
 interface Message {
   text: string;
   sender: 'user' | 'bot';
+  type?: 'suggestion';
 }
 
 interface ChatSession {
@@ -54,12 +54,21 @@ const welcomeMessage: Message = {
     sender: 'bot',
 };
 
+const suggestionChips = [
+    "What is Sangini Udaan?",
+    "Courses & internships",
+    "Mentorship support",
+    "About SheCodesHerWay",
+];
+
 export default function ChatbotPage() {
   const [chatHistory, setChatHistory] = useState<ChatSession[]>([]);
   const [activeChatId, setActiveChatId] = useState<string | null>(null);
   const [inputValue, setInputValue] = useState('');
-  const scrollAreaRef = useRef<HTMLDivElement>(null);
+  const [isTyping, setIsTyping] = useState(false);
   const [isSidebarOpen, setIsSidebarOpen] = useState(true);
+  
+  const scrollAreaRef = useRef<HTMLDivElement>(null);
   const textareaRef = useRef<HTMLTextAreaElement>(null);
 
   // State for dialogs
@@ -67,32 +76,26 @@ export default function ChatbotPage() {
   const [chatToRename, setChatToRename] = useState<ChatSession | null>(null);
   const [newChatName, setNewChatName] = useState('');
 
-  const getActiveChat = () => {
-    if (!activeChatId) return null;
-    return chatHistory.find(chat => chat.id === activeChatId);
-  };
-  const activeChat = getActiveChat();
-  
+  const activeChat = chatHistory.find(chat => chat.id === activeChatId);
+
+  // Auto-resize textarea
   useEffect(() => {
     if (textareaRef.current) {
         textareaRef.current.style.height = 'auto';
-        textareaRef.current.style.height = `${textareaRef.current.scrollHeight}px`;
+        const scrollHeight = textareaRef.current.scrollHeight;
+        textareaRef.current.style.height = `${scrollHeight}px`;
     }
   }, [inputValue]);
-
-
-  useEffect(() => {
-    if (scrollAreaRef.current) {
-        const viewport = scrollAreaRef.current.querySelector('[data-radix-scroll-area-viewport]');
-        if (viewport) {
-            viewport.scrollTo({
-                top: viewport.scrollHeight,
-                behavior: 'smooth',
-            });
-        }
-    }
-  }, [activeChat?.messages]);
   
+  // Auto-scroll chat
+  useEffect(() => {
+    const viewport = scrollAreaRef.current?.querySelector('[data-radix-scroll-area-viewport]');
+    if (viewport) {
+      viewport.scrollTo({ top: viewport.scrollHeight, behavior: 'smooth' });
+    }
+  }, [activeChat?.messages, isTyping]);
+
+
   const handleNewChat = () => {
     const newChatId = Date.now().toString();
     const newChat: ChatSession = {
@@ -107,43 +110,39 @@ export default function ChatbotPage() {
   useEffect(() => {
     if (chatHistory.length === 0) {
       handleNewChat();
-    } else if (!activeChatId) {
+    } else if (!activeChatId && chatHistory.length > 0) {
       setActiveChatId(chatHistory[0].id);
     }
   }, []);
 
 
-  const handleSendMessage = () => {
-    if (!inputValue.trim() || !activeChatId) return;
-  
-    const userMessage: Message = { text: inputValue, sender: 'user' };
+  const sendMessage = (text: string) => {
+    if (!text.trim() || !activeChatId) return;
+
+    const userMessage: Message = { text, sender: 'user' };
   
     setChatHistory(prevHistory => {
-      let isFirstUserMessageInChat = false;
-      const updatedHistory = prevHistory.map(chat => {
+      const isFirstUserMessage = prevHistory.find(c => c.id === activeChatId)?.messages.filter(m => m.sender === 'user').length === 0;
+      
+      return prevHistory.map(chat => {
         if (chat.id === activeChatId) {
-          isFirstUserMessageInChat = chat.messages.filter(m => m.sender === 'user').length === 0;
-          const newTitle = isFirstUserMessageInChat 
-            ? inputValue.substring(0, 30) + (inputValue.length > 30 ? '...' : '') 
-            : chat.title;
-          
           return {
             ...chat,
-            title: newTitle,
+            title: isFirstUserMessage ? text.substring(0, 30) + (text.length > 30 ? '...' : '') : chat.title,
             messages: [...chat.messages, userMessage],
           };
         }
         return chat;
       });
-      return updatedHistory;
     });
   
     setInputValue('');
+    setIsTyping(true);
   
     // Simulate bot response
     setTimeout(() => {
       const botMessage: Message = {
-        text: 'This is a simulated response. In a real application, I would connect to an AI service to provide a helpful answer!',
+        text: `I'm still in training, but I'm learning to answer questions like: "${text}". Soon, I'll be able to help with your learning journey!`,
         sender: 'bot',
       };
       setChatHistory(prevHistory =>
@@ -153,7 +152,12 @@ export default function ChatbotPage() {
             : chat
         )
       );
-    }, 1000);
+      setIsTyping(false);
+    }, 2000);
+  }
+
+  const handleSendMessage = () => {
+    sendMessage(inputValue);
   };
 
   const handleRenameChat = () => {
@@ -186,12 +190,12 @@ export default function ChatbotPage() {
 
   return (
     <>
-    <div className="flex h-screen flex-col bg-white">
+    <div className="flex flex-col h-screen bg-background">
       <Header />
-      <main className="flex-1 flex overflow-hidden bg-white">
+      <div className="flex-1 flex overflow-hidden">
         <aside className={cn(
             "flex flex-col p-4 bg-white border-r transition-all duration-300",
-            isSidebarOpen ? "w-64" : "w-0 p-0 overflow-hidden"
+            isSidebarOpen ? "w-72" : "w-0 p-0 overflow-hidden"
         )}>
             <Button onClick={handleNewChat} className="w-full justify-start">
                 <Plus className="mr-2 h-4 w-4" />
@@ -204,11 +208,11 @@ export default function ChatbotPage() {
                     <div key={chat.id} className="group relative flex items-center">
                         <Button
                             variant={activeChatId === chat.id ? 'secondary' : 'ghost'}
-                            className="w-full justify-start truncate pr-8"
+                            className="w-full justify-start truncate pr-8 h-10"
                             onClick={() => setActiveChatId(chat.id)}
                         >
                             <MessageSquare className="mr-2 h-4 w-4 flex-shrink-0" />
-                            {chat.title}
+                            <span className="truncate">{chat.title}</span>
                         </Button>
                         <DropdownMenu>
                             <DropdownMenuTrigger asChild>
@@ -232,7 +236,7 @@ export default function ChatbotPage() {
                 ))}
               </div>
             </ScrollArea>
-            <div className="mt-auto">
+            <div className="mt-auto border-t -mx-4 pt-2 px-4">
                 <Button variant="ghost" className="w-full justify-start">
                     <Settings className="mr-2 h-4 w-4" />
                     Settings
@@ -240,52 +244,79 @@ export default function ChatbotPage() {
             </div>
         </aside>
         
-        <div className="flex-1 flex flex-col bg-white">
-          <div className="flex-1 relative flex flex-col">
-            <ScrollArea className="flex-grow w-full" ref={scrollAreaRef as any}>
-              <div className="max-w-3xl mx-auto w-full px-4 pb-24 pt-4">
-                  <div className="space-y-6">
-                  {activeChat?.messages.map((message, index) => (
-                    <div
-                        key={index}
-                        className={cn(
-                        'flex items-start gap-3',
-                        message.sender === 'user' ? 'justify-end' : 'justify-start'
-                        )}
-                    >
-                        {message.sender === 'bot' && (
-                        <Avatar className="h-8 w-8 border bg-primary text-primary-foreground p-1">
-                            <AvatarFallback className='bg-transparent'><LogoIcon/></AvatarFallback>
-                        </Avatar>
-                        )}
-                        <div
-                        className={cn(
-                            'max-w-[75%] rounded-lg p-3 text-sm',
-                            message.sender === 'user'
-                            ? 'bg-primary text-primary-foreground'
-                            : 'bg-secondary'
-                        )}
-                        >
-                        {message.text}
+        <main className="flex-1 flex flex-col bg-white">
+            <ScrollArea className="flex-grow" ref={scrollAreaRef as any}>
+                <div className="max-w-3xl mx-auto w-full px-4 pt-8 pb-4">
+                    <div className="space-y-6">
+                    {activeChat?.messages.map((message, index) => (
+                      <div
+                          key={index}
+                          className={cn(
+                          'flex items-start gap-3',
+                          message.sender === 'user' ? 'justify-end' : 'justify-start'
+                          )}
+                      >
+                          {message.sender === 'bot' && (
+                            <Avatar className="h-8 w-8 border bg-primary text-primary-foreground p-1 shadow-sm">
+                                <AvatarFallback className='bg-transparent'><LogoIcon/></AvatarFallback>
+                            </Avatar>
+                          )}
+                          <div
+                          className={cn(
+                              'max-w-[75%] rounded-xl p-3 text-sm shadow-sm',
+                              message.sender === 'user'
+                              ? 'bg-primary text-primary-foreground'
+                              : 'bg-secondary'
+                          )}
+                          >
+                          {message.text}
+                          </div>
+                           {message.sender === 'user' && (
+                            <Avatar className="h-8 w-8 border shadow-sm">
+                                <AvatarFallback><User size={18}/></AvatarFallback>
+                            </Avatar>
+                          )}
+                      </div>
+                    ))}
+                    {isTyping && (
+                         <div className='flex items-start gap-3 justify-start'>
+                             <Avatar className="h-8 w-8 border bg-primary text-primary-foreground p-1 shadow-sm">
+                                <AvatarFallback className='bg-transparent'><LogoIcon/></AvatarFallback>
+                            </Avatar>
+                            <div className="bg-secondary rounded-xl p-3 text-sm shadow-sm">
+                                <div className="flex items-center gap-1.5">
+                                    <span className="h-2 w-2 rounded-full bg-muted-foreground animate-pulse delay-0"></span>
+                                    <span className="h-2 w-2 rounded-full bg-muted-foreground animate-pulse delay-150"></span>
+                                    <span className="h-2 w-2 rounded-full bg-muted-foreground animate-pulse delay-300"></span>
+                                </div>
+                            </div>
                         </div>
-                         {message.sender === 'user' && (
-                        <Avatar className="h-8 w-8 border">
-                            <AvatarFallback><User size={20}/></AvatarFallback>
-                        </Avatar>
-                        )}
+                    )}
                     </div>
-                  ))}
-                  </div>
-              </div>
+
+                    {activeChat?.messages.filter(m => m.sender === 'user').length === 0 && (
+                        <div className="mt-8 pt-8 border-t">
+                            <h3 className="text-center text-sm font-semibold text-muted-foreground mb-4">Or try one of these suggestions:</h3>
+                            <div className="grid sm:grid-cols-2 gap-3">
+                                {suggestionChips.map(suggestion => (
+                                    <Button key={suggestion} variant="outline" className="justify-start h-auto py-2" onClick={() => sendMessage(suggestion)}>
+                                        {suggestion}
+                                    </Button>
+                                ))}
+                            </div>
+                        </div>
+                    )}
+
+                </div>
             </ScrollArea>
 
-            <div className="absolute bottom-0 w-full p-4 bg-gradient-to-t from-white to-transparent">
+            <div className="p-4 bg-white border-t">
               <div className="relative max-w-3xl mx-auto">
                 <div className='relative flex items-end'>
                     <Textarea
                       ref={textareaRef}
                       rows={1}
-                      placeholder="Ask anything..."
+                      placeholder="Ask EmpowerFly AI Coach anything..."
                       value={inputValue}
                       onChange={(e) => setInputValue(e.target.value)}
                       onKeyDown={(e) => {
@@ -294,23 +325,22 @@ export default function ChatbotPage() {
                             handleSendMessage();
                         }
                       }}
-                      className="pr-16 py-2 resize-none max-h-40 overflow-y-auto rounded-full shadow-md border-gray-300 focus:border-primary focus:ring-primary"
+                      className="pr-12 py-2 resize-none max-h-36 rounded-lg shadow-sm border-input"
                     />
                     <Button 
                         onClick={handleSendMessage} 
-                        disabled={!inputValue.trim()}
+                        disabled={!inputValue.trim() || isTyping}
                         size="icon"
-                        className="absolute right-2.5 bottom-1.5 rounded-full"
+                        className="absolute right-2 bottom-1.5 h-8 w-8 rounded-full"
                     >
-                        <Send className="w-5 h-5" />
+                        <Send className="w-4 h-4" />
                         <span className="sr-only">Send</span>
                     </Button>
                 </div>
               </div>
             </div>
-          </div>
-        </div>
-      </main>
+        </main>
+      </div>
     </div>
 
     {/* Rename Chat Dialog */}
@@ -359,5 +389,3 @@ export default function ChatbotPage() {
     </>
   );
 }
-
-    
