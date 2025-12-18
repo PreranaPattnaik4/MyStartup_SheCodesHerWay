@@ -35,19 +35,7 @@ export default function AboutProgram() {
           )}
         </div>
         <div>
-          <h2 className="font-headline text-4xl font-bold">{brand.programName}</h2>
-          <p className="mt-4 text-2xl text-primary italic">
-            “{brand.programTagline}”
-          </p>
-          <div className="w-24 h-1 bg-primary my-4"></div>
-          <div className="space-y-4 text-foreground/80 text-lg">
-            <p>
-              The flagship program of SheCodesHerWay, designed to help women rise with confidence, mentorship, and creativity — whether in tech or in art, innovation, or leadership.
-            </p>
-            <p className="font-semibold text-foreground/90 pt-4">
-              Because when one woman takes flight, she inspires a thousand more to soar. 🌸
-            </p>
-          </div>
+         
         </div>
       </div>
     </section>
