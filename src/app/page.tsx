@@ -17,6 +17,7 @@ import Link from 'next/link';
 import { brand } from '@/lib/brand';
 import CommunityVision from '@/components/home/community-vision';
 import { Button } from '@/components/ui/button';
+import AiPoweredSupport from '@/components/home/ai-powered-support';
 
 export default function Home() {
   return (
@@ -35,6 +36,11 @@ export default function Home() {
             <div className="rounded-xl py-12 relative overflow-hidden">
                 <div className="absolute inset-0 -z-10 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-primary/10 via-white/0 to-white/0"></div>
                 <WhatWeOffer />
+            </div>
+            <Separator />
+            <div className="rounded-xl py-12 relative overflow-hidden">
+                <div className="absolute inset-0 -z-10 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-primary/10 via-white/0 to-white/0"></div>
+                <AiPoweredSupport />
             </div>
             <Separator />
             <div id="startup-school" className="rounded-xl py-12 relative overflow-hidden">
