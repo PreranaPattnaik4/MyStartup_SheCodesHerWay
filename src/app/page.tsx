@@ -105,8 +105,7 @@ export default function Home() {
             </p>
             <Button asChild size="lg" className="mt-8">
               <Link href="/partner">
-                <Handshake className="mr-2 h-5 w-5" />
-                Become a Mentor Today
+                Join the Movement
               </Link>
             </Button>
           </div>
