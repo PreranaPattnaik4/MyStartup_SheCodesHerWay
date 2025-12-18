@@ -66,7 +66,7 @@ export default function CommunityVision() {
                             <CardHeader>
                                 <CardTitle className="flex items-center gap-3">
                                     <Users className="h-6 w-6 text-primary"/>
-                                    🌱 Early Community Voices
+                                    Early Community Voices
                                 </CardTitle>
                             </CardHeader>
                             <CardContent className="flex-grow flex flex-col justify-between pt-4">
@@ -91,7 +91,7 @@ export default function CommunityVision() {
                            <CardHeader>
                                 <CardTitle className="flex items-center gap-3">
                                     <Sparkles className="h-6 w-6 text-primary"/>
-                                     🌷 Why SheCodesHerWay Was Created
+                                     Why SheCodesHerWay Was Created
                                 </CardTitle>
                             </CardHeader>
                             <CardContent className="flex-grow flex flex-col space-y-4 text-foreground/90 pt-4">
@@ -109,7 +109,7 @@ export default function CommunityVision() {
                             <CardHeader>
                                 <CardTitle className="flex items-center gap-3">
                                     <Target className="h-6 w-6 text-primary"/>
-                                     🌍 Our Impact — In Progress
+                                     Our Impact — In Progress
                                 </CardTitle>
                             </CardHeader>
                             <CardContent className="flex-grow flex flex-col space-y-4">
@@ -132,7 +132,7 @@ export default function CommunityVision() {
                              <CardHeader>
                                 <CardTitle className="flex items-center gap-3">
                                     <TrendingUp className="h-6 w-6 text-primary"/>
-                                    📊 Early Commitment Metrics
+                                    Early Commitment Metrics
                                 </CardTitle>
                             </CardHeader>
                             <CardContent className="flex-grow flex flex-col pt-4">
@@ -156,7 +156,7 @@ export default function CommunityVision() {
                            <CardHeader>
                                 <CardTitle className="flex items-center gap-3">
                                     <Route className="h-6 w-6 text-primary"/>
-                                     🛤️ The Journey We Enable
+                                     The Journey We Enable
                                 </CardTitle>
                             </CardHeader>
                             <CardContent className="flex-grow flex flex-col space-y-4 pt-4">
@@ -179,7 +179,7 @@ export default function CommunityVision() {
                             <CardHeader>
                                 <CardTitle className="flex items-center gap-3">
                                     <Heart className="h-6 w-6 text-primary"/>
-                                    🤍 A Note on Our Approach
+                                    A Note on Our Approach
                                 </CardTitle>
                             </CardHeader>
                             <CardContent className="flex-grow flex flex-col items-center justify-center text-center space-y-4 pt-4">
