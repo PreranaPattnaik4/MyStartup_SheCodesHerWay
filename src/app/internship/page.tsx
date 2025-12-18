@@ -10,6 +10,7 @@ import { Separator } from '@/components/ui/separator';
 import { Laptop, Milestone, Feather, Globe, Users, Award, Briefcase, Bot, Megaphone, Search, HeartHandshake, Calendar, Clock, School, Gift, DollarSign } from 'lucide-react';
 import { Badge } from '@/components/ui/badge';
 import Faq from '@/components/faq';
+import ProgramOverview from '@/components/home/program-overview';
 
 const aboutIcons = [
     { icon: Laptop, text: 'Learning' },
@@ -96,6 +97,10 @@ export default function InternshipPage() {
                                 </div>
                             </div>
                         </section>
+
+                        <ProgramOverview />
+
+                        <Separator />
 
                         <section>
                             <div className="text-center mb-12">
