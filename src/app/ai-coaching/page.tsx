@@ -62,20 +62,18 @@ export default function AiCoachingPage() {
 
         <section className="container mx-auto px-4 py-20 sm:px-6 lg:px-8">
             <div className="space-y-16">
-                <Card className="shadow-lg overflow-hidden grid md:grid-cols-2">
-                     <div className="relative min-h-[300px] md:min-h-full">
-                         {coachImage && (
-                            <Image
-                                src={coachImage.imageUrl}
-                                alt={coachImage.description}
-                                fill
-                                className="object-cover"
-                                data-ai-hint={coachImage.imageHint}
-                            />
-                        )}
-                        <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent md:bg-gradient-to-r"></div>
-                    </div>
-                    <div className="p-8 flex flex-col justify-center">
+                 <Card className="relative shadow-lg overflow-hidden min-h-[450px] flex items-center">
+                    {coachImage && (
+                        <Image
+                            src={coachImage.imageUrl}
+                            alt={coachImage.description}
+                            fill
+                            className="object-cover"
+                            data-ai-hint={coachImage.imageHint}
+                        />
+                    )}
+                    <div className="absolute inset-0 bg-gradient-to-r from-background/95 via-background/80 to-transparent"></div>
+                    <div className="relative p-8 md:p-12 md:w-3/5">
                         <div className="flex items-center gap-4 mb-4">
                             <div className="bg-primary/10 text-primary p-3 rounded-full">
                                 <MessageSquare className="h-7 w-7" />
@@ -83,10 +81,10 @@ export default function AiCoachingPage() {
                              <h2 className="font-headline text-3xl font-bold">EmpowerFly AI Coach</h2>
                         </div>
                        
-                        <p className="text-foreground/80 mb-6">
+                        <p className="text-foreground/80 mb-6 text-lg">
                             Your personal AI guide is here to help you navigate your journey. Ask questions about our programs, get advice on your career path, or brainstorm ideas for your next project. The EmpowerFly AI Coach is available 24/7 to provide support and guidance whenever you need it.
                         </p>
-                        <Button asChild className="w-fit">
+                        <Button asChild className="w-fit" size="lg">
                             <Link href="/chatbot">
                                 Chat with the Coach
                                 <ArrowRight className="ml-2 h-4 w-4" />
@@ -94,6 +92,7 @@ export default function AiCoachingPage() {
                         </Button>
                     </div>
                 </Card>
+
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
                     {otherAiTools.map((tool) => (
