@@ -44,13 +44,6 @@ const journeySteps = [
 ]
 
 export default function CommunityVision() {
-    const communityVoicesImage = PlaceHolderImages.find((p) => p.id === 'vision-community-voices');
-    const whyCreatedImage = PlaceHolderImages.find((p) => p.id === 'vision-why-created');
-    const communityImage = PlaceHolderImages.find((p) => p.id === 'feature-community');
-    const earlyMetricsImage = PlaceHolderImages.find((p) => p.id === 'vision-early-metrics');
-    const journeyImage = PlaceHolderImages.find((p) => p.id === 'vision-journey');
-    const ourApproachImage = PlaceHolderImages.find((p) => p.id === 'vision-our-approach');
-
   return (
     <section className="w-full py-16 bg-secondary/50">
         <div className="container mx-auto px-4">
@@ -77,12 +70,10 @@ export default function CommunityVision() {
                                 </CardTitle>
                             </CardHeader>
                             <CardContent className="flex-grow flex flex-col justify-between pt-4">
-                                {communityVoicesImage && (
-                                    <div className="relative h-40 w-full rounded-lg overflow-hidden mb-4">
-                                        <Image src={communityVoicesImage.imageUrl} alt={communityVoicesImage.description} fill className="object-cover" data-ai-hint={communityVoicesImage.imageHint} />
-                                    </div>
-                                )}
-                                <div className="space-y-4">
+                                <div className="flex-grow flex items-center justify-center text-primary/30">
+                                    <Quote className="h-24 w-24" />
+                                </div>
+                                <div className="space-y-4 mt-4">
                                     {testimonials.map(testimonial => (
                                         <blockquote key={testimonial.author} className="border-l-4 border-primary pl-4 italic text-sm">
                                             <p>"{testimonial.quote}"</p>
@@ -103,12 +94,10 @@ export default function CommunityVision() {
                                      🌷 Why SheCodesHerWay Was Created
                                 </CardTitle>
                             </CardHeader>
-                            <CardContent className="flex-grow space-y-4 text-foreground/90 pt-4">
-                                {whyCreatedImage && (
-                                    <div className="relative h-40 w-full rounded-lg overflow-hidden mb-4">
-                                        <Image src={whyCreatedImage.imageUrl} alt={whyCreatedImage.description} fill className="object-cover" data-ai-hint={whyCreatedImage.imageHint} />
-                                    </div>
-                                )}
+                            <CardContent className="flex-grow flex flex-col space-y-4 text-foreground/90 pt-4">
+                                <div className="flex-grow flex items-center justify-center text-primary/30">
+                                    <Library className="h-24 w-24" />
+                                </div>
                                 <p>SheCodesHerWay was created after witnessing talented, capable women stepping back from their dreams due to career breaks, lack of guidance, self-doubt, or life responsibilities.</p>
                                 <p className="font-semibold text-primary">SheCodesHerWay exists to bridge that gap. Not with pressure, but with mentorship, community, and belief.</p>
                             </CardContent>
@@ -123,12 +112,10 @@ export default function CommunityVision() {
                                      🌍 Our Impact — In Progress
                                 </CardTitle>
                             </CardHeader>
-                            <CardContent className="flex-grow space-y-4">
-                                {communityImage && (
-                                    <div className="relative h-40 w-full rounded-lg overflow-hidden mb-4">
-                                        <Image src={communityImage.imageUrl} alt={communityImage.description} fill className="object-cover" data-ai-hint={communityImage.imageHint} />
-                                    </div>
-                                )}
+                            <CardContent className="flex-grow flex flex-col space-y-4">
+                                <div className="flex-grow flex items-center justify-center text-primary/30">
+                                    <Milestone className="h-24 w-24" />
+                                </div>
                                 <p>We are currently preparing our first Sangini Udaan cohort. Our focus right now is not rapid scale, but strong foundations:</p>
                                 <ul className="list-disc list-inside space-y-2 text-sm text-foreground/80">
                                     <li>Listening deeply to our community</li>
@@ -148,13 +135,11 @@ export default function CommunityVision() {
                                     📊 Early Commitment Metrics
                                 </CardTitle>
                             </CardHeader>
-                            <CardContent className="flex-grow pt-4">
-                                {earlyMetricsImage && (
-                                    <div className="relative h-40 w-full rounded-lg overflow-hidden mb-4">
-                                        <Image src={earlyMetricsImage.imageUrl} alt={earlyMetricsImage.description} fill className="object-cover" data-ai-hint={earlyMetricsImage.imageHint} />
-                                    </div>
-                                )}
-                                <p className="mb-4 text-sm text-muted-foreground">While outcomes are still ahead, these early signals guide our direction:</p>
+                            <CardContent className="flex-grow flex flex-col pt-4">
+                                <div className="flex-grow flex items-center justify-center text-primary/30">
+                                    <TrendingUp className="h-24 w-24" />
+                                </div>
+                                <p className="my-4 text-sm text-muted-foreground">While outcomes are still ahead, these early signals guide our direction:</p>
                                 <ul className="space-y-2 list-disc list-inside text-sm">
                                     <li>Growing number of women signing up</li>
                                     <li>Active blog contributors sharing their voices</li>
@@ -174,12 +159,10 @@ export default function CommunityVision() {
                                      🛤️ The Journey We Enable
                                 </CardTitle>
                             </CardHeader>
-                            <CardContent className="flex-grow space-y-4 pt-4">
-                                 {journeyImage && (
-                                    <div className="relative h-40 w-full rounded-lg overflow-hidden mb-4">
-                                        <Image src={journeyImage.imageUrl} alt={journeyImage.description} fill className="object-cover" data-ai-hint={journeyImage.imageHint} />
-                                    </div>
-                                )}
+                            <CardContent className="flex-grow flex flex-col space-y-4 pt-4">
+                                <div className="flex-grow flex items-center justify-center text-primary/30">
+                                    <Route className="h-24 w-24" />
+                                </div>
                                 {journeySteps.map(step => (
                                     <div key={step.stage}>
                                         <h4 className="font-semibold">{step.stage}</h4>
@@ -200,11 +183,9 @@ export default function CommunityVision() {
                                 </CardTitle>
                             </CardHeader>
                             <CardContent className="flex-grow flex flex-col items-center justify-center text-center space-y-4 pt-4">
-                                {ourApproachImage && (
-                                    <div className="relative h-40 w-full rounded-lg overflow-hidden mb-4">
-                                        <Image src={ourApproachImage.imageUrl} alt={ourApproachImage.description} fill className="object-cover" data-ai-hint={ourApproachImage.imageHint} />
-                                    </div>
-                                )}
+                                <div className="flex-grow flex items-center justify-center text-primary/30">
+                                    <Eye className="h-24 w-24" />
+                                </div>
                                <p className="font-headline text-xl text-primary">"We believe honesty builds stronger platforms than hype."</p>
                                <div className="text-lg">
                                  <p>We are early. We are intentional. And we are building something real.</p>
@@ -221,5 +202,7 @@ export default function CommunityVision() {
     </section>
   );
 }
+
+    
 
     
