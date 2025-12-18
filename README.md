@@ -1,4 +1,5 @@
-# SheCodesHerWay 🌸
+
+# SheCodesHerWay 
 
 [**View the Full Project Completion Report**](./PROJECT_REPORT.md)
 
@@ -6,7 +7,7 @@
 
 This is the official web application for **SheCodesHerWay**, a women-led startup dedicated to empowering women through digital learning, mentorship, and community. The platform is built with Next.js, React, Tailwind CSS, and Firebase.
 
-## ✨ Features
+##  Features
 
 - **Empowerment Programs:** Information and application forms for the flagship "Sangini Udaan" program and various learning tracks.
 - **Community Forum:** A space for users to connect, collaborate, and grow with peers and mentors.
@@ -15,7 +16,7 @@ This is the official web application for **SheCodesHerWay**, a women-led startup
 - **User Authentication:** Secure sign-up and login functionality powered by Firebase Authentication.
 - **Mentorship Platform:** A portal for passionate professionals to apply as mentors and guide the next generation.
 
-## 🚀 Tech Stack
+##  Tech Stack
 
 - **Framework:** [Next.js](https://nextjs.org/) (with App Router)
 - **UI:** [React](https://react.dev/) & [TypeScript](https://www.typescriptlang.org/)
@@ -23,7 +24,7 @@ This is the official web application for **SheCodesHerWay**, a women-led startup
 - **Generative AI:** [Genkit](https://firebase.google.com/docs/genkit)
 - **Backend & Authentication:** [Firebase](https://firebase.google.com/) (Firestore, Firebase Authentication)
 
-## 🛠️ Getting Started
+##  Getting Started
 
 To run the project locally, follow these steps:
 
