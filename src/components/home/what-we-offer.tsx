@@ -1,5 +1,5 @@
 
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
 import { GraduationCap, Bot, Users, HeartHandshake, CheckCircle2, Rocket, BrainCircuit, Lightbulb } from 'lucide-react';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
@@ -21,19 +21,25 @@ const otherOfferings = [
         icon: GraduationCap,
         title: "Courses",
         subtitle: "WHAT YOU WILL GET",
-        description: "Big ideas. Beautifully simple. Timeless wisdom, curated into clear, actionable frameworks. Short lessons. Story-driven. AI-enhanced."
+        description: "Big ideas. Beautifully simple. Timeless wisdom, curated into clear, actionable frameworks. Short lessons. Story-driven. AI-enhanced.",
+        href: "/courses",
+        cta: "Explore Courses"
     },
     {
         icon: Bot,
         title: "AI Coaching",
         subtitle: "WHAT YOU WILL GET",
-        description: "Your teacher, On demand. Ask questions. Get voice answers. It's your own coach in your pocket, powered by AI."
+        description: "Your teacher, On demand. Ask questions. Get voice answers. It's your own coach in your pocket, powered by AI.",
+        href: "/ai-coaching",
+        cta: "Discover AI Tools"
     },
     {
         icon: Users,
         title: "Community",
         subtitle: "WHAT YOU WILL GET",
-        description: "Clarity, loves company. Join a community of thoughtful doers designing lives with purpose. Deep reflections. Honest feedback. Shared rituals."
+        description: "Clarity, loves company. Join a community of thoughtful doers designing lives with purpose. Deep reflections. Honest feedback. Shared rituals.",
+        href: "/community",
+        cta: "Join the Community"
     }
 ]
 
@@ -92,7 +98,7 @@ export default function WhatWeOffer() {
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
                 {otherOfferings.map((offering) => (
-                    <Card key={offering.title} className="text-center shadow-md transform transition-transform hover:-translate-y-2 duration-300 bg-white">
+                    <Card key={offering.title} className="text-center shadow-md transform transition-transform hover:-translate-y-2 duration-300 bg-white flex flex-col">
                         <CardHeader className="items-center">
                             <div className="rounded-full bg-primary/10 p-4 text-primary">
                                 <offering.icon className="h-8 w-8" />
@@ -100,9 +106,14 @@ export default function WhatWeOffer() {
                             <CardTitle className="font-headline text-3xl pt-4">{offering.title}</CardTitle>
                             <CardDescription>{offering.subtitle}</CardDescription>
                         </CardHeader>
-                        <CardContent>
+                        <CardContent className="flex-grow">
                             <p className="text-foreground/80">{offering.description}</p>
                         </CardContent>
+                        <CardFooter className="justify-center">
+                            <Button asChild variant="outline">
+                                <Link href={offering.href}>{offering.cta}</Link>
+                            </Button>
+                        </CardFooter>
                     </Card>
                 ))}
             </div>
