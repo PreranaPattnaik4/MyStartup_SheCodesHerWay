@@ -1,3 +1,4 @@
+
 'use client';
 
 import { CheckCircle2 } from "lucide-react";
@@ -36,23 +37,40 @@ const optionalPrograms = [
 export default function ProgramFlow() {
     const [lineHeight, setLineHeight] = useState(0);
     const timelineRef = useRef<HTMLDivElement>(null);
+    const itemsRef = useRef<(HTMLDivElement | null)[]>([]);
 
     useEffect(() => {
         const handleScroll = () => {
             if (timelineRef.current) {
-                const { top, height } = timelineRef.current.getBoundingClientRect();
+                const { top: sectionTop, height: sectionHeight } = timelineRef.current.getBoundingClientRect();
                 const screenHeight = window.innerHeight;
-
-                // Start animating when the top of the section is a bit into the viewport
-                const start = Math.max(0, screenHeight - top);
-                const scrollableHeight = height + screenHeight;
                 
-                const progress = Math.min(1, start / scrollableHeight);
-                setLineHeight(progress * height);
+                const firstItem = itemsRef.current[0];
+                const lastItem = itemsRef.current[itemsRef.current.length - 1];
+
+                if (!firstItem || !lastItem) return;
+
+                const firstItemTop = firstItem.getBoundingClientRect().top;
+                const lastItemTop = lastItem.getBoundingClientRect().top;
+
+                // Calculate the total animation distance
+                const totalAnimationDistance = lastItemTop - firstItemTop;
+
+                // How far has the user scrolled into the animation path
+                const scrollIntoAnimation = firstItemTop - sectionTop;
+                
+                // Calculate progress
+                let progress = (window.scrollY + screenHeight - (timelineRef.current.offsetTop + firstItem.offsetTop)) / totalAnimationDistance;
+                
+                progress = Math.max(0, Math.min(1, progress));
+                
+                const finalHeight = lastItem.offsetTop - firstItem.offsetTop;
+
+                setLineHeight(progress * finalHeight);
             }
         };
 
-        window.addEventListener("scroll", handleScroll);
+        window.addEventListener("scroll", handleScroll, { passive: true });
         handleScroll(); // Initial check
 
         return () => window.removeEventListener("scroll", handleScroll);
@@ -60,7 +78,7 @@ export default function ProgramFlow() {
 
     return (
         <section className="bg-background py-20 px-4 rounded-2xl">
-            <div className="container mx-auto" ref={timelineRef}>
+            <div className="container mx-auto">
                 <div className="text-center mb-16">
                     <h2 className="font-headline text-4xl font-bold text-foreground">
                         🚀 Flagship Program: Sangini Udaan – Women Empowerment Initiative
@@ -72,7 +90,7 @@ export default function ProgramFlow() {
                     </p>
                 </div>
 
-                <div className="relative">
+                <div className="relative" ref={timelineRef}>
                     {/* The vertical background line */}
                     <div className="absolute left-1/2 -translate-x-1/2 h-full w-0.5 bg-border hidden md:block" aria-hidden="true"></div>
                     {/* The animated vertical line */}
@@ -82,11 +100,15 @@ export default function ProgramFlow() {
                         aria-hidden="true"
                     ></div>
 
-                    <div className="space-y-12 md:space-y-0">
+                    <div className="space-y-16 md:space-y-0">
                         {timelineContent.map((item, index) => (
-                            <div key={index} className="relative flex items-center md:items-start flex-col md:flex-row">
+                            <div 
+                                key={index} 
+                                ref={el => itemsRef.current[index] = el}
+                                className="relative flex items-center md:items-start flex-col md:flex-row md:mt-12 first:mt-0"
+                            >
                                 <div className="md:hidden absolute left-0 h-full w-0.5 bg-border" aria-hidden="true"></div>
-                                <div className="md:w-1/2 flex justify-start md:justify-end md:pr-8 order-1 md:order-none">
+                                <div className="md:w-1/2 flex justify-start md:justify-end md:pr-12 order-1 md:order-none">
                                     {index % 2 === 0 && (
                                          <div className="w-full md:max-w-md p-6 bg-card border rounded-lg shadow-lg">
                                             <h3 className="font-headline text-2xl text-foreground">{item.title}</h3>
@@ -102,7 +124,7 @@ export default function ProgramFlow() {
                                     <div className="h-3 w-3 rounded-full bg-primary"></div>
                                 </div>
 
-                                <div className="md:w-1/2 flex justify-start pl-8 order-2 mt-8 md:mt-0">
+                                <div className="md:w-1/2 flex justify-start md:pl-12 order-2 mt-8 md:mt-0">
                                    {index % 2 !== 0 && (
                                         <div className="w-full md:max-w-md p-6 bg-card border rounded-lg shadow-lg">
                                             <h3 className="font-headline text-2xl text-foreground">{item.title}</h3>
@@ -110,7 +132,7 @@ export default function ProgramFlow() {
                                         </div>
                                    )}
                                    {/* Mobile-only card */}
-                                   <div className="md:hidden w-full max-w-md p-6 bg-card border rounded-lg shadow-lg">
+                                   <div className="md:hidden w-full max-w-md p-6 bg-card border rounded-lg shadow-lg ml-8">
                                         <h3 className="font-headline text-2xl text-foreground">{item.title}</h3>
                                         <p className="mt-2 text-foreground/80">{item.description}</p>
                                     </div>
