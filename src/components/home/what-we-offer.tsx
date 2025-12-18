@@ -15,6 +15,27 @@ const keyHighlights = [
     { icon: Rocket, text: "A clear path from confusion to confidence and independence" },
 ];
 
+const otherOfferings = [
+    {
+        icon: GraduationCap,
+        title: "Courses",
+        subtitle: "WHAT YOU WILL GET",
+        description: "Big ideas. Beautifully simple. Timeless wisdom, curated into clear, actionable frameworks. Short lessons. Story-driven. AI-enhanced."
+    },
+    {
+        icon: Bot,
+        title: "AI Coaching",
+        subtitle: "WHAT YOU WILL GET",
+        description: "Your teacher, On demand. Ask questions. Get voice answers. It's your own coach in your pocket, powered by AI."
+    },
+    {
+        icon: Users,
+        title: "Community",
+        subtitle: "WHAT YOU WILL GET",
+        description: "Clarity, loves company. Join a community of thoughtful doers designing lives with purpose. Deep reflections. Honest feedback. Shared rituals."
+    }
+]
+
 export default function WhatWeOffer() {
     const cardImage = PlaceHolderImages.find((p) => p.id === 'feature-community');
 
@@ -23,7 +44,7 @@ export default function WhatWeOffer() {
              <div className="text-center mb-12">
                 <h2 className="font-headline text-4xl font-bold">What We Offer</h2>
             </div>
-            <Card className="w-full max-w-6xl mx-auto shadow-lg overflow-hidden border-primary/20 bg-secondary/30">
+            <Card className="w-full max-w-6xl mx-auto shadow-lg overflow-hidden border-primary/20 bg-secondary/30 mb-12">
                 <div className="grid md:grid-cols-2">
                     <div className="p-8 md:p-12 flex flex-col justify-center">
                         <div>
@@ -67,6 +88,23 @@ export default function WhatWeOffer() {
                     </div>
                 </div>
             </Card>
+
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+                {otherOfferings.map((offering) => (
+                    <Card key={offering.title} className="text-center shadow-md transform transition-transform hover:-translate-y-2 duration-300">
+                        <CardHeader className="items-center">
+                            <div className="rounded-full bg-primary/10 p-4 text-primary">
+                                <offering.icon className="h-8 w-8" />
+                            </div>
+                            <CardTitle className="font-headline text-3xl pt-4">{offering.title}</CardTitle>
+                            <CardDescription>{offering.subtitle}</CardDescription>
+                        </CardHeader>
+                        <CardContent>
+                            <p className="text-foreground/80">{offering.description}</p>
+                        </CardContent>
+                    </Card>
+                ))}
+            </div>
         </section>
     );
 }
