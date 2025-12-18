@@ -16,9 +16,10 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from '@/components/ui/form';
 import { useToast } from '@/components/ui/use-toast';
 import Link from 'next/link';
+import { brand } from '@/lib/brand';
 
 const programPaths = [
-  { id: 'all-in-one', label: 'Complete Sangini Udaan Journey (All-in-One Track)', description: 'Holistic growth, independence, and leadership.' },
+  { id: 'all-in-one', label: `Complete ${brand.programName} Journey (All-in-One Track)`, description: 'Holistic growth, independence, and leadership.' },
   { id: 'tech', label: 'For Women in Tech Journeys', description: 'Coding, digital tools, AI basics, career confidence.' },
   { id: 'startup', label: 'For Women Aspiring to Start Startups or Businesses', description: 'Startup building, business modeling, entrepreneurship bootcamps.' },
   { id: 'creative', label: 'For Creative & Content Entrepreneurs', description: 'Blogging, book publishing, Canva editing, art creation, WordPress.' },
@@ -71,7 +72,7 @@ export default function ApplyPage() {
       <main className="flex-1">
         <section className="bg-secondary py-16">
           <div className="container mx-auto px-4 text-center">
-            <h1 className="font-headline text-4xl font-bold md:text-5xl">Apply for Sangini Udaan</h1>
+            <h1 className="font-headline text-4xl font-bold md:text-5xl">Apply for {brand.programName}</h1>
             <p className="mt-4 max-w-2xl mx-auto text-lg text-foreground/80">
               Choose your path and begin your journey to learn, lead, and rise with SheCodesHerWay.
             </p>
@@ -152,7 +153,7 @@ export default function ApplyPage() {
 
                     <Card>
                       <CardHeader>
-                        <CardTitle className="text-xl">Select Your Preferred Sangini Udaan Path</CardTitle>
+                        <CardTitle className="text-xl">Select Your Preferred {brand.programName} Path</CardTitle>
                       </CardHeader>
                       <CardContent>
                         <FormField

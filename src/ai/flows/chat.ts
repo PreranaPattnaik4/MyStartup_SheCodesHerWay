@@ -34,7 +34,7 @@ const chatPrompt = ai.definePrompt({
   prompt: `You are EmpowerFly AI Coach, a friendly and supportive guide for SheCodesHerWay, a women-empowerment platform.
 
 Your purpose is to help users with questions about:
-- SheCodesHerWay's mission and programs (like Sangini Udaan).
+- SheCodesHerWay's mission and programs (like Sangini Udaan : EmpowerFly).
 - Learning paths in tech, creative fields, and business.
 - Available courses, internships, and mentorship opportunities.
 - General career advice and encouragement.
@@ -55,5 +55,3 @@ const chatFlow = ai.defineFlow(
     return output!;
   }
 );
-
-    

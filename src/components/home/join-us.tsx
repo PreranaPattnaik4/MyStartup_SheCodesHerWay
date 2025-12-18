@@ -6,13 +6,14 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { UserPlus, Handshake } from "lucide-react"
 import Link from "next/link"
+import { brand } from "@/lib/brand"
 
 export default function JoinUs() {
  
   return (
     <section>
         <div className="text-center mb-10">
-            <h2 className="font-headline text-3xl font-bold md:text-4xl">Join the Movement</h2>
+            <h2 className="font-headline text-3xl font-bold md-text-4xl">Join the Movement</h2>
             <p className="mt-4 max-w-2xl mx-auto text-lg text-foreground/80">
                 Whether you're a student, professional, or an organization, there's a place for you at SheCodesHerWay.
             </p>
@@ -26,12 +27,12 @@ export default function JoinUs() {
         <TabsContent value="enroll" className="mt-8">
             <Card className="max-w-2xl mx-auto shadow-lg">
                 <CardHeader>
-                <CardTitle>Enroll in Sangini Udaan</CardTitle>
+                <CardTitle>Enroll in {brand.programName}</CardTitle>
                 <CardDescription>Ready to begin your journey of empowerment? Apply now!</CardDescription>
                 </CardHeader>
                 <CardContent className="text-center">
                     <Button asChild size="lg">
-                        <Link href="/apply">Apply to Sangini Udaan</Link>
+                        <Link href="/apply">Apply to {brand.programName}</Link>
                     </Button>
                 </CardContent>
             </Card>

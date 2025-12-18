@@ -37,6 +37,7 @@ import { Label } from '@/components/ui/label';
 import { Input } from '@/components/ui/input';
 import LogoIcon from '@/components/logo-icon';
 import { chat } from '@/ai/flows/chat';
+import { brand } from '@/lib/brand';
 
 interface Message {
   text: string;
@@ -55,7 +56,7 @@ const welcomeMessage: Message = {
 };
 
 const suggestionChips = [
-    "What is Sangini Udaan?",
+    `What is ${brand.programName}?`,
     "Courses & internships",
     "Mentorship support",
     "About SheCodesHerWay",
@@ -435,5 +436,3 @@ export default function ChatbotPage() {
     </>
   );
 }
-
-    

@@ -73,7 +73,7 @@ export default function SanginiUdaanPage() {
                     <div className="absolute inset-0 flex items-center justify-center">
                         <div className="container mx-auto px-4 text-center text-foreground">
                             <h1 className="font-headline text-4xl font-extrabold tracking-tight drop-shadow-md sm:text-5xl md:text-6xl">
-                                Sangini Udaan
+                                Sangini Udaan : EmpowerFly
                             </h1>
                             <p className="mt-2 text-2xl font-medium drop-shadow-sm md:text-3xl">Empower Her to Fly Beyond Limits.</p>
                             <p className="mt-6 max-w-3xl mx-auto text-lg font-medium drop-shadow-sm md:text-xl">
@@ -166,14 +166,14 @@ export default function SanginiUdaanPage() {
                                 <h2 className="text-center text-lg font-semibold text-primary"> Recommended:</h2>
                                 <Card className="mt-4 max-w-3xl mx-auto shadow-lg transform transition-transform hover:scale-105 duration-300">
                                     <CardHeader>
-                                        <CardTitle className="font-headline text-3xl">Complete Sangini Udaan Journey (All-in-One Track)</CardTitle>
+                                        <CardTitle className="font-headline text-3xl">Complete {brand.programName} Journey (All-in-One Track)</CardTitle>
                                     </CardHeader>
                                     <CardContent>
                                         <p className="text-lg text-foreground/80">
                                             Experience the entire empowerment journey — tech learning, business building, creativity, and emotional growth — all in one full program.  Best for women who want holistic growth, independence, and leadership.
                                         </p>
                                         <Button asChild size="lg" className="mt-6">
-                                            <Link href="/apply">Enroll in Sangini Udaan All-in-One</Link>
+                                            <Link href="/apply">Enroll in {brand.programName} All-in-One</Link>
                                         </Button>
                                     </CardContent>
                                 </Card>
@@ -202,7 +202,7 @@ export default function SanginiUdaanPage() {
 
                             <div className="text-center mt-16">
                                 <p className="font-headline text-2xl">
-                                     Choose your path and begin your journey to learn, lead, and rise with SheCodesHerWay. 🌷
+                                     Choose your path and begin your journey to learn, lead, and rise with SheCodesHerWay.
                                 </p>
                             </div>
                         </section>
@@ -218,7 +218,7 @@ export default function SanginiUdaanPage() {
                               <div className="text-center mb-10">
                                 <h2 className="font-headline text-3xl font-bold md:text-4xl">Frequently Asked Questions</h2>
                                 <p className="mt-4 max-w-2xl mx-auto text-lg text-foreground/80">
-                                  Your questions about the Sangini Udaan program, answered.
+                                  Your questions about the {brand.programName} program, answered.
                                 </p>
                               </div>
                               <Accordion type="single" collapsible className="w-full max-w-3xl mx-auto">

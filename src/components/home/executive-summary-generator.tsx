@@ -173,7 +173,7 @@ export default function ExecutiveSummaryGenerator() {
                     <FormItem>
                       <FormLabel>Flagship Program</FormLabel>
                       <FormControl>
-                        <Input placeholder="e.g., Sangini Udaan" {...field} />
+                        <Input placeholder={`e.g., ${brand.programName}`} {...field} />
                       </FormControl>
                       <FormMessage />
                     </FormItem>

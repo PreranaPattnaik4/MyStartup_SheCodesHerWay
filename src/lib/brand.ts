@@ -3,7 +3,7 @@ export const brand = {
   appName: "EmpowerFly",
   mission: "Build Your Path. Lead Your Way. Leave Your Mark.",
   vision: "To create a world where every woman has the opportunity, resources, and confidence to fly beyond limits.",
-  programName: "Sangini Udaan",
+  programName: "Sangini Udaan : EmpowerFly",
   programTagline: "Empower Her to Fly Beyond Limits.",
   founder: {
     name: "Prerana Kailash Pattnaik",

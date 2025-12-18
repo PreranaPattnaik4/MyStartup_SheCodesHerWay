@@ -6,6 +6,7 @@ import { Button } from '@/components/ui/button';
 import Link from 'next/link';
 import Image from 'next/image';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
+import { brand } from '@/lib/brand';
 
 const keyHighlights = [
     { icon: BrainCircuit, text: "Skill-building across tech, creativity, business, and leadership" },
@@ -50,11 +51,11 @@ export default function WhatWeOffer() {
                         <div>
                             <p className="text-sm font-semibold text-primary uppercase tracking-wider">Women Empowerment Program</p>
                             <h3 className="font-headline text-3xl md:text-4xl font-bold mt-2">
-                                Sangini Udaan : EmpowerFly
+                                {brand.programName}
                             </h3>
                             <Badge className="mt-3">Founding Cohort — Launching Soon</Badge>
                              <p className="mt-4 text-lg text-foreground/90 font-semibold italic">
-                                “Empower Her to Fly Beyond Limits.”
+                                “{brand.programTagline}”
                             </p>
                             <p className="mt-4 text-foreground/80">
                                 A supportive, women-led empowerment journey designed to help you rise with confidence and fly beyond limits.

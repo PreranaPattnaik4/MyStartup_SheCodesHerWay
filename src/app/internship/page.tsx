@@ -11,6 +11,7 @@ import { Laptop, Milestone, Feather, Globe, Users, Award, Briefcase, Bot, Megaph
 import { Badge } from '@/components/ui/badge';
 import Faq from '@/components/faq';
 import ProgramOverview from '@/components/home/program-overview';
+import { brand } from '@/lib/brand';
 
 const aboutIcons = [
     { icon: Laptop, text: 'Learning' },
@@ -182,7 +183,7 @@ export default function InternshipPage() {
                                 <p className="mt-4 text-lg text-foreground/80">Become part of a digital sisterhood of learners and leaders, where you can connect, collaborate, and grow. Participate in exclusive events like the annual Udaan Summit.</p>
                                 <div className="flex justify-center md:justify-start gap-4 mt-6">
                                     <span className="font-semibold font-headline text-lg text-primary">Udaan Summit</span>
-                                    <span className="font-semibold font-headline text-lg text-primary">Sangini Udaan</span>
+                                    <span className="font-semibold font-headline text-lg text-primary">{brand.programName}</span>
                                 </div>
                             </div>
                             {communityImage && (

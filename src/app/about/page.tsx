@@ -81,10 +81,10 @@ export default function AboutPage() {
 
                         <section className="max-w-4xl mx-auto">
                             <div className="text-center">
-                                <h2 className="font-headline text-3xl font-bold md:text-4xl">Our Flagship Program: Sangini Udaan</h2>
+                                <h2 className="font-headline text-3xl font-bold md:text-4xl">Our Flagship Program: {brand.programName}</h2>
                                 <p className="mt-4 text-2xl text-primary italic">“Empower Her to Fly Beyond Limits.”</p>
                                 <p className="mt-6 text-lg text-foreground/80">
-                                    Sangini Udaan is the heart of SheCodesHerWay—a guided mentorship and growth journey created to help women build skills, confidence, and clarity across technology, creativity, business, and leadership. This is more than a learning experience; it is a women-led, supportive journey where growth is intentional, guidance is genuine, and every woman is encouraged to move forward at her own pace.
+                                    Sangini Udaan : EmpowerFly is the heart of SheCodesHerWay—a guided mentorship and growth journey created to help women build skills, confidence, and clarity across technology, creativity, business, and leadership. This is more than a learning experience; it is a women-led, supportive journey where growth is intentional, guidance is genuine, and every woman is encouraged to move forward at her own pace.
                                 </p>
                                 <Button asChild size="lg" className="mt-8">
                                     <Link href="/sangini-udaan">Learn More About the Program</Link>
@@ -135,7 +135,7 @@ export default function AboutPage() {
                              <h2 className="font-headline text-3xl font-bold text-center">A Note of Gratitude</h2>
                              <div className="prose dark:prose-invert max-w-none mx-auto mt-6">
                                 <p>SheCodesHerWay stands today because of a dream—your dream, Prerana. You created a platform where women can discover their voice, build their skills, grow without fear, find a community, and spread their wings.</p>
-                                <p>Your dedication transformed SheCodesHerWay and Sangini Udaan into symbols of hope, empowerment, and possibility. Your courage and innovation continue to inspire the women who join this movement every day.</p>
+                                <p>Your dedication transformed SheCodesHerWay and Sangini Udaan : EmpowerFly into symbols of hope, empowerment, and possibility. Your courage and innovation continue to inspire the women who join this movement every day.</p>
                                 <p className="text-right italic">— The SheCodesHerWay Team</p>
                              </div>
                         </section>

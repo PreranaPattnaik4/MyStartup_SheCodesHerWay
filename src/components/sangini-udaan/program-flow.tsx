@@ -81,10 +81,10 @@ export default function ProgramFlow() {
             <div className="container mx-auto">
                 <div className="text-center mb-16">
                     <h2 className="font-headline text-4xl font-bold text-foreground">
-                        Flagship Program: Sangini Udaan – Women Empowerment Initiative
+                        Flagship Program: Sangini Udaan : EmpowerFly – Women Empowerment Initiative
                     </h2>
                     <p className="mt-4 text-lg text-foreground/80 max-w-3xl mx-auto">
-                        Sangini Udaan is the flagship program of SheCodesHerWay. It is a transformative women empowerment journey that helps women
+                        Sangini Udaan : EmpowerFly is the flagship program of SheCodesHerWay. It is a transformative women empowerment journey that helps women
                         discover confidence, leadership, technical skills, creativity,
                         and independence in the digital era.
                     </p>
@@ -144,7 +144,7 @@ export default function ProgramFlow() {
 
                 <div className="text-center mt-20">
                      <p className="font-headline text-2xl text-primary italic max-w-3xl mx-auto">
-                        “Every woman who joins Sangini Udaan embarks on a journey —
+                        “Every woman who joins Sangini Udaan : EmpowerFly embarks on a journey —
                         from learning and exploration to confidence, leadership, and independence.”
                     </p>
                 </div>

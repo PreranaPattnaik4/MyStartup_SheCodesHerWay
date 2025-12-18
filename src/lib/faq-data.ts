@@ -12,8 +12,8 @@ export const faqData: FAQ[] = [
         answer: "SheCodesHerWay is a women-led startup dedicated to empowering women with digital skills, mentorship, and leadership training. Our mission is to help women build their path, lead their way, and leave their mark in the world.",
     },
     {
-        question: "Who is the 'Sangini Udaan' program for?",
-        answer: "Sangini Udaan is our flagship empowerment and mentorship program designed for any woman who wants to grow. Whether you're interested in tech, starting a business, exploring your creativity, or developing soft skills, there's a path for you.",
+        question: "Who is the 'Sangini Udaan : EmpowerFly' program for?",
+        answer: "Sangini Udaan : EmpowerFly is our flagship empowerment and mentorship program designed for any woman who wants to grow. Whether you're interested in tech, starting a business, exploring your creativity, or developing soft skills, there's a path for you.",
     },
     {
         question: "Is the SheCodesHerWay internship a paid program?",
