@@ -9,13 +9,13 @@
     {
       "id": "founder-portrait",
       "description": "A professional and friendly portrait of the founder, Prerana Kailash Pattnaik.",
-      "imageUrl": "https://images.unsplash.com/photo-1546961329-78bef0414d7c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHx3b21hbiUyMHBvcnRyYWl0fGVufDB8fHx8fDE3NjIxNTQzMTh8MA&ixlib-rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1546961329-78bef0414d7c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHx3b21hbiUyMHBvcnRyYWl0fGVufDB8fHx8fDE3NjIxNTQzMTh8MA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "woman portrait"
     },
     {
       "id": "program-skill-dev",
       "description": "A woman focused on her laptop in a colorful, creative environment.",
-      "imageUrl": "https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHx3b21hbiUyMGxlYXJuaW5nJTIwb24lMjBsYXB0b3B8ZW58MHx8fHwxNzIyNTEzODQzfDA&ixlib-rb-4.1.0&w=1080&fit=max&q=80&fm=jpg&crop=entropy&cs=tinysrgb",
+      "imageUrl": "https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHx3b21hbiUyMGxlYXJuaW5nJTIwb24lMjBsYXB0b3B8ZW58MHx8fHwxNzIyNTEzODQzfDA&ixlib=rb-4.1.0&w=1080&fit=max&q=80&fm=jpg&crop=entropy&cs=tinysrgb",
       "imageHint": "woman learning"
     },
     {
@@ -39,7 +39,7 @@
     {
       "id": "forum-banner",
       "description": "An abstract banner for the community forum.",
-      "imageUrl": "https://images.unsplash.com/photo-1706791722468-1e52d64bd3e2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxhYnN0cmFjdCUyMGJhbm5lcnxlbnwwfHx8fDE3NjIxNjYwODl8MA&ixlib-rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1706791722468-1e52d64bd3e2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxhYnN0cmFjdCUyMGJhbm5lcnxlbnwwfHx8fDE3NjIxNjYwODl8MA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "abstract banner"
     },
     {
@@ -50,9 +50,9 @@
     },
     {
       "id": "internship-community",
-      "description": "Illustration of women in an online meeting.",
-      "imageUrl": "https://images.unsplash.com/photo-1543269865-cbf427effbad?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHx3b21lbiUyMG9ubGluZSUyMG1lZXRpbmd8ZW58MHx8fHwxNzYyMjQ3MzQxfDA&ixlib-rb-4.1.0&q=80&w=1080",
-      "imageHint": "women online meeting"
+      "description": "A diverse group of women engaged in a lively and supportive discussion in a modern, bright space.",
+      "imageUrl": "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHx3b21lbiUyMGNvbGxhYm9yYXRpb258ZW58MHx8fHwxNzYyMjQwMTQ1fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "women collaboration"
     },
     {
       "id": "internship-certificate",
@@ -63,7 +63,7 @@
     {
       "id": "about-program-1",
       "description": "A woman confidently speaking to a group in an outdoor setting.",
-      "imageUrl": "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxtZW50b3J8ZW58MHx8fHwxNzE4NzIwMzEyfDA&ixlib-rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxtZW50b3J8ZW58MHx8fHwxNzE4NzIwMzEyfDA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "woman leader"
     },
     {
@@ -75,31 +75,31 @@
     {
       "id": "startup-school-hero",
       "description": "Three men having a discussion at a startup event.",
-      "imageUrl": "https://images.unsplash.com/photo-1671726805753-5d57b54c00fd?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxNXx8c3RhcnR1cCUyMGV2ZW50fGVufDB8fHx8fDE3NjU4NzgwNDh8MA&ixlib-rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1671726805753-5d57b54c00fd?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxNXx8c3RhcnR1cCUyMGV2ZW50fGVufDB8fHx8fDE3NjU4NzgwNDh8MA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "startup event"
     },
     {
       "id": "impact-goals-target",
       "description": "A woman holding a bow and aiming at a target.",
-      "imageUrl": "https://images.unsplash.com/photo-1558546416-e8d2243e936b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHx3b21hbiUyMGFpbWluZyUyMGF0JTIwdGFyZ2V0fGVufDB8fHx8fDE3MjM1ODk2ODN8MA&ixlib-rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1558546416-e8d2243e936b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHx3b21hbiUyMGFpbWluZyUyMGF0JTIwdGFyZ2V0fGVufDB8fHx8fDE3MjM1ODk2ODN8MA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "woman target"
     },
     {
       "id": "chatbot-avatar",
       "description": "A friendly, abstract avatar for a chatbot.",
-      "imageUrl": "https://images.unsplash.com/photo-1615843423179-bea071facf96?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxib3QlMjBhdmF0YXJ8ZW58MHx8fHwxNzY1ODc4NTE3fDA&ixlib-rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1615843423179-bea071facf96?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxib3QlMjBhdmF0YXJ8ZW58MHx8fHwxNzY1ODc4NTE3fDA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "bot avatar"
     },
     {
       "id": "feature-palai",
       "description": "A vibrant lightbulb with colorful smoke, representing ideas and AI.",
-      "imageUrl": "https://images.unsplash.com/photo-1521791136064-7986c2920216?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxhbiUyMGFpJTIwY2hhdGJvdHxlbnwwfHx8fDE3MTg3MjAyNzl8MA&ixlib-rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1521791136064-7986c2920216?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxhbiUyMGFpJTIwY2hhdGJvdHxlbnwwfHx8fDE3MTg3MjAyNzl8MA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "ai chatbot"
     },
     {
       "id": "feature-mentors",
       "description": "Portrait of a woman with a sunlit background, representing guidance.",
-      "imageUrl": "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxtZW50b3J8ZW58MHx8fHwxNzE4NzIwMzEyfDA&ixlib-rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxtZW50b3J8ZW58MHx8fHwxNzE4NzIwMzEyfDA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "mentor"
     },
     {
@@ -111,7 +111,7 @@
     {
       "id": "feature-workshops",
       "description": "A group of people in a creative workshop setting.",
-      "imageUrl": "https://images.unsplash.com/photo-1516321497487-e288fb19713f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHx3b3Jrc2hvcHxlbnwwfHx8fDE3MTg3MjAzNjl8MA&ixlib-rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1516321497487-e288fb19713f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHx3b3Jrc2hvcHxlbnwwfHx8fDE3MTg3MjAzNjl8MA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "workshop"
     },
     {
@@ -123,7 +123,7 @@
     {
       "id": "feature-ai-coaching",
       "description": "A futuristic image of a brain with network connections, representing AI intelligence and coaching.",
-      "imageUrl": "https://images.unsplash.com/photo-1535378917042-10a22c95931a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxhaSUyMGJyYWlufGVufDB8fHx8MTcyMjQzNTQ2NHww&ixlib-rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1535378917042-10a22c95931a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxhaSUyMGJyYWlufGVufDB8fHx8MTcyMjQzNTQ2NHww&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "ai brain"
     },
     {
@@ -137,6 +137,36 @@
       "description": "A crowd of people at a live conference or event, looking engaged.",
       "imageUrl": "https://images.unsplash.com/photo-1527529482837-4698179dc6ce?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxpbnRlcmFjdGl2ZSUyMGV2ZW50fGVufDB8fHx8MTcyMjQ2MTE0OHww&ixlib-rb-4.1.0&q=80&w=1080",
       "imageHint": "interactive event"
+    },
+    {
+      "id": "vision-community-voices",
+      "imageUrl": "https://images.unsplash.com/photo-1524250502761-1ac6f2e30d43?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHx3b21lbiUyMHRhbGtpbmd8ZW58MHx8fHwxNzY1ODc4NTE3fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "description": "A group of diverse women engaged in a supportive conversation.",
+      "imageHint": "women talking"
+    },
+    {
+      "id": "vision-why-created",
+      "imageUrl": "https://images.unsplash.com/photo-1521791136064-7986c2920216?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxpbnNwaXJhdGlvbnxlbnwwfHx8fDE3NjU4Nzg1MTd8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "description": "A lightbulb moment, symbolizing the inspiration behind the startup.",
+      "imageHint": "inspiration lightbulb"
+    },
+    {
+      "id": "vision-early-metrics",
+      "imageUrl": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxhbmFseXRpY3MlMjBkYXNoYm9hcmR8ZW58MHx8fHwxNzY1ODc4NTE3fDA&ixlib-rb-4.1.0&q=80&w=1080",
+      "description": "A dashboard showing growth charts and metrics, representing early positive signals.",
+      "imageHint": "analytics dashboard"
+    },
+    {
+      "id": "vision-journey",
+      "imageUrl": "https://images.unsplash.com/photo-1476820865390-c52aeebb9891?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxwYXRoJTIwaW4lMjBmb3Jlc3R8ZW58MHx8fHwxNzY1ODc4NTE3fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "description": "A winding path through a forest, symbolizing the transformative journey of members.",
+      "imageHint": "path forest"
+    },
+    {
+      "id": "vision-our-approach",
+      "imageUrl": "https://images.unsplash.com/photo-1588340373801-fce3a3a31147?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxoYW5kcyUyMGhvbGRpbmclMjBoZWFydHxlbnwwfHx8fDE3NjU4Nzg1MTd8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "description": "Hands holding a heart shape, symbolizing care, intention, and authenticity.",
+      "imageHint": "hands heart"
     }
   ]
 }
