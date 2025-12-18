@@ -1,8 +1,9 @@
+
 'use client';
 
 import React, { useState, useEffect, useRef } from 'react';
 import { Textarea } from '@/components/ui/textarea';
-import { Button } from '@/components/ui/button';
+import { Button, buttonVariants } from '@/components/ui/button';
 import { Send, Plus, Settings, MessageSquare, MoreHorizontal, Edit, Trash2, Bot, User } from 'lucide-react';
 import Header from '@/components/header';
 import { ScrollArea } from '@/components/ui/scroll-area';
@@ -35,7 +36,6 @@ import {
 import { Label } from '@/components/ui/label';
 import { Input } from '@/components/ui/input';
 import LogoIcon from '@/components/logo-icon';
-import { buttonVariants } from '../ui/button';
 
 interface Message {
   text: string;
@@ -389,3 +389,5 @@ export default function ChatbotPage() {
     </>
   );
 }
+
+    
