@@ -1,3 +1,4 @@
+
 import Header from '@/components/header';
 import Footer from '@/components/footer';
 import Image from 'next/image';
@@ -18,17 +19,11 @@ const coreValues = [
     { value: "Courage", meaning: "Encouraging women to dream, lead, and take flight" },
 ]
 
-const teamMembers = [
-    { name: "Prerana", role: "Lead Developer", image: PlaceHolderImages.find((p) => p.id === 'founder-portrait') },
-    { name: "Sanjana M.", role: "Community Manager – Build, engage, and grow our community", image: PlaceHolderImages.find((p) => p.id === 'team-member-2')},
-    { name: "Rhea S.", role: "Marketing & Growth Lead – Drive visibility, campaigns, and growth", image: PlaceHolderImages.find((p) => p.id === 'team-member-3')},
-    { name: "Priya V.", role: "Program Coordinator – Plan, host, and manage workshops and cohorts", image: PlaceHolderImages.find((p) => p.id === 'team-member-4')},
-]
-
 export default function AboutPage() {
     const aboutHeroImage = PlaceHolderImages.find((p) => p.id === 'about-hero-team');
     const image1 = PlaceHolderImages.find((p) => p.id === 'about-program-1');
     const image2 = PlaceHolderImages.find((p) => p.id === 'about-program-2');
+    const founderImage = PlaceHolderImages.find((p) => p.id === 'founder-portrait');
 
     return (
         <div className="flex min-h-dvh flex-col">
@@ -229,3 +224,5 @@ export default function AboutPage() {
         </div>
     );
 }
+
+    
