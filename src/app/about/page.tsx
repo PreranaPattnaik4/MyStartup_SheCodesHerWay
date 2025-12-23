@@ -9,6 +9,7 @@ import { Button } from '@/components/ui/button';
 import Link from 'next/link';
 import { Separator } from '@/components/ui/separator';
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from '@/components/ui/table';
+import { Github, Instagram, Linkedin, Twitter } from 'lucide-react';
 
 const coreValues = [
     { value: "Empowerment", meaning: "Helping women find their voice and independence" },
@@ -26,15 +27,56 @@ export default function AboutPage() {
         <div className="flex min-h-dvh flex-col">
             <Header />
             <main className="flex-1">
-                <section className="bg-white py-16 md:py-24">
-                    <div className="container mx-auto px-4 text-center">
-                        <h1 className="font-headline text-4xl font-bold md:text-6xl">About SheCodesHerWay</h1>
-                        <p className="mt-4 max-w-3xl mx-auto text-lg text-foreground/80">
-                            Empowering Women to Learn, Lead, and Rise Together.
-                        </p>
+                <section className="bg-muted/30 py-20 md:py-28 flex items-center justify-center">
+                    <div className="container mx-auto px-4">
+                        <div className="relative grid md:grid-cols-2 gap-8 md:gap-4 items-center">
+                            {/* Card 1: Content */}
+                            <Card className="z-10 rounded-xl shadow-lg bg-background/80 backdrop-blur-sm p-6 md:p-10">
+                                <h1 className="text-sm uppercase text-primary font-semibold tracking-wider">About Us</h1>
+                                <p className="font-headline text-4xl md:text-5xl font-bold mt-2">{brand.name}</p>
+                                <p className="mt-2 text-lg text-foreground/80 italic">"{brand.mission}"</p>
+                                <p className="mt-6 text-foreground/90">
+                                    We are a women-led startup dedicated to building a world where every woman has the opportunity, resources, and confidence to fly beyond limits.
+                                </p>
+                                <div className="mt-8 flex items-center space-x-4">
+                                    <Link href="#" aria-label="LinkedIn" className="text-muted-foreground hover:text-primary transition-colors">
+                                        <Linkedin className="h-6 w-6" />
+                                    </Link>
+                                    <Link href="#" aria-label="GitHub" className="text-muted-foreground hover:text-primary transition-colors">
+                                        <Github className="h-6 w-6" />
+                                    </Link>
+                                    <Link href="#" aria-label="Twitter" className="text-muted-foreground hover:text-primary transition-colors">
+                                        <Twitter className="h-6 w-6" />
+                                    </Link>
+                                    <Link href="#" aria-label="Instagram" className="text-muted-foreground hover:text-primary transition-colors">
+                                        <Instagram className="h-6 w-6" />
+                                    </Link>
+                                </div>
+                            </Card>
+
+                            {/* Card 2: Image */}
+                            <div className="relative flex items-center justify-center md:justify-start">
+                                <div className="relative w-[300px] h-[300px] md:w-[350px] md:h-[350px] group">
+                                     {/* Ambient glow effect */}
+                                     <div className="absolute inset-0 bg-primary/20 rounded-full blur-3xl transition-opacity duration-500 opacity-70 group-hover:opacity-100"></div>
+
+                                     {/* Image card with shadow and fog */}
+                                     <Card className="relative z-10 w-full h-full rounded-xl overflow-hidden shadow-2xl transition-transform duration-500 group-hover:scale-105">
+                                        <Image
+                                            src="https://i.postimg.cc/9M28bVsy/final.png"
+                                            alt="Abstract illustration representing technology and innovation"
+                                            fill
+                                            className="object-cover"
+                                        />
+                                        {/* Fog effect */}
+                                        <div className="absolute inset-0 bg-gradient-radial from-transparent via-transparent to-background/50 pointer-events-none"></div>
+                                     </Card>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </section>
-                
+
                 <div className="container mx-auto px-4 py-16 sm:px-6 lg:px-8">
                     <div className="space-y-24">
                         <section className="max-w-4xl mx-auto">
@@ -186,3 +228,5 @@ export default function AboutPage() {
         </div>
     );
 }
+
+    
