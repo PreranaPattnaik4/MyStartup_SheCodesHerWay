@@ -1,4 +1,3 @@
-
 import Header from '@/components/header';
 import Footer from '@/components/footer';
 import Image from 'next/image';
@@ -21,12 +20,13 @@ const coreValues = [
 
 const teamMembers = [
     { name: "Prerana", role: "Lead Developer", image: PlaceHolderImages.find((p) => p.id === 'founder-portrait') },
-    { name: "Sanjana M.", role: "Community Manager", image: PlaceHolderImages.find((p) => p.id === 'team-member-2')},
-    { name: "Rhea S.", role: "Marketing & Growth Lead", image: PlaceHolderImages.find((p) => p.id === 'team-member-3')},
-    { name: "Priya V.", role: "Program Coordinator", image: PlaceHolderImages.find((p) => p.id === 'team-member-4')},
+    { name: "Sanjana M.", role: "Community Manager – Build, engage, and grow our community", image: PlaceHolderImages.find((p) => p.id === 'team-member-2')},
+    { name: "Rhea S.", role: "Marketing & Growth Lead – Drive visibility, campaigns, and growth", image: PlaceHolderImages.find((p) => p.id === 'team-member-3')},
+    { name: "Priya V.", role: "Program Coordinator – Plan, host, and manage workshops and cohorts", image: PlaceHolderImages.find((p) => p.id === 'team-member-4')},
 ]
 
 export default function AboutPage() {
+    const aboutHeroImage = PlaceHolderImages.find((p) => p.id === 'about-hero-team');
     const image1 = PlaceHolderImages.find((p) => p.id === 'about-program-1');
     const image2 = PlaceHolderImages.find((p) => p.id === 'about-program-2');
 
@@ -34,50 +34,54 @@ export default function AboutPage() {
         <div className="flex min-h-dvh flex-col">
             <Header />
             <main className="flex-1">
-                <section className="bg-muted/30 py-20 md:py-28 flex items-center justify-center">
+                <section className="bg-primary/10 py-20 md:py-28 flex items-center justify-center">
                     <div className="container mx-auto px-4">
-                        <div className="relative grid md:grid-cols-2 gap-8 md:gap-4 items-center">
-                            {/* Card 1: Content */}
-                            <Card className="z-10 rounded-xl shadow-lg bg-background/80 backdrop-blur-sm p-6 md:p-10">
-                                <h1 className="text-sm uppercase text-primary font-semibold tracking-wider">About Us</h1>
-                                <p className="font-headline text-4xl md:text-5xl font-bold mt-2">{brand.name}</p>
-                                <p className="mt-2 text-lg text-foreground/80 italic">"{brand.mission}"</p>
-                                <p className="mt-6 text-foreground/90">
-                                    We are a women-led startup dedicated to building a world where every woman has the opportunity, resources, and confidence to fly beyond limits.
-                                </p>
-                                <div className="mt-8 flex items-center space-x-4">
-                                    <Link href="#" aria-label="LinkedIn" className="text-muted-foreground hover:text-primary transition-colors">
-                                        <Linkedin className="h-6 w-6" />
-                                    </Link>
-                                    <Link href="#" aria-label="GitHub" className="text-muted-foreground hover:text-primary transition-colors">
-                                        <Github className="h-6 w-6" />
-                                    </Link>
-                                    <Link href="#" aria-label="Twitter" className="text-muted-foreground hover:text-primary transition-colors">
-                                        <Twitter className="h-6 w-6" />
-                                    </Link>
-                                    <Link href="#" aria-label="Instagram" className="text-muted-foreground hover:text-primary transition-colors">
-                                        <Instagram className="h-6 w-6" />
-                                    </Link>
+                        <div className="bg-white rounded-xl shadow-2xl overflow-hidden">
+                            {/* Card Header */}
+                            <div className="flex items-center justify-between p-4 border-b">
+                                <div className="flex items-center gap-2">
+                                    <span className="h-3 w-3 rounded-full bg-red-400"></span>
+                                    <span className="h-3 w-3 rounded-full bg-yellow-400"></span>
+                                    <span className="h-3 w-3 rounded-full bg-green-400"></span>
                                 </div>
-                            </Card>
-
-                            {/* Card 2: Image */}
-                            <div className="relative flex items-center justify-center md:justify-start">
-                                <div className="relative w-[300px] h-[300px] md:w-[350px] md:h-[350px] group">
-                                     {/* Ambient glow effect */}
-                                     <div className="absolute inset-0 bg-yellow-300/20 rounded-full blur-3xl transition-opacity duration-500 opacity-70 group-hover:opacity-100"></div>
-
-                                     {/* Image card with shadow and fog */}
-                                     <Card className="relative z-10 w-full h-full rounded-full overflow-hidden shadow-2xl transition-transform duration-500 group-hover:scale-105">
-                                        <Image
-                                            src="https://i.postimg.cc/9M28bVsy/final.png"
-                                            alt="Abstract illustration representing technology and innovation"
-                                            fill
-                                            className="object-cover"
-                                        />
-                                        {/* Fog effect */}
-                                        <div className="absolute inset-0 bg-gradient-radial from-transparent via-transparent to-background/50 pointer-events-none"></div>
-                                     </Card>
+                                <div className="hidden sm:flex items-center gap-6 text-sm font-medium text-foreground/70">
+                                    <Link href="#" className="hover:text-primary">Solutions</Link>
+                                    <Link href="/about" className="text-primary font-semibold relative">
+                                        About Us
+                                        <span className="absolute -bottom-2 left-0 w-full h-0.5 bg-primary"></span>
+                                    </Link>
+                                    <Link href="/contact" className="hover:text-primary">Contact</Link>
+                                </div>
+                                <div className="w-16"></div>
+                            </div>
+                            
+                            {/* Card Content */}
+                            <div className="p-8 md:p-12">
+                                <div className="grid md:grid-cols-2 gap-8 items-center">
+                                    <div className="relative">
+                                        <h1 className="font-headline text-7xl md:text-8xl font-bold text-foreground">
+                                            About
+                                            <br />
+                                            Us
+                                        </h1>
+                                        <div className="absolute top-1/2 -right-4 w-2/3 h-1/2 bg-primary/10 -z-0 blur-3xl"></div>
+                                    </div>
+                                    <div className="relative h-64 md:h-80 rounded-lg overflow-hidden">
+                                        {aboutHeroImage && (
+                                            <Image 
+                                                src={aboutHeroImage.imageUrl}
+                                                alt={aboutHeroImage.description}
+                                                fill
+                                                className="object-cover"
+                                                data-ai-hint={aboutHeroImage.imageHint}
+                                            />
+                                        )}
+                                    </div>
+                                </div>
+                                 <div className="mt-8 md:mt-0 md:pt-8 md:w-1/2">
+                                    <p className="text-lg text-foreground/80">
+                                        Hello. We’re {brand.name}. We’re a women-led startup agency for a better tomorrow.
+                                    </p>
                                 </div>
                             </div>
                         </div>
@@ -173,34 +177,8 @@ export default function AboutPage() {
                                     <p className="mt-2 text-xl font-semibold text-primary">{brand.founder.name}</p>
                                     <p className='italic text-muted-foreground'>Founder & Developer | SheCodesHerWay</p>
                                     <p className="mt-4 text-foreground/80">A visionary committed to building a world where women can rise with confidence. She believes in equal opportunities, creativity, innovation, emotional empowerment, and community-driven learning. Her leadership blends compassion, courage, and creativity—the true essence of SheCodesHerWay.</p>
+                                    <p className="mt-4 text-foreground/80 font-semibold italic">Note of Gratitude: It takes a village to build a vision. This platform is a result of the efforts of our incredible early team members, mentors, and community voices who believed in this idea from day one. Their passion and dedication are the foundation of SheCodesHerWay.</p>
                                 </div>
-                            </div>
-                        </section>
-                        
-                        <Separator/>
-
-                        <section className="bg-muted/50 p-8 rounded-lg">
-                             <h2 className="font-headline text-3xl font-bold text-center">Our Team</h2>
-                             <div className="mt-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-                                {teamMembers.map((member) => (
-                                    <Card key={member.name} className="text-center shadow-lg">
-                                        <CardContent className="p-4">
-                                            {member.image && (
-                                                <div className="relative h-40 w-40 mx-auto rounded-full overflow-hidden mb-4">
-                                                    <Image
-                                                        src={member.image.imageUrl}
-                                                        alt={member.name}
-                                                        fill
-                                                        className="object-cover"
-                                                        data-ai-hint={member.image.imageHint}
-                                                    />
-                                                </div>
-                                            )}
-                                            <h3 className="text-lg font-bold">{member.name}</h3>
-                                            <p className="text-sm text-primary">{member.role}</p>
-                                        </CardContent>
-                                    </Card>
-                                ))}
                             </div>
                         </section>
 
@@ -251,5 +229,3 @@ export default function AboutPage() {
         </div>
     );
 }
-
-    

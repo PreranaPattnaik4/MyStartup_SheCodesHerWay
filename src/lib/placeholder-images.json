@@ -57,7 +57,7 @@
     {
       "id": "program-internship",
       "description": "A professional woman confidently leading a meeting.",
-      "imageUrl": "https://images.unsplash.com/photo-1556761175-5973dc0f32e7?ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHx3b21hbiUyMGxlYWRpbmclMjBhJTIwbWVldGluZ3xlbnwwfHx8fDE3MjI1MTM5MDB8MA&ixlib-rb-4.1.0&w=1080&fit=max&q=80&fm=jpg&crop=entropy&cs=tinysrgb",
+      "imageUrl": "https://images.unsplash.com/photo-1556761175-5973dc0f32e7?ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHx3b21hbiUyMGxlYWRpbmclMjBhJTIwbWVldGluZ3xlbnwwfHx8fDE3MjI1MTM5MDB8MA&ixlib=rb-4.1.0&w=1080&fit=max&q=80&fm=jpg&crop=entropy&cs=tinysrgb",
       "imageHint": "woman leading meeting"
     },
     {
@@ -99,8 +99,14 @@
     {
       "id": "about-program-2",
       "description": "Two women collaborating and smiling in a bright, modern office space.",
-      "imageUrl": "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHx3b21lbiUyMGNvbGxhYm9yYXRpb258ZW58MHx8fHwxNzYyMjQwMTQ1fDA&ixlib-rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHx3b21lbiUyMGNvbGxhYm9yYXRpb258ZW58MHx8fHwxNzYyMjQwMTQ1fDA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "women collaboration"
+    },
+    {
+      "id": "about-hero-team",
+      "description": "A diverse group of colleagues collaborating in a modern office.",
+      "imageUrl": "https://images.unsplash.com/photo-1522071820081-009f0129c71c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wzNzYyMDB8MHwxfHNlYXJjaHw0fHx0ZWFtJTIwY29sbGFib3JhdGlvbnxlbnwwfHx8fDE3MTg3MjAyNzl8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "team collaboration"
     },
     {
       "id": "startup-school-hero",
@@ -129,19 +135,19 @@
     {
       "id": "feature-mentors",
       "description": "Portrait of a woman with a sunlit background, representing guidance.",
-      "imageUrl": "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxtZW50b3J8ZW58MHx8fHwxNzE4NzIwMzEyfDA&ixlib-rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxtZW50b3J8ZW58MHx8fHwxNzE4NzIwMzEyfDA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "mentor"
     },
     {
       "id": "feature-community",
       "description": "Two people collaborating over a laptop, with yellow background.",
-      "imageUrl": "https://images.unsplash.com/photo-1543269664-56d93c1b41a6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxjb21tdW5pdHl8ZW58MHx8fHwxNzE4NzIwMzM5fDA&ixlib-rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1543269664-56d93c1b41a6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxjb21tdW5pdHl8ZW58MHx8fHwxNzE4NzIwMzM5fDA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "community"
     },
     {
       "id": "feature-workshops",
       "description": "A group of people in a creative workshop setting.",
-      "imageUrl": "https://images.unsplash.com/photo-1516321497487-e288fb19713f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHx3b3Jrc2hvcHxlbnwwfHx8fDE3MTg3MjAzNjl8MA&ixlib-rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1516321497487-e288fb19713f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHx3b3Jrc2hvcHxlbnwwfHx8fDE3MTg3MjAzNjl8MA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "workshop"
     },
     {
@@ -153,7 +159,7 @@
     {
       "id": "feature-ai-coaching",
       "description": "A futuristic image of a brain with network connections, representing AI intelligence and coaching.",
-      "imageUrl": "https://images.unsplash.com/photo-1535378917042-10a22c95931a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxhaSUyMGJyYWlufGVufDB8fHx8MTcyMjQzNTQ2NHww&ixlib-rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1535378917042-10a22c95931a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxhaSUyMGJyYWlufGVufDB8fHx8MTcyMjQzNTQ2NHww&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "ai brain"
     },
     {
@@ -165,7 +171,7 @@
     {
       "id": "feature-live-events",
       "description": "A crowd of people at a live conference or event, looking engaged.",
-      "imageUrl": "https://images.unsplash.com/photo-1527529482837-4698179dc6ce?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxpbnRlcmFjdGl2ZSUyMGV2ZW50fGVufDB8fHx8MTcyMjQ2MTE0OHww&ixlib-rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1527529482837-4698179dc6ce?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxpbnRlcmFjdGl2ZSUyMGV2ZW50fGVufDB8fHx8MTcyMjQ2MTE0OHww&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "interactive event"
     },
     {
@@ -176,31 +182,31 @@
     },
     {
       "id": "vision-why-created",
-      "imageUrl": "https://images.unsplash.com/photo-1521791136064-7986c2920216?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wzNzYyMDB8MHwxfHNlYXJjaHwxfHxpbnNwaXJhdGlvbnxlbnwwfHx8fDE3MTg3MjAyNzl8MA&ixlib-rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1521791136064-7986c2920216?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wzNzYyMDB8MHwxfHNlYXJjaHwxfHxpbnNwaXJhdGlvbnxlbnwwfHx8fDE3MTg3MjAyNzl8MA&ixlib=rb-4.1.0&q=80&w=1080",
       "description": "A lightbulb moment, symbolizing the inspiration behind the startup.",
       "imageHint": "inspiration lightbulb"
     },
     {
       "id": "vision-impact",
-      "imageUrl": "https://images.unsplash.com/photo-1543269865-cbf427effbad?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wzNzYyMDB8MHwxfHNlYXJjaHwyfHxjb21tdW5pdHl8ZW58MHx8fHwxNzE4NzIwMzM5fDA&ixlib-rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1543269865-cbf427effbad?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wzNzYyMDB8MHwxfHNlYXJjaHwyfHxjb21tdW5pdHl8ZW58MHx8fHwxNzE4NzIwMzM5fDA&ixlib=rb-4.1.0&q=80&w=1080",
       "description": "People working together, symbolizing community impact.",
       "imageHint": "community impact"
     },
     {
       "id": "vision-early-metrics",
-      "imageUrl": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wzNzYyMDB8MHwxfHNlYXJjaHwxfHxhbmFseXRpY3MlMjBkYXNoYm9hcmR8ZW58MHx8fHwxNzE4NzIwMzEyfDA&ixlib-rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wzNzYyMDB8MHwxfHNlYXJjaHwxfHxhbmFseXRpY3MlMjBkYXNoYm9hcmR8ZW58MHx8fHwxNzE4NzIwMzEyfDA&ixlib=rb-4.1.0&q=80&w=1080",
       "description": "A dashboard showing growth charts and metrics, representing early positive signals.",
       "imageHint": "analytics dashboard"
     },
     {
       "id": "vision-journey",
-      "imageUrl": "https://images.unsplash.com/photo-1476820865390-c52aeebb9891?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wzNzYyMDB8MHwxfHNlYXJjaHwxfHxwYXRoJTIwaW4lMjBmb3Jlc3R8ZW58MHx8fHwxNzE4NzIwMzEyfDA&ixlib-rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1476820865390-c52aeebb9891?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wzNzYyMDB8MHwxfHNlYXJjaHwxfHxwYXRoJTIwaW4lMjBmb3Jlc3R8ZW58MHx8fHwxNzE4NzIwMzEyfDA&ixlib=rb-4.1.0&q=80&w=1080",
       "description": "A winding path through a forest, symbolizing the transformative journey of members.",
       "imageHint": "path forest"
     },
     {
       "id": "vision-our-approach",
-      "imageUrl": "https://images.unsplash.com/photo-1588340373801-fce3a3a31147?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wzNzYyMDB8MHwxfHNlYXJjaHwxfHxoYW5kcyUyMGhvbGRpbmclMjBoZWFydHxlbnwwfHx8fDE3MTg3MjAyNzl8MA&ixlib-rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1588340373801-fce3a3a31147?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wzNzYyMDB8MHwxfHNlYXJjaHwxfHxoYW5kcyUyMGhvbGRpbmclMjBoZWFydHxlbnwwfHx8fDE3MTg3MjAyNzl8MA&ixlib=rb-4.1.0&q=80&w=1080",
       "description": "Hands holding a heart shape, symbolizing care, intention, and authenticity.",
       "imageHint": "hands heart"
     }
