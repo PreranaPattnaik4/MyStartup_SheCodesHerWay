@@ -104,7 +104,7 @@ Implement the following pages and features:
         *   **Left:** The brand logo, which links to the homepage.
         *   **Center (Desktop):** A navigation bar with links to key pages (Home, Our Program, AI Coaching, etc.). Links should have a `hover` effect that changes their color to `primary`.
         *   **Right:** A `UserAuth` component for sign-up/login and user profile management. A `Sheet` (slide-out menu) trigger with a `Menu` icon for mobile navigation.
-    *   **Mobile View:** The desktop navigation should be hidden, and a hamburger menu icon should trigger a slide-out `Sheet` from the left, containing all navigation links.
+    *   **Mobile View:** The desktop navigation should be hidden, and a hamburger menu icon (`Menu` from lucide-react) should trigger a slide-out `Sheet` from the left, containing all navigation links.
 
 *   **Footer:**
     *   **Layout:** A three-column layout on larger screens, stacking vertically on mobile.
@@ -112,7 +112,7 @@ Implement the following pages and features:
     *   **Content:**
         *   **Column 1:** The brand logo, the mission statement, and the copyright notice.
         *   **Column 2:** A "Quick Links" section with two columns of navigation links to important pages (About, Programs, FAQ, etc.).
-        *   **Column 3:** A "Get in Touch" section with the company's contact email and social media icons (Twitter, LinkedIn, GitHub).
+        *   **Column 3:** A "Get in Touch" section with the company's contact email and social media icons (`Twitter`, `LinkedIn`, `GitHub` from lucide-react).
     *   **Overall Feel:** Professional, informative, and consistent with the site's branding.
 
 ---
