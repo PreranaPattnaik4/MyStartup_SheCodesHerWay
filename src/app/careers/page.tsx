@@ -20,7 +20,7 @@ const opportunities = [
         title: "Become a Mentor",
         description: "Are you a student or professional passionate about giving back? Guide and inspire the next generation of women leaders and creators.",
         cta: "Apply to be a Mentor",
-        href: "/partner"
+        href: "/mentor"
     },
     {
         icon: Handshake,
