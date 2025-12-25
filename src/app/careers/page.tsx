@@ -81,32 +81,6 @@ export default function CareersPage() {
             </div>
         </section>
 
-        <section className="container mx-auto px-4 py-20 sm:px-6 lg:px-8">
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-                {opportunities.map((opp) => (
-                    <Card key={opp.title} className="flex flex-col shadow-lg transform transition-transform hover:-translate-y-2 duration-300">
-                        <CardHeader className="items-center text-center">
-                            <div className="bg-primary/10 text-primary p-4 rounded-full">
-                                <opp.icon className="h-8 w-8" />
-                            </div>
-                            <CardTitle className="pt-4">{opp.title}</CardTitle>
-                        </CardHeader>
-                        <CardContent className="flex-grow text-center">
-                            <p className="text-foreground/80">{opp.description}</p>
-                        </CardContent>
-                        <div className="p-6 pt-0 text-center">
-                             <Button asChild>
-                                <Link href={opp.href}>
-                                    {opp.cta}
-                                    <ArrowRight className="ml-2 h-4 w-4" />
-                                </Link>
-                            </Button>
-                        </div>
-                    </Card>
-                ))}
-            </div>
-        </section>
-
         <section className="bg-muted/50 py-20">
              <div className="container mx-auto px-4 sm:px-6 lg:px-8">
                 <Card className="max-w-4xl mx-auto shadow-2xl bg-gradient-to-br from-background via-accent/10 to-background">
@@ -138,6 +112,32 @@ export default function CareersPage() {
                         </div>
                     </CardContent>
                 </Card>
+            </div>
+        </section>
+
+        <section className="container mx-auto px-4 py-20 sm:px-6 lg:px-8">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                {opportunities.map((opp) => (
+                    <Card key={opp.title} className="flex flex-col shadow-lg transform transition-transform hover:-translate-y-2 duration-300">
+                        <CardHeader className="items-center text-center">
+                            <div className="bg-primary/10 text-primary p-4 rounded-full">
+                                <opp.icon className="h-8 w-8" />
+                            </div>
+                            <CardTitle className="pt-4">{opp.title}</CardTitle>
+                        </CardHeader>
+                        <CardContent className="flex-grow text-center">
+                            <p className="text-foreground/80">{opp.description}</p>
+                        </CardContent>
+                        <div className="p-6 pt-0 text-center">
+                             <Button asChild>
+                                <Link href={opp.href}>
+                                    {opp.cta}
+                                    <ArrowRight className="ml-2 h-4 w-4" />
+                                </Link>
+                            </Button>
+                        </div>
+                    </Card>
+                ))}
             </div>
         </section>
 
