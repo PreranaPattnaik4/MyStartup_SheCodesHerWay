@@ -1,3 +1,4 @@
+
 'use client';
 
 import React, { useEffect } from 'react';
@@ -7,11 +8,10 @@ import { z } from 'zod';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
-import { Label } from '@/components/ui/label';
 import { useUser, useAuth } from '@/firebase/hooks';
 import { updateProfile } from 'firebase/auth';
 import { useToast } from '@/components/ui/use-toast';
-import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from '@/components/ui/form';
+import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage, FormDescription } from '@/components/ui/form';
 import { Loader2 } from 'lucide-react';
 
 const profileFormSchema = z.object({
@@ -104,7 +104,7 @@ export default function ProfilePage() {
                             <Input placeholder="Your last name" {...field} />
                         </FormControl>
                         <FormMessage />
-                        </formItem>
+                        </FormItem>
                     )}
                     />
                </div>
