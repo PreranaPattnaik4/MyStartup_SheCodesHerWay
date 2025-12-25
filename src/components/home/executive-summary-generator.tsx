@@ -2,7 +2,7 @@
 "use client"
 
 import React, { useEffect } from "react"
-import { useFormStatus } from "react-dom"
+import { useFormState, useFormStatus } from "react-dom"
 import { useForm } from "react-hook-form"
 import { zodResolver } from "@hookform/resolvers/zod"
 import { z } from "zod"
@@ -14,7 +14,7 @@ import { Textarea } from "@/components/ui/textarea"
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form"
 import { handleGenerateSummary, type ActionState } from "@/app/actions"
 import { brand } from "@/lib/brand"
-import { useToast } from "@/components/ui/use-toast"
+import { useToast } from "@/hooks/use-toast"
 import { Bot, Loader2, Copy } from "lucide-react"
 
 const formSchema = z.object({
@@ -48,7 +48,7 @@ function SubmitButton() {
 }
 
 export default function ExecutiveSummaryGenerator() {
-  const [state, formAction] = React.useActionState<ActionState, FormData>(handleGenerateSummary, { success: false })
+  const [state, formAction] = useFormState<ActionState, FormData>(handleGenerateSummary, { success: false })
   const { toast } = useToast()
 
   const form = useForm<FormData>({
@@ -67,21 +67,21 @@ export default function ExecutiveSummaryGenerator() {
   const { pending } = useFormStatus();
 
   useEffect(() => {
-    if (state.success && state.data) {
+    if (formState.isSubmitSuccessful && state.success && state.data) {
       setGeneratedSummary(state.data.executiveSummary)
       toast({
         title: "Summary Generated!",
         description: "Your executive summary has been created successfully.",
       })
       reset(form.getValues()) // Reset form state but keep values
-    } else if (!state.success && state.error && typeof state.error === 'string') {
+    } else if (formState.isSubmitSuccessful && !state.success && state.error && typeof state.error === 'string') {
       toast({
         title: "Error",
         description: state.error,
         variant: "destructive",
       })
     }
-  }, [state, toast, reset, form])
+  }, [formState.isSubmitSuccessful, state, toast, reset, form])
 
   const copyToClipboard = () => {
     if (generatedSummary) {
@@ -95,13 +95,6 @@ export default function ExecutiveSummaryGenerator() {
 
   return (
     <section className="w-full">
-      <div className="text-center mb-10">
-        <h2 className="font-headline text-3xl font-bold md:text-4xl">AI-Powered Executive Summary</h2>
-        <p className="mt-4 max-w-2xl mx-auto text-lg text-foreground/80">
-          Generate a concise and compelling executive summary for your pitch deck using our AI tool.
-        </p>
-      </div>
-
       <div className="grid lg:grid-cols-2 gap-8 items-start">
         <Form {...form}>
           <form
