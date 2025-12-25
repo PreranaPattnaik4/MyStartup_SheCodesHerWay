@@ -1,4 +1,3 @@
-
 'use client';
 import { useUser, useAuth } from '@/firebase/hooks';
 import { signOut } from 'firebase/auth';
