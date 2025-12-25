@@ -117,7 +117,7 @@ export default function CareersPage() {
                         </div>
                          <div className="mt-8 text-center">
                             <Button asChild size="lg">
-                                <Link href="/partner">
+                                <Link href="/collaboration-policy">
                                     <FileText className="mr-2 h-5 w-5" />
                                     Learn More & Apply
                                     <ArrowRight className="ml-2 h-5 w-5" />
