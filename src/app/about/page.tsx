@@ -226,7 +226,7 @@ export default function AboutPage() {
                                         <p className="font-semibold text-lg">📝 Flexible, experience-driven collaboration – learn, contribute, and grow in a real startup environment.</p>
                                         <p className="text-sm mt-2"><span className="font-bold">Important:</span> This is voluntary, unpaid, and non-employment collaboration, designed for impact, learning, and skill-building.</p>
                                         <Button asChild variant="link" className="mt-2">
-                                            <Link href="/careers">
+                                            <Link href="/collaboration-policy">
                                                 <FileText className="mr-2"/> Read the full Collaboration Guidelines here
                                             </Link>
                                         </Button>
