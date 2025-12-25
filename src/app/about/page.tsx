@@ -123,7 +123,7 @@ export default function AboutPage() {
                                         <CardTitle className="font-headline text-3xl">Vision</CardTitle>
                                     </CardHeader>
                                     <CardContent>
-                                        <p className="text-lg text-foreground/80">To create a world where every woman has the resources, the opportunities, and the confidence to rise beyond barriers and step into her fullest potential.</p>
+                                        <p className="text-lg text-foreground/80">To create a world where every woman has the resources, the opportunities, and the confidence to step into her fullest potential.</p>
                                     </CardContent>
                                 </Card>
                             </div>
@@ -226,7 +226,7 @@ export default function AboutPage() {
                                         <p className="font-semibold text-lg">📝 Flexible, experience-driven collaboration – learn, contribute, and grow in a real startup environment.</p>
                                         <p className="text-sm mt-2"><span className="font-bold">Important:</span> This is voluntary, unpaid, and non-employment collaboration, designed for impact, learning, and skill-building.</p>
                                         <Button asChild variant="link" className="mt-2">
-                                            <Link href="https://docs.google.com/document/d/1aGJ6ldythh6hwnUa-zz-mr23x-hSPRlzuJKA2qIXZR0/edit?usp=sharing" target="_blank" rel="noopener noreferrer">
+                                            <Link href="/careers">
                                                 <FileText className="mr-2"/> Read the full Collaboration Guidelines here
                                             </Link>
                                         </Button>

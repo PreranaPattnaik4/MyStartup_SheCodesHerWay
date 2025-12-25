@@ -43,7 +43,7 @@ export default function PartnerPage() {
                     </div>
                      <div className="mt-8 text-center">
                         <Button asChild size="lg">
-                            <Link href="https://docs.google.com/document/d/1yycVFW7TiH2P-KCBuvHyNLg03mOqATPS/edit?usp=sharing&ouid=104571785946165056965&rtpof=true&sd=true" target="_blank" rel="noopener noreferrer">
+                            <Link href="/partner">
                                 <FileText className="mr-2 h-5 w-5" />
                                 Learn More & Apply
                                 <ArrowRight className="ml-2 h-5 w-5" />
