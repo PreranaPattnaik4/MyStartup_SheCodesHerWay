@@ -1,6 +1,6 @@
 export const brand = {
   name: "SheCodesHerWay",
-  appName: "EmpowerFly",
+  appName: "EmpowerFly Assistant",
   mission: "Build Your Path. Lead Your Way. Leave Your Mark.",
   vision: "To create a world where every woman has the opportunity, resources, and confidence to fly beyond limits.",
   programName: "Sangini Udaan : EmpowerFly",

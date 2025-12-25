@@ -5,7 +5,7 @@
  * @fileOverview This file defines a Genkit flow for handling chatbot conversations.
  *
  * The flow takes a user's message as input and uses a language model to generate a response,
- * acting as the "EmpowerFly AI Coach".
+ * acting as the "EmpowerFly Assistant".
  */
 
 import { ai } from '@/ai/genkit';
@@ -31,7 +31,7 @@ const chatPrompt = ai.definePrompt({
   name: 'chatPrompt',
   input: { schema: ChatInputSchema },
   output: { schema: ChatOutputSchema },
-  prompt: `You are EmpowerFly AI Coach, a friendly and supportive guide for SheCodesHerWay, a women-empowerment platform.
+  prompt: `You are EmpowerFly Assistant, a friendly and supportive guide for SheCodesHerWay, a women-empowerment platform.
 
 Your purpose is to help users with questions about:
 - SheCodesHerWay's mission and programs (like Sangini Udaan : EmpowerFly).

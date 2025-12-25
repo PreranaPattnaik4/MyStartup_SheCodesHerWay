@@ -51,7 +51,7 @@ interface ChatSession {
 }
 
 const welcomeMessage: Message = {
-    text: "Hi, I’m EmpowerFly AI Coach — your friendly guide to learning, careers, and opportunities, at your own pace. How can I help you today?",
+    text: "Hi, I’m EmpowerFly Assistant — your friendly guide to learning, careers, and opportunities, at your own pace. How can I help you today?",
     sender: 'bot',
 };
 
@@ -363,7 +363,7 @@ export default function ChatbotPage() {
                   <Textarea
                     ref={textareaRef}
                     rows={1}
-                    placeholder="Ask EmpowerFly AI Coach anything..."
+                    placeholder="Ask EmpowerFly Assistant anything..."
                     value={inputValue}
                     onChange={(e) => setInputValue(e.target.value)}
                     onKeyDown={(e) => {

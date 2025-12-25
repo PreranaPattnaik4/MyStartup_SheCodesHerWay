@@ -93,15 +93,15 @@ export default function AiCoachingPage() {
                             <div className="bg-primary/10 text-primary p-3 rounded-full">
                                 <MessageSquare className="h-7 w-7" />
                             </div>
-                             <h2 className="font-headline text-3xl font-bold">EmpowerFly AI Coach</h2>
+                             <h2 className="font-headline text-3xl font-bold">EmpowerFly Assistant</h2>
                         </div>
                        <Badge variant="secondary">Powered by Google Gemini</Badge>
                         <p className="text-foreground/80 my-6 text-lg">
-                            Your personal AI guide is here to help you navigate your journey. Ask questions about our programs, get advice on your career path, or brainstorm ideas for your next project. The EmpowerFly AI Coach is available 24/7 to provide support and guidance whenever you need it.
+                            Your personal AI guide is here to help you navigate your journey. Ask questions about our programs, get advice on your career path, or brainstorm ideas for your next project. The EmpowerFly Assistant is available 24/7 to provide support and guidance whenever you need it.
                         </p>
                         <Button asChild className="w-fit" size="lg">
                             <Link href="/chatbot">
-                                Chat with the Coach
+                                Chat with the Assistant
                                 <ArrowRight className="ml-2 h-4 w-4" />
                             </Link>
                         </Button>

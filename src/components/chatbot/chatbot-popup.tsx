@@ -1,3 +1,4 @@
+
 'use client';
 
 import React, { useState, useEffect, useRef } from 'react';
@@ -19,7 +20,7 @@ interface Message {
 }
 
 const welcomeMessage: Message = {
-  text: "Hi, I’m EmpowerFly AI Coach. How can I help you today?",
+  text: "Hi, I’m EmpowerFly Assistant. How can I help you today?",
   sender: 'bot',
 };
 
@@ -109,7 +110,7 @@ export default function ChatbotPopup({ isOpen, onClose }: ChatbotPopupProps) {
             <AvatarFallback className='bg-transparent'><LogoIcon/></AvatarFallback>
           </Avatar>
           <div>
-            <h3 className="font-semibold">{brand.appName} AI Coach</h3>
+            <h3 className="font-semibold">{brand.appName} Assistant</h3>
             <p className="text-xs text-muted-foreground">Powered by Genkit</p>
           </div>
         </div>
@@ -212,7 +213,7 @@ export default function ChatbotPopup({ isOpen, onClose }: ChatbotPopupProps) {
          <p className="text-center text-xs text-muted-foreground mt-2">
             For more detailed conversations, visit our full{' '}
             <Link href="/chatbot" className="underline" onClick={onClose}>
-             AI Coach page
+             AI Assistant page
             </Link>.
         </p>
       </div>
