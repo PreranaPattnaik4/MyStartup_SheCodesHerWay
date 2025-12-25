@@ -39,7 +39,7 @@ export default function CommunityPage() {
             <div className="space-y-24">
                 <ForumList />
                 <Separator />
-                <div id="partner-with-us">
+                <div id="join-us">
                     <JoinUs />
                 </div>
             </div>

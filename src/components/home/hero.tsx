@@ -39,7 +39,7 @@ export default function Hero() {
             </Button>
             <Button asChild size="lg" variant="outline" className="bg-background/80">
               <Link href="/partner">
-                Partner with Us
+                Join Us
               </Link>
             </Button>
           </div>

@@ -1,3 +1,4 @@
+
 'use client';
 
 import React from 'react';
@@ -30,7 +31,7 @@ export default function PartnerPage() {
       <main className="flex-1">
         <section className="bg-white py-16">
           <div className="container mx-auto px-4 text-center">
-            <h1 className="font-headline text-4xl font-bold md:text-5xl">Partner with Us</h1>
+            <h1 className="font-headline text-4xl font-bold md:text-5xl">Join Us</h1>
             <p className="mt-4 max-w-2xl mx-auto text-lg text-foreground/80">
               Join our core team or collaborate with us to help shape the future of women in tech and creative fields.
             </p>
