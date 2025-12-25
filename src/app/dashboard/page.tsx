@@ -37,6 +37,21 @@ export default function DashboardPage() {
             </Button>
         </div>
 
+        <Card className="bg-gradient-to-br from-primary/20 via-accent/20 to-secondary/20 border-primary/30 mb-8">
+            <CardHeader>
+                <CardTitle className="font-headline text-2xl md:text-3xl">My Program Journey</CardTitle>
+                <CardDescription className="text-lg text-primary italic">“Empower Her to Fly Beyond Limits.”</CardDescription>
+            </CardHeader>
+            <CardContent>
+                <p className="mb-4">You are enrolled in: <strong>Sangini Udaan : EmpowerFly — Cohort 1</strong></p>
+                <Button asChild>
+                    <Link href="/dashboard/program">
+                        View My Journey <ArrowRight className="ml-2 h-4 w-4" />
+                    </Link>
+                </Button>
+            </CardContent>
+        </Card>
+
         <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
             {stats.map((stat) => (
                 <Card key={stat.label}>
@@ -51,22 +66,6 @@ export default function DashboardPage() {
                     </CardContent>
                 </Card>
             ))}
-        </div>
-
-        <div className="mt-8">
-            <Card className="bg-accent/30 border-accent/50 mb-8">
-                <CardHeader>
-                    <CardTitle>My Program Journey</CardTitle>
-                    <CardDescription>Track your progress in the {brand.programName} program.</CardDescription>
-                </CardHeader>
-                <CardContent>
-                    <Button asChild>
-                        <Link href="/dashboard/program">
-                            View My Journey <ArrowRight className="ml-2 h-4 w-4" />
-                        </Link>
-                    </Button>
-                </CardContent>
-            </Card>
         </div>
 
         <div className="mt-8">
