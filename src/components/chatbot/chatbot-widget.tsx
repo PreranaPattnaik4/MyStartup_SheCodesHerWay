@@ -22,10 +22,10 @@ export default function ChatbotWidget() {
             >
               <Button
                 size="icon"
-                className="rounded-full w-16 h-16 bg-primary text-primary-foreground shadow-lg hover:bg-primary/90 focus:ring-4 focus:ring-primary/30"
+                className="rounded-full w-20 h-20 bg-primary text-primary-foreground shadow-lg hover:bg-primary/90 focus:ring-4 focus:ring-primary/30"
                 onClick={() => setIsOpen(true)}
               >
-                <LogoIcon className="w-8 h-8" />
+                <LogoIcon className="w-10 h-10" />
                 <span className="sr-only">Open Chatbot</span>
               </Button>
              </motion.div>
