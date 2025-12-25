@@ -51,3 +51,4 @@ To run the project locally, follow these steps:
 This project was bootstrapped and developed with **Firebase Studio**.
 # SheCodesHerWayv2
 # SheCodesHerWayv2
+# SheCodesHerWayv2
