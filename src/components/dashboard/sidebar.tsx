@@ -11,7 +11,7 @@ import Logo from '../logo';
 const mainNav = [
     { name: 'Dashboard', href: '/dashboard', icon: LayoutDashboard },
     { name: 'My Profile', href: '/dashboard/profile', icon: UserIcon },
-    { name: 'Program', href: '/sangini-udaan', icon: Rocket },
+    { name: 'My Program', href: '/dashboard/program', icon: Rocket },
     { name: 'Enrolled Courses', href: '/dashboard/enrolled-courses', icon: BookOpen },
     { name: 'Reviews', href: '/dashboard/reviews', icon: Star },
     { name: 'My Quiz Attempts', href: '/dashboard/quiz-attempts', icon: ClipboardCheck },
