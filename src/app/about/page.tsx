@@ -40,7 +40,7 @@ export default function AboutPage() {
                                     <span className="h-3 w-3 rounded-full bg-green-400"></span>
                                 </div>
                                 <div className="hidden sm:flex items-center gap-6 text-sm font-medium text-foreground/70">
-                                    <Link href="#" className="hover:text-primary">Solutions</Link>
+                                    <Link href="/" className="hover:text-primary">Solutions</Link>
                                     <Link href="/about" className="text-primary font-semibold relative">
                                         About Us
                                         <span className="absolute -bottom-2 left-0 w-full h-0.5 bg-primary"></span>
@@ -72,7 +72,7 @@ export default function AboutPage() {
                                         </div>
                                     </div>
                                 </div>
-                                 <div className="mt-0">
+                                 <div className="mt-8">
                                     <div className="text-6xl font-bold text-foreground/80">{brand.name}</div>
                                     <p className="font-headline text-lg text-foreground/80 mt-2">{brand.mission}</p>
                                     <p className="text-lg text-foreground mt-4">
@@ -285,3 +285,5 @@ export default function AboutPage() {
         </div>
     );
 }
+
+    
