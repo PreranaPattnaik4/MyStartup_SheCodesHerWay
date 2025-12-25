@@ -70,7 +70,7 @@ export default function AboutPage() {
                                         />
                                     </div>
                                 </div>
-                                 <div className="mt-8 md:mt-0 md:pt-8">
+                                 <div className="mt-8">
                                     <div className="text-6xl font-bold text-foreground/80">{brand.name}</div>
                                     <p className="text-lg text-foreground/80 mt-4">
                                         SheCodesHerWay is officially stepping into a new chapter as a purpose-driven, women-led empowerment platform. Built to inspire, uplift, and guide women, the platform supports them in learning, leading, and rising—together.
