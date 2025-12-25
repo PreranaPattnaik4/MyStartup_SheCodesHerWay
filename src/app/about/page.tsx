@@ -66,7 +66,7 @@ export default function AboutPage() {
                                             src="https://i.postimg.cc/VLnm9Pvt/Generated_Image_November_05_2025_8_01AM_Copy.png"
                                             alt="About illustration"
                                             fill
-                                            className="object-contain"
+                                            className="object-cover"
                                         />
                                     </div>
                                 </div>
