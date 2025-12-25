@@ -3,7 +3,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { Textarea } from '@/components/ui/textarea';
 import { Button, buttonVariants } from '@/components/ui/button';
-import { Send, Plus, Settings, MessageSquare, MoreHorizontal, Edit, Trash2, User, ArrowUp } from 'lucide-react';
+import { Send, Plus, Settings, MessageSquare, MoreHorizontal, Edit, Trash2, User, ArrowUp, Mic } from 'lucide-react';
 import Header from '@/components/header';
 import { ScrollArea } from '@/components/ui/scroll-area';
 import { cn } from '@/lib/utils';
@@ -61,6 +61,14 @@ const suggestionChips = [
     "About SheCodesHerWay",
 ];
 
+// Extend window type for SpeechRecognition
+declare global {
+  interface Window {
+    SpeechRecognition: any;
+    webkitSpeechRecognition: any;
+  }
+}
+
 export default function ChatbotPage() {
   const [chatHistory, setChatHistory] = useState<ChatSession[]>([]);
   const [activeChatId, setActiveChatId] = useState<string | null>(null);
@@ -76,6 +84,51 @@ export default function ChatbotPage() {
   const [newChatName, setNewChatName] = useState('');
 
   const activeChat = chatHistory.find(chat => chat.id === activeChatId);
+  
+  // Speech Recognition state
+  const [isListening, setIsListening] = useState(false);
+  const [isSpeechRecognitionSupported, setIsSpeechRecognitionSupported] = useState(false);
+  const recognitionRef = useRef<any>(null);
+
+  useEffect(() => {
+    const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+    if (SpeechRecognition) {
+      setIsSpeechRecognitionSupported(true);
+      const recognition = new SpeechRecognition();
+      recognition.continuous = true;
+      recognition.interimResults = true;
+      recognition.lang = 'en-US';
+
+      recognition.onresult = (event: any) => {
+        let interimTranscript = '';
+        let finalTranscript = '';
+        for (let i = event.resultIndex; i < event.results.length; ++i) {
+          if (event.results[i].isFinal) {
+            finalTranscript += event.results[i][0].transcript;
+          } else {
+            interimTranscript += event.results[i][0].transcript;
+          }
+        }
+        setInputValue(inputValue + finalTranscript + interimTranscript);
+      };
+      
+      recognition.onend = () => {
+        setIsListening(false);
+      };
+
+      recognitionRef.current = recognition;
+    }
+  }, [inputValue]);
+
+  const toggleListening = () => {
+    if (isListening) {
+      recognitionRef.current?.stop();
+    } else {
+      recognitionRef.current?.start();
+    }
+    setIsListening(!isListening);
+  };
+
 
   useEffect(() => {
     if (textareaRef.current) {
@@ -354,7 +407,7 @@ export default function ChatbotPage() {
 
             <div className="p-4 bg-white/95 backdrop-blur-sm border-t">
               <div className="max-w-3xl mx-auto">
-                <div className="relative">
+                <div className="relative flex items-center w-full">
                   <Textarea
                     ref={textareaRef}
                     rows={1}
@@ -367,8 +420,22 @@ export default function ChatbotPage() {
                           handleSendMessage();
                       }
                     }}
-                    className="w-full resize-none bg-transparent border-2 border-border focus-visible:ring-primary focus-visible:ring-offset-0 p-3 pr-14 rounded-2xl shadow-sm"
+                    className="w-full resize-none bg-transparent border-2 border-border focus-visible:ring-primary focus-visible:ring-offset-0 p-3 pr-24 pl-12 rounded-2xl shadow-sm"
                   />
+                  {isSpeechRecognitionSupported && (
+                    <Button 
+                        onClick={toggleListening} 
+                        size="icon"
+                        variant="ghost"
+                        className={cn(
+                          "absolute left-2.5 top-1/2 -translate-y-1/2 h-8 w-8 rounded-full",
+                          isListening ? "text-primary animate-pulse" : "text-muted-foreground"
+                        )}
+                    >
+                        <Mic className="w-4 h-4" />
+                        <span className="sr-only">{isListening ? 'Stop listening' : 'Start listening'}</span>
+                    </Button>
+                  )}
                   <Button 
                       onClick={handleSendMessage} 
                       disabled={!inputValue.trim() || isTyping}
