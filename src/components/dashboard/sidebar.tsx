@@ -20,13 +20,6 @@ const mainNav = [
     { name: 'Question & Answer', href: '/dashboard/q-a', icon: HelpCircle },
 ];
 
-const instructorNav = [
-    { name: 'My Courses', href: '/dashboard/my-courses', icon: Rocket },
-    { name: "Announcements", href: "/dashboard/announcements", icon: Annoyed },
-    { name: 'Withdrawals', href: '/dashboard/withdrawals', icon: DollarSign },
-    { name: 'Quiz Attempts', href: '/dashboard/instructor-quiz-attempts', icon: ClipboardCheck },
-]
-
 export default function Sidebar() {
   const pathname = usePathname();
   const { user } = useUser();
@@ -65,24 +58,6 @@ export default function Sidebar() {
                     </Button>
                 </Link>
             ))}
-            
-            <div className="pt-4">
-                <p className="px-4 text-xs font-semibold text-muted-foreground uppercase">Instructor</p>
-                 <div className="mt-2 space-y-2">
-                    {instructorNav.map((item) => (
-                        <Link href={item.href} key={item.name}>
-                            <Button
-                                variant={pathname === item.href ? 'secondary' : 'ghost'}
-                                className="w-full justify-start"
-                            >
-                                <item.icon className="mr-2 h-4 w-4" />
-                                {item.name}
-                            </Button>
-                        </Link>
-                    ))}
-                </div>
-            </div>
-
         </nav>
       </div>
     </aside>
