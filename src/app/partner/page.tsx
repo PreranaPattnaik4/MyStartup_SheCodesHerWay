@@ -32,7 +32,7 @@ export default function PartnerPage() {
                        Join the founding circle of SheCodesHerWay. We are looking for passionate individuals—including students, freshers, and working professionals—to join us as Early Core Contributors on a part-time basis.
                     </CardDescription>
                 </CardHeader>
-                <CardContent className="px-8 md:px-12">
+                <CardContent className="px-8 md:px-12 pb-12">
                     <div className="prose dark:prose-invert max-w-none text-foreground/90">
                         <p>
                             In this role, you will take full ownership of high-impact modules, building specialized tools, creative assets, and strategic systems from the ground up. As a Core Contributor, you will work independently in a dedicated local environment, contributing your expertise to help scale our mission.
