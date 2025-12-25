@@ -52,16 +52,16 @@ export default function AboutPage() {
                             
                             {/* Card Content */}
                             <div className="p-8 md:p-12">
-                                <div className="grid md:grid-cols-2 gap-8 items-center">
+                                <div className="grid md:grid-cols-2 gap-8 items-start">
                                     <div className="relative">
-                                        <h1 className="font-headline text-9xl font-bold text-primary">
+                                        <h1 className="font-headline text-9xl font-bold text-foreground">
                                             About
                                             <br />
                                             Us
                                         </h1>
                                         <div className="absolute top-1/2 -right-4 w-2/3 h-1/2 bg-primary/10 -z-0 blur-3xl"></div>
                                     </div>
-                                    <div className="relative h-80 md:h-[520px] rounded-lg overflow-hidden">
+                                    <div className="relative h-96 md:h-[480px] rounded-lg overflow-hidden">
                                         <Image
                                             src="https://i.postimg.cc/VLnm9Pvt/Generated_Image_November_05_2025_8_01AM_Copy.png"
                                             alt="About illustration"
@@ -71,7 +71,7 @@ export default function AboutPage() {
                                     </div>
                                 </div>
                                  <div className="mt-0">
-                                    <div className="text-6xl font-bold text-primary">{brand.name}</div>
+                                    <div className="text-4xl font-bold text-foreground/80">{brand.name}</div>
                                     <p className="font-headline text-lg text-foreground/80 mt-2">{brand.mission}</p>
                                     <p className="text-lg text-foreground/80 mt-4">
                                         SheCodesHerWay is officially stepping into a new chapter as a purpose-driven, women-led empowerment platform. Built to inspire, uplift, and guide women, the platform supports them in learning, leading, and rising—together.
