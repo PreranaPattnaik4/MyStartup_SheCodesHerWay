@@ -355,7 +355,7 @@ export default function ChatbotPage() {
 
             <div className="p-4 bg-white/95 backdrop-blur-sm border-t">
               <div className="max-w-3xl mx-auto">
-                <div className="relative">
+                <div className="relative flex items-center w-full border-2 rounded-2xl shadow-sm p-2">
                   <Textarea
                     ref={textareaRef}
                     rows={1}
@@ -368,7 +368,7 @@ export default function ChatbotPage() {
                           handleSendMessage();
                       }
                     }}
-                    className="w-full resize-none rounded-xl border-2 bg-background p-4 pr-14 shadow-sm min-h-[56px]"
+                    className="w-full resize-none bg-transparent border-none focus-visible:ring-0 focus-visible:ring-offset-0 p-2 pr-12 shadow-none"
                   />
                   <Button 
                       onClick={handleSendMessage} 

@@ -181,7 +181,7 @@ export default function ChatbotPopup({ isOpen, onClose }: ChatbotPopupProps) {
       </ScrollArea>
       
       <div className="p-4 bg-white/95 backdrop-blur-sm border-t">
-         <div className="relative">
+         <div className="relative flex items-center w-full border-2 rounded-2xl shadow-sm p-1">
           <Textarea
             ref={textareaRef}
             rows={1}
@@ -194,13 +194,13 @@ export default function ChatbotPopup({ isOpen, onClose }: ChatbotPopupProps) {
                 handleSendMessage();
               }
             }}
-            className="w-full resize-none rounded-xl border-2 bg-background p-3 pr-12 shadow-sm min-h-[48px]"
+            className="w-full resize-none bg-transparent border-none focus-visible:ring-0 focus-visible:ring-offset-0 p-2 pr-10 shadow-none"
           />
           <Button 
               onClick={handleSendMessage} 
               disabled={!inputValue.trim() || isTyping}
               size="icon"
-              className="absolute right-2.5 top-1/2 -translate-y-1/2 h-8 w-8 rounded-lg"
+              className="absolute right-2 top-1/2 -translate-y-1/2 h-8 w-8 rounded-lg"
           >
               <Send className="w-4 h-4" />
               <span className="sr-only">Send</span>
