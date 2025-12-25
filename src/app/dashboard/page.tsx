@@ -54,13 +54,13 @@ export default function DashboardPage() {
         <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-2">
             {stats.map((stat) => (
                 <Card key={stat.label}>
-                    <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
+                    <CardHeader className="flex flex-row items-center justify-between space-y-0 p-4">
                         <CardTitle className="text-sm font-medium">{stat.label}</CardTitle>
-                        <div className="p-2 bg-primary/10 rounded-full">
-                            <stat.icon className="h-5 w-5 text-primary" />
+                        <div className="p-1.5 bg-primary/10 rounded-full">
+                            <stat.icon className="h-4 w-4 text-primary" />
                         </div>
                     </CardHeader>
-                    <CardContent>
+                    <CardContent className="p-4 pt-0">
                         <div className="text-2xl font-bold">{stat.value}</div>
                     </CardContent>
                 </Card>
