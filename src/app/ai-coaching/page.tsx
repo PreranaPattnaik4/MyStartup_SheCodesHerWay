@@ -7,12 +7,26 @@ import Footer from '@/components/footer';
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
-import { Bot, MessageSquare, Image as ImageIcon, Code, FileText, ArrowRight, ShieldCheck, CheckCircle2 } from 'lucide-react';
+import { Bot, MessageSquare, Image as ImageIcon, Code, FileText, ArrowRight, ShieldCheck, CheckCircle2, BrainCircuit } from 'lucide-react';
 import { Badge } from '@/components/ui/badge';
 import Image from 'next/image';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 
 const otherAiTools = [
+    {
+        icon: BrainCircuit,
+        title: "AI Coaching",
+        subtitle: "Learn Anything, Just Ask",
+        description: "An agentic AI-powered coach that helps you learn any skill, from coding to creative writing, through personalized, conversational lessons.",
+        features: [
+            "Personalized learning paths",
+            "Interactive exercises",
+            "Real-time feedback"
+        ],
+        href: "#",
+        isReady: false,
+        poweredBy: "Google's Tech"
+    },
     {
         icon: ImageIcon,
         title: "AI Image Studio",
@@ -145,7 +159,7 @@ export default function AiCoachingPage() {
                 </Card>
 
 
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-stretch">
+                <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 items-stretch">
                     {otherAiTools.map((tool) => (
                         <Card key={tool.title} className="flex flex-col shadow-lg transform transition-transform hover:-translate-y-2 duration-300">
                             <CardHeader>
