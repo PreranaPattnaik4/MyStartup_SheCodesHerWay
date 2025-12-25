@@ -164,7 +164,7 @@ export default function AiCoachingPage() {
                         <h2 className="font-headline text-3xl font-bold">Agentic AI-powered coach</h2>
                         <Badge variant="secondary" className="mt-2">Powered by Google's Tech</Badge>
                     </div>
-                    <Card key={aiCoachTool.title} className="flex flex-col shadow-lg transform transition-transform hover:-translate-y-2 duration-300 max-w-lg mx-auto">
+                    <Card key={aiCoachTool.title} className="flex flex-col shadow-lg transform transition-transform hover:-translate-y-2 duration-300 max-w-2xl mx-auto">
                         <CardHeader>
                             <div className="flex items-center justify-between">
                                 <div className="bg-primary/10 text-primary p-3 rounded-full">
@@ -258,5 +258,3 @@ export default function AiCoachingPage() {
     </div>
   );
 }
-
-    
