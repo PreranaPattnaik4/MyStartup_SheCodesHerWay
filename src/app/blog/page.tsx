@@ -11,7 +11,7 @@ import { PlaceHolderImages } from '@/lib/placeholder-images';
 const blogPosts = [
   {
     id: '6',
-    title: 'Next-Gen Creativity: Trending AI Tools (DALL·E, Veo, Sora, Nano Banana, Imagen, ChatGPT & Gemini) for Images, Infographics & Video in 2025',
+    title: 'Next-Gen Creativity: Trending AI Tools for Images, Infographics & Video in 2025',
     author: 'AI Content Team',
     date: 'August 6, 2024',
     excerpt: 'The digital content landscape is evolving faster than ever. AI no longer just writes text — it generates stunning visuals, infographics, and cinematic videos...',
