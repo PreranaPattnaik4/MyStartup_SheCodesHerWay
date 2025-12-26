@@ -49,9 +49,9 @@ export default function BlogPage() {
             <div className="max-w-4xl mx-auto">
                 <header className="text-center mb-12">
                     <h1 className="font-headline text-4xl md:text-5xl font-bold text-foreground">
-                        🌸 SheCodesHerWay: Where Women Build Their Path, Lead Their Way, and Leave Their Mark
+                        SheCodesHerWay: Where Women Build Their Path, Lead Their Way, and Leave Their Mark
                     </h1>
-                    <p className="mt-4 text-muted-foreground text-lg">Published on: July 31, 2024</p>
+                    <p className="mt-4 text-muted-foreground text-lg">Published on: {new Date().toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}</p>
                 </header>
 
                 <div className="relative w-full h-96 rounded-lg overflow-hidden mb-12 shadow-lg">
@@ -113,7 +113,7 @@ export default function BlogPage() {
                                     Sangini Udaan: EmpowerFly — Cohort 1 is a supportive, women-led empowerment journey designed to help women rise with confidence and fly beyond limits. Rooted in mentorship, structured learning, and community support, this founding cohort empowers women to develop skills, strengthen self-belief, and move forward at their own pace — on their own terms.
                                 </p>
                                 <p className="font-semibold mt-4">This is more than a program. It is a shared rise — where women learn together, grow together, and fly beyond limits.</p>
-                                <p className="mt-4">💖 A very warm welcome to all the participants and mentors joining our founding cohort. We are truly thrilled to have you on this journey of growth, learning, and empowerment. Together, we will build something meaningful, impactful, and lasting. Stay connected for upcoming announcements and follow our journey on social media as we take flight — together.</p>
+                                <p className="mt-4 flex items-center gap-2"><Heart className="text-primary"/> A very warm welcome to all the participants and mentors joining our founding cohort. We are truly thrilled to have you on this journey of growth, learning, and empowerment. Together, we will build something meaningful, impactful, and lasting. Stay connected for upcoming announcements and follow our journey on social media as we take flight — together.</p>
                             </CardContent>
                         </Card>
                     </section>
@@ -121,7 +121,7 @@ export default function BlogPage() {
                     <Separator />
 
                      <section>
-                        <h3 className="font-headline text-3xl">💗 Choose Your Sangini Udaan Journey</h3>
+                        <h3 className="font-headline text-3xl">Choose Your Sangini Udaan Journey</h3>
                         <p>Women can choose from five powerful learning and growth tracks:</p>
                         <div className="grid md:grid-cols-2 gap-4 not-prose">
                             {sanginiUdaanTracks.map(track => (
@@ -231,7 +231,7 @@ export default function BlogPage() {
                     <Separator />
                     
                     <section className="text-center">
-                        <h2 className="font-headline text-3xl">🌷 Join Us — Let’s Build a Future Where Women Rise Higher</h2>
+                        <h2 className="font-headline text-3xl">Join Us — Let’s Build a Future Where Women Rise Higher</h2>
                         <p>SheCodesHerWay is more than a platform. It is a movement of confidence, creativity, and courage. Whether you join as a learner, mentor, or contributor, you become part of a story bigger than yourself — a story where women rise, lead, and inspire.</p>
                         <p className="text-2xl font-bold mt-4">Because when one woman rises…<br/>the world rises with her.</p>
                     </section>
@@ -239,7 +239,7 @@ export default function BlogPage() {
                     <Separator />
                     
                     <section>
-                         <h2 className="font-headline text-3xl text-center">💚 Connect With Us</h2>
+                         <h2 className="font-headline text-3xl text-center flex items-center justify-center gap-3"><Heart className="text-primary"/>Connect With Us</h2>
                          <div className="text-center mt-4 space-y-1 not-prose">
                             <p><strong>Website:</strong> <Link href="https://shecodesherways.com" className="text-primary hover:underline">https://shecodesherways.com</Link></p>
                             <p><strong>Email:</strong> <a href={`mailto:${brand.email}`} className="text-primary hover:underline">{brand.email}</a></p>
