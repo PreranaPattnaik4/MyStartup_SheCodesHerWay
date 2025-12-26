@@ -11,7 +11,7 @@ type PostImage = {
     hint: string;
 }
 
-type ForumPost = {
+export type ForumPost = {
   id: string;
   title: string;
   author: string;
