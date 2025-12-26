@@ -8,6 +8,7 @@ import { brand } from '@/lib/brand';
 import Link from 'next/link';
 import { Award, BrainCircuit, Briefcase, CheckCircle, Handshake, Heart, Linkedin, Rocket, Sparkles, Star, Users } from 'lucide-react';
 import { Badge } from '@/components/ui/badge';
+import Image from 'next/image';
 
 const sanginiUdaanTracks = [
     {
@@ -52,6 +53,15 @@ export default function BlogPage() {
                     </h1>
                     <p className="mt-4 text-muted-foreground text-lg">Published on: August 1, 2024</p>
                 </header>
+
+                <div className="relative w-full h-96 rounded-lg overflow-hidden mb-12 shadow-lg">
+                    <Image
+                        src="https://i.postimg.cc/1RqPqqfF/Banners3.png"
+                        alt="SheCodesHerWay banner"
+                        fill
+                        className="object-cover"
+                    />
+                </div>
 
                 <div className="prose lg:prose-xl dark:prose-invert max-w-none mx-auto text-foreground/80 space-y-8">
                     <p className="lead">
