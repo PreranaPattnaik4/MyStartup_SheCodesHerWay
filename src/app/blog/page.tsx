@@ -51,7 +51,7 @@ export default function BlogPage() {
                     <h1 className="font-headline text-4xl md:text-5xl font-bold text-foreground">
                         🌸 SheCodesHerWay: Where Women Build Their Path, Lead Their Way, and Leave Their Mark
                     </h1>
-                    <p className="mt-4 text-muted-foreground text-lg">Published on: August 1, 2024</p>
+                    <p className="mt-4 text-muted-foreground text-lg">Published on: July 31, 2024</p>
                 </header>
 
                 <div className="relative w-full h-96 rounded-lg overflow-hidden mb-12 shadow-lg">
