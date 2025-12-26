@@ -5,7 +5,8 @@ import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 import { Button } from '@/components/ui/button';
 import { cn } from '@/lib/utils';
 import { useUser } from '@/firebase/hooks';
-import { Award, LayoutDashboard, User as UserIcon, BookOpen, MessageSquare, Heart, ShoppingCart, HelpCircle, Rocket, Annoyed, DollarSign, ClipboardCheck, Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from 'lucide-react';
+import { Award, LayoutDashboard, User as UserIcon, BookOpen, MessageSquare, Heart, ShoppingCart, HelpCircle, Rocket, Annoyed, DollarSign, ClipboardCheck } from 'lucide-react';
+import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip';
 import Logo from '../logo';
 
 const mainNav = [
