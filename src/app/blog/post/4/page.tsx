@@ -36,7 +36,7 @@ export default function BlogPostPage4() {
                         priority
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/30 to-transparent" />
-                    <div className="absolute bottom-0 left-0 p-8 md:p-12">
+                    <div className="absolute bottom-12 left-0 p-8 md:p-12">
                         <h1 className="font-headline text-4xl font-bold text-white drop-shadow-lg md:text-6xl max-w-4xl">
                             {post.title}
                         </h1>
@@ -102,7 +102,8 @@ export default function BlogPostPage4() {
                     <Separator className="my-8" />
                     
                     <h2>🌍 The Sangini Network — Our Community</h2>
-                    <p>Every woman who joins SheCodesHerWay becomes a Sangini — a friend, a sister, a changemaker. Our community is built on:</p>
+                    <p>Every woman who joins SheCodesHerWay becomes a Sangini — a friend, a sister, a changemaker.
+                    Our community is built on:</p>
                     <ul>
                         <li>Women supporting women</li>
                         <li>Shared learning and mentorship</li>
@@ -169,7 +170,9 @@ export default function BlogPostPage4() {
                     <Separator className="my-8" />
 
                     <h2>🌷 Join Us — Let’s Build a Future Where Women Rise Higher</h2>
-                    <p>SheCodesHerWay is more than a platform. It is a movement of confidence, creativity, and courage. Whether you join as a learner, mentor, or contributor, you become part of a story bigger than yourself — a story where women rise, lead, and inspire.</p>
+                    <p>SheCodesHerWay is more than a platform.
+                    It is a movement of confidence, creativity, and courage.
+                    Whether you join as a learner, mentor, or contributor, you become part of a story bigger than yourself — a story where women rise, lead, and inspire.</p>
                     <blockquote>Because when one woman rises… the world rises with her.</blockquote>
 
                     <h4>💚 Connect With Us</h4>
@@ -197,4 +200,5 @@ export default function BlogPostPage4() {
     </div>
   );
 }
+
 
