@@ -142,6 +142,17 @@ export default function ProgramFlow() {
                     </div>
                 </div>
 
+                <div className="mt-16 space-y-8 max-w-3xl mx-auto text-center">
+                    <div>
+                        <h3 className="font-headline text-2xl font-bold">Build Projects & Solve Real-World Problems</h3>
+                        <p className="mt-2 text-foreground/80">Participants work on practical, impact-driven projects that address real-world challenges. This hands-on approach strengthens problem-solving skills, teamwork, innovation, and confidence while building a strong project portfolio.</p>
+                    </div>
+                    <div>
+                        <h3 className="font-headline text-2xl font-bold">Industry Expert Guidance on Your Career Goals</h3>
+                        <p className="mt-2 text-foreground/80">Direct guidance from industry professionals to help participants identify career paths, set goals, receive feedback, and make informed decisions aligned with their aspirations and strengths.</p>
+                    </div>
+                </div>
+
                 <div className="text-center mt-20">
                      <p className="font-headline text-2xl text-primary italic max-w-3xl mx-auto">
                         “Every woman who joins Sangini Udaan : EmpowerFly embarks on a journey —
