@@ -8,9 +8,9 @@ import {
   Briefcase,
   Users,
   Award,
-  CheckCircle,
 } from 'lucide-react';
 import { Card, CardContent, CardHeader, CardTitle } from '../ui/card';
+import { cn } from '@/lib/utils';
 
 const timelinePhases = [
   {
@@ -59,7 +59,11 @@ const timelinePhases = [
 
 export default function ProgramFlow() {
   return (
-    <section className="py-16 px-4">
+    <section className="py-16 px-4 relative overflow-hidden">
+      <div
+        className="absolute inset-0 -z-10 bg-[radial-gradient(ellipse_at_center,rgba(143,188,143,0.1),transparent_70%)]"
+        aria-hidden="true"
+      ></div>
       <div className="container mx-auto">
         <div className="text-center mb-16">
           <h2 className="font-headline text-4xl font-bold text-foreground">
@@ -78,80 +82,31 @@ export default function ProgramFlow() {
             aria-hidden="true"
           ></div>
 
-          <div className="space-y-12 md:space-y-0">
+          {/* Vertical line for mobile */}
+          <div
+            className="absolute left-4 top-0 bottom-0 w-0.5 bg-border -translate-x-1/2 md:hidden"
+            aria-hidden="true"
+          ></div>
+
+          <div className="space-y-16">
             {timelinePhases.map((item, index) => (
               <div
                 key={index}
-                className="relative md:grid md:grid-cols-2 md:items-center md:gap-x-12"
+                className="relative flex items-center"
               >
-                {/* Content Card - Left */}
-                <div
-                  className={cn(
-                    'md:text-right',
-                    index % 2 === 0 ? 'md:order-1' : 'md:order-2'
-                  )}
-                >
-                  {index % 2 === 0 && (
-                    <Card className="shadow-lg bg-white mb-8 md:mb-0">
-                      <CardHeader>
-                        <p className="text-sm font-semibold text-primary">
-                          {item.phase}
-                        </p>
-                        <CardTitle className="font-headline text-2xl">
-                          {item.title}
-                        </CardTitle>
-                      </CardHeader>
-                      <CardContent>
-                        <p className="text-foreground/80">
-                          {item.description}
-                        </p>
-                      </CardContent>
-                    </Card>
-                  )}
-                </div>
-
                 {/* Timeline Marker */}
                 <div
-                  className={cn(
-                    'absolute top-0 left-4 md:left-1/2 w-8 h-8 rounded-full bg-background flex items-center justify-center border-2 border-primary shadow-md -translate-x-1/2',
-                    index % 2 === 0 ? 'md:order-2' : 'md:order-1'
-                  )}
+                  className="absolute top-1/2 -translate-y-1/2 left-4 md:left-1/2 w-8 h-8 rounded-full bg-background flex items-center justify-center border-2 border-primary shadow-md -translate-x-1/2 z-10"
                 >
                   <item.icon className="h-4 w-4 text-primary" />
                 </div>
 
-                {/* Vertical line for mobile */}
-                <div
-                  className="absolute left-4 top-0 h-full w-0.5 bg-border -translate-x-1/2 md:hidden"
-                  aria-hidden="true"
-                ></div>
-
-                {/* Content Card - Right and Mobile */}
-                <div
-                  className={cn(
-                    'ml-12 md:ml-0',
-                    index % 2 !== 0 ? 'md:order-1' : 'md:order-2'
-                  )}
-                >
-                  {index % 2 !== 0 && (
-                     <Card className="shadow-lg bg-white hidden md:block">
-                      <CardHeader>
-                         <p className="text-sm font-semibold text-primary">
-                          {item.phase}
-                        </p>
-                        <CardTitle className="font-headline text-2xl">
-                          {item.title}
-                        </CardTitle>
-                      </CardHeader>
-                      <CardContent>
-                        <p className="text-foreground/80">
-                          {item.description}
-                        </p>
-                      </CardContent>
-                    </Card>
-                  )}
-                   {/* Mobile Card */}
-                   <Card className="shadow-lg bg-white md:hidden">
+                {/* Content Card */}
+                <div className={cn(
+                    "w-full pl-12 md:pl-0 md:w-1/2",
+                    index % 2 === 0 ? 'md:pr-10' : 'md:ml-auto md:pl-10 md:text-left'
+                )}>
+                    <Card className="shadow-xl bg-white hover:shadow-2xl transition-shadow duration-300">
                       <CardHeader>
                          <p className="text-sm font-semibold text-primary">
                           {item.phase}
@@ -167,12 +122,13 @@ export default function ProgramFlow() {
                       </CardContent>
                     </Card>
                 </div>
+
               </div>
             ))}
           </div>
         </div>
 
-        <div className="mt-16 text-center max-w-3xl mx-auto">
+        <div className="mt-20 text-center max-w-3xl mx-auto">
           <Card className="bg-white p-6 shadow-md border-t-4 border-primary">
             <p className="text-foreground/80 italic">
               “All Sangini Udaan tracks follow a shared learning journey through
@@ -186,8 +142,4 @@ export default function ProgramFlow() {
       </div>
     </section>
   );
-}
-
-function cn(...classes: (string | undefined | false)[]) {
-  return classes.filter(Boolean).join(' ');
 }
