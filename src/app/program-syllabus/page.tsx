@@ -4,7 +4,7 @@ import Footer from '@/components/footer';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
 import { Badge } from '@/components/ui/badge';
-import { BookOpen, BrainCircuit, Code, Cpu, Eye, FileText, Heart, Lightbulb, Lock, Pilcrow, Rocket, Scale, Sparkles, UserCheck, Users, Zap } from 'lucide-react';
+import { BookOpen, BrainCircuit, Code, Cpu, Eye, FileText, Heart, Lightbulb, Lock, Pilcrow, Projector, Rocket, Scale, Sparkles, UserCheck, Users, Zap } from 'lucide-react';
 import { Separator } from '@/components/ui/separator';
 
 const tracks = [
@@ -199,6 +199,15 @@ export default function ProgramSyllabusPage() {
                                                 <ul className="list-disc list-inside space-y-1 pl-4 text-foreground/80">
                                                     {track.outcomes.map(item => <li key={item}>{item}</li>)}
                                                 </ul>
+                                            </div>
+                                            <Separator />
+                                            <div>
+                                                <h4 className="font-semibold mb-2 flex items-center gap-2"><Projector className="h-5 w-5 text-primary" />Build Projects & Solve Real-World Problems</h4>
+                                                <p className="text-foreground/80">Participants work on practical, impact-driven projects that address real-world challenges. This hands-on approach strengthens problem-solving skills, teamwork, innovation, and confidence while building a strong project portfolio.</p>
+                                            </div>
+                                            <div>
+                                                <h4 className="font-semibold mb-2 flex items-center gap-2"><UserCheck className="h-5 w-5 text-primary" />Industry Expert Guidance on Your Career Goals</h4>
+                                                <p className="text-foreground/80">Direct guidance from industry professionals to help participants identify career paths, set goals, receive feedback, and make informed decisions aligned with their aspirations and strengths.</p>
                                             </div>
                                         </AccordionContent>
                                     </AccordionItem>
