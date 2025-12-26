@@ -6,7 +6,7 @@ import { PlaceHolderImages } from '@/lib/placeholder-images';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle, CardFooter } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
-import { Laptop, HeartHandshake, Award, Calendar, Users, School, Gift, Linkedin, BrainCircuit, Code, Pilcrow, Lightbulb } from 'lucide-react';
+import { Laptop, HeartHandshake, Award, Calendar, Users, School, Gift, Linkedin, BrainCircuit, Code, Pilcrow, Lightbulb, Scale } from 'lucide-react';
 import { Separator } from '@/components/ui/separator';
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
 import { programFaqData } from '@/lib/program-faq-data';
@@ -273,8 +273,18 @@ export default function SanginiUdaanPage() {
                         <Separator />
 
                         <ProgramFlow />
+                        
+                        <Separator />
+
+                        <section className="max-w-3xl mx-auto text-center">
+                            <Card className="!mt-8 text-sm text-muted-foreground p-6 bg-red-50 border-red-200 text-left shadow-lg">
+                                <h3 className="font-bold text-red-800 flex items-center gap-2"><Scale className="h-5 w-5" />Important Notice: Legal Status Clarification</h3>
+                                <p className="mt-2 text-red-700">Collaboration does not create an employer-employee, contractor, or internship relationship. Participation is non-binding and non-contractual.</p>
+                            </Card>
+                        </section>
 
                         <Separator />
+
 
                         <div id="faq">
                            <section>
