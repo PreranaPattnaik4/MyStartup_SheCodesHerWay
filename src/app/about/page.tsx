@@ -60,6 +60,20 @@ const teamMembers = [
         description: "Will craft our digital voice, manage social channels, and create compelling content to grow our online presence.",
         image: PlaceHolderImages.find((p) => p.id === 'team-member-5'),
         hiringSoon: true,
+    },
+    {
+        name: "Hiring Soon",
+        role: "Graphics Designer",
+        description: "Creates visual assets including platform graphics, banners, social media creatives, and brand materials.",
+        image: PlaceHolderImages.find((p) => p.id === 'team-member-6'),
+        hiringSoon: true,
+    },
+    {
+        name: "Hiring Soon",
+        role: "Video Editor & Motion Designer",
+        description: "Edits promotional videos, reels, program explainers, and storytelling content for digital platforms.",
+        image: PlaceHolderImages.find((p) => p.id === 'team-member-7'),
+        hiringSoon: true,
     }
 ];
 
@@ -373,3 +387,5 @@ export default function AboutPage() {
         </div>
     );
 }
+
+    
