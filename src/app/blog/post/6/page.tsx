@@ -13,8 +13,8 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 const post = {
     id: '6',
     title: 'Next-Gen Creativity: Trending AI Tools for Images, Infographics & Video in 2025',
-    author: 'AI Content Team',
-    authorAvatar: 'https://images.unsplash.com/photo-1599305445671-ac291c95aaa9?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHx0ZWFtJTIwYXZhdGFyfGVufDB8fHx8fDE3NjU4OTg4MTJ8MA&ixlib=rb-4.1.0&q=80&w=1080',
+    author: 'Prerana K.',
+    authorAvatar: 'https://i.postimg.cc/HkLGWcM4/1718292767884.jpg',
     date: 'August 6, 2024',
     image: {
         imageUrl: "https://i.postimg.cc/3wc105jw/Whats-App-Image-2025-12-02-at-3-55-38-PM.jpg",
