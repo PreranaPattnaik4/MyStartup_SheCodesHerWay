@@ -34,7 +34,7 @@ const blogPosts = [
     date: 'July 18, 2024',
     excerpt: 'Diving into web development can be daunting. This guide breaks down the essential steps to build your first web application, from choosing the right tools to deploying your project.',
     image: PlaceHolderImages.find((p) => p.id === 'feature-workshops'),
-    href: '#'
+    href: '/blog/post/3'
   }
 ];
 
