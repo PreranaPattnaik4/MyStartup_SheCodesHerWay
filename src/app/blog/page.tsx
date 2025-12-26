@@ -22,10 +22,10 @@ const blogPosts = [
     id: '2',
     title: 'From Imposter to Innovator: Overcoming Self-Doubt',
     author: 'Community Voice',
-    date: 'July 22, 2024',
+    date: 'July 28, 2024',
     excerpt: 'Imposter syndrome is a silent career killer, especially for women in competitive fields. Learn practical strategies to overcome self-doubt and embrace your inner innovator.',
     image: PlaceHolderImages.find((p) => p.id === 'feature-community'),
-    href: '#'
+    href: '/blog/post/2'
   },
     {
     id: '3',
