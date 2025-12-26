@@ -6,13 +6,14 @@ import { PlaceHolderImages } from '@/lib/placeholder-images';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle, CardFooter } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
-import { Laptop, HeartHandshake, Award, Calendar, Users, School, Gift, Linkedin, BrainCircuit, Code, Pilcrow, Lightbulb, Scale } from 'lucide-react';
+import { Linkedin, BrainCircuit, Code, Pilcrow, Lightbulb, Scale } from 'lucide-react';
 import { Separator } from '@/components/ui/separator';
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
 import { programFaqData } from '@/lib/program-faq-data';
 import ProgramFlow from '@/components/sangini-udaan/program-flow';
 import { brand } from '@/lib/brand';
 import { Badge } from '@/components/ui/badge';
+import JoinUs from '@/components/join-us';
 
 const specializedPaths = [
     {
@@ -46,15 +47,6 @@ const specializedPaths = [
         href: "/program-syllabus",
     }
 ]
-
-const gains = [
-    { icon: Laptop, title: 'Hands-on Learning', description: 'Work on real-world projects.' },
-    { icon: HeartHandshake, title: 'Mentorship Support', description: 'Guidance from industry experts.' },
-    { icon: Award, title: 'Completion Certificate', description: 'Official recognition of your work.' },
-    { icon: Calendar, title: 'Access to Events', description: 'Join exclusive online & live events.' },
-    { icon: Users, title: 'Lifetime Community', description: 'Become part of our Sangini Circle.' },
-    { icon: Gift, title: 'Growth Investment', description: 'We invest in your skills and opportunities.' },
-];
 
 export default function SanginiUdaanPage() {
     const bannerImage = PlaceHolderImages.find(p => p.id === 'program-community');
@@ -155,38 +147,12 @@ export default function SanginiUdaanPage() {
 
                         <Separator />
 
-                        <section>
-                            <div className="text-center mb-12">
-                                <h2 className="font-headline text-3xl font-bold">What You’ll Gain From The Program</h2>
-                                 <p className="mt-4 font-body text-lg italic text-primary">“This is not just a program — it's an investment in your future.”</p>
-                            </div>
-                            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
-                                {gains.map((gain) => (
-                                    <Card key={gain.title} className="bg-muted border-0 flex items-start p-6 gap-4">
-                                        <div className="text-primary pt-1">
-                                            <gain.icon className="h-6 w-6"/>
-                                        </div>
-                                        <div>
-                                            <h3 className="font-semibold text-lg">{gain.title}</h3>
-                                            <p className="text-foreground/80 text-sm">{gain.description}</p>
-                                        </div>
-                                    </Card>
-                                ))}
-                            </div>
-                            <Card className="mt-8 flex flex-col sm:flex-row items-center justify-center p-6 text-center bg-accent/50">
-                                <School className="h-10 w-10 text-accent-foreground mb-4 sm:mb-0 sm:mr-4"/>
-                                <div>
-                                    <h3 className="font-bold text-lg">Who Can Apply?</h3>
-                                    <p className="text-accent-foreground/90">Students, learners, and women restarting their careers are all welcome.</p>
-                                </div>
-                            </Card>
-                        </section>
-
-                        <Separator />
-
                         <section className="space-y-16">
+                            <div className="text-center mb-12">
+                                <h2 className="font-headline text-3xl font-bold md:text-4xl">What You’ll Gain From The Program</h2>
+                                <p className="mt-4 font-body text-lg italic text-primary">“This is not just a program — it's an investment in your future.”</p>
+                            </div>
                             <div>
-                                <h2 className="text-center text-lg font-semibold text-primary"> Recommended:</h2>
                                 <Card className="mt-4 max-w-3xl mx-auto shadow-lg transform transition-transform hover:scale-105 duration-300">
                                     <CardHeader>
                                         <CardTitle className="font-headline text-3xl">Complete {brand.programName} Journey (All-in-One Track)</CardTitle>
@@ -209,6 +175,9 @@ export default function SanginiUdaanPage() {
 
                             <div>
                                 <h2 className="text-center font-headline text-3xl font-bold md:text-4xl">Other Specialized Paths:</h2>
+                                <p className="text-center mt-4 max-w-2xl mx-auto text-lg text-foreground/80">
+                                    Choose your path and begin your journey to learn, lead, and rise with SheCodesHerWay.
+                                </p>
                                 <div className="mt-8 grid gap-8 sm:grid-cols-2 lg:grid-cols-2">
                                     {specializedPaths.map((path) => (
                                         <Card key={path.title} className="flex flex-col shadow-lg">
@@ -228,13 +197,7 @@ export default function SanginiUdaanPage() {
                                 </div>
                             </div>
                             
-                            <div className="text-center mt-16">
-                                <p className="font-headline text-2xl">
-                                     Choose your path and begin your journey to learn, lead, and rise with SheCodesHerWay.
-                                </p>
-                            </div>
-
-                             <div className="mt-16">
+                            <div className="mt-16">
                                 <div className="text-center mb-12">
                                     <h2 className="font-headline text-3xl font-bold md:text-4xl">Core Program Foundations</h2>
                                     <p className="mt-4 max-w-2xl mx-auto text-lg text-foreground/80">
@@ -305,6 +268,13 @@ export default function SanginiUdaanPage() {
                                 ))}
                               </Accordion>
                             </section>
+                        </div>
+                        
+                        <Separator />
+
+                        <div id="join-us" className="rounded-xl py-12 relative overflow-hidden">
+                           <div className="absolute inset-0 -z-10 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-primary/10 via-white/0 to-white/0"></div>
+                            <JoinUs />
                         </div>
 
                     </div>

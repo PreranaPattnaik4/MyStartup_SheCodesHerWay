@@ -6,7 +6,7 @@ import MissionVision from '@/components/home/mission-vision';
 import ImpactGoals from '@/components/home/impact-goals';
 import CoreActivities from '@/components/home/core-activities';
 import Roadmap from '@/components/home/roadmap';
-import JoinUs from '@/components/home/join-us';
+import JoinUs from '@/components/join-us';
 import { Separator } from '@/components/ui/separator';
 import Faq from '@/components/faq';
 import WhatWeOffer from '@/components/home/what-we-offer';
