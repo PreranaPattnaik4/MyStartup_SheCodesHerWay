@@ -47,7 +47,7 @@ export default function Header() {
                 <span className="sr-only">Open menu</span>
               </Button>
             </SheetTrigger>
-            <SheetContent side="left" className="w-full h-full bg-background/90 backdrop-blur-lg">
+            <SheetContent side="left" className="w-full h-full bg-background/95 backdrop-blur">
               <div className="flex flex-col items-center justify-center h-full gap-8">
                 <Logo />
                  <div className="sm:hidden">
