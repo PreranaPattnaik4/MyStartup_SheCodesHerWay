@@ -96,7 +96,7 @@ export default function StartupSchool() {
                 <Button asChild size="lg">
                 <Link href="/apply">Apply Now</Link>
                 </Button>
-                <Button asChild size="lg" variant="outline">
+                <Button asChild size="lg" variant="secondary">
                 <Link href="/sangini-udaan">Learn More</Link>
                 </Button>
             </div>

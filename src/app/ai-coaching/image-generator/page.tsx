@@ -47,7 +47,7 @@ export default function ImageGeneratorPage() {
                     <p className="mb-6 text-foreground/80">
                         Soon you'll be able to create stunning visuals and graphics for your projects with simple text prompts. From social media posts to presentation slides, our AI will help you bring your ideas to life instantly.
                     </p>
-                    <Button asChild variant="outline">
+                    <Button asChild>
                         <Link href="/ai-coaching">
                             <ArrowLeft className="mr-2 h-4 w-4" />
                             Back to AI Tools

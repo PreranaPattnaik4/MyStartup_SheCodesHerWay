@@ -37,7 +37,7 @@ export default function Hero() {
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Link>
             </Button>
-            <Button asChild size="lg" variant="outline" className="bg-background/80">
+            <Button asChild size="lg" variant="secondary">
               <Link href="/partner">
                 Join Us
               </Link>

@@ -90,7 +90,7 @@ export default function BlogPostPage() {
                 </div>
 
                 <div className="mt-12 pt-8 border-t">
-                    <Button asChild variant="outline">
+                    <Button asChild>
                         <Link href="/blog">
                             <ArrowLeft className="mr-2 h-4 w-4" />
                             Back to All Blogs

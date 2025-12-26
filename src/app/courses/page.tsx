@@ -46,7 +46,7 @@ export default function CoursesPage() {
                      <p className="mb-6 text-foreground/80">
                         Our course catalog will feature guided learning paths, hands-on projects, and expert-led workshops designed to help you grow at your own pace.
                     </p>
-                    <Button asChild variant="outline">
+                    <Button asChild>
                         <Link href="/">
                             <ArrowLeft className="mr-2 h-4 w-4" />
                             Back to Home

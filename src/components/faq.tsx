@@ -40,7 +40,7 @@ export default function Faq({ showAll = false }: FaqProps) {
             <p className="text-foreground/80">
             Have more questions? Visit our full FAQ section.
             </p>
-            <Button asChild variant="outline" className="mt-4">
+            <Button asChild className="mt-4">
                 <Link href="/faq">
                     View All FAQs
                     <ArrowRight className="ml-2 h-4 w-4" />

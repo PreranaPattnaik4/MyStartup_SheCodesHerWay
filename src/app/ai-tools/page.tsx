@@ -22,7 +22,7 @@ export default function AiToolsPage() {
                 <p className="mt-4 max-w-3xl mx-auto text-lg text-foreground/80">
                     Generate a concise and compelling executive summary for your pitch deck using our AI tool.
                 </p>
-                <Button asChild variant="outline" className="mt-8">
+                <Button asChild className="mt-8">
                     <Link href="/ai-coaching">
                         <ArrowLeft className="mr-2 h-4 w-4" />
                         Back to All AI Tools

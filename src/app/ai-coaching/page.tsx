@@ -150,7 +150,7 @@ export default function AiCoachingPage() {
                     </CardContent>
                     <CardFooter className="flex-col items-start gap-4">
                         <Badge variant="secondary">Powered by {executiveSummaryTool.poweredBy}</Badge>
-                        <Button asChild variant="outline" className="w-full" disabled={!executiveSummaryTool.isReady}>
+                        <Button asChild className="w-full" disabled={!executiveSummaryTool.isReady}>
                             <Link href={executiveSummaryTool.isReady ? executiveSummaryTool.href : '#'}>
                                 {executiveSummaryTool.isReady ? 'Use Tool' : 'Coming Soon'}
                                 {executiveSummaryTool.isReady && <ArrowRight className="ml-2 h-4 w-4" />}
@@ -190,7 +190,7 @@ export default function AiCoachingPage() {
                             </div>
                         </CardContent>
                         <CardFooter className="flex-col items-start gap-4">
-                            <Button asChild variant="outline" className="w-full" disabled={!aiCoachTool.isReady}>
+                            <Button asChild className="w-full" disabled={!aiCoachTool.isReady}>
                                 <Link href={aiCoachTool.isReady ? aiCoachTool.href : '#'}>
                                     {aiCoachTool.isReady ? 'Use Tool' : 'Coming Soon'}
                                     {aiCoachTool.isReady && <ArrowRight className="ml-2 h-4 w-4" />}
@@ -230,7 +230,7 @@ export default function AiCoachingPage() {
                             </CardContent>
                             <CardFooter className="flex-col items-start gap-4">
                                 <Badge variant="secondary">Powered by {tool.poweredBy}</Badge>
-                                <Button asChild variant="outline" className="w-full" disabled={!tool.isReady}>
+                                <Button asChild className="w-full" disabled={!tool.isReady}>
                                     <Link href={tool.isReady ? tool.href : '#'}>
                                         {tool.isReady ? 'Use Tool' : 'Coming Soon'}
                                         {tool.isReady && <ArrowRight className="ml-2 h-4 w-4" />}

@@ -110,7 +110,7 @@ export default function WhatWeOffer() {
                             <p className="text-foreground/80">{offering.description}</p>
                         </CardContent>
                         <CardFooter className="justify-center">
-                            <Button asChild variant="outline">
+                            <Button asChild>
                                 <Link href={offering.href}>{offering.cta}</Link>
                             </Button>
                         </CardFooter>

@@ -14,7 +14,7 @@ const forumPosts: ForumPost[] = [
     id: '1',
     title: 'How do you balance learning to code with a full-time job?',
     author: 'Priya Sharma',
-    authorAvatar: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wzNzYyMDB8MHwxfHNlYXJjaHwxfHx3b21hbiUyMHBvcnRyYWl0fGVufDB8fHx8MTcxODcyMDI3OXww&ixlib-rb-4.1.0&q=80&w=1080',
+    authorAvatar: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wzNzYyMDB8MHwxfHNlYXJjaHwxfHx3b21hbiUyMHBvcnRyYWl0fGVufDB8fHx8MTcxODcyMDI3OXww&ixlib=rb-4.1.0&q=80&w=1080',
     timestamp: '2 days ago',
     content: "Hi everyone! I'm new here and just started my journey in the 'Women in Tech' path of the Sangini Udaan program. I'm working full-time and trying to dedicate my evenings to learning. It feels a bit overwhelming. For those who have been through this, what are your best tips for time management, staying motivated, and avoiding burnout? Any advice would be greatly appreciated!",
     commentCount: 5,
@@ -28,12 +28,12 @@ const forumPosts: ForumPost[] = [
     id: '2',
     title: 'Show & Tell: My first portfolio website built with Next.js!',
     author: 'Meera Singh',
-    authorAvatar: 'https://images.unsplash.com/photo-1580489944761-15a19d654956?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wzNzYyMDB8MHwxfHNlYXJjaHwzfHx3b21hbiUyMHBvcnRyYWl0fGVufDB8fHx8MTcxODcyMDI3OXww&ixlib-rb-4.1.0&q=80&w=1080',
+    authorAvatar: 'https://images.unsplash.com/photo-1580489944761-15a19d654956?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wzNzYyMDB8MHwxfHNlYXJjaHwzfHx3b21hbiUyMHBvcnRyYWl0fGVufDB8fHx8MTcxODcyMDI3OXww&ixlib=rb-4.1.0&q=80&w=1080',
     timestamp: '5 days ago',
     content: "So excited to share my first big project from the Sangini Udaan bootcamp! It's a personal portfolio site built with Next.js and Tailwind CSS. I'm really proud of how it turned out, but would love to get feedback from this amazing community on the design and code. All suggestions are welcome! You can check it out here: [link-to-portfolio]",
     commentCount: 12,
     image: {
-      src: 'https://images.unsplash.com/photo-1516321497487-e288fb19713f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wzNDE5ODJ8MHwxfHNlYXJjaHwxfHx3b3Jrc2hvcHxlbnwwfHx8fDE3MTg3MjAzNjl8MA&ixlib-rb-4.1.0&q=80&w=1080',
+      src: 'https://images.unsplash.com/photo-1516321497487-e288fb19713f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wzNDE5ODJ8MHwxfHNlYXJjaHwxfHx3b3Jrc2hvcHxlbnwwfHx8fDE3MTg3MjAzNjl8MA&ixlib=rb-4.1.0&q=80&w=1080',
       alt: 'A person presenting their work on a laptop.',
       hint: 'laptop presentation'
     }
@@ -55,7 +55,7 @@ export default function PostPage({ params }: { params: { id: string } }) {
         <main className="flex-1 flex items-center justify-center text-center">
             <div>
                 <h1 className="text-2xl font-bold">Post not found</h1>
-                <Button asChild variant="outline" className="mt-4">
+                <Button asChild className="mt-4">
                     <Link href="/community">
                         <ArrowLeft className="mr-2 h-4 w-4" />
                         Back to Community

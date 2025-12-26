@@ -30,7 +30,7 @@ export default function CodeCanvasPage() {
                     </CardDescription>
                 </CardHeader>
                 <CardContent>
-                    <Button asChild variant="outline">
+                    <Button asChild>
                         <Link href="/ai-coaching">
                             <ArrowLeft className="mr-2 h-4 w-4" />
                             Back to AI Tools

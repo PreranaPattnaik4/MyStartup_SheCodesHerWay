@@ -13,7 +13,7 @@ const post = {
     id: '3',
     title: 'Building Your First Web App: A Beginner\'s Guide',
     author: 'Tech Team',
-    authorAvatar: 'https://images.unsplash.com/photo-1599305445671-ac291c95aaa9?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHx0ZWFtJTIwYXZhdGFyfGVufDB8fHx8MTc2NTg5ODgxMnww&ixlib=rb-4.1.0&q=80&w=1080',
+    authorAvatar: 'https://images.unsplash.com/photo-1599305445671-ac291c95aaa9?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHx0ZWFtJTIwYXZhdGFyfGVufDB8fHx8fDE3NjU4OTg4MTJ8MA&ixlib=rb-4.1.0&q=80&w=1080',
     date: 'July 18, 2024',
     image: PlaceHolderImages.find((p) => p.id === 'feature-workshops'),
 };
@@ -100,7 +100,7 @@ export default function BlogPostPage3() {
                 </div>
 
                 <div className="mt-12 pt-8 border-t">
-                    <Button asChild variant="outline">
+                    <Button asChild>
                         <Link href="/blog">
                             <ArrowLeft className="mr-2 h-4 w-4" />
                             Back to All Blogs

@@ -201,7 +201,7 @@ export default function CareersPage() {
             <p className="mt-4 max-w-2xl mx-auto text-lg text-foreground/80">
                 We're always open to new ideas and collaborations. If you have a different way you'd like to contribute, we'd love to hear from you.
             </p>
-            <Button asChild variant="outline" className="mt-8">
+            <Button asChild className="mt-8">
                 <Link href="/contact">Get in Touch</Link>
             </Button>
         </section>
