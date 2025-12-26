@@ -15,7 +15,11 @@ const blogPosts = [
     author: 'Prerana K.',
     date: 'August 5, 2024',
     excerpt: 'Every startup begins with an idea. Mine began with a prompt. This blog is a reflection of my startup-building journey — how I moved from thinking about ideas to actually prototyping and shipping them...',
-    image: PlaceHolderImages.find((p) => p.id === 'feature-workshops'),
+    image: {
+        imageUrl: "https://i.postimg.cc/1RqPqqfF/Banners3.png",
+        description: "From Prompt to Prototype",
+        imageHint: "startup journey",
+    },
     href: '/blog/post/5'
   },
   {
