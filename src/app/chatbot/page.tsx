@@ -350,9 +350,7 @@ export default function ChatbotPage() {
                     <Menu className="h-5 w-5" />
                     <span className="sr-only">Toggle sidebar</span>
                 </Button>
-                <h2 className="text-lg font-semibold ml-2 truncate">
-                    {activeChat ? activeChat.title : 'Chat'}
-                </h2>
+                <h2 className="text-lg font-semibold ml-2 truncate">EmpowerFly Assistant</h2>
             </div>
             <ScrollArea className="flex-grow" ref={scrollAreaRef as any}>
                 <div className="max-w-3xl mx-auto w-full px-4 pt-8 pb-4">
@@ -391,7 +389,7 @@ export default function ChatbotPage() {
                          <div className='flex items-start gap-3 justify-start'>
                              <Avatar className="h-8 w-8 border bg-primary text-primary-foreground p-1 shadow-sm">
                                 <AvatarFallback className='bg-transparent'><LogoIcon/></AvatarFallback>
-                            </Avatar>
+                             </Avatar>
                             <div className="bg-secondary rounded-xl p-3 text-sm shadow-sm">
                                 <div className="flex items-center gap-1.5">
                                     <span className="h-2 w-2 rounded-full bg-muted-foreground animate-pulse delay-0"></span>
@@ -512,4 +510,5 @@ export default function ChatbotPage() {
     </>
   );
 
+    
     
