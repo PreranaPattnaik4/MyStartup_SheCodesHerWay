@@ -25,7 +25,7 @@ export const faqData: FaqCategory[] = [
             },
             {
                 question: "Who is the founder of SheCodesHerWay?",
-                answer: "SheCodesHerWay was founded by Prerana Kailash Pattnaik, a visionary committed to building a world where women can rise with confidence. Her leadership blends compassion, courage, and creativity.",
+                answer: "SheCodesHerWay was founded by Prerana Kailash Pattnaik. As the founder and developer, she built more than just a platform—she created a community and a vision for women to discover their strength and skills. Her leadership blends compassion, courage, and a deep commitment to empowering women to pursue their dreams fearlessly.",
             },
             {
                 question: "What are the core values of the organization?",
@@ -135,15 +135,15 @@ export const faqData: FaqCategory[] = [
             },
             {
                 question: "What is the duration of the collaboration?",
-                answer: "The initial collaboration period is 3 months. A second phase of 3 months is possible, subject to reapplication and selection based on performance. High-performing individuals may be able to continue for up to 1 year.",
+                answer: "Initial collaboration period: 3 months. A second phase of 3 months is possible, subject to reapplication and selection based on performance. Performance-based continuation may extend up to 1 year."
             },
             {
                 question: "How should I represent my role at SheCodesHerWay?",
-                answer: "You should identify yourself as a 'Contributor' or 'Intern'. This is an unpaid internship/collaboration, not a formal team role. Your contributions are highly valued as part of this learning and impact-driven engagement."
+                answer: "You should identify yourself as a 'Contributor' or 'Intern.' This is an unpaid, learning-focused engagement, not a formal team role. You can tell others, 'I joined as a Contributor,' to accurately reflect your position."
             },
             {
                 question: "Will collaboration lead to a paid job?",
-                answer: "While paid roles are not guaranteed, high-performing contributors may be considered for a paid part-time role after 1 year of collaboration, depending on company growth, funding, and a formal interview process. If I work well, I may get a chance to become a permanent member."
+                answer: "While paid roles are not guaranteed, high-performing contributors may be considered for a paid part-time role after 1 year of collaboration, depending on company growth, funding, and a formal interview process. As one might say, 'If I work well, I may get a chance to become a permanent member.'"
             },
             {
                 question: "What is the legal status of a collaborator?",
