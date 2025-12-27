@@ -41,6 +41,15 @@ const blogPosts = [
     href: '/blog/post/2'
   },
   {
+    id: '1',
+    title: 'The Power of Mentorship for Women in Tech',
+    author: 'Prerana K.',
+    date: 'July 25, 2024',
+    excerpt: 'Mentorship can be a game-changer for women navigating the tech industry. In this post, we explore the profound impact of having a mentor and how it can accelerate your career growth and build confidence.',
+    image: PlaceHolderImages.find((p) => p.id === 'program-mentorship'),
+    href: '/blog/post/1'
+  },
+  {
     id: '6',
     title: 'Next-Gen Creativity: Trending AI Tools for Images, Infographics & Video in 2025',
     author: 'Prerana K.',
@@ -54,15 +63,6 @@ const blogPosts = [
     href: '/blog/post/6'
   },
   {
-    id: '1',
-    title: 'The Power of Mentorship for Women in Tech',
-    author: 'Prerana K.',
-    date: 'July 25, 2024',
-    excerpt: 'Mentorship can be a game-changer for women navigating the tech industry. In this post, we explore the profound impact of having a mentor and how it can accelerate your career growth and build confidence.',
-    image: PlaceHolderImages.find((p) => p.id === 'program-mentorship'),
-    href: '/blog/post/1'
-  },
-    {
     id: '3',
     title: 'Building Your First Web App: A Beginner\'s Guide',
     author: 'Tech Team',
