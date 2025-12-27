@@ -275,7 +275,7 @@ export default function SanginiUdaanPage() {
                                 </Card>
                                 <Card className="shadow-lg lg:col-span-3">
                                     <CardHeader>
-                                        <CardTitle className="flex items-center gap-2"><RefreshCw className="h-6 w-6 text-primary"/>Program Duration Flexibility & Extension Policy</CardTitle>
+                                        <CardTitle className="flex items-center gap-2"><RefreshCw className="h-6 w-6 text-primary"/>Program Policies</CardTitle>
                                     </CardHeader>
                                     <CardContent className="space-y-4">
                                         <div className="grid md:grid-cols-2 gap-8">
