@@ -94,6 +94,7 @@ export default function Home() {
                                         <Link href="https://x.com/preranakailash4" target="_blank" rel="noopener noreferrer" aria-label="Twitter" className="text-muted-foreground hover:text-primary"><Twitter /></Link>
                                         <Link href="https://www.linkedin.com/company/shecodesherway/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" className="text-muted-foreground hover:text-primary"><Linkedin /></Link>
                                         <Link href="https://github.com/PreranaPattnaik4/SheCodesHerWay" target="_blank" rel="noopener noreferrer" aria-label="GitHub" className="text-muted-foreground hover:text-primary"><Github /></Link>
+                                        <Link href={`mailto:${brand.secondaryEmail}`} aria-label="Email" className="text-muted-foreground hover:text-primary"><Mail /></Link>
                                     </div>
                                 </div>
                             </div>

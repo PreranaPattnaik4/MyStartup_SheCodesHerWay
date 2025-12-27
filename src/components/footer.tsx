@@ -42,6 +42,9 @@ export default function Footer() {
             <a href={`mailto:${brand.email}`} className="mt-4 text-sm text-secondary-foreground/80 transition-colors hover:text-primary">
               {brand.email}
             </a>
+            <a href={`mailto:${brand.secondaryEmail}`} className="mt-2 text-sm text-secondary-foreground/80 transition-colors hover:text-primary">
+              {brand.secondaryEmail}
+            </a>
             <div className="mt-4 flex space-x-4">
               <Link href="https://x.com/preranakailash4" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
                 <Twitter className="h-6 w-6 text-secondary-foreground/80 transition-colors hover:text-primary" />

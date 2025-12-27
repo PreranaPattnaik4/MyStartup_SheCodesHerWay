@@ -1,3 +1,4 @@
+
 export const brand = {
   name: "SheCodesHerWay",
   appName: "EmpowerFly Assistant",
@@ -11,4 +12,5 @@ export const brand = {
   },
   website: "www.shecodesherway.com",
   email: "contact@shecodesherway.com",
+  secondaryEmail: "shecodesherway@gmail.com",
 };

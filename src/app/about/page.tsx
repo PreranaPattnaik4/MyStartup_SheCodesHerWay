@@ -9,7 +9,7 @@ import { Button } from '@/components/ui/button';
 import Link from 'next/link';
 import { Separator } from '@/components/ui/separator';
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from '@/components/ui/table';
-import { Award, Check, FileText, Github, Heart, Instagram, Linkedin, Star, Twitter, Users, Youtube, Zap, HeartHandshake, UserPlus } from 'lucide-react';
+import { Award, Check, FileText, Github, Heart, Instagram, Linkedin, Star, Twitter, Users, Youtube, Zap, HeartHandshake, UserPlus, Mail } from 'lucide-react';
 import { Badge } from '@/components/ui/badge';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 
@@ -159,6 +159,7 @@ export default function AboutPage() {
                                         <Link href="https://www.linkedin.com/company/shecodesherway/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" className="text-muted-foreground hover:text-primary"><Linkedin size={24}/></Link>
                                         <Link href="#" target="_blank" rel="noopener noreferrer" aria-label="YouTube" className="text-muted-foreground hover:text-primary"><Youtube size={24}/></Link>
                                         <Link href="#" target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="text-muted-foreground hover:text-primary"><Instagram size={24}/></Link>
+                                        <Link href={`mailto:${brand.secondaryEmail}`} aria-label="Email" className="text-muted-foreground hover:text-primary"><Mail size={24}/></Link>
                                     </div>
                                 </div>
                             </div>
