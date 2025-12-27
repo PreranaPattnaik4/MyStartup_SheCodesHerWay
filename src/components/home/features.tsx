@@ -13,17 +13,17 @@ import { Badge } from '@/components/ui/badge';
 
 const categories = [
   { id: 'all-features', name: 'All Features' },
+  { id: 'our-program', name: 'Our Program' },
   { id: 'ai-coaching', name: 'AI Coaching' },
   { id: 'empowerfly-assistant', name: 'EmpowerFly Assistant' },
   { id: 'mentorship', name: 'Mentorship' },
+  { id: 'resources', name: 'Resources' },
+  { id: 'our-blogs', name: 'Our Blogs' },
   { id: 'community', name: 'Community' },
   { id: 'workshops', name: 'Workshops' },
   { id: 'internships', name: 'Internships' },
   { id: 'hackathons', name: 'Hackathons' },
   { id: 'live-events', name: 'LIVE Events!' },
-  { id: 'our-program', name: 'Our Program' },
-  { id: 'our-blogs', name: 'Our Blogs' },
-  { id: 'resources', name: 'Resources' },
 ];
 
 const features = [
