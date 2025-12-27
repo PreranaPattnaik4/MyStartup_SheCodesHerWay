@@ -16,12 +16,20 @@ export const faqData: FAQ[] = [
         answer: "Sangini Udaan : EmpowerFly is our flagship empowerment and mentorship program designed for any woman who wants to grow. Whether you're interested in tech, starting a business, exploring your creativity, or developing soft skills, there's a path for you.",
     },
     {
-        question: "Is the SheCodesHerWay internship a paid program?",
-        answer: "No, our internship is an unpaid, training-based program. We don't offer a stipend because our primary focus is on investing in your growth by providing hands-on experience, dedicated mentorship, and valuable learning opportunities.",
+        question: "What kind of opportunities are available at SheCodesHerWay?",
+        answer: "We offer several ways to get involved: you can join our training-based Internship Program, become a Mentor, or collaborate with our Core Team. We also have an 'Early Core Contributor' opportunity for those who want to help shape the platform in its early stages.",
+    },
+    {
+        question: "Are the internship and contributor roles paid?",
+        answer: "Our internships and Early Core Contributor roles are voluntary, unpaid collaborations. They are designed for individuals motivated by gaining hands-on experience, learning, and making an impact in a pre-seed stage startup. We focus on investing in your growth through mentorship and practical projects.",
     },
     {
         question: "How can I become a mentor or partner with SheCodesHerWay?",
         answer: "We are always looking for passionate professionals, educators, and organizations to join our mission. If you're interested in becoming a mentor or partnering with us, please visit our 'Partner with Us' page to learn more and apply.",
+    },
+    {
+        question: "What is an 'Early Core Contributor'?",
+        answer: "Early Core Contributors are passionate individuals (students, freshers, or professionals) who collaborate with us on a part-time basis to build, shape, and grow the platform. It's a high-impact, voluntary role where you can take ownership of features and contribute directly to our mission during our foundational pre-seed stage.",
     },
     {
         question: "What kind of skills can I learn through your programs?",
