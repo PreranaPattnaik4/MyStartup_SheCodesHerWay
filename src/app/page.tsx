@@ -107,13 +107,21 @@ export default function Home() {
                                         <p className="text-foreground/80 mt-2">There are no right or wrong questions — only the ones that matter to you.</p>
                                     </AccordionContent>
                                 </AccordionItem>
+                                <AccordionItem value="important-note">
+                                    <AccordionTrigger className="font-semibold text-lg">🧭 Important Note</AccordionTrigger>
+                                    <AccordionContent>
+                                        <p className="text-foreground/80 mt-2">While EmpowerFly Assistant is designed to be supportive and informative, AI may sometimes make mistakes or offer incomplete information. We encourage you to:</p>
+                                        <ul className="list-disc list-inside space-y-1 text-foreground/80 mt-2">
+                                            <li>Take your time</li>
+                                            <li>Read all information carefully</li>
+                                            <li>Reflect on what feels right for you</li>
+                                            <li>Make decisions based on your own judgment</li>
+                                        </ul>
+                                         <p className="text-foreground/80 mt-2 font-semibold">Your journey is yours — AI is here only to support, not decide for you.</p>
+                                    </AccordionContent>
+                                </AccordionItem>
                             </Accordion>
                             
-                             <div className="bg-muted/80 p-4 rounded-lg mt-auto text-sm">
-                                 <h4 className="font-semibold">🧭 Important Note</h4>
-                                 <p className="text-muted-foreground mt-1">While EmpowerFly Assistant is designed to be supportive and informative, AI may sometimes make mistakes or offer incomplete information. We encourage you to take your time, read all information carefully, reflect on what feels right for you, and make decisions based on your own judgment. Your journey is yours — AI is here only to support, not decide for you.</p>
-                             </div>
-
                             <div className="pt-4 space-y-4 mt-auto">
                                 <div className="flex flex-wrap items-center gap-4">
                                      <Button asChild>
