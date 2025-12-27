@@ -33,25 +33,25 @@
     {
       "id": "team-member-4",
       "description": "Portrait of a smiling team member with a warm background.",
-      "imageUrl": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wzNzYyMDB8MHwxfHNlYXJjaHw1fHx3b21hbiUyMHBvcnRyYWl0fGVufDB8fHx8MTcxODcyMDI3OXww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wzNzYyMDB8MHwxfHNlYXJjaHw1fHx3b21hbiUyMHBvcnRyYWl0fGVufDB8fHx8MTcxODcyMDI3OXww&ixlib-rb-4.1.0&q=80&w=1080",
       "imageHint": "woman smiling"
     },
     {
       "id": "team-member-5",
       "description": "Portrait of a team member in a creative office.",
-      "imageUrl": "https://images.unsplash.com/photo-1544723795-3fb6469f5b39?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wzNzYyMDB8MHwxfHNlYXJjaHwyfHxtYW4lMjBwb3J0cmFpdHxlbnwwfHx8fDE3MTg3MjAyNzl8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1544723795-3fb6469f5b39?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wzNzYyMDB8MHwxfHNlYXJjaHwyfHxtYW4lMjBwb3J0cmFpdHxlbnwwfHx8fDE3MTg3MjAyNzl8MA&ixlib-rb-4.1.0&q=80&w=1080",
       "imageHint": "man creative"
     },
     {
       "id": "team-member-6",
       "description": "Portrait of a female graphics designer.",
-      "imageUrl": "https://images.unsplash.com/photo-1558507652-2d9626c4e67a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wzNzYyMDB8MHwxfHNlYXJjaHw4fHx3b21hbiUyMHBvcnRyYWl0fGVufDB8fHx8MTcxODcyMDI3OXww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1558507652-2d9626c4e67a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wzNzYyMDB8MHwxfHNlYXJjaHw4fHx3b21hbiUyMHBvcnRyYWl0fGVufDB8fHx8MTcxODcyMDI3OXww&ixlib-rb-4.1.0&q=80&w=1080",
       "imageHint": "woman creative"
     },
     {
       "id": "team-member-7",
       "description": "Portrait of a male video editor.",
-      "imageUrl": "https://images.unsplash.com/photo-1560250097-0b93528c311a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wzNzYyMDB8MHwxfHNlYXJjaHw0fHxtYW4lMjBwb3J0cmFpdHxlbnwwfHx8fDE3MTg3MjAyNzl8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1560250097-0b93528c311a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wzNzYyMDB8MHwxfHNlYXJjaHw0fHxtYW4lMjBwb3J0cmFpdHxlbnwwfHx8fDE3MTg3MjAyNzl8MA&ixlib-rb-4.1.0&q=80&w=1080",
       "imageHint": "man editor"
     },
     {
@@ -147,7 +147,7 @@
     {
       "id": "feature-palai",
       "description": "A woman interacting with a futuristic chatbot interface on a transparent screen.",
-      "imageUrl": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxhbmFseXRpY3MlMjBkYXNoYm9hcmR8ZW58MHx8fHwxNzE4NzIwMzEyfDA&ixlib=rb-4.1.0&w=1080&fit=max&q=80&fm=jpg&crop=entropy&cs=tinysrgb",
+      "imageUrl": "https://i.postimg.cc/DzBLMHBS/man-using-laptop-with-chatbot-interface-(1).jpg",
       "imageHint": "human chatbot"
     },
     {
@@ -159,7 +159,7 @@
     {
       "id": "feature-community",
       "description": "Two people collaborating over a laptop, with yellow background.",
-      "imageUrl": "https://images.unsplash.com/photo-1543269664-56d93c1b41a6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxjb21tdW5pdHl8ZW58MHx8fHwxNzE4NzIwMzM5fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1543269664-56d93c1b41a6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxjb21tdW5pdHl8ZW58MHx8fHwxNzE4NzIwMzM5fDA&ixlib-rb-4.1.0&q=80&w=1080",
       "imageHint": "community"
     },
     {
