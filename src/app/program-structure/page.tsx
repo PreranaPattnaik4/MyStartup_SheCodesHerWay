@@ -82,16 +82,24 @@ export default function ProgramStructurePage() {
                 <section className="bg-secondary py-16 md:py-24">
                     <div className="container mx-auto px-4 text-center">
                         <GitBranch className="mx-auto h-12 w-12 text-primary" />
-                        <h1 className="mt-4 font-headline text-4xl font-bold md:text-6xl">Program Structure & Timeline</h1>
+                        <h1 className="mt-4 font-headline text-4xl font-bold md:text-6xl">Program Structure &amp; Timeline</h1>
                         <p className="mt-4 max-w-3xl mx-auto text-lg text-foreground/80">
                             A detailed look at the 3-month journey of Sangini Udaan : EmpowerFly.
                         </p>
-                        <Button asChild className="mt-8">
-                            <Link href="/sangini-udaan">
-                                <ArrowLeft className="mr-2 h-4 w-4" />
-                                Back to Program Overview
-                            </Link>
-                        </Button>
+                        <div className="mt-8 flex justify-center gap-4">
+                            <Button asChild>
+                                <Link href="/sangini-udaan">
+                                    <ArrowLeft className="mr-2 h-4 w-4" />
+                                    Back to Program Overview
+                                </Link>
+                            </Button>
+                             <Button asChild variant="secondary">
+                                <Link href="/program-syllabus">
+                                    View Full Syllabus
+                                    <BookOpen className="ml-2 h-4 w-4" />
+                                </Link>
+                            </Button>
+                        </div>
                     </div>
                 </section>
                 
@@ -209,11 +217,11 @@ export default function ProgramStructurePage() {
                         
                         <Card className="shadow-lg">
                             <CardHeader>
-                                <CardTitle className="font-headline text-2xl flex items-center gap-3"><Users size={24}/>Community & Engagement Sessions</CardTitle>
+                                <CardTitle className="font-headline text-2xl flex items-center gap-3"><Users size={24}/>Community &amp; Engagement Sessions</CardTitle>
                                 <CardDescription>Additional 6 Special Sessions (Across 3 Months)</CardDescription>
                             </CardHeader>
                             <CardContent>
-                                <p>These sessions are designed for bonding, reflection, and growth. Topics include fun interactive activities, knowledge sharing with mentors, “Tell Us About Yourself” sessions, personal journeys & challenges, future goals and career plans, open discussions and inspiration talks.</p>
+                                <p>These sessions are designed for bonding, reflection, and growth. Topics include fun interactive activities, knowledge sharing with mentors, “Tell Us About Yourself” sessions, personal journeys &amp; challenges, future goals and career plans, open discussions and inspiration talks.</p>
                             </CardContent>
                         </Card>
                         
@@ -240,12 +248,12 @@ export default function ProgramStructurePage() {
                         <div>
                              <Card className="shadow-lg">
                                 <CardHeader>
-                                    <CardTitle className="font-headline text-2xl flex items-center gap-3"><Disc size={24}/>Soft Skills & Interview Preparation (Program-Wide Policy)</CardTitle>
+                                    <CardTitle className="font-headline text-2xl flex items-center gap-3"><Disc size={24}/>Soft Skills &amp; Interview Preparation (Program-Wide Policy)</CardTitle>
                                 </CardHeader>
                                 <CardContent className="space-y-6">
                                     <div>
                                         <Badge>Mandatory Foundation for All</Badge>
-                                        <p className="mt-2">The Emotional, Personal & Soft Skills Growth track is a compulsory core foundation for all Sangini Udaan : EmpowerFly participants, regardless of their primary learning track. This ensures every participant develops professional communication, confidence and leadership presence, emotional intelligence, and career and interview readiness.</p>
+                                        <p className="mt-2">The Emotional, Personal &amp; Soft Skills Growth track is a compulsory core foundation for all Sangini Udaan : EmpowerFly participants, regardless of their primary learning track. This ensures every participant develops professional communication, confidence and leadership presence, emotional intelligence, and career and interview readiness.</p>
                                     </div>
                                     <div>
                                         <h4 className="font-semibold flex items-center gap-2"><Mic size={18}/>Interview Preparation — Included for All Participants</h4>
@@ -254,12 +262,12 @@ export default function ProgramStructurePage() {
                                     <div>
                                         <h4 className="font-semibold flex items-center gap-2"><Heart size={18}/>Track Enrollment Clarification</h4>
                                         <ul className="list-disc list-inside space-y-2 mt-2">
-                                            <li>Every participant must complete the Soft Skills & Interview Preparation foundation.</li>
-                                            <li>Participants who want deep, specialized focus on emotional growth, leadership, communication, and interview mastery may choose “Emotional, Personal & Soft Skills Growth” as their primary track.</li>
+                                            <li>Every participant must complete the Soft Skills &amp; Interview Preparation foundation.</li>
+                                            <li>Participants who want deep, specialized focus on emotional growth, leadership, communication, and interview mastery may choose “Emotional, Personal &amp; Soft Skills Growth” as their primary track.</li>
                                             <li>Participants who select other tracks will complete soft skills and interview preparation as a mandatory shared foundation, alongside their main track.</li>
                                         </ul>
                                     </div>
-                                    <p className="font-semibold text-primary p-4 bg-primary/10 rounded-lg">Clear Participant Understanding Statement: Soft skills and interview preparation are compulsory for all Sangini Udaan : EmpowerFly participants. Learners seeking advanced depth in emotional intelligence, leadership, communication, and career readiness may choose the Emotional, Personal & Soft Skills Growth track as their primary specialization.</p>
+                                    <p className="font-semibold text-primary p-4 bg-primary/10 rounded-lg">Clear Participant Understanding Statement: Soft skills and interview preparation are compulsory for all Sangini Udaan : EmpowerFly participants. Learners seeking advanced depth in emotional intelligence, leadership, communication, and career readiness may choose the Emotional, Personal &amp; Soft Skills Growth track as their primary specialization.</p>
                                 </CardContent>
                             </Card>
                         </div>
