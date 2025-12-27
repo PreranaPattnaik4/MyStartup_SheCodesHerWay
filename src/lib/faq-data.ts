@@ -103,7 +103,7 @@ export const faqData: FaqCategory[] = [
         ]
     },
     {
-        title: "About Careers & Opportunities",
+        title: "Careers & Opportunities",
         questions: [
             {
                 question: "What kind of opportunities are available at SheCodesHerWay?",
@@ -130,8 +130,12 @@ export const faqData: FaqCategory[] = [
                 answer: "Contributors receive recognition, including tiered certificates (Diamond for 3 months, Platinum for 6 months) and a 'Top Contributor' spotlight for exceptional work. You also gain hands-on experience for your portfolio and LinkedIn profile.",
             },
             {
-                question: "Is there a fixed time commitment for collaborators?",
-                answer: "The initial collaboration period is 6 months, with flexible hours. We value consistency and quality of contribution. After 6 months, you may choose to continue or conclude the collaboration.",
+                question: "What is the duration of the collaboration?",
+                answer: "The initial collaboration period is 3 months. After that, a second 3-month phase is possible, subject to reapplication and selection based on performance. This can be extended up to 1 year for high-performing individuals who wish to continue.",
+            },
+             {
+                question: "How should I represent my role at SheCodesHerWay?",
+                answer: "You should identify yourself as a 'Contributor' or 'Intern'. It is an unpaid internship/collaboration, not a formal team role. If you perform well, there may be an opportunity to be considered for a permanent position in the future, but it is not guaranteed."
             },
             {
                 question: "Will collaboration lead to a paid job?",
@@ -139,16 +143,12 @@ export const faqData: FaqCategory[] = [
             },
             {
                 question: "What is the legal status of a collaborator?",
-                answer: "Collaboration is voluntary and does not create an employer-employee, contractor, or internship relationship. It is a non-binding engagement focused on learning and impact.",
-            },
-            {
-                question: "Where can I find the full collaboration guidelines?",
-                answer: "You can read the complete 'Collaboration Policy &amp; Guidelines' on our dedicated policy page, which outlines all terms, benefits, and expectations in detail.",
+                answer: "Collaboration is voluntary and does not create an employer-employee, contractor, or formal internship relationship. It is a non-binding engagement focused on learning and impact.",
             },
         ]
     },
     {
-        title: "How to Use EmpowerFly AI Coach &amp; Tools",
+        title: "How to Use EmpowerFly AI Coach & Tools",
         questions: [
             {
                 question: "What is the EmpowerFly Assistant?",
