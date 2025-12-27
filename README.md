@@ -22,6 +22,8 @@ This is the official web application for **SheCodesHerWay**, a women-led startup
 - **AI-Powered Tools:** An executive summary generator to help users craft compelling startup pitches.
 - **User Authentication:** Secure sign-up and login functionality powered by Firebase Authentication.
 - **Mentorship Platform:** A portal for passionate professionals to apply as mentors and guide the next generation.
+- **Resource Hub:** A curated collection of guides, templates, and tools to support learning.
+- **Blog:** Insights, stories, and advice from the SheCodesHerWay community.
 
 ##  Tech Stack
 
@@ -29,7 +31,7 @@ This is the official web application for **SheCodesHerWay**, a women-led startup
 - **UI:** [React](https://react.dev/) & [TypeScript](https://www.typescriptlang.org/)
 - **Styling:** [Tailwind CSS](https://tailwindcss.com/) & [ShadCN UI](https://ui.shadcn.com/)
 - **Generative AI:** [Genkit](https://firebase.google.com/docs/genkit)
-- **Backend & Authentication:** [Firebase](https://firebase.google.com/) (Firestore, Firebase Authentication)
+- **Backend & Deployment:** Fully integrated with Google's backend and deployment technologies, including Firebase (Firestore, Firebase Authentication), ensuring a scalable and secure infrastructure.
 
 ##  Getting Started
 
