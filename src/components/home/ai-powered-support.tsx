@@ -8,7 +8,7 @@ const aiFeatures = [
         icon: Bot,
         title: "EmpowerFly AI Coach",
         description: "On-demand guidance for learning, clarity, and confidence.",
-        href: "/chatbot",
+        href: "/ai-coaching",
     },
     {
         icon: ImageIcon,
