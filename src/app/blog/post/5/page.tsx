@@ -88,7 +88,7 @@ export default function BlogPostPage5() {
                     <p><strong>Builder Insight:</strong> Your product quality can never exceed your prompt quality.</p>
                     <p>From this point on, prompts stopped being inputs. They became product blueprints.</p>
                     
-                    <h3>My Prompt Writing Experience: How Thinking Became Building</h3>
+                    <h4>My Prompt Writing Experience: How Thinking Became Building</h4>
                     <p>Prompt writing wasn’t something I planned to learn. It became something I grew into. I realized that prompt writing isn’t about asking AI better questions — it’s about thinking better as a builder. Prompts became the bridge between my ideas and execution.</p>
                     
                     <h4>Prompt Writing as a Thinking Tool</h4>
@@ -127,7 +127,6 @@ export default function BlogPostPage5() {
                     <p><strong>Builder Insight:</strong> A prototype is a promise. Shipping is commitment.</p>
 
                     <h3>My Startup Building Stack (Inspired by This Journey)</h3>
-                    <p>Everything I build now follows one principle: Prompt-first → Research-backed → AI-assisted → Human-centered.</p>
                     <h4>Tools I Actively Use</h4>
                     <ul>
                         <li>Google AI Studio — prompting, reasoning, testing</li>
@@ -149,7 +148,6 @@ export default function BlogPostPage5() {
                     </ul>
 
                     <h3>My Startup Vision: Building With Empathy, Speed & Responsibility</h3>
-                    <p>This program didn’t give me a startup idea. It shaped how I want to build any startup.</p>
                     <h4>What My Startup Stands For</h4>
                     <ul>
                         <li>Problem-first, not feature-first</li>
