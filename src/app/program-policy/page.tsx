@@ -62,7 +62,7 @@ export default function ProgramPolicyPage() {
                                 <li>Allowed only <strong>once</strong>. Multiple or repeated extensions are not permitted.</li>
                                 <li>No other months are extendable under this policy.</li>
                             </ul>
-                            <p className="mt-4 p-4 bg-primary/10 rounded-lg text-primary-foreground font-semibold">SheCodesHerWay is committed to doing its best to support every participant throughout the journey, while maintaining program structure, fairness, and professionalism.</p>
+                            <p className="mt-4 p-4 bg-primary/10 rounded-lg text-primary font-semibold">SheCodesHerWay is committed to doing its best to support every participant throughout the journey, while maintaining program structure, fairness, and professionalism.</p>
                         </SectionCard>
 
                         <Separator />
