@@ -53,6 +53,11 @@ export default function Home() {
                 <ProgramFlow />
             </div>
             <Separator />
+            <div id="impact" className="rounded-xl py-12 relative overflow-hidden">
+               <div className="absolute inset-0 -z-10 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-primary/10 via-white/0 to-white/0"></div>
+              <ImpactGoals />
+            </div>
+            <Separator />
             <div id="features" className="rounded-xl py-12 relative overflow-hidden">
                 <div className="absolute inset-0 -z-10 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-primary/10 via-white/0 to-white/0"></div>
                 <Features />
@@ -76,11 +81,6 @@ export default function Home() {
                   </Link>
                 </div>
               </div>
-            </div>
-            <Separator />
-            <div id="impact" className="rounded-xl py-12 relative overflow-hidden">
-               <div className="absolute inset-0 -z-10 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-primary/10 via-white/0 to-white/0"></div>
-              <ImpactGoals />
             </div>
             <Separator />
             <div className="grid gap-20 lg:grid-cols-2 lg:gap-12 items-stretch">
