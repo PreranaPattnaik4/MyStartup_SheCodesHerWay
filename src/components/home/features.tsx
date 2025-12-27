@@ -17,6 +17,7 @@ const categories = [
   { id: 'ai-coaching', name: 'AI Coaching' },
   { id: 'empowerfly-assistant', name: 'EmpowerFly Assistant' },
   { id: 'mentorship', name: 'Mentorship' },
+  { id: 'courses', name: 'Courses' },
   { id: 'resources', name: 'Resources' },
   { id: 'our-blogs', name: 'Our Blogs' },
   { id: 'community', name: 'Community' },
@@ -147,7 +148,11 @@ const features = [
   {
     id: 'resources',
     title: 'Resources',
-    image: PlaceHolderImages.find((p) => p.id === 'feature-workshops'),
+    image: {
+        imageUrl: "https://i.postimg.cc/y8v0QW11/download.jpg",
+        description: "A collection of resources.",
+        imageHint: "resources library",
+    },
     colSpan: 'col-span-1',
     rowSpan: 'row-span-1',
     href: '/resources',
