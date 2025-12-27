@@ -139,7 +139,7 @@ export const faqData: FaqCategory[] = [
             },
             {
                 question: "What is the duration of the collaboration?",
-                answer: "The initial collaboration period is 3 months. A second 3-month phase is possible, subject to reapplication and selection based on performance. High-performing contributors may continue for up to 1 year. Contributors may choose to conclude participation at any time.",
+                answer: "The initial collaboration period is 3 months, with an optional second phase of 3 months subject to reapplication and selection. High-performing contributors may continue for up to 1 year. This is a flexible, voluntary engagement, and you may conclude your participation at any time.",
             },
             {
                 question: "How should I represent my role at SheCodesHerWay?",
@@ -248,7 +248,71 @@ export const faqData: FaqCategory[] = [
                 answer: "If you have any questions or concerns about our privacy policy or practices, please feel free to contact us through our official contact channels."
             }
         ]
+    },
+    {
+        title: "🎓 Certificates, Degrees, and Job Opportunities",
+        questions: [
+            {
+                question: "Does SheCodesHerWay offer certificates for course completion?",
+                answer: "Yes, upon successful completion of our programs, you will receive an official Certificate of Contribution or Completion that recognizes your learning and achievements."
+            },
+            {
+                question: "How do I edit my name on the certificate using Canva?",
+                answer: "Our certificates are provided as editable templates, often in Canva. You can simply open the template, click on the name field, and type in your correct name before downloading it."
+            },
+            {
+                question: "Can I add the courses completed on SheCodesHerWay to my resume or LinkedIn profile?",
+                answer: "Absolutely! We encourage you to showcase your accomplishments. Adding our programs and the skills you've learned to your resume and LinkedIn profile is a great way to demonstrate your commitment to growth."
+            },
+            {
+                question: "Will completing courses on SheCodesHerWay help me earn a degree?",
+                answer: "No, our programs are designed for skill-building, career readiness, and personal growth. They are not accredited degree programs and do not provide academic credits."
+            },
+            {
+                question: "Can I use the skills learned from SheCodesHerWay courses to improve my job prospects?",
+                answer: "Yes, that is one of our primary goals. The hands-on projects, mentorship, and practical skills you gain are designed to make you more competitive in the job market and confident in your abilities."
+            },
+            {
+                question: "Are there any job placement services or career support available through SheCodesHerWay?",
+                answer: "We provide career support through mentorship, internship opportunities, and real-world projects. While we do not offer formal job placement services, our ecosystem is designed to prepare you for career opportunities and connect you with a professional network."
+            },
+            {
+                question: "Will completing courses on SheCodesHerWay provide any formal recognition or accreditation?",
+                answer: "The certificates we provide are a formal recognition from SheCodesHerWay of your participation and achievements. However, they are not formal academic accreditations. They serve as a valuable credential for your professional portfolio."
+            }
+        ]
+    },
+    {
+        title: "📰 Sign Up and Newsletter",
+        questions: [
+            {
+                question: "How do I sign up for an account on SheCodesHerWay?",
+                answer: "You can sign up for an account by clicking the 'Sign Up' button on our homepage. This will open a dialog where you can create an account using your email and a password."
+            },
+            {
+                question: "Is my personal information safe with SheCodesHerWay?",
+                answer: "Yes, protecting your privacy is a priority. We use secure systems like Firebase Authentication and follow our privacy policy to safeguard your data. We only use your information to provide and improve our services."
+            },
+            {
+                question: "How do I reset my password if I forget it?",
+                answer: "If you forget your password, you can use the 'Forgot Password' link on the login screen. You will receive an email with instructions on how to reset it."
+            },
+            {
+                question: "What topics are covered on SheCodesHerWay?",
+                answer: "Our platform covers a wide range of topics including technology, AI, web development, entrepreneurship, creativity, content creation, leadership, and emotional intelligence."
+            },
+            {
+                question: "Can I unsubscribe from the SheCodesHerWay newsletter?",
+                answer: "Yes, you can unsubscribe at any time. Every newsletter we send includes an 'Unsubscribe' link at the bottom. Clicking it will remove you from our mailing list."
+            },
+            {
+                question: "What kind of content will I receive in the SheCodesHerWay newsletter?",
+                answer: "Our newsletter includes updates on new programs and courses, inspiring stories from our community, announcements about upcoming events, and valuable insights on tech, creativity, and leadership."
+            }
+        ]
     }
 ];
+
+    
 
     
