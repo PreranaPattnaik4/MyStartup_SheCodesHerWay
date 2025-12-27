@@ -168,14 +168,28 @@ export default function Home() {
         <section className="bg-muted py-20">
           <div className="container mx-auto px-4 text-center">
             <h2 className="font-headline text-3xl font-bold md:text-4xl">Ready to Make an Impact?</h2>
-            <p className="mt-4 max-w-2xl mx-auto text-lg text-foreground/80">
-              Your experience and passion can inspire the next generation of women leaders. Join us as a mentor and help shape the future.
-            </p>
-            <Button asChild size="lg" className="mt-8">
-              <Link href="/mentor">
-                Become a Mentor
-              </Link>
-            </Button>
+            <div className="mt-8 grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                <div className="space-y-4">
+                    <p className="text-lg text-foreground/80">
+                        Your experience and passion can inspire the next generation of women leaders. Join us as a mentor and help shape the future.
+                    </p>
+                    <Button asChild size="lg">
+                        <Link href="/mentor">
+                        Become a Mentor
+                        </Link>
+                    </Button>
+                </div>
+                <div className="space-y-4">
+                    <p className="text-lg text-foreground/80">
+                        Passionate about our mission? Join the founding circle as an Early Core Contributor and help build our platform from the ground up.
+                    </p>
+                     <Button asChild size="lg" variant="secondary">
+                        <Link href="/careers">
+                        Join as a Contributor
+                        </Link>
+                    </Button>
+                </div>
+            </div>
           </div>
         </section>
 
