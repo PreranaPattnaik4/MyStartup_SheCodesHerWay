@@ -23,6 +23,15 @@ const blogPosts = [
     href: '/blog/post/5'
   },
   {
+    id: '4',
+    title: 'SheCodesHerWay: Where Women Build Their Path, Lead Their Way, and Leave Their Mark',
+    author: 'Prerana K.',
+    date: 'August 1, 2024',
+    excerpt: 'Every movement begins with a spark — a spark of courage, vision, and hope. SheCodesHerWay was born from such a spark. A dream to create a space where women don’t just learn skills, but rise with confidence.',
+    image: PlaceHolderImages.find((p) => p.id === 'hero-background'),
+    href: '/blog/post/4'
+  },
+  {
     id: '6',
     title: 'Next-Gen Creativity: Trending AI Tools for Images, Infographics & Video in 2025',
     author: 'Prerana K.',
@@ -34,15 +43,6 @@ const blogPosts = [
         imageHint: "AI tools",
     },
     href: '/blog/post/6'
-  },
-  {
-    id: '4',
-    title: 'SheCodesHerWay: Where Women Build Their Path, Lead Their Way, and Leave Their Mark',
-    author: 'Prerana K.',
-    date: 'August 1, 2024',
-    excerpt: 'Every movement begins with a spark — a spark of courage, vision, and hope. SheCodesHerWay was born from such a spark. A dream to create a space where women don’t just learn skills, but rise with confidence.',
-    image: PlaceHolderImages.find((p) => p.id === 'hero-background'),
-    href: '/blog/post/4'
   },
   {
     id: '1',
