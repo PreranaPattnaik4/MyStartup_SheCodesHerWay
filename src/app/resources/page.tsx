@@ -177,44 +177,7 @@ export default function ResourcesPage() {
                 All resources will be available soon. The content on this page is currently for prototype and demonstration purposes only.
               </AlertDescription>
             </Alert>
-            <div className="mb-12">
-                <div className="relative max-w-lg mx-auto">
-                    <Search className="absolute left-4 top-1/2 -translate-y-1/2 h-5 w-5 text-muted-foreground" />
-                    <Input placeholder="Search resources..." className="pl-12 text-base" />
-                </div>
-            </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                {resources.map((resource, index) => (
-                    <Card key={index} className="flex flex-col shadow-lg">
-                        <CardHeader>
-                            <div className='flex items-center justify-between'>
-                                <div className="bg-primary/10 text-primary p-3 rounded-full">
-                                    <resource.icon className="h-6 w-6" />
-                                </div>
-                                <Badge variant="outline">{resource.category}</Badge>
-                            </div>
-                            <CardTitle className="pt-4">{resource.title}</CardTitle>
-                        </CardHeader>
-                        <CardContent className="flex-grow">
-                            <CardDescription>{resource.description}</CardDescription>
-                        </CardContent>
-                        <div className="p-6 pt-0">
-                           <Button asChild className="w-full">
-                                <Link href={resource.href} target={resource.type === 'external' ? '_blank' : '_self'}>
-                                    {resource.type === 'link' ? 'Download' : 'Visit Link'}
-                                    {resource.type === 'link' ? <Download className="ml-2 h-4 w-4" /> : <ExternalLink className="ml-2 h-4 w-4" />}
-                                </Link>
-                            </Button>
-                        </div>
-                    </Card>
-                ))}
-            </div>
-        </section>
-
-        <Separator />
-
-        <section className="container mx-auto px-4 py-16 sm:px-6 lg:px-8">
+            
             <div className="text-center mb-12">
                 <h2 className="font-headline text-3xl font-bold md:text-4xl">Project Samples</h2>
                 <p className="mt-4 max-w-3xl mx-auto text-lg text-foreground/80">
@@ -261,6 +224,45 @@ export default function ResourcesPage() {
                 ))}
             </div>
         </section>
+
+        <Separator />
+
+        <section className="container mx-auto px-4 py-16 sm:px-6 lg:px-8">
+            <div className="mb-12">
+                <div className="relative max-w-lg mx-auto">
+                    <Search className="absolute left-4 top-1/2 -translate-y-1/2 h-5 w-5 text-muted-foreground" />
+                    <Input placeholder="Search resources..." className="pl-12 text-base" />
+                </div>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                {resources.map((resource, index) => (
+                    <Card key={index} className="flex flex-col shadow-lg">
+                        <CardHeader>
+                            <div className='flex items-center justify-between'>
+                                <div className="bg-primary/10 text-primary p-3 rounded-full">
+                                    <resource.icon className="h-6 w-6" />
+                                </div>
+                                <Badge variant="outline">{resource.category}</Badge>
+                            </div>
+                            <CardTitle className="pt-4">{resource.title}</CardTitle>
+                        </CardHeader>
+                        <CardContent className="flex-grow">
+                            <CardDescription>{resource.description}</CardDescription>
+                        </CardContent>
+                        <div className="p-6 pt-0">
+                           <Button asChild className="w-full">
+                                <Link href={resource.href} target={resource.type === 'external' ? '_blank' : '_self'}>
+                                    {resource.type === 'link' ? 'Download' : 'Visit Link'}
+                                    {resource.type === 'link' ? <Download className="ml-2 h-4 w-4" /> : <ExternalLink className="ml-2 h-4 w-4" />}
+                                </Link>
+                            </Button>
+                        </div>
+                    </Card>
+                ))}
+            </div>
+        </section>
+
       </main>
       <Footer />
     </div>
