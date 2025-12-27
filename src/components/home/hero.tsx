@@ -38,8 +38,8 @@ export default function Hero() {
               </Link>
             </Button>
             <Button asChild size="lg" variant="secondary">
-              <Link href="/partner">
-                Partner with Us
+              <Link href="/careers">
+                Join Us
               </Link>
             </Button>
           </div>
