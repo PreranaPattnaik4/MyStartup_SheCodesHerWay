@@ -21,7 +21,7 @@ export default function JoinUs() {
         <Tabs defaultValue="enroll" className="w-full">
         <TabsList className="grid w-full grid-cols-2 max-w-md mx-auto h-auto">
             <TabsTrigger value="enroll" className="py-2"><UserPlus className="mr-2 h-4 w-4"/>Enroll in Program</TabsTrigger>
-            <TabsTrigger value="partner" className="py-2"><Handshake className="mr-2 h-4 w-4"/>Become a Mentor</TabsTrigger>
+            <TabsTrigger value="partner" className="py-2"><Handshake className="mr-2 h-4 w-4"/>Join as a Core Team</TabsTrigger>
         </TabsList>
         <TabsContent value="enroll" className="mt-8">
             <Card className="max-w-2xl mx-auto shadow-lg">
@@ -39,14 +39,14 @@ export default function JoinUs() {
         <TabsContent value="partner" className="mt-8">
             <Card className="max-w-2xl mx-auto shadow-lg">
                 <CardHeader>
-                    <CardTitle>Become a Mentor</CardTitle>
+                    <CardTitle>Join as a Core Team</CardTitle>
                     <CardDescription>
-                        Are you a student or professional passionate about giving back? Join us as a mentor to guide and inspire the next generation.
+                        Are you passionate about our mission? We're looking for dedicated individuals to join our core team and drive our initiatives forward.
                     </CardDescription>
                 </CardHeader>
                 <CardContent className="text-center">
                    <Button asChild size="lg">
-                        <Link href="/partner">Apply to be a Mentor</Link>
+                        <Link href="/careers">Join Our Core Team</Link>
                     </Button>
                 </CardContent>
             </Card>
