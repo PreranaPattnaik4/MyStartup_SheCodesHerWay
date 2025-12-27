@@ -59,52 +59,52 @@ export default function Home() {
             </div>
             <Separator />
             <div className="rounded-xl py-12 relative overflow-hidden">
-                <div className="grid md:grid-cols-2 gap-8 items-center max-w-4xl mx-auto">
-                    <div>
-                         <Card className="shadow-xl border-primary/20 bg-gradient-to-br from-background to-accent/20 h-full">
-                            <CardHeader>
-                                <CardTitle className="font-headline text-3xl md:text-4xl">How to Start Your Journey</CardTitle>
-                            </CardHeader>
-                            <CardContent className="space-y-4">
-                                <p className="font-semibold text-lg flex items-center gap-2"><Bot className="text-primary"/> Chat with {brand.appName}</p>
-                                <p className="text-foreground/80">
-                                    Starting something new can feel overwhelming — and that’s okay. You don’t need to have everything figured out before you begin. {brand.appName} is here to help you take your first step.
-                                </p>
-                                <p className="text-foreground/80">
-                                    Start by simply interacting with our AI guide. Ask anything related to this platform, programs, or next steps, and she will gently guide you forward.
-                                </p>
-                                <p className="font-semibold text-primary italic">
-                                    Always remember: You remain your own boss. The choices, pace, and direction are always yours.
-                                </p>
-                                <div className="pt-4 space-y-4">
-                                    <p className='text-sm text-muted-foreground'>If you need human guidance, we're happy to help. You can contact us through email or follow us on social media for the latest updates.</p>
-                                    <div className="flex items-center gap-4">
-                                        <Button asChild variant="outline" size="sm">
-                                            <Link href={`mailto:${brand.email}`}>
-                                                <Mail className="mr-2"/> Contact Us
-                                            </Link>
-                                        </Button>
-                                        <div className="flex items-center gap-2">
-                                            <Link href="https://x.com/preranakailash4" target="_blank" rel="noopener noreferrer" aria-label="Twitter" className="text-muted-foreground hover:text-primary"><Twitter /></Link>
-                                            <Link href="https://www.linkedin.com/company/shecodesherway/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" className="text-muted-foreground hover:text-primary"><Linkedin /></Link>
-                                            <Link href="https://github.com/PreranaPattnaik4/SheCodesHerWay" target="_blank" rel="noopener noreferrer" aria-label="GitHub" className="text-muted-foreground hover:text-primary"><Github /></Link>
-                                        </div>
+                <div className="grid md:grid-cols-2 gap-8 items-stretch max-w-6xl mx-auto">
+                    <Card className="shadow-xl border-primary/20 bg-gradient-to-br from-background to-accent/20 h-full flex flex-col">
+                        <CardHeader>
+                            <CardTitle className="font-headline text-3xl md:text-4xl">How to Start Your Journey</CardTitle>
+                        </CardHeader>
+                        <CardContent className="space-y-4 flex-grow flex flex-col">
+                            <p className="font-semibold text-lg flex items-center gap-2"><Bot className="text-primary"/> Chat with {brand.appName}</p>
+                            <p className="text-foreground/80">
+                                Starting something new can feel overwhelming — and that’s okay. You don’t need to have everything figured out before you begin. {brand.appName} is here to help you take your first step.
+                            </p>
+                            <p className="text-foreground/80">
+                                Start by simply interacting with our AI guide. Ask anything related to this platform, programs, or next steps, and she will gently guide you forward.
+                            </p>
+                            <p className="font-semibold text-primary italic">
+                                Always remember: You remain your own boss. The choices, pace, and direction are always yours.
+                            </p>
+                            <div className="pt-4 space-y-4 mt-auto">
+                                <p className='text-sm text-muted-foreground'>If you need human guidance, we're happy to help. You can contact us through email or follow us on social media for the latest updates.</p>
+                                <div className="flex items-center gap-4">
+                                    <Button asChild variant="outline" size="sm">
+                                        <Link href={`mailto:${brand.email}`}>
+                                            <Mail className="mr-2"/> Contact Us
+                                        </Link>
+                                    </Button>
+                                    <div className="flex items-center gap-2">
+                                        <Link href="https://x.com/preranakailash4" target="_blank" rel="noopener noreferrer" aria-label="Twitter" className="text-muted-foreground hover:text-primary"><Twitter /></Link>
+                                        <Link href="https://www.linkedin.com/company/shecodesherway/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" className="text-muted-foreground hover:text-primary"><Linkedin /></Link>
+                                        <Link href="https://github.com/PreranaPattnaik4/SheCodesHerWay" target="_blank" rel="noopener noreferrer" aria-label="GitHub" className="text-muted-foreground hover:text-primary"><Github /></Link>
                                     </div>
                                 </div>
-                            </CardContent>
-                        </Card>
-                    </div>
-                    {chatbotImage && (
-                        <div className="relative h-96 rounded-lg overflow-hidden shadow-2xl">
-                             <Image
-                                src={chatbotImage.imageUrl}
-                                alt={chatbotImage.description}
-                                fill
-                                className="object-cover"
-                                data-ai-hint={chatbotImage.imageHint}
-                            />
-                        </div>
-                    )}
+                            </div>
+                        </CardContent>
+                    </Card>
+                    <Card className="shadow-2xl overflow-hidden h-full">
+                         {chatbotImage && (
+                            <div className="relative w-full h-full min-h-[400px]">
+                                <Image
+                                    src={chatbotImage.imageUrl}
+                                    alt={chatbotImage.description}
+                                    fill
+                                    className="object-cover"
+                                    data-ai-hint={chatbotImage.imageHint}
+                                />
+                            </div>
+                         )}
+                    </Card>
                 </div>
             </div>
             <Separator />
