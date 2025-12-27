@@ -143,8 +143,98 @@ export const faqData: FaqCategory[] = [
             },
             {
                 question: "Where can I find the full collaboration guidelines?",
-                answer: "You can read the complete 'Collaboration Policy & Guidelines' on our dedicated policy page, which outlines all terms, benefits, and expectations in detail.",
+                answer: "You can read the complete 'Collaboration Policy &amp; Guidelines' on our dedicated policy page, which outlines all terms, benefits, and expectations in detail.",
             },
+        ]
+    },
+    {
+        title: "How to Use EmpowerFly AI Coach &amp; Tools",
+        questions: [
+            {
+                question: "What is the EmpowerFly Assistant?",
+                answer: "The EmpowerFly Assistant is your personal AI guide, available 24/7. You can ask it questions about our programs, get career advice, or brainstorm ideas. You can access it through the chat widget on our site or on its dedicated page."
+            },
+            {
+                question: "What is the Executive Summary Generator?",
+                answer: "This is an AI tool designed to help you create a concise, professional executive summary for a startup pitch deck. Simply fill in the details about your startup, and the AI will generate a compelling summary for you. It's a great way to structure your ideas for maximum impact."
+            },
+            {
+                question: "What is the EmpowerFly AI Coach?",
+                answer: "The EmpowerFly AI Coach is an upcoming agentic AI-powered coach designed to help you learn any skill through personalized, conversational lessons. It will offer interactive exercises and real-time feedback. This feature is currently in development."
+            },
+            {
+                question: "What is the AI Image Studio?",
+                answer: "The AI Image Studio is a future feature that will allow you to generate unique visuals for your projects or social media just by describing what you want to see. It will support multiple art styles and high-resolution outputs."
+            },
+            {
+                question: "What is the CodeCanvas Assistant?",
+                answer: "CodeCanvas is our upcoming AI coding partner. It's designed to help you accelerate your development process by generating code snippets, explaining complex concepts, and assisting with debugging. It's perfect for both learning and building."
+            },
+            {
+                question: "Are the AI tools free to use?",
+                answer: "Yes, our AI-powered tools, like the Executive Summary Generator and EmpowerFly Assistant, are available for all users to explore and use as part of our commitment to providing accessible resources."
+            },
+            {
+                question: "What technology powers these AI tools?",
+                answer: "All our AI features are built using Google’s advanced technology, including Google's Genkit and Gemini models. This ensures a secure, scalable, and powerful experience."
+            },
+            {
+                question: "Why are some AI tools marked as 'Coming Soon'?",
+                answer: "Our platform is currently in a prototype stage. We are actively developing and testing our advanced AI features, like the AI Coach and Image Studio, to ensure they are powerful, responsible, and ready for our community. They will be rolled out gradually."
+            },
+            {
+                question: "How does SheCodesHerWay ensure AI is used responsibly?",
+                answer: "We are committed to developing AI tools that are ethical and responsible. We design our AI to assist, not replace, human creativity and potential, with a focus on fairness, transparency, and user privacy. Responsible AI principles are a mandatory foundation in all our programs."
+            },
+            {
+                question: "Where can I find all the available AI tools?",
+                answer: "You can explore all our current and upcoming AI-powered tools on the 'AI Coaching' page. The Executive Summary Generator has its own dedicated page under 'AI Tools'."
+            }
+        ]
+    },
+    {
+        title: "User Privacy Queries",
+        questions: [
+            {
+                question: "What personal information do you collect?",
+                answer: "We collect information you voluntarily provide to us, such as your name and email address, when you register for an account, apply for a program, or contact us."
+            },
+            {
+                question: "How do you use my information?",
+                answer: "We use your information to provide our services, manage your account, communicate with you, and for other business purposes such as improving our platform, all with your consent and in compliance with legal obligations."
+            },
+            {
+                question: "Is my information shared with third parties?",
+                answer: "We do not share your personal information with third parties except with your consent, to comply with laws, to provide you with our services, to protect your rights, or to fulfill business obligations."
+            },
+            {
+                question: "How long do you keep my data?",
+                answer: "We retain your personal information only for as long as it is necessary to fulfill the purposes outlined in our privacy policy, unless a longer retention period is required by law."
+            },
+            {
+                question: "How can I access or update my personal information?",
+                answer: "You can review and update your personal information, such as your name, in your user Dashboard under the 'My Profile' section."
+            },
+            {
+                question: "How is my account secured?",
+                answer: "We use Firebase Authentication to manage user accounts, which provides a secure sign-up and login system. You are responsible for keeping your password confidential."
+            },
+            {
+                question: "Do you collect information from minors?",
+                answer: "Our services are not intended for individuals under the age of 13. We do not knowingly collect personal information from children under 13."
+            },
+            {
+                question: "What are my privacy rights?",
+                answer: "You have the right to access, correct, or delete your personal information. Please contact us if you have any questions or wish to exercise these rights."
+            },
+            {
+                question: "How will I be notified of changes to the privacy policy?",
+                answer: "We may update our privacy policy from time to time. The updated version will be indicated by a 'Last updated' date, and we encourage you to review it periodically."
+            },
+            {
+                question: "Who can I contact for privacy-related concerns?",
+                answer: "If you have any questions or concerns about our privacy policy or practices, please feel free to contact us through our official contact channels."
+            }
         ]
     }
 ];
