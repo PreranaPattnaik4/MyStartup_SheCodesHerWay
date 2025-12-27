@@ -6,7 +6,7 @@ import { PlaceHolderImages } from '@/lib/placeholder-images';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle, CardFooter } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
-import { Linkedin, BrainCircuit, Code, Pilcrow, Lightbulb, Scale, Clock, RefreshCw, CalendarCheck2 } from 'lucide-react';
+import { Linkedin, BrainCircuit, Code, Pilcrow, Lightbulb, Scale, Clock, RefreshCw, CalendarCheck2, ArrowRight } from 'lucide-react';
 import { Separator } from '@/components/ui/separator';
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
 import { programFaqData } from '@/lib/program-faq-data';
@@ -243,7 +243,7 @@ export default function SanginiUdaanPage() {
                                 </p>
                             </div>
                             <div className="grid lg:grid-cols-3 gap-8 items-start">
-                                <Card className="shadow-lg">
+                                <Card className="shadow-lg h-full">
                                     <CardHeader>
                                         <CardTitle className="flex items-center gap-2"><Clock className="h-6 w-6 text-primary"/>Program Duration & Structure</CardTitle>
                                     </CardHeader>
@@ -253,9 +253,14 @@ export default function SanginiUdaanPage() {
                                             <li><strong>Initial Phase:</strong> A focused 3-month period covering core curriculum, foundational skills, and project work.</li>
                                             <li><strong>Advanced Phase:</strong> An optional 3-month extension for deeper specialization, leadership roles, and advanced project contribution.</li>
                                         </ul>
+                                        <Button asChild variant="link" className="p-0 h-auto mt-4">
+                                            <Link href="/program-structure">
+                                                See Detailed Structure <ArrowRight className="ml-2 h-4 w-4" />
+                                            </Link>
+                                        </Button>
                                     </CardContent>
                                 </Card>
-                                <Card className="shadow-lg lg:col-span-2">
+                                <Card className="shadow-lg lg:col-span-2 h-full">
                                     <CardHeader>
                                         <CardTitle className="flex items-center gap-2"><BrainCircuit className="h-6 w-6 text-primary"/>How the Complete Sangini Udaan : EmpowerFly Journey (All-in-One Track) Works</CardTitle>
                                     </CardHeader>
