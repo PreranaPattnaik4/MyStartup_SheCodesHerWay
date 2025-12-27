@@ -9,6 +9,13 @@ import {
   Users,
   Award,
   GraduationCap,
+  GitBranch,
+  Projector,
+  Star,
+  RefreshCw,
+  CalendarDays,
+  PartyPopper,
+  Flag,
 } from 'lucide-react';
 import { Card, CardContent, CardHeader, CardTitle } from '../ui/card';
 import { cn } from '@/lib/utils';
@@ -17,51 +24,110 @@ const timelinePhases = [
   {
     phase: 'Phase 1',
     title: 'Foundation & Orientation',
-    description:
-      'Introduction to the Sangini Udaan journey, program values, learning expectations, responsible AI principles, and baseline skill assessment.',
+    description: 'Introduction to the Sangini Udaan journey, program values, learning expectations, responsible AI principles, and baseline skill assessment.',
     icon: Rocket,
   },
   {
     phase: 'Phase 2',
     title: 'Core Skill & AI Learning',
-    description:
-      'Track-specific technical and digital skills, AI fundamentals, tool exposure, and ethical technology practices aligned with industry standards.',
+    description: 'Track-specific technical and digital skills, AI fundamentals, tool exposure, and ethical technology practices aligned with industry standards.',
     icon: Lightbulb,
   },
   {
     phase: 'Phase 3',
     title: 'Personal Growth & Communication',
-    description:
-      'Confidence building, emotional intelligence, storytelling, public speaking, leadership basics, and professional mindset development.',
+    description: 'Confidence building, emotional intelligence, storytelling, public speaking, leadership basics, and professional mindset development.',
     icon: Heart,
   },
   {
     phase: 'Phase 4',
     title: 'Real-World Projects & Portfolio',
-    description:
-      'Hands-on problem-solving projects, guided implementation, collaboration, and creation of a showcase-ready portfolio.',
+    description: 'Hands-on problem-solving projects, guided implementation, collaboration, and creation of a showcase-ready portfolio.',
     icon: Briefcase,
   },
   {
     phase: 'Phase 5',
     title: 'Community Collaboration & Impact',
-    description:
-      'Team-based initiatives, social impact projects, leadership participation, and contribution to community-driven outcomes.',
+    description: 'Team-based initiatives, social impact projects, leadership participation, and contribution to community-driven outcomes.',
     icon: Users,
   },
   {
     phase: 'Phase 6',
     title: 'Industry Guidance & Career Direction',
-    description:
-      'Mentorship, feedback, career path exploration, interview readiness, goal-setting, and next-step planning.',
+    description: 'Mentorship, feedback, career path exploration, interview readiness, goal-setting, and next-step planning.',
     icon: GraduationCap,
   },
   {
     phase: 'Phase 7',
     title: 'Certificates & Participation Recognition',
-    description:
-      'Receive a Participation Announcement Template at joining. Earn Professional Certificates (Diamond, Platinum) for your contributions and achievements.',
+    description: 'Receive a participation announcement at joining and earn professional certificates (Diamond, Platinum) for contributions and achievements.',
     icon: Award,
+  },
+  {
+    phase: 'Phase 8',
+    title: 'Track Alignment & Early Validation',
+    description: 'Guided exploration of the selected track. Participants may apply for a one-time track change within the first 15 days; after this, track selection is final.',
+    icon: GitBranch,
+  },
+  {
+    phase: 'Phase 9',
+    title: 'Live Training Projects (Guided Execution)',
+    description: 'Hands-on live project with SheCodesHerWay, one live project per track over 15 days, focusing on teamwork and real-world application.',
+    icon: Projector,
+  },
+  {
+    phase: 'Phase 10',
+    title: 'Independent Innovation Project (Ownership)',
+    description: 'Participants independently build their own project based on a theme, problem statement, prototype design, and final submission & presentation.',
+    icon: Star,
+  },
+  {
+    phase: 'Phase 11',
+    title: 'Evaluation, Ranking & Recognition',
+    description: 'Assessment based on learning progress, project quality, soft skills, and ethical practices. Top 100 performers and top 10 per track are recognized.',
+    icon: Award,
+  },
+  {
+    phase: 'Phase 12',
+    title: 'Growth Sessions (Month 1 End)',
+    description: '6 interactive sessions including knowledge sharing, fun activities, personal storytelling, future planning, and community bonding.',
+    icon: CalendarDays,
+  },
+  {
+    phase: 'Phase 13',
+    title: 'Growth Sessions (Month 2 End)',
+    description: '6 interactive sessions including knowledge sharing, fun activities, personal storytelling, future planning, and community bonding.',
+    icon: CalendarDays,
+  },
+  {
+    phase: 'Phase 14',
+    title: 'Growth Sessions (Month 3 End)',
+    description: '6 interactive sessions including knowledge sharing, fun activities, personal storytelling, future planning, and community bonding.',
+    icon: CalendarDays,
+  },
+  {
+    phase: 'Phase 15',
+    title: 'Program Extension (If Required)',
+    description: 'Program duration may be extended by up to one month, strictly one time only, based on track complexity, project depth, and cohort learning pace.',
+    icon: RefreshCw,
+  },
+  {
+    phase: 'Phase 16',
+    title: 'Alumni Pathway & Continued Association',
+    description: 'Access to the alumni community, future collaboration opportunities, mentorship touchpoints, and invitations for contribution to upcoming initiatives.',
+    icon: GraduationCap,
+  },
+  {
+    phase: 'Phase 17',
+    title: 'EmpowerFly Graduation & Legacy Building',
+    description: 'Formal completion and celebration of the journey, recognizing personal growth, skill transformation, confidence, and community contribution.',
+    icon: PartyPopper,
+  },
+  {
+    phase: 'Phase 18',
+    title: 'Final Reflection & Online Live Event',
+    description: 'Consolidation of learnings, long-term goal setting, feedback sharing, and an online live event to celebrate achievements and inspire future growth.',
+    icon: Flag,
   },
 ];
 
