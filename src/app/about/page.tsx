@@ -426,7 +426,7 @@ export default function AboutPage() {
                                                 <CardTitle>Inclusive Participation Policy</CardTitle>
                                             </CardHeader>
                                             <CardContent className="text-lg text-accent-foreground/90">
-                                                <p>SheCodesHerWay welcomes both women and men to join us as Core Team Members, Early Core Contributors, and Mentors, contributing their skills, experience, and guidance to help build and grow the platform.</p>
+                                                <p>SheCodesHerWay welcomes both women and men to join us as Early Core Contributors, and Mentors, contributing their skills, experience, and guidance to help build and grow the platform.</p>
                                                 <p className="mt-4">However, our Women Empowerment Program — Sangini Udaan : EmpowerFly — is exclusively designed for women, and only women are eligible to enroll as participants in this program.</p>
                                                 <p className="mt-4">As the platform evolves, we will be introducing Hackathons, Collaborative Projects, Community Events, and other platform activities that will be accessible to all genders, fostering an inclusive and collaborative learning ecosystem.</p>
                                             </CardContent>
