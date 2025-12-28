@@ -12,7 +12,7 @@ import Faq from '@/components/faq';
 import WhatWeOffer from '@/components/home/what-we-offer';
 import StartupSchool from '@/components/home/startup-school';
 import Features from '@/components/home/features';
-import { Github, Linkedin, Twitter, Handshake, Bot, Mail, Users, User, Rocket } from 'lucide-react';
+import { Github, Linkedin, Twitter, Handshake, Bot, Mail, Users, User, Rocket, ArrowRight } from 'lucide-react';
 import Link from 'next/link';
 import { brand } from '@/lib/brand';
 import CommunityVision from '@/components/home/community-vision';
@@ -207,76 +207,6 @@ export default function Home() {
             <div id="features" className="rounded-xl py-12 relative overflow-hidden">
                 <div className="absolute inset-0 -z-10 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-primary/10 via-white/0 to-white/0"></div>
                 <Features />
-            </div>
-            <Separator />
-            <section className="rounded-xl py-12 relative overflow-hidden">
-              <div className="text-center mb-12">
-                <h2 className="font-headline text-3xl font-bold md:text-4xl">Our Inclusive Approach</h2>
-                <p className="mt-4 max-w-3xl mx-auto text-lg text-foreground/80">
-                  Building an ecosystem where everyone has a place to grow and contribute.
-                </p>
-              </div>
-              <div className="grid md:grid-cols-3 gap-8 items-stretch">
-                <Card className="flex flex-col shadow-lg">
-                  {inclusiveImage1 && (
-                    <div className="relative h-56 w-full">
-                      <Image src={inclusiveImage1.imageUrl} alt={inclusiveImage1.description} fill className="object-cover" data-ai-hint={inclusiveImage1.imageHint}/>
-                    </div>
-                  )}
-                  <CardHeader>
-                    <CardTitle className="flex items-center gap-2"><Users className="text-primary"/>For Our Core Team</CardTitle>
-                  </CardHeader>
-                  <CardContent className="flex-grow">
-                    <p className="text-foreground/80">We welcome both women and men to join as Core Team Members, Early Core Contributors, and Mentors, contributing their skills and experience to grow the platform.</p>
-                  </CardContent>
-                </Card>
-                 <Card className="flex flex-col shadow-lg">
-                  {inclusiveImage2 && (
-                    <div className="relative h-56 w-full">
-                      <Image src={inclusiveImage2.imageUrl} alt={inclusiveImage2.description} fill className="object-cover" data-ai-hint={inclusiveImage2.imageHint}/>
-                    </div>
-                  )}
-                  <CardHeader>
-                    <CardTitle className="flex items-center gap-2"><User className="text-primary"/>For Program Participants</CardTitle>
-                  </CardHeader>
-                  <CardContent className="flex-grow">
-                    <p className="text-foreground/80">Our Women Empowerment Program — Sangini Udaan : EmpowerFly — is exclusively designed for women, and only women are eligible to enroll as participants.</p>
-                  </CardContent>
-                </Card>
-                 <Card className="flex flex-col shadow-lg">
-                  {inclusiveImage3 && (
-                    <div className="relative h-56 w-full">
-                      <Image src={inclusiveImage3.imageUrl} alt={inclusiveImage3.description} fill className="object-cover" data-ai-hint={inclusiveImage3.imageHint}/>
-                    </div>
-                  )}
-                  <CardHeader>
-                    <CardTitle className="flex items-center gap-2"><Rocket className="text-primary"/>For Future Activities</CardTitle>
-                  </CardHeader>
-                  <CardContent className="flex-grow">
-                    <p className="text-foreground/80">As the platform evolves, we will introduce Hackathons, Collaborative Projects, and Community Events that will be accessible to all genders to foster an inclusive learning ecosystem.</p>
-                  </CardContent>
-                </Card>
-              </div>
-            </section>
-            <Separator />
-            <div id="join-us" className="rounded-xl py-12 relative overflow-hidden scroll-mt-24">
-               <div className="absolute inset-0 -z-10 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-primary/10 via-white/0 to-white/0"></div>
-              <JoinUs />
-              <div className="text-center mt-16">
-                <p className="font-headline text-2xl font-bold">{brand.name}</p>
-                <p className="mt-2 text-foreground/80 max-w-md mx-auto">Follow our journey and join the conversation on social media.</p>
-                <div className="mt-6 flex justify-center space-x-4">
-                  <Link href="https://x.com/preranakailash4" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
-                    <Twitter className="h-7 w-7 text-foreground/80 transition-colors hover:text-primary" />
-                  </Link>
-                  <Link href="https://www.linkedin.com/company/shecodesherway/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
-                    <Linkedin className="h-7 w-7 text-foreground/80 transition-colors hover:text-primary" />
-                  </Link>
-                  <Link href="https://github.com/PreranaPattnaik4/SheCodesHerWay" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
-                    <Github className="h-7 w-7 text-foreground/80 transition-colors hover:text-primary" />
-                  </Link>
-                </div>
-              </div>
             </div>
             <Separator />
             <div className="grid gap-20 lg:grid-cols-2 lg:gap-12 items-stretch">
