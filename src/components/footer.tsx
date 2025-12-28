@@ -26,13 +26,14 @@ export default function Footer() {
             <nav className="mt-4 grid grid-cols-2 gap-2 text-sm text-secondary-foreground/80">
               <Link href="/about" className="transition-colors hover:text-primary">About Us</Link>
               <Link href="/sangini-udaan" className="transition-colors hover:text-primary">Our Program</Link>
+              <Link href="/impact-ecosystem" className="transition-colors hover:text-primary">Impact & Ecosystem</Link>
               <Link href="/internship" className="transition-colors hover:text-primary">Internships</Link>
               <Link href="/careers" className="transition-colors hover:text-primary">Careers</Link>
               <Link href="/community" className="transition-colors hover:text-primary">Community</Link>
               <Link href="/faq" className="transition-colors hover:text-primary">FAQs</Link>
+              <Link href="/collaboration-policy" className="transition-colors hover:text-primary">Collaboration Policy</Link>
               <Link href="/terms" className="transition-colors hover:text-primary">Terms of Service</Link>
               <Link href="/privacy" className="transition-colors hover:text-primary">Privacy Policy</Link>
-              <Link href="/collaboration-policy" className="transition-colors hover:text-primary">Collaboration Policy</Link>
             </nav>
           </div>
 
