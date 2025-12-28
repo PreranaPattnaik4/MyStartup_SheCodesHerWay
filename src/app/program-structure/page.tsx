@@ -4,7 +4,7 @@ import Footer from '@/components/footer';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
-import { ArrowLeft, Award, BookOpen, Calendar, Clock, Disc, GitBranch, Goal, Heart, Lightbulb, Mic, Projector, Rocket, Sparkles, Star, Users, Zap } from 'lucide-react';
+import { ArrowLeft, Award, BookOpen, Calendar, Clock, Disc, GitBranch, Goal, Heart, Lightbulb, Mic, Projector, Rocket, Sparkles, Star, Users, Zap, Bell } from 'lucide-react';
 import { Separator } from '@/components/ui/separator';
 import { Badge } from '@/components/ui/badge';
 
@@ -271,6 +271,29 @@ export default function ProgramStructurePage() {
                                 </CardContent>
                             </Card>
                         </div>
+                        
+                        <Separator/>
+
+                        <Card className="bg-destructive/10 border-destructive/20 shadow-lg">
+                            <CardHeader>
+                                <CardTitle className="font-headline text-xl text-destructive flex items-center gap-3">
+                                    <Bell className="h-6 w-6" />
+                                    Mandatory Core Curriculum Notice: Vibe Coding, Prompt Writing & Responsible AI
+                                </CardTitle>
+                            </CardHeader>
+                            <CardContent className="space-y-4 text-foreground/90">
+                                 <h4 className="font-bold">Important Notice for All Participants</h4>
+                                <p>The Core Curriculum with a primary focus on <strong>Prompt Writing & Responsible AI is mandatory</strong> for all participants, irrespective of the selected track.</p>
+                                <ul className="list-disc list-inside space-y-2">
+                                    <li><strong>Technical participants</strong> will complete the full curriculum, including Vibe Coding, Prompt Writing & Responsible AI.</li>
+                                    <li><strong>Non-technical participants</strong> will focus on Prompt Writing for non-technical applications, such as content creation, research support, documentation, workflow optimization, and digital productivity, along with Responsible AI practices.</li>
+                                </ul>
+                                 <p><strong>Vibe Coding is optional for non-technical participants</strong> and may be skipped upon prior written intimation to the program team.</p>
+                                <p>Participants who do not inform in advance will be required to follow the complete curriculum by default.</p>
+                                <p className="font-semibold">Completion of the applicable mandatory core curriculum is required to continue and progress within the Sangini Udaan : EmpowerFly program.</p>
+                            </CardContent>
+                        </Card>
+
                     </div>
                 </section>
             </main>
@@ -278,3 +301,5 @@ export default function ProgramStructurePage() {
         </div>
     );
 }
+
+    
