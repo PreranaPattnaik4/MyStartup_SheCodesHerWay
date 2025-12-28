@@ -3,7 +3,7 @@ import Header from '@/components/header';
 import Footer from '@/components/footer';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
-import { Users, UserCheck, HeartHandshake, Rocket, TrendingUp, CheckCircle, Lock, Info, Goal } from 'lucide-react';
+import { Users, UserCheck, HeartHandshake, Rocket, TrendingUp, CheckCircle, Lock, Info, Goal, Bot, BrainCircuit } from 'lucide-react';
 import { Separator } from '@/components/ui/separator';
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from '@/components/ui/table';
 
@@ -166,7 +166,54 @@ export default function ImpactEcosystemPage() {
                         
                          <Separator/>
                         
-                         <SectionCard icon={CheckCircle} title="7. One-Year Impact Summary (Final)">
+                        <SectionCard icon={Bot} title="7. AI Coaching & 24/7 Support">
+                            <h4>AI Coaching with EmpowerFly Assistant</h4>
+                            <p>EmpowerFly Assistant is SheCodesHerWay’s AI-powered coaching companion, designed to support learners anytime, anywhere.</p>
+                            <p>While mentors and contributors guide learners through structured sessions, EmpowerFly Assistant fills the gaps between sessions, ensuring continuous momentum and confidence.</p>
+                            
+                            <h4 className="mt-4">🌟 What EmpowerFly Assistant Supports</h4>
+                            <ul>
+                                <li>24/7 learning guidance and doubt clarification</li>
+                                <li>Career and confidence coaching prompts</li>
+                                <li>Program navigation and next-step suggestions</li>
+                                <li>Reflection, motivation, and progress check-ins</li>
+                                <li>Safe space to ask questions—without hesitation</li>
+                            </ul>
+                            <p className="font-semibold text-primary border-l-4 border-primary pl-4 mt-4">EmpowerFly Assistant complements human mentors; it does not replace them.</p>
+
+                            <h4 className="mt-6">🔁 How AI Coaching Fits Into the Ecosystem</h4>
+                             <h5 className="mt-4">🧩 Support Stack (Human + AI)</h5>
+                            <Table>
+                                <TableHeader>
+                                    <TableRow>
+                                        <TableHead>Support Layer</TableHead>
+                                        <TableHead>Role</TableHead>
+                                    </TableRow>
+                                </TableHeader>
+                                <TableBody>
+                                    <TableRow><TableCell>Core Team</TableCell><TableCell>Strategy, program ownership</TableCell></TableRow>
+                                    <TableRow><TableCell>Contributors</TableCell><TableCell>Day-to-day guidance & support</TableCell></TableRow>
+                                    <TableRow><TableCell>Mentors</TableCell><TableCell>Expertise, inspiration, direction</TableCell></TableRow>
+                                    <TableRow><TableCell>EmpowerFly Assistant (AI)</TableCell><TableCell>24/7 coaching & continuous support</TableCell></TableRow>
+                                </TableBody>
+                            </Table>
+                            <p className="mt-4">This hybrid model ensures:</p>
+                            <ul>
+                                <li>No learner is stuck waiting</li>
+                                <li>Support scales without burnout</li>
+                                <li>Every learner feels guided—even outside sessions</li>
+                            </ul>
+
+                             <div className="mt-6 p-4 bg-blue-50 border-l-4 border-blue-400 text-blue-800 rounded-r-lg">
+                                <h5 className="font-semibold flex items-center gap-2"><BrainCircuit size={20}/> Founder-Ready Explanation (Use Anywhere)</h5>
+                                <blockquote className="border-l-0 pl-0 italic mt-2">“Our programs are supported by a hybrid ecosystem—human mentors, contributors, and our AI-powered EmpowerFly Assistant—ensuring learners receive guidance not just during sessions, but 24/7.”</blockquote>
+                                <p className="mt-2 text-sm">This sounds: ✔ Thoughtful ✔ Scalable ✔ AI-responsible ✔ Future-ready</p>
+                            </div>
+                        </SectionCard>
+                        
+                        <Separator/>
+                        
+                         <SectionCard icon={CheckCircle} title="8. One-Year Impact Summary (Final)">
                              <h4>Annual Targets</h4>
                             <ul>
                                 <li><strong>Core Team Members:</strong> 4–6</li>
@@ -181,7 +228,7 @@ export default function ImpactEcosystemPage() {
                         
                         <Card className="shadow-lg">
                             <CardHeader>
-                                <CardTitle className="text-2xl font-bold flex items-center gap-4"><Goal className="text-primary"/>8. Founder Statement (Official Use)</CardTitle>
+                                <CardTitle className="text-2xl font-bold flex items-center gap-4"><Goal className="text-primary"/>9. Founder Statement (Official Use)</CardTitle>
                             </CardHeader>
                             <CardContent>
                                 <blockquote className="border-l-4 border-primary pl-4 italic text-lg text-foreground/90">
