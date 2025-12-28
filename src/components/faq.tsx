@@ -54,7 +54,7 @@ export default function Faq({ showAll = false }: FaqProps) {
             </div>
         ) : (
              <div className="grid md:grid-cols-2 gap-8 items-start">
-                <Card className="shadow-lg">
+                <Card className="shadow-lg bg-white">
                     <CardContent className="p-4">
                         <Accordion type="single" collapsible className="w-full">
                             {firstHalf.map((faq, index) => (
@@ -68,7 +68,7 @@ export default function Faq({ showAll = false }: FaqProps) {
                         </Accordion>
                     </CardContent>
                 </Card>
-                <Card className="shadow-lg">
+                <Card className="shadow-lg bg-white">
                     <CardContent className="p-4">
                         <Accordion type="single" collapsible className="w-full">
                             {secondHalf.map((faq, index) => (
