@@ -12,12 +12,17 @@ import { Button } from "./ui/button";
 import { ArrowRight } from "lucide-react";
 import { Separator } from "./ui/separator";
 import { homeFaqData } from "@/lib/home-faq-data";
+import { Card, CardContent } from "./ui/card";
 
 interface FaqProps {
   showAll?: boolean;
 }
 
 export default function Faq({ showAll = false }: FaqProps) {
+    const half = Math.ceil(homeFaqData.length / 2);
+    const firstHalf = homeFaqData.slice(0, half);
+    const secondHalf = homeFaqData.slice(half);
+
   return (
     <section>
       <div className="text-center mb-10">
@@ -27,40 +32,62 @@ export default function Faq({ showAll = false }: FaqProps) {
         </p>
       </div>
       
-      <div className="max-w-3xl mx-auto space-y-12">
+      <div className="max-w-4xl mx-auto">
         {showAll ? (
-            faqData.map((category, catIndex) => (
-                <div key={catIndex}>
-                    <h3 className="text-2xl font-bold font-headline mb-6 text-center">{category.title}</h3>
-                    <Accordion type="single" collapsible className="w-full">
-                    {category.questions.map((faq, index) => (
-                        <AccordionItem value={`item-${catIndex}-${index}`} key={index}>
-                        <AccordionTrigger className="text-left text-lg font-semibold">{faq.question}</AccordionTrigger>
-                        <AccordionContent className="text-base text-foreground/80">
-                            {faq.answer}
-                        </AccordionContent>
-                        </AccordionItem>
-                    ))}
-                    </Accordion>
-                    {catIndex < faqData.length - 1 && <Separator className="my-12" />}
-                </div>
-            ))
+             <div className="space-y-12">
+                {faqData.map((category, catIndex) => (
+                    <div key={catIndex}>
+                        <h3 className="text-2xl font-bold font-headline mb-6 text-center">{category.title}</h3>
+                        <Accordion type="single" collapsible className="w-full">
+                        {category.questions.map((faq, index) => (
+                            <AccordionItem value={`item-${catIndex}-${index}`} key={index}>
+                            <AccordionTrigger className="text-left text-lg font-semibold">{faq.question}</AccordionTrigger>
+                            <AccordionContent className="text-base text-foreground/80">
+                                {faq.answer}
+                            </AccordionContent>
+                            </AccordionItem>
+                        ))}
+                        </Accordion>
+                        {catIndex < faqData.length - 1 && <Separator className="my-12" />}
+                    </div>
+                ))}
+            </div>
         ) : (
-             <Accordion type="single" collapsible className="w-full">
-              {homeFaqData.map((faq, index) => (
-                <AccordionItem value={`item-${index}`} key={index}>
-                  <AccordionTrigger className="text-left text-lg font-semibold">{faq.question}</AccordionTrigger>
-                  <AccordionContent className="text-base text-foreground/80">
-                    {faq.answer}
-                  </AccordionContent>
-                </AccordionItem>
-              ))}
-            </Accordion>
+             <div className="grid md:grid-cols-2 gap-8 items-start">
+                <Card className="shadow-lg">
+                    <CardContent className="p-4">
+                        <Accordion type="single" collapsible className="w-full">
+                            {firstHalf.map((faq, index) => (
+                                <AccordionItem value={`item-a-${index}`} key={index}>
+                                <AccordionTrigger className="text-left text-base font-semibold">{faq.question}</AccordionTrigger>
+                                <AccordionContent className="text-sm text-foreground/80">
+                                    {faq.answer}
+                                </AccordionContent>
+                                </AccordionItem>
+                            ))}
+                        </Accordion>
+                    </CardContent>
+                </Card>
+                <Card className="shadow-lg">
+                    <CardContent className="p-4">
+                        <Accordion type="single" collapsible className="w-full">
+                            {secondHalf.map((faq, index) => (
+                                <AccordionItem value={`item-b-${index}`} key={index}>
+                                <AccordionTrigger className="text-left text-base font-semibold">{faq.question}</AccordionTrigger>
+                                <AccordionContent className="text-sm text-foreground/80">
+                                    {faq.answer}
+                                </AccordionContent>
+                                </AccordionItem>
+                            ))}
+                        </Accordion>
+                    </CardContent>
+                </Card>
+            </div>
         )}
       </div>
 
       {!showAll && (
-        <div className="text-center mt-8">
+        <div className="text-center mt-12">
             <p className="text-foreground/80">
             Have more questions? Visit our full FAQ section.
             </p>
