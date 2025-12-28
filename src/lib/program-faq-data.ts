@@ -30,5 +30,9 @@ export const programFaqData: FAQ[] = [
     {
         question: "Do I need any prior experience to apply for Sangini Udaan : EmpowerFly?",
         answer: "Not at all! Our programs are designed for women at all stages of their journey. We welcome students, learners just starting out, and women looking to restart or pivot their careers.",
+    },
+    {
+        question: "Can men join the Sangini Udaan : EmpowerFly program?",
+        answer: "Our Women Empowerment Program — Sangini Udaan : EmpowerFly — is exclusively designed for women, and only women are eligible to enroll as participants in this program. However, men are welcome to join us as Core Team Members, Early Core Contributors, and Mentors to help grow the platform. We will also be introducing other platform activities like Hackathons and Community Events that will be open to all genders."
     }
 ];

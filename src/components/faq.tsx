@@ -6,7 +6,7 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion"
-import { faqData, type FaqCategory } from "@/lib/faq-data"
+import { faqData } from "@/lib/faq-data"
 import Link from "next/link";
 import { Button } from "./ui/button";
 import { ArrowRight } from "lucide-react";
@@ -18,8 +18,6 @@ interface FaqProps {
 }
 
 export default function Faq({ showAll = false }: FaqProps) {
-  const faqsToShow = showAll ? faqData : [];
-
   return (
     <section>
       <div className="text-center mb-10">
@@ -31,7 +29,7 @@ export default function Faq({ showAll = false }: FaqProps) {
       
       <div className="max-w-3xl mx-auto space-y-12">
         {showAll ? (
-            faqsToShow.map((category, catIndex) => (
+            faqData.map((category, catIndex) => (
                 <div key={catIndex}>
                     <h3 className="text-2xl font-bold font-headline mb-6 text-center">{category.title}</h3>
                     <Accordion type="single" collapsible className="w-full">
@@ -44,7 +42,7 @@ export default function Faq({ showAll = false }: FaqProps) {
                         </AccordionItem>
                     ))}
                     </Accordion>
-                    {catIndex < faqsToShow.length - 1 && <Separator className="my-12" />}
+                    {catIndex < faqData.length - 1 && <Separator className="my-12" />}
                 </div>
             ))
         ) : (

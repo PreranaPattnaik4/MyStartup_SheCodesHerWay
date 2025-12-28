@@ -204,6 +204,15 @@ export const faqData: FaqCategory[] = [
             }
         ]
     },
+     {
+        title: "Participation & Inclusivity",
+        questions: [
+            {
+                question: "What is the inclusive participation policy?",
+                answer: "SheCodesHerWay welcomes both women and men to join us as Core Team Members, Early Core Contributors, and Mentors, contributing their skills, experience, and guidance to help build and grow the platform. However, our Women Empowerment Program — Sangini Udaan : EmpowerFly — is exclusively designed for women, and only women are eligible to enroll as participants in this program. As the platform evolves, we will be introducing Hackathons, Collaborative Projects, Community Events, and other platform activities that will be accessible to all genders, fostering an inclusive and collaborative learning ecosystem.",
+            },
+        ],
+    },
     {
         title: "User Privacy Queries",
         questions: [
