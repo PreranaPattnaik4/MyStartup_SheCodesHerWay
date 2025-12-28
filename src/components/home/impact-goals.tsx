@@ -37,7 +37,7 @@ export default function ImpactGoals() {
   return (
     <section>
         <div className="text-center mb-16">
-            <h2 className="font-headline text-3xl font-bold md:text-4xl">Our Impact Goals (2025-2026)</h2>
+            <h2 className="font-headline text-3xl font-bold md:text-4xl">Our Impact Goals (2026-2027)</h2>
             <p className="mt-4 max-w-2xl mx-auto text-lg text-foreground/80">
                 We are committed to making a tangible difference in the lives of women across India.
             </p>
