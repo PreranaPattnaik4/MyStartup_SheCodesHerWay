@@ -9,13 +9,12 @@ import {
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 
 const roadmapPhases = [
-  { phase: "Phase 1 (2027 Q1-Q2)", milestone: "Launch website and pilot the Sangini Udaan program." },
-  { phase: "Phase 2 (2027 Q3)", milestone: "Build and expand our mentor and partner network." },
-  { phase: "Phase 3 (2027 Q4)", milestone: "Introduce an online learning portal with diverse courses." },
+  { phase: "Phase 1 (2026 Q1-Q2)", milestone: "Launch website and pilot the Sangini Udaan program." },
+  { phase: "Phase 2 (2026 Q3)", milestone: "Build and expand our mentor and partner network." },
+  { phase: "Phase 3 (2026 Q4)", milestone: "Introduce an online learning portal with diverse courses." },
   { phase: "Phase 4 (2027 Q1)", milestone: "Host the first annual 'Udaan Summit' for our community." },
   { phase: "Phase 5 (2027 Q2-Q3)", milestone: "Develop and integrate advanced AI coaching tools to provide personalized learning support." },
   { phase: "Phase 6 (2027 Q4)", milestone: "Launch a dedicated job board and career resource hub to connect members with opportunities." },
-  { phase: "Phase 7 (2028)", milestone: "Expand our program offerings to include new specialized tracks and advanced-level courses." },
 ];
 
 export default function Roadmap() {
