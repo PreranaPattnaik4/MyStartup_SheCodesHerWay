@@ -75,7 +75,7 @@
     {
       "id": "program-internship",
       "description": "A professional woman confidently leading a meeting.",
-      "imageUrl": "https://images.unsplash.com/photo-1556761175-5973dc0f32e7?ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHx3b21hbiUyMGxlYWRpbmclMjBhJTIwbWVldGluZ3xlbnwwfHx8fDE3MjI1MTM5MDB8MA&ixlib=rb-4.1.0&w=1080&fit=max&q=80&fm=jpg&crop=entropy&cs=tinysrgb",
+      "imageUrl": "https://images.unsplash.com/photo-1556761175-5973dc0f32e7?ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHx3b21hbiUyMGxlYWRpbmclMjBhJTIwbWVldGluZ3xlbnwwfHx8fDE3MjI1MTM5MDB8MA&ixlib-rb-4.1.0&w=1080&fit=max&q=80&fm=jpg&crop=entropy&cs=tinysrgb",
       "imageHint": "woman leading meeting"
     },
     {
@@ -93,19 +93,19 @@
     {
       "id": "internship-hero",
       "description": "Welcoming banner showing diverse women collaborating online.",
-      "imageUrl": "https://images.unsplash.com/photo-1699570047113-16fdf623e83e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHx3b21lbiUyMGNvbGxhYm9yYXRpb258ZW58MHx8fHwxNzYyMjQwMTQ1fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1699570047113-16fdf623e83e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHx3b21lbiUyMGNvbGxhYm9yYXRpb258ZW58MHx8fHwxNzYyMjQwMTQ1fDA&ixlib-rb-4.1.0&q=80&w=1080",
       "imageHint": "women collaborating"
     },
     {
       "id": "internship-community",
       "description": "A diverse group of women engaged in a lively and supportive discussion in a modern, bright space.",
-      "imageUrl": "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxkaWdpdGFsJTIwc2lzdGVyaG9vZHxlbnwwfHx8fDE3MjM1OTAxODN8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxkaWdpdGFsJTIwc2lzdGVyaG9vZHxlbnwwfHx8fDE3MjM1OTAxODN8MA&ixlib-rb-4.1.0&q=80&w=1080",
       "imageHint": "digital sisterhood"
     },
     {
       "id": "internship-certificate",
       "description": "A mock certificate with floral borders.",
-      "imageUrl": "https://images.unsplash.com/photo-1748712576506-000c01890275?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxjZXJ0aWZpY2F0ZSUyMGZsb3JhbHxlbnwwfHx8fDE3NjIyNDczNDF8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1748712576506-000c01890275?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxjZXJ0aWZpY2F0ZSUyMGZsb3JhbHxlbnwwfHx8fDE3NjIyNDczNDF8MA&ixlib-rb-4.1.0&q=80&w=1080",
       "imageHint": "certificate floral"
     },
     {
@@ -153,7 +153,7 @@
     {
       "id": "feature-mentors",
       "description": "Portrait of a woman with a sunlit background, representing guidance.",
-      "imageUrl": "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxtZW50b3J8ZW58MHx8fHwxNzE4NzIwMzEyfDA&ixlib-rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxtZW50b3J8ZW58MHx8fHwxNzE4NzIwMzEyfDA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "mentor"
     },
     {
@@ -177,7 +177,7 @@
     {
       "id": "feature-ai-coaching",
       "description": "A futuristic image of a brain with network connections, representing AI intelligence and coaching.",
-      "imageUrl": "https://images.unsplash.com/photo-1535378917042-10a22c95931a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxhaSUyMGJyYWlufGVufDB8fHx8MTcyMjQzNTQ2NHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1535378917042-10a22c95931a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxhSSUyMGJyYWlufGVufDB8fHx8MTcyMjQzNTQ2NHww&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "ai brain"
     },
     {
@@ -194,13 +194,13 @@
     },
     {
       "id": "vision-community-voices",
-      "imageUrl": "https://images.unsplash.com/photo-1524250502761-1ac6f2e30d43?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wzNzYyMDB8MHwxfHNlYXJjaHwxfHx3b21lbiUyMHRhbGtpbmd8ZW58MHx8fHwxNzE4NzIwMzEyfDA&ixlib-rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1524250502761-1ac6f2e30d43?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wzNzYyMDB8MHwxfHNlYXJjaHwxfHx3b21lbiUyMHRhbGtpbmd8ZW58MHx8fHwxNzE4NzIwMzEyfDA&ixlib=rb-4.1.0&q=80&w=1080",
       "description": "A group of diverse women engaged in a supportive conversation.",
       "imageHint": "women talking"
     },
     {
       "id": "vision-why-created",
-      "imageUrl": "https://images.unsplash.com/photo-1521791136064-7986c2920216?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wzNzYyMDB8MHwxfHNlYXJjaHwxfHxpbnNwaXJhdGlvbnxlbnwwfHx8fDE3MTg3MjAyNzl8MA&ixlib-rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1521791136064-7986c2920216?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wzNzYyMDB8MHwxfHNlYXJjaHwxfHxpbnNwaXJhdGlvbnxlbnwwfHx8fDE3MTg3MjAyNzl8MA&ixlib=rb-4.1.0&q=80&w=1080",
       "description": "A lightbulb moment, symbolizing the inspiration behind the startup.",
       "imageHint": "inspiration lightbulb"
     },
@@ -230,7 +230,7 @@
     },
     {
       "id": "ai-tools-banner",
-      "imageUrl": "https://images.unsplash.com/photo-1696203435834-453b3a7a011d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wzNzYyMDB8MHwxfHNlYXJjaHwxfHxhcnRpZmljaWFsJTIwaW50ZWxsaWdlbmNlJTIwYWJzdHJhY3R8ZW58MHx8fHwxNzE4NzIwMzEyfDA&ixlib-rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1696203435834-453b3a7a011d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wzNzYyMDB8MHwxfHNlYXJjaHwxfHxhcnRpZmljaWFsJTIwaW50ZWxsaWdlbmNlJTIwYWJzdHJhY3R8ZW58MHx8fHwxNzE4NzIwMzEyfDA&ixlib=rb-4.1.0&q=80&w=1080",
       "description": "An abstract image representing artificial intelligence and modern technology.",
       "imageHint": "AI tools"
     },
@@ -251,6 +251,12 @@
       "imageUrl": "https://images.unsplash.com/photo-1543269865-cbf427effbad?ixid=M3wzNzYyMDB8MHwxfHNlYXJjaHwyfHxjb21tdW5pdHl8ZW58MHx8fHwxNzE4NzIwMzM5fDA&ixlib=rb-4.1.0&q=80&w=1080&fit=max&fm=jpg&crop=entropy&cs=tinysrgb",
       "description": "People collaborating on a project, symbolizing hackathons and events.",
       "imageHint": "community event"
+    },
+    {
+      "id": "inclusive-approach-4",
+      "imageUrl": "https://i.postimg.cc/R0Zjwhd0/a90169a1-9831-407f-97c9-0e270dcca46f.png",
+      "description": "Early core contributors working together.",
+      "imageHint": "team collaboration"
     }
   ]
 }

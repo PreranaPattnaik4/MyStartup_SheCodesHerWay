@@ -10,7 +10,7 @@ import Faq from '@/components/faq';
 import WhatWeOffer from '@/components/home/what-we-offer';
 import StartupSchool from '@/components/home/startup-school';
 import Features from '@/components/home/features';
-import { Github, Linkedin, Twitter, Handshake, Bot, Mail, Users, User, Rocket } from 'lucide-react';
+import { Github, Linkedin, Twitter, Handshake, Bot, Mail, Users, User, Rocket, UserCheck } from 'lucide-react';
 import Link from 'next/link';
 import { brand } from '@/lib/brand';
 import CommunityVision from '@/components/home/community-vision';
@@ -33,6 +33,7 @@ export default function Home() {
   const inclusiveImage1 = PlaceHolderImages.find((p) => p.id === 'inclusive-approach-1');
   const inclusiveImage2 = PlaceHolderImages.find((p) => p.id === 'inclusive-approach-2');
   const inclusiveImage3 = PlaceHolderImages.find((p) => p.id === 'inclusive-approach-3');
+  const inclusiveImage4 = PlaceHolderImages.find((p) => p.id === 'inclusive-approach-4');
 
 
   return (
@@ -167,14 +168,14 @@ export default function Home() {
                 <Features />
             </div>
             <Separator />
-            <section className="rounded-xl py-12 relative overflow-hidden">
+            <section className="rounded-xl py-12 relative overflow-hidden scroll-mt-24">
               <div className="text-center mb-12">
                 <h2 className="font-headline text-3xl font-bold md:text-4xl">Our Inclusive Approach</h2>
                 <p className="mt-4 max-w-3xl mx-auto text-lg text-foreground/80">
                   Building an ecosystem where everyone has a place to grow and contribute.
                 </p>
               </div>
-              <div className="grid md:grid-cols-3 gap-8 items-stretch">
+              <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 items-stretch">
                 <Card className="flex flex-col shadow-lg">
                   {inclusiveImage1 && (
                     <div className="relative h-56 w-full">
@@ -185,7 +186,7 @@ export default function Home() {
                     <CardTitle className="flex items-center gap-2"><Users className="text-primary"/>For Our Core Team</CardTitle>
                   </CardHeader>
                   <CardContent className="flex-grow">
-                    <p className="text-foreground/80">We welcome both women and men to join as Core Team Members, Early Core Contributors, and Mentors, contributing their skills and experience to grow the platform.</p>
+                    <p className="text-foreground/80">We welcome both women and men to join as Core Team Members and Mentors, contributing their skills to grow the platform.</p>
                   </CardContent>
                 </Card>
                  <Card className="flex flex-col shadow-lg">
@@ -198,7 +199,20 @@ export default function Home() {
                     <CardTitle className="flex items-center gap-2"><User className="text-primary"/>For Program Participants</CardTitle>
                   </CardHeader>
                   <CardContent className="flex-grow">
-                    <p className="text-foreground/80">Our Women Empowerment Program — Sangini Udaan : EmpowerFly — is exclusively designed for women, and only women are eligible to enroll as participants.</p>
+                    <p className="text-foreground/80">Our Women Empowerment Program — {brand.programName} — is exclusively designed for women participants.</p>
+                  </CardContent>
+                </Card>
+                <Card className="flex flex-col shadow-lg">
+                  {inclusiveImage4 && (
+                    <div className="relative h-56 w-full">
+                      <Image src={inclusiveImage4.imageUrl} alt={inclusiveImage4.description} fill className="object-cover" data-ai-hint={inclusiveImage4.imageHint}/>
+                    </div>
+                  )}
+                  <CardHeader>
+                    <CardTitle className="flex items-center gap-2"><UserCheck className="text-primary"/>For Early Core Contributors</CardTitle>
+                  </CardHeader>
+                  <CardContent className="flex-grow">
+                    <p className="text-foreground/80">Passionate individuals of all genders can join as Early Core Contributors to help build and shape our platform.</p>
                   </CardContent>
                 </Card>
                  <Card className="flex flex-col shadow-lg">
@@ -211,7 +225,7 @@ export default function Home() {
                     <CardTitle className="flex items-center gap-2"><Rocket className="text-primary"/>For Future Activities</CardTitle>
                   </CardHeader>
                   <CardContent className="flex-grow">
-                    <p className="text-foreground/80">As the platform evolves, we will introduce Hackathons, Collaborative Projects, and Community Events that will be accessible to all genders to foster an inclusive learning ecosystem.</p>
+                    <p className="text-foreground/80">Future Hackathons, Collaborative Projects, and Community Events will be open to all genders, fostering a diverse ecosystem.</p>
                   </CardContent>
                 </Card>
               </div>
