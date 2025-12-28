@@ -4,8 +4,6 @@ import Footer from '@/components/footer';
 import Hero from '@/components/home/hero';
 import MissionVision from '@/components/home/mission-vision';
 import ImpactGoals from '@/components/home/impact-goals';
-import CoreActivities from '@/components/home/core-activities';
-import Roadmap from '@/components/home/roadmap';
 import JoinUs from '@/components/join-us';
 import { Separator } from '@/components/ui/separator';
 import Faq from '@/components/faq';
@@ -236,17 +234,6 @@ export default function Home() {
                     <Github className="h-7 w-7 text-foreground/80 transition-colors hover:text-primary" />
                   </Link>
                 </div>
-              </div>
-            </div>
-            <Separator />
-            <div className="grid gap-20 lg:grid-cols-2 lg:gap-12 items-stretch">
-             <div className="rounded-xl py-12 relative overflow-hidden">
-               <div className="absolute inset-0 -z-10 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-primary/10 via-white/0 to-white/0"></div>
-                <CoreActivities />
-              </div>
-              <div className="rounded-xl py-12 relative overflow-hidden">
-                 <div className="absolute inset-0 -z-10 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-primary/10 via-white/0 to-white/0"></div>
-                <Roadmap />
               </div>
             </div>
             <Separator />

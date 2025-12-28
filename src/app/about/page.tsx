@@ -12,6 +12,8 @@ import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from '@
 import { Award, Check, FileText, Github, Heart, Instagram, Linkedin, Star, Twitter, Users, Youtube, Zap, HeartHandshake, UserPlus, Mail } from 'lucide-react';
 import { Badge } from '@/components/ui/badge';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
+import CoreActivities from '@/components/home/core-activities';
+import Roadmap from '@/components/home/roadmap';
 
 const coreValues = [
     { value: "Empowerment", meaning: "Helping women find their voice and independence" },
@@ -386,6 +388,13 @@ export default function AboutPage() {
                                 </CardContent>
                             </Card>
                         </section>
+
+                        <Separator />
+                        
+                        <div className="grid gap-20 lg:grid-cols-2 lg:gap-12 items-start">
+                            <CoreActivities />
+                            <Roadmap />
+                        </div>
                         
                         <Separator/>
 
