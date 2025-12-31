@@ -52,6 +52,10 @@ const chatFlow = ai.defineFlow(
   async (input) => {
     const userMessage = input.message.toLowerCase().trim();
     
+    if (userMessage === "hi" || userMessage === "hello") {
+        return { message: "Hi, I’m EmpowerFly Assistant — your friendly guide to learning, careers, and opportunities, at your own pace. How can I help you today?" };
+    }
+    
     // Find a matching FAQ
     const foundFaq = allFaqs.find(faq => 
         faq.question.toLowerCase().trim().includes(userMessage)
