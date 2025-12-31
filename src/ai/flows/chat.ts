@@ -3,12 +3,13 @@
 /**
  * @fileOverview This file defines a Genkit flow for handling chatbot conversations.
  *
- * The flow takes a user's message as input and uses a language model to generate a response,
+ * The flow takes a user's message as input and uses the FAQ data to generate a response,
  * acting as the "EmpowerFly Assistant".
  */
 
 import { ai } from '@/ai/genkit';
 import { z } from 'genkit';
+import { faqData } from '@/lib/faq-data';
 
 const ChatInputSchema = z.object({
   message: z.string().describe("The user's message to the chatbot."),
@@ -26,22 +27,8 @@ export async function chat(input: ChatInput): Promise<ChatOutput> {
   return chatFlow(input);
 }
 
-const chatPrompt = ai.definePrompt({
-  name: 'chatPrompt',
-  input: { schema: ChatInputSchema },
-  output: { schema: ChatOutputSchema },
-  prompt: `You are EmpowerFly Assistant, a friendly and supportive guide for SheCodesHerWay, a women-empowerment platform.
-
-Your purpose is to help users with questions about:
-- SheCodesHerWay's mission and programs (like Sangini Udaan : EmpowerFly).
-- Learning paths in tech, creative fields, and business.
-- Available courses, internships, and mentorship opportunities.
-- General career advice and encouragement.
-
-Keep your tone warm, encouraging, and professional. Answer concisely.
-
-User's message: {{{message}}}`,
-});
+// Flatten the FAQ data for easier searching
+const allFaqs = faqData.flatMap(category => category.questions);
 
 const chatFlow = ai.defineFlow(
   {
@@ -50,7 +37,38 @@ const chatFlow = ai.defineFlow(
     outputSchema: ChatOutputSchema,
   },
   async (input) => {
-    const { output } = await chatPrompt(input);
-    return output!;
+    const userMessage = input.message.toLowerCase();
+    
+    // Find a matching FAQ
+    const foundFaq = allFaqs.find(faq => 
+        faq.question.toLowerCase().includes(userMessage) || 
+        (typeof faq.answer === 'string' && faq.answer.toLowerCase().includes(userMessage))
+    );
+
+    if (foundFaq) {
+        let answerText = '';
+        if (typeof foundFaq.answer === 'string') {
+            answerText = foundFaq.answer;
+        } else if (React.isValidElement(foundFaq.answer)) {
+            // A simple way to extract text from React elements. Might not be perfect for complex components.
+            const extractText = (element: React.ReactNode): string => {
+                if (typeof element === 'string') return element;
+                if (!React.isValidElement(element)) return '';
+                const children = (element.props as any).children;
+                if (children) {
+                    return React.Children.map(children, child => extractText(child)).join('');
+                }
+                return '';
+            };
+            answerText = extractText(foundFaq.answer);
+        }
+        
+        return { message: answerText || "I found some information, but couldn't format it as a simple text answer." };
+    }
+
+    return { message: "I'm sorry, I don't have information about that. Please try asking about our programs, careers, or the EmpowerFly initiative." };
   }
 );
+
+// We need a React import for isValidElement, even in a server file, due to the nature of the FAQ data.
+import React from 'react';
