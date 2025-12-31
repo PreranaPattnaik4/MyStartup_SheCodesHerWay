@@ -70,7 +70,7 @@ const executiveSummaryTool = {
         "Instantly ready for your pitch deck"
     ],
     href: "/ai-tools",
-    isReady: true,
+    isReady: false,
     poweredBy: "Google Gemini"
 };
 
