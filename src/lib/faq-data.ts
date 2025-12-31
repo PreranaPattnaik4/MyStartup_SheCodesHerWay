@@ -20,6 +20,10 @@ export const faqData: FaqCategory[] = [
                 answer: "SheCodesHerWay is a women-led empowerment startup and platform founded by Prerana Kailash Pattnaik. Its mission is to help women build their path, lead their way, and leave their mark by providing resources for growth in technology, creativity, entrepreneurship, leadership, and emotional strength.",
             },
             {
+                question: "What this platform is all about?",
+                answer: "SheCodesHerWay is a purpose-driven digital platform for women to learn, lead, and grow. It offers mentorship, skill-building programs, AI tools, and a supportive community to help women achieve their potential in technology, business, creativity, and leadership. Our mission is to provide the tools and confidence for every woman to build her own path to success."
+            },
+            {
                 question: "What is the mission and vision of SheCodesHerWay?",
                 answer: "Our mission is to empower women with digital learning, mentorship, leadership development, and emotional strength, while building a global community that celebrates creativity, collaboration, and courage. Our vision is to create a world where every woman has the resources, opportunities, and confidence to step into her fullest potential.",
             },
@@ -69,6 +73,10 @@ export const faqData: FaqCategory[] = [
                 answer: "It is the flagship empowerment and mentorship program of SheCodesHerWay. It's a guided journey created to help women build skills, confidence, and clarity across technology, creativity, business, and leadership.",
             },
             {
+                question: "TELL ME ABOUT THE PROGRAM THAT THIS PLATFORM OFFER",
+                answer: "Our flagship program is 'Sangini Udaan : EmpowerFly', a comprehensive empowerment and mentorship journey. It offers multiple learning tracks, including Technology, Business, Creativity, and Personal Growth, to help women build skills, confidence, and career readiness. It is designed to be a supportive, women-led experience with hands-on projects and community support."
+            },
+            {
                 question: "Who is the 'Sangini Udaan : EmpowerFly' program for?",
                 answer: "Sangini Udaan : EmpowerFly is our flagship empowerment and mentorship program designed for any woman who wants to grow. Whether you're interested in tech, starting a business, exploring your creativity, or developing soft skills, there's a path for you.",
             },
@@ -107,6 +115,10 @@ export const faqData: FaqCategory[] = [
             {
                 question: "Is there a fee to enroll in the Sangini Udaan : EmpowerFly program?",
                 answer: "No, the Sangini Udaan : EmpowerFly program is offered free of charge. We believe in investing in your growth and potential without financial barriers. Our focus is on providing skills, mentorship, and opportunities.",
+            },
+            {
+                question: "IS THIS FREE ?",
+                answer: "Yes, participation in the 'Sangini Udaan : EmpowerFly' program and our collaborative opportunities (like internships and core contributor roles) are offered free of charge. Our goal is to provide empowerment and growth without financial barriers."
             },
             {
                 question: "What is the structure of the program journey?",
