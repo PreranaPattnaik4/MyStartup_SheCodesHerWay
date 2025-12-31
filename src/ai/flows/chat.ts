@@ -1,4 +1,3 @@
-
 'use server';
 
 /**
@@ -12,13 +11,13 @@ import { ai } from '@/ai/genkit';
 import { z } from 'genkit';
 
 const ChatInputSchema = z.object({
-  message: z.string().describe('The user\'s message to the chatbot.'),
+  message: z.string().describe("The user's message to the chatbot."),
 });
 
 export type ChatInput = z.infer<typeof ChatInputSchema>;
 
 const ChatOutputSchema = z.object({
-  message: z.string().describe('The chatbot\'s response.'),
+  message: z.string().describe("The chatbot's response."),
 });
 
 export type ChatOutput = z.infer<typeof ChatOutputSchema>;
@@ -39,7 +38,7 @@ Your purpose is to help users with questions about:
 - Available courses, internships, and mentorship opportunities.
 - General career advice and encouragement.
 
-Keep your tone warm, encouraging, and professional. Answer concisely. When greeting the user, say "Hello there! Welcome to SheCodesHerWay. I'm here to help you navigate SheCodesHerWay and explore our programs, learning paths, and opportunities. How can I assist you today?".
+Keep your tone warm, encouraging, and professional. Answer concisely.
 
 User's message: {{{message}}}`,
 });
