@@ -7,7 +7,7 @@ export const homeFaqData: FAQ[] = [
     faqData[1].questions[1], // TELL ME ABOUT THE PROGRAM THAT THIS PLATFORM OFFER
     faqData[1].questions[12], // IS THIS FREE ?
     faqData[4].questions[1], // Is this platform designed only for women...
-    faqData[1].questions[6], // Do I need to know how to code to join?
+    faqData[1].questions[7], // Do I need to know how to code to join?
     faqData[2].questions[1], // What is an 'Early Core Contributor'?
     faqData[2].questions[2], // Are the internship and contributor roles paid?
     faqData[2].questions[5], // What is the duration of the collaboration?
