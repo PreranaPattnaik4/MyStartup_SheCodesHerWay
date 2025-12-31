@@ -35,6 +35,7 @@ const allFaqs = faqData.flatMap(category => category.questions);
 const extractText = (element: React.ReactNode): string => {
     if (typeof element === 'string') return element;
     if (typeof element === 'number') return String(element);
+    if (React.Children.count(element) === 0) return '';
     if (!React.isValidElement(element)) return '';
     const children = (element.props as any).children;
     if (children) {
@@ -56,10 +57,33 @@ const chatFlow = ai.defineFlow(
         return { message: "Hi, I’m EmpowerFly Assistant — your friendly guide to learning, careers, and opportunities, at your own pace. How can I help you today?" };
     }
     
-    // Find a matching FAQ
-    const foundFaq = allFaqs.find(faq => 
+    // Improved search logic
+    const keywords = userMessage.split(/\s+/).filter(word => word.length > 2); // get keywords
+    let foundFaq = null;
+
+    // Exact phrase match first
+    foundFaq = allFaqs.find(faq => 
         faq.question.toLowerCase().trim().includes(userMessage)
     );
+
+    // Keyword based search if no exact match
+    if (!foundFaq) {
+        let bestMatchScore = 0;
+        for (const faq of allFaqs) {
+            const questionText = faq.question.toLowerCase();
+            let score = 0;
+            for (const keyword of keywords) {
+                if (questionText.includes(keyword)) {
+                    score++;
+                }
+            }
+            if (score > bestMatchScore) {
+                bestMatchScore = score;
+                foundFaq = faq;
+            }
+        }
+    }
+
 
     if (foundFaq) {
         const answerText = extractText(foundFaq.answer);
