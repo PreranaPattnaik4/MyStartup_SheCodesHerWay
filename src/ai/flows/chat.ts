@@ -10,6 +10,7 @@
 import { ai } from '@/ai/genkit';
 import { z } from 'genkit';
 import { faqData } from '@/lib/faq-data';
+import React from 'react';
 
 const ChatInputSchema = z.object({
   message: z.string().describe("The user's message to the chatbot."),
@@ -30,6 +31,18 @@ export async function chat(input: ChatInput): Promise<ChatOutput> {
 // Flatten the FAQ data for easier searching
 const allFaqs = faqData.flatMap(category => category.questions);
 
+// Helper function to extract text from React nodes
+const extractText = (element: React.ReactNode): string => {
+    if (typeof element === 'string') return element;
+    if (typeof element === 'number') return String(element);
+    if (!React.isValidElement(element)) return '';
+    const children = (element.props as any).children;
+    if (children) {
+        return React.Children.map(children, child => extractText(child)).join('');
+    }
+    return '';
+};
+
 const chatFlow = ai.defineFlow(
   {
     name: 'chatFlow',
@@ -37,38 +50,18 @@ const chatFlow = ai.defineFlow(
     outputSchema: ChatOutputSchema,
   },
   async (input) => {
-    const userMessage = input.message.toLowerCase();
+    const userMessage = input.message.toLowerCase().trim();
     
     // Find a matching FAQ
     const foundFaq = allFaqs.find(faq => 
-        faq.question.toLowerCase().includes(userMessage) || 
-        (typeof faq.answer === 'string' && faq.answer.toLowerCase().includes(userMessage))
+        faq.question.toLowerCase().trim().includes(userMessage)
     );
 
     if (foundFaq) {
-        let answerText = '';
-        if (typeof foundFaq.answer === 'string') {
-            answerText = foundFaq.answer;
-        } else if (React.isValidElement(foundFaq.answer)) {
-            // A simple way to extract text from React elements. Might not be perfect for complex components.
-            const extractText = (element: React.ReactNode): string => {
-                if (typeof element === 'string') return element;
-                if (!React.isValidElement(element)) return '';
-                const children = (element.props as any).children;
-                if (children) {
-                    return React.Children.map(children, child => extractText(child)).join('');
-                }
-                return '';
-            };
-            answerText = extractText(foundFaq.answer);
-        }
-        
+        const answerText = extractText(foundFaq.answer);
         return { message: answerText || "I found some information, but couldn't format it as a simple text answer." };
     }
 
     return { message: "I'm sorry, I don't have information about that. Please try asking about our programs, careers, or the EmpowerFly initiative." };
   }
 );
-
-// We need a React import for isValidElement, even in a server file, due to the nature of the FAQ data.
-import React from 'react';
