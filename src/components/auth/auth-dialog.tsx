@@ -95,11 +95,10 @@ export default function AuthDialog({ open, onOpenChange, initialTab = "signup" }
 
   return (
     <Dialog open={open} onOpenChange={onOpenChange}>
-      <DialogContent className="sm:max-w-2xl">
+      <DialogContent className="sm:max-w-md">
         <DialogHeader className="items-center text-center">
             <Logo />
-            <DialogTitle className="font-headline text-2xl pt-2">{brand.name}</DialogTitle>
-            <DialogDescription className="text-balance">
+            <DialogDescription className="text-balance pt-2">
                 {brand.mission}
             </DialogDescription>
         </DialogHeader>
