@@ -95,7 +95,7 @@ export default function AuthDialog({ open, onOpenChange, initialTab = "signup" }
 
   return (
     <Dialog open={open} onOpenChange={onOpenChange}>
-      <DialogContent className="sm:max-w-lg">
+      <DialogContent className="sm:max-w-sm">
         <DialogHeader className="items-center text-center">
             <Logo />
             <DialogTitle className="sr-only">Authentication</DialogTitle>
@@ -103,10 +103,6 @@ export default function AuthDialog({ open, onOpenChange, initialTab = "signup" }
                 {brand.mission}
             </DialogDescription>
         </DialogHeader>
-
-        <p className="text-center text-sm italic text-muted-foreground px-4">
-            <strong>Our Vision:</strong> {brand.vision}
-        </p>
         
         <Tabs defaultValue={initialTab} className="w-full" onValueChange={onTabChange}>
           <TabsList className="grid w-full grid-cols-2">
