@@ -32,7 +32,7 @@ export default function Header() {
             <Link
               key={link.href}
               href={link.href}
-              className="flex items-center gap-2 text-base text-foreground/80 transition-colors hover:text-primary"
+              className="flex items-center gap-2 text-lg text-foreground/80 transition-colors hover:text-primary"
             >
               {link.label}
             </Link>
@@ -61,7 +61,7 @@ export default function Header() {
                       key={link.href}
                       href={link.href}
                       onClick={() => setOpen(false)}
-                      className="flex items-center gap-2 text-2xl font-medium text-foreground/80 transition-colors hover:text-primary"
+                      className="flex items-center gap-2 text-3xl font-medium text-foreground/80 transition-colors hover:text-primary"
                     >
                       {link.label}
                     </Link>
@@ -69,7 +69,7 @@ export default function Header() {
                    <Link
                         href="/dashboard"
                         onClick={() => setOpen(false)}
-                        className="flex items-center justify-center gap-2 text-2xl font-medium text-foreground/80 transition-colors hover:text-primary"
+                        className="flex items-center justify-center gap-2 text-3xl font-medium text-foreground/80 transition-colors hover:text-primary"
                     >
                         Dashboard
                     </Link>
