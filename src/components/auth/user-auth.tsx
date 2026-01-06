@@ -41,10 +41,10 @@ export default function UserAuth() {
     return (
       <>
         <div className="flex gap-2">
-          <Button onClick={() => openDialog('signup')}>Sign Up</Button>
           <Button asChild variant="outline">
             <Link href="/dashboard">Dashboard</Link>
           </Button>
+          <Button onClick={() => openDialog('signup')}>Sign Up</Button>
         </div>
         <AuthDialog 
             open={authDialogOpen} 
