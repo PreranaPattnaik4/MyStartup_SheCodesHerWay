@@ -95,7 +95,7 @@ export default function AuthDialog({ open, onOpenChange, initialTab = "signup" }
 
   return (
     <Dialog open={open} onOpenChange={onOpenChange}>
-      <DialogContent className="sm:max-w-lg">
+      <DialogContent className="sm:max-w-2xl">
         <DialogHeader className="items-center text-center">
             <Logo />
             <DialogTitle className="font-headline text-2xl pt-2">{brand.name}</DialogTitle>
