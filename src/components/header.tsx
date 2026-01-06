@@ -17,7 +17,6 @@ const navLinks = [
   { href: '/blog', label: 'Our Blogs' },
   { href: '/resources', label: 'Resources' },
   { href: '/about', label: 'About' },
-  { href: '/dashboard', label: 'Dashboard' },
   { href: '/impact-ecosystem', label: 'Impact' },
   { href: '/careers', label: 'Careers' },
   { href: '/contact', label: 'Contact' },
@@ -70,6 +69,13 @@ export default function Header() {
                       {link.label}
                     </Link>
                   ))}
+                   <Link
+                        href="/dashboard"
+                        onClick={() => setOpen(false)}
+                        className="flex items-center justify-center gap-2 text-2xl font-medium text-foreground/80 transition-colors hover:text-primary"
+                    >
+                        Dashboard
+                    </Link>
                 </nav>
               </div>
             </SheetContent>

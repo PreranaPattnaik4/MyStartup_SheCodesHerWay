@@ -1,3 +1,4 @@
+
 'use client';
 import { useUser, useAuth } from '@/firebase/hooks';
 import { signOut } from 'firebase/auth';
@@ -41,6 +42,9 @@ export default function UserAuth() {
       <>
         <div className="flex gap-2">
           <Button onClick={() => openDialog('signup')}>Sign Up</Button>
+          <Button asChild variant="outline">
+            <Link href="/dashboard">Dashboard</Link>
+          </Button>
         </div>
         <AuthDialog 
             open={authDialogOpen} 
