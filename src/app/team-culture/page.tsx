@@ -8,11 +8,11 @@ import { Separator } from '@/components/ui/separator';
 import Link from 'next/link';
 import { brand } from '@/lib/brand';
 
-const SectionCard = ({ icon, title, badgeText, children }: { icon: React.ElementType, title: string, badgeText?: string, children: React.ReactNode }) => (
+const SectionCard = ({ icon: Icon, title, badgeText, children }: { icon: React.ElementType, title: string, badgeText?: string, children: React.ReactNode }) => (
     <Card className="shadow-lg bg-white">
         <CardHeader className="flex flex-row items-start gap-4">
             <div className="bg-primary/10 text-primary p-3 rounded-full">
-                <icon className="h-6 w-6" />
+                <Icon className="h-6 w-6" />
             </div>
             <div className="flex-1">
                 <CardTitle className="text-2xl font-bold">{title}</CardTitle>
@@ -75,21 +75,26 @@ export default function TeamCulturePage() {
                         <li>Ensure clarity and quality</li>
                         <li>Submit one final, consolidated version</li>
                     </ul>
-                    <p>This process is not about control or hierarchy. It exists only to:</p>
+                    <p>This process is not about control or hierarchy.</p>
+                     <p>It exists only to:</p>
                      <ul>
                         <li>Avoid confusion</li>
                         <li>Maintain version control</li>
                         <li>Ensure smooth coordination</li>
                         <li>Represent the team professionally</li>
                     </ul>
-                     <p>Submission authority does not mean higher importance or extra credit. Individual ownership and contribution remain fully recognized.</p>
+                     <p>Submission authority does not mean higher importance or extra credit.</p>
+                    <p>Individual ownership and contribution remain fully recognized.</p>
                 </SectionCard>
 
                 <Separator />
 
                 <SectionCard icon={Scale} title="Equal Importance & Fair Acknowledgment">
-                    <p>Every team member is equally important to the project’s success. Importance is defined by role responsibility and contribution, not titles. Every role — technical, design, content, marketing, coordination, or support — is critical.</p>
-                    <p>Contributions will be acknowledged based on the role performed. Recognition and certification will reflect:</p>
+                    <p>Every team member is equally important to the project’s success.</p>
+                    <p>Importance is defined by role responsibility and contribution, not titles.</p>
+                    <p>Every role — technical, design, content, marketing, coordination, or support — is critical.</p>
+                    <p>Contributions will be acknowledged based on the role performed.</p>
+                    <p>Recognition and certification will reflect:</p>
                     <ul>
                         <li>Actual work done</li>
                         <li>Quality of contribution</li>
