@@ -98,6 +98,7 @@ export default function AuthDialog({ open, onOpenChange, initialTab = "signup" }
       <DialogContent className="sm:max-w-lg">
         <DialogHeader className="items-center text-center">
             <Logo />
+            <DialogTitle className="sr-only">Authentication</DialogTitle>
             <DialogDescription className="text-balance pt-2">
                 {brand.mission}
             </DialogDescription>
