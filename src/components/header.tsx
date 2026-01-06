@@ -17,6 +17,7 @@ const navLinks = [
   { href: '/blog', label: 'Our Blogs' },
   { href: '/resources', label: 'Resources' },
   { href: '/about', label: 'About' },
+  { href: '/dashboard', label: 'Dashboard' },
   { href: '/impact-ecosystem', label: 'Impact' },
   { href: '/careers', label: 'Careers' },
   { href: '/contact', label: 'Contact' },

@@ -1,3 +1,4 @@
+
 'use client';
 
 import { useUser } from '@/firebase/hooks';
@@ -17,19 +18,20 @@ export default function DashboardLayout({
   const router = useRouter();
   const [isSidebarOpen, setIsSidebarOpen] = useState(true);
 
-  useEffect(() => {
-    if (!isUserLoading && !user) {
-      router.push('/');
-    }
-  }, [user, isUserLoading, router]);
+  // The login requirement is removed for demonstration purposes.
+  // useEffect(() => {
+  //   if (!isUserLoading && !user) {
+  //     router.push('/');
+  //   }
+  // }, [user, isUserLoading, router]);
 
-  if (isUserLoading || !user) {
-    return (
-        <div className="flex h-screen items-center justify-center">
-            <p>Loading...</p>
-        </div>
-    );
-  }
+  // if (isUserLoading || !user) {
+  //   return (
+  //       <div className="flex h-screen items-center justify-center">
+  //           <p>Loading...</p>
+  //       </div>
+  //   );
+  // }
 
   return (
     <div className="flex min-h-dvh flex-col">
