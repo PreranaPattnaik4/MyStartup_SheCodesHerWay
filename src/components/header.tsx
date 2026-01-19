@@ -13,7 +13,6 @@ const navLinks = [
   { href: '/', label: 'Home' },
   { href: '/sangini-udaan', label: 'Our Program' },
   { href: '/ai-coaching', label: 'AI Coaching' },
-  { href: '/chatbot', label: 'EmpowerFly Assistant' },
   { href: '/blog', label: 'Our Blogs' },
   { href: '/about', label: 'About' },
   { href: '/impact-ecosystem', label: 'Impact' },
