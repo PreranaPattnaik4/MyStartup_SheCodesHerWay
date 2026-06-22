@@ -3,18 +3,18 @@ import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import Logo from '@/components/logo';
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
-import { Menu, Users } from 'lucide-react';
+import { Menu, Users, GraduationCap } from 'lucide-react';
 import React, { useState } from 'react';
 import JoinCommunityDialog from './community/join-community-dialog';
 
 const navLinks = [
   { href: '/', label: 'Home' },
   { href: '/sangini-udaan', label: 'Our Program' },
+  { href: '/knowledge-hub', label: 'Knowledge Hub' },
   { href: '/ai-coaching', label: 'AI Coaching' },
   { href: '/blog', label: 'Our Blogs' },
   { href: '/about', label: 'About' },
   { href: '/impact-ecosystem', label: 'Impact' },
-  { href: '/careers', label: 'Careers' },
   { href: '/contact', label: 'Contact' },
 ];
 
