@@ -4,7 +4,7 @@ import Footer from '@/components/footer';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
 import { Badge } from '@/components/ui/badge';
-import { BookOpen, BrainCircuit, Code, Cpu, Eye, FileText, Heart, Lightbulb, Lock, Pilcrow, Projector, Rocket, Scale, Sparkles, UserCheck, Users, Zap, Bell } from 'lucide-react';
+import { BookOpen, BrainCircuit, Code, Cpu, Eye, FileText, Heart, Lightbulb, Lock, Pilcrow, Projector, Rocket, Scale, Sparkles, UserCheck, Users, Zap, Bell, CheckCircle2 } from 'lucide-react';
 import { Separator } from '@/components/ui/separator';
 
 const tracks = [
@@ -37,7 +37,7 @@ const tracks = [
         focus: "Designed for beginners and aspiring professionals entering the technology, AI, and software ecosystem.",
         syllabus: [
             "Introduction to Technology & Career Paths",
-            "Web Development Fundamentals",
+            "Web Development Fundamentals (HTML, CSS, JS)",
             "Programming Logic & Problem Solving",
             "Cloud-Based Application Development",
             "AI Basics & Applied AI Use Cases",
@@ -166,48 +166,71 @@ export default function ProgramSyllabusPage() {
                                 <CardDescription className="text-lg text-accent-foreground/90">A Holistic Empowerment Ecosystem for Women</CardDescription>
                             </CardHeader>
                             <CardContent className="text-foreground/80">
-                                <p>Sangini Udaan : EmpowerFly is a purpose-driven, multi-track empowerment initiative designed to support women across diverse life stages, backgrounds, and career aspirations. The program integrates digital skills, AI literacy, entrepreneurship, creativity, leadership, emotional intelligence, and ethical growth into clearly structured learning pathways. Participants may choose a focused specialization track or enroll in the complete empowerment journey, depending on their goals, readiness, and interests.</p>
+                                <p>Sangini Udaan : EmpowerFly is a purpose-driven, multi-track empowerment initiative designed to support women across diverse life stages, backgrounds, and career aspirations. The program integrates digital skills, AI literacy, entrepreneurship, creativity, leadership, emotional intelligence, and ethical growth into clearly structured learning pathways.</p>
                             </CardContent>
                         </Card>
 
-                        <div>
-                            <Accordion type="single" collapsible className="w-full" defaultValue="item-0">
+                        <div className="space-y-8">
+                            <div className="flex items-center gap-2 mb-4">
+                                <Rocket className="text-primary" />
+                                <h2 className="text-2xl font-bold font-headline">Specialization Tracks</h2>
+                            </div>
+                            <Accordion type="single" collapsible className="w-full space-y-4" defaultValue="item-0">
                                 {tracks.map((track, index) => (
-                                    <AccordionItem value={`item-${index}`} key={index}>
-                                        <AccordionTrigger className="text-left hover:no-underline">
+                                    <AccordionItem value={`item-${index}`} key={index} className="border rounded-xl px-4 bg-white shadow-sm overflow-hidden">
+                                        <AccordionTrigger className="text-left hover:no-underline py-6">
                                             <div className="flex flex-col gap-1">
-                                                <span className="text-xl font-bold">{track.title}</span>
-                                                <span className="text-sm text-primary font-semibold">{track.subtitle}</span>
+                                                <span className="text-xl font-bold text-foreground">{track.title}</span>
+                                                <span className="text-sm text-primary font-semibold uppercase tracking-wider">{track.subtitle}</span>
                                             </div>
                                         </AccordionTrigger>
-                                        <AccordionContent className="pt-4 space-y-6">
-                                            <p><strong className="font-semibold">Program Focus:</strong> {track.focus}</p>
-                                            {track.idealFor && <p><strong className="font-semibold">Ideal For:</strong> {track.idealFor}</p>}
+                                        <AccordionContent className="pb-8 space-y-8">
+                                            <div className="bg-muted/30 p-4 rounded-lg border border-dashed">
+                                                <p><strong className="font-bold text-foreground">Program Focus:</strong> <span className="text-foreground/80">{track.focus}</span></p>
+                                                {track.idealFor && <p className="mt-2"><strong className="font-bold text-foreground">Ideal For:</strong> <span className="text-foreground/80">{track.idealFor}</span></p>}
+                                            </div>
 
-                                            <div>
-                                                <h4 className="font-semibold mb-2 flex items-center gap-2"><Rocket className="h-5 w-5 text-primary" />Syllabus Overview</h4>
-                                                <ul className="list-disc list-inside space-y-1 pl-4 text-foreground/80">
-                                                    {track.syllabus.map(item => <li key={item}>{item}</li>)}
-                                                </ul>
+                                            <div className="grid md:grid-cols-2 gap-8">
+                                                <div>
+                                                    <h4 className="font-bold text-lg mb-4 flex items-center gap-2"><FileText className="h-5 w-5 text-primary" />Syllabus Overview</h4>
+                                                    <ul className="space-y-2">
+                                                        {track.syllabus.map(item => (
+                                                            <li key={item} className="flex items-start gap-2 text-foreground/80 text-sm">
+                                                                <CheckCircle2 className="h-4 w-4 text-green-500 mt-0.5 flex-shrink-0" />
+                                                                {item}
+                                                            </li>
+                                                        ))}
+                                                    </ul>
+                                                </div>
+                                                <div className="space-y-6">
+                                                     <div>
+                                                        <h4 className="font-bold text-lg mb-2 flex items-center gap-2"><Cpu className="h-5 w-5 text-primary" />Industry Tools</h4>
+                                                        <p className="text-sm text-foreground/70 leading-relaxed bg-secondary/20 p-3 rounded-lg border">{track.tools}</p>
+                                                    </div>
+                                                    <div>
+                                                        <h4 className="font-bold text-lg mb-4 flex items-center gap-2"><Sparkles className="h-5 w-5 text-primary" />Key Outcomes</h4>
+                                                        <ul className="space-y-2">
+                                                            {track.outcomes.map(item => (
+                                                                <li key={item} className="flex items-start gap-2 text-foreground/80 text-sm italic">
+                                                                    <span className="text-primary font-bold">•</span> {item}
+                                                                </li>
+                                                            ))}
+                                                        </ul>
+                                                    </div>
+                                                </div>
                                             </div>
-                                            <div>
-                                                <h4 className="font-semibold mb-2 flex items-center gap-2"><Cpu className="h-5 w-5 text-primary" />Technologies, AI & Industry Tools</h4>
-                                                <p className="text-foreground/80">{track.tools}</p>
-                                            </div>
-                                            <div>
-                                                <h4 className="font-semibold mb-2 flex items-center gap-2"><Sparkles className="h-5 w-5 text-primary" />Outcomes</h4>
-                                                <ul className="list-disc list-inside space-y-1 pl-4 text-foreground/80">
-                                                    {track.outcomes.map(item => <li key={item}>{item}</li>)}
-                                                </ul>
-                                            </div>
+                                            
                                             <Separator />
-                                            <div>
-                                                <h4 className="font-semibold mb-2 flex items-center gap-2"><Projector className="h-5 w-5 text-primary" />Build Projects & Solve Real-World Problems</h4>
-                                                <p className="text-foreground/80">Participants work on practical, impact-driven projects that address real-world challenges. This hands-on approach strengthens problem-solving skills, teamwork, innovation, and confidence while building a strong project portfolio.</p>
-                                            </div>
-                                            <div>
-                                                <h4 className="font-semibold mb-2 flex items-center gap-2"><UserCheck className="h-5 w-5 text-primary" />Industry Expert Guidance on Your Career Goals</h4>
-                                                <p className="text-foreground/80">Direct guidance from industry professionals to help participants identify career paths, set goals, receive feedback, and make informed decisions aligned with their aspirations and strengths.</p>
+                                            
+                                            <div className="grid md:grid-cols-2 gap-8 pt-4">
+                                                <div className="space-y-3">
+                                                    <h4 className="font-bold text-lg flex items-center gap-2"><Projector className="h-5 w-5 text-primary" />Build Projects</h4>
+                                                    <p className="text-sm text-foreground/70">Participants work on practical, impact-driven projects that address real-world challenges. This hands-on approach strengthens problem-solving skills, teamwork, innovation, and confidence while building a strong project portfolio.</p>
+                                                </div>
+                                                <div className="space-y-3">
+                                                    <h4 className="font-bold text-lg flex items-center gap-2"><UserCheck className="h-5 w-5 text-primary" />Expert Guidance</h4>
+                                                    <p className="text-sm text-foreground/70">Direct guidance from industry professionals to help participants identify career paths, set goals, receive feedback, and make informed decisions aligned with their aspirations and strengths.</p>
+                                                </div>
                                             </div>
                                         </AccordionContent>
                                     </AccordionItem>
@@ -217,64 +240,61 @@ export default function ProgramSyllabusPage() {
                         
                         <Separator />
                         
-                        <Card>
-                            <CardHeader>
+                        <Card className="shadow-xl border-primary/20 overflow-hidden">
+                            <CardHeader className="bg-primary/10 border-b border-primary/10">
                                 <CardTitle className="font-headline text-3xl">Vibe Coding, Prompt Writing & Responsible AI</CardTitle>
-                                <CardDescription>Program-Wide Core Foundation</CardDescription>
+                                <CardDescription className="text-primary font-semibold">Program-Wide Core Foundation</CardDescription>
                             </CardHeader>
-                            <CardContent className="space-y-8">
+                            <CardContent className="space-y-10 p-8">
                                 <div>
-                                    <h3 className="font-bold text-lg mb-2 flex items-center gap-2"><Lightbulb className="h-5 w-5 text-primary"/>What This Means</h3>
-                                    <p>Vibe Coding, Prompt Writing & Responsible AI are not separate tracks. They are core foundations integrated across all Sangini Udaan : EmpowerFly programs, adapted to each learner’s journey and background. These foundations are embedded across all tracks. While the depth and application vary, every participant learns how to work confidently, creatively, and ethically with AI.</p>
+                                    <h3 className="font-bold text-xl mb-3 flex items-center gap-2"><Lightbulb className="h-6 w-6 text-primary"/>What This Means</h3>
+                                    <p className="text-foreground/80 leading-relaxed text-lg">Vibe Coding, Prompt Writing & Responsible AI are not separate tracks. They are core foundations integrated across all Sangini Udaan : EmpowerFly programs, adapted to each learner’s journey and background. These foundations are embedded across all tracks. While the depth and application vary, every participant learns how to work confidently, creatively, and ethically with AI.</p>
                                 </div>
-                                <div className="grid md:grid-cols-2 gap-8">
-                                    <div>
-                                        <h4 className="font-semibold mb-2 flex items-center gap-2"><Code className="h-5 w-5 text-primary"/>Vibe Coding Explained</h4>
-                                        <p>Vibe Coding is an inclusive, human-centered approach to building with technology using: AI-assisted creation, natural language and intuition-driven problem solving, creativity and experimentation, and clear human intent, review, and judgment. This approach enables beginners, non-tech users, creators, and founders to build and experiment without fear of complex coding.</p>
+                                <div className="grid md:grid-cols-2 gap-10">
+                                    <div className="bg-muted/20 p-6 rounded-2xl border">
+                                        <h4 className="font-bold text-lg mb-3 flex items-center gap-2"><Code className="h-5 w-5 text-primary"/>Vibe Coding Explained</h4>
+                                        <p className="text-sm text-foreground/70 leading-relaxed">Vibe Coding is an inclusive, human-centered approach to building with technology using AI-assisted creation, natural language and intuition-driven problem solving, and clear human intent. This approach enables beginners and non-tech users to build and experiment without fear of complex coding.</p>
                                     </div>
-                                    <div>
-                                        <h4 className="font-semibold mb-2 flex items-center gap-2"><Pilcrow className="h-5 w-5 text-primary"/>Prompt Writing as a Core Life Skill</h4>
-                                        <p>Prompt writing is taught as a communication, thinking, and problem-solving skill, not just a technical concept. Participants learn: How AI interprets instructions, writing clear, structured, goal-oriented prompts, context setting and iterative refinement, and using prompts for content, creativity, learning, planning, and building. Human originality, review, and validation remain central throughout.</p>
+                                    <div className="bg-muted/20 p-6 rounded-2xl border">
+                                        <h4 className="font-bold text-lg mb-3 flex items-center gap-2"><Pilcrow className="h-5 w-5 text-primary"/>Prompt Writing as a Skill</h4>
+                                        <p className="text-sm text-foreground/70 leading-relaxed">Prompt writing is taught as a communication and problem-solving skill. Participants learn: writing clear, structured, goal-oriented prompts for content, creativity, learning, and building. Human originality and review remain central throughout.</p>
                                     </div>
                                 </div>
-                                <div>
-                                    <h4 className="font-semibold mb-2 flex items-center gap-2"><BrainCircuit className="h-5 w-5 text-primary"/>Responsible AI Foundation</h4>
-                                    <p>Responsible AI is a mandatory foundation across all tracks. Key principles include: human-centered AI usage, transparency and explainability, bias awareness and fairness, data privacy and consent, understanding AI limitations and risks, and accountability and human oversight. Ethical AI practices are applied through real projects and scenarios, not taught only in theory.</p>
+                                <div className="bg-primary/5 p-6 rounded-2xl border border-primary/20">
+                                    <h4 className="font-bold text-lg mb-3 flex items-center gap-2"><BrainCircuit className="h-6 w-6 text-primary"/>Responsible AI Foundation</h4>
+                                    <p className="text-foreground/80">Responsible AI is a mandatory foundation across all tracks. Key principles include: human-centered AI usage, transparency, explainability, bias awareness, data privacy, and accountability. Ethical AI practices are applied through real projects and scenarios.</p>
                                 </div>
                             </CardContent>
                         </Card>
                         
                         <Accordion type="single" collapsible className="w-full">
-                            <AccordionItem value="item-1">
-                                <AccordionTrigger className="text-left hover:no-underline bg-destructive/10 px-4 rounded-md border-destructive/20 border">
+                            <AccordionItem value="item-1" className="border-none">
+                                <AccordionTrigger className="text-left hover:no-underline bg-destructive/10 px-6 py-4 rounded-xl border-destructive/20 border transition-all hover:bg-destructive/20">
                                     <div className="flex items-center gap-3">
                                          <Bell className="h-6 w-6 text-destructive" />
-                                        <span className="text-xl font-bold text-destructive">📢 Mandatory Core Curriculum Notice: Vibe Coding, Prompt Writing & Responsible AI</span>
+                                        <span className="text-lg font-bold text-destructive">📢 Mandatory Core Curriculum Notice</span>
                                     </div>
                                 </AccordionTrigger>
-                                <AccordionContent className="pt-4 space-y-4 border-x border-b border-destructive/20 px-4 rounded-b-md">
-                                    <h4 className="font-bold">Important Notice for All Participants</h4>
-                                    <p>The Core Curriculum with a primary focus on <strong>Prompt Writing & Responsible AI is mandatory</strong> for all participants, irrespective of the selected track.</p>
-                                    <ul className="list-disc list-inside space-y-2">
-                                        <li><strong>Technical participants</strong> will complete the full curriculum, including Vibe Coding, Prompt Writing & Responsible AI.</li>
-                                        <li><strong>Non-technical participants</strong> will focus on Prompt Writing for non-technical applications, such as content creation, research support, documentation, workflow optimization, and digital productivity, along with Responsible AI practices.</li>
+                                <AccordionContent className="pt-6 space-y-4 border-x border-b border-destructive/20 px-6 pb-6 rounded-b-xl">
+                                    <h4 className="font-bold text-foreground">Important Notice for All Participants</h4>
+                                    <p className="text-foreground/80">The Core Curriculum with a primary focus on <strong>Prompt Writing & Responsible AI is mandatory</strong> for all participants, irrespective of the selected track.</p>
+                                    <ul className="list-disc list-inside space-y-2 text-foreground/70 text-sm">
+                                        <li><strong>Technical participants</strong> will complete the full curriculum, including Vibe Coding.</li>
+                                        <li><strong>Non-technical participants</strong> will focus on Prompt Writing for content creation, research support, and documentation, along with Responsible AI practices.</li>
                                     </ul>
-                                     <p><strong>Vibe Coding is optional for non-technical participants</strong> and may be skipped upon prior written intimation to the program team.</p>
-                                    <p>Participants who do not inform in advance will be required to follow the complete curriculum by default.</p>
-                                    <p className="font-semibold">Completion of the applicable mandatory core curriculum is required to continue and progress within the Sangini Udaan : EmpowerFly program.</p>
+                                     <p className="text-foreground/80 text-sm"><strong>Vibe Coding is optional for non-technical participants</strong> and may be skipped upon prior written intimation to the program team.</p>
+                                    <p className="font-bold text-primary pt-2">Completion of the applicable mandatory core curriculum is required to continue and progress within the Sangini Udaan : EmpowerFly program.</p>
                                 </AccordionContent>
                             </AccordionItem>
                         </Accordion>
                         
                         <Separator />
 
-                        <div className="text-center space-y-4">
-                            <h2 className="font-headline text-3xl">Sangini Udaan : EmpowerFly</h2>
-                             <p className="!mt-8 text-xl font-semibold text-primary">"Choose your path. Build with confidence. Lead with purpose. Grow responsibly."</p>
-                            <Card className="!mt-8 text-sm text-muted-foreground p-4 bg-muted/50 text-left">
-                                <p><strong className="text-foreground font-semibold">Program Assurance & Syllabus Evolution Note:</strong> All AI tools, digital platforms, and learning methodologies used in Sangini Udaan : EmpowerFly align with current industry standards and responsible AI principles. The program emphasizes ethical, inclusive, secure, and future-ready use of technology across all tracks. To stay aligned with evolving industry needs, ethical frameworks, and technological advancements, tools and technologies may be updated periodically. Such updates will be introduced thoughtfully, ensuring minimal disruption to learning outcomes, program values, and participant experience. Syllabus refinements during launch or early rollout phases may occur to better reflect real-world requirements and learner needs, without diluting the program’s core intent of confidence building, skill development, responsible AI awareness, and holistic empowerment.</p>
+                        <div className="text-center space-y-8 py-10">
+                             <p className="text-2xl font-bold font-headline text-primary italic">"Choose your path. Build with confidence. Lead with purpose. Grow responsibly."</p>
+                            <Card className="text-xs text-muted-foreground p-6 bg-muted/30 text-left border-dashed border-2">
+                                <p><strong className="text-foreground font-bold">Program Assurance & Evolution:</strong> All AI tools and methodologies used align with current industry standards and responsible AI principles. The program emphasizes ethical, inclusive, and future-ready use of technology. Tools may be updated periodically to stay aligned with evolving industry needs, ensuring minimal disruption to learning outcomes and participant experience.</p>
                             </Card>
-                             <p className="!mt-8 text-xl font-semibold text-primary">"Choose your track. Build with confidence. Lead with purpose. Grow responsibly."</p>
                         </div>
                     </div>
                 </section>
