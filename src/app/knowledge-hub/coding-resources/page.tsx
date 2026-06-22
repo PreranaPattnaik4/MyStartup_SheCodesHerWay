@@ -1,10 +1,11 @@
-
 import Header from '@/components/header';
 import Footer from '@/components/footer';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle, CardFooter } from '@/components/ui/card';
 import { Code, ArrowLeft, ExternalLink, Bookmark, Cpu, Database } from 'lucide-react';
 import Link from 'next/link';
+import Image from 'next/image';
+import { PlaceHolderImages } from '@/lib/placeholder-images';
 
 const resources = [
   {
@@ -36,12 +37,24 @@ const resources = [
 ];
 
 export default function CodingResourcesPage() {
+  const bgImage = PlaceHolderImages.find(p => p.id === 'feature-workshops');
+
   return (
     <div className="flex min-h-dvh flex-col">
       <Header />
       <main className="flex-1 bg-muted/20">
-        <section className="bg-secondary py-16">
-          <div className="container mx-auto px-4 text-center">
+        <section className="bg-secondary py-16 relative overflow-hidden">
+          {bgImage && (
+            <Image 
+              src={bgImage.imageUrl}
+              alt={bgImage.description}
+              fill
+              className="object-cover opacity-10"
+              priority
+              data-ai-hint={bgImage.imageHint}
+            />
+          )}
+          <div className="container relative mx-auto px-4 text-center">
             <Code className="mx-auto h-12 w-12 text-primary" />
             <h1 className="mt-4 font-headline text-4xl font-bold md:text-5xl">Coding Resources</h1>
             <p className="mt-4 max-w-2xl mx-auto text-lg text-foreground/80">

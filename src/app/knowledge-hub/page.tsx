@@ -1,4 +1,3 @@
-
 'use client';
 
 import React, { useState, useMemo } from 'react';
@@ -10,12 +9,16 @@ import { Input } from '@/components/ui/input';
 import { Badge } from '@/components/ui/badge';
 import { Search, ArrowRight, Library, Zap, Clock, TrendingUp, Download, CheckCircle2, BookOpen } from 'lucide-react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { hubCategories, allResources, ResourceItem } from '@/lib/knowledge-hub-data';
 import { cn } from '@/lib/utils';
+import { PlaceHolderImages } from '@/lib/placeholder-images';
 
 export default function KnowledgeHubPage() {
   const [searchQuery, setSearchQuery] = useState('');
   const [activeFilter, setActiveFilter] = useState('all');
+
+  const heroImage = PlaceHolderImages.find(p => p.id === 'hero-background');
 
   const filteredResources = useMemo(() => {
     return allResources.filter(item => {
@@ -40,6 +43,16 @@ export default function KnowledgeHubPage() {
       <main className="flex-1 bg-muted/20">
         {/* Hero Section */}
         <section className="bg-secondary/40 py-16 md:py-24 relative overflow-hidden border-b">
+          {heroImage && (
+            <Image 
+              src={heroImage.imageUrl}
+              alt={heroImage.description}
+              fill
+              className="object-cover opacity-10"
+              priority
+              data-ai-hint={heroImage.imageHint}
+            />
+          )}
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,_var(--tw-gradient-stops))] from-primary/10 via-transparent to-transparent"></div>
           <div className="container relative mx-auto px-4 text-center">
             <Library className="mx-auto h-16 w-16 text-primary mb-6" />

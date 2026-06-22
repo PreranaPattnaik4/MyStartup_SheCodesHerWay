@@ -1,11 +1,12 @@
-
 import Header from '@/components/header';
 import Footer from '@/components/footer';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle, CardFooter } from '@/components/ui/card';
 import { Download, ArrowLeft, Package, Sparkles, ShieldCheck, Settings } from 'lucide-react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { Badge } from '@/components/ui/badge';
+import { PlaceHolderImages } from '@/lib/placeholder-images';
 
 const freebies = [
   {
@@ -32,12 +33,24 @@ const freebies = [
 ];
 
 export default function FreeResourcesPage() {
+  const bgImage = PlaceHolderImages.find(p => p.id === 'inclusive-approach-4');
+
   return (
     <div className="flex min-h-dvh flex-col">
       <Header />
       <main className="flex-1 bg-muted/20">
-        <section className="bg-secondary py-16">
-          <div className="container mx-auto px-4 text-center">
+        <section className="bg-secondary py-16 relative overflow-hidden">
+          {bgImage && (
+            <Image 
+              src={bgImage.imageUrl}
+              alt={bgImage.description}
+              fill
+              className="object-cover opacity-10"
+              priority
+              data-ai-hint={bgImage.imageHint}
+            />
+          )}
+          <div className="container relative mx-auto px-4 text-center">
             <Download className="mx-auto h-12 w-12 text-primary" />
             <h1 className="mt-4 font-headline text-4xl font-bold md:text-5xl">Free Resources</h1>
             <p className="mt-4 max-w-2xl mx-auto text-lg text-foreground/80">
