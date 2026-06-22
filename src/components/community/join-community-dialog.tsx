@@ -41,7 +41,7 @@ export default function JoinCommunityDialog({ open, onOpenChange }: JoinCommunit
               Get real-time updates, participate in discussions, and connect with peers directly.
             </p>
             <Button asChild className="w-full" size="lg">
-              <Link href="#" target="_blank" rel="noopener noreferrer">
+              <Link href="https://chat.whatsapp.com/Fy0Zj24Z1vMJTIocK6DbUs" target="_blank" rel="noopener noreferrer">
                 Join WhatsApp Group <ArrowRight className="ml-2 h-4 w-4" />
               </Link>
             </Button>
