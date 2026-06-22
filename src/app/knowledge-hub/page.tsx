@@ -8,9 +8,8 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle, CardFooter }
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Badge } from '@/components/ui/badge';
-import { Search, ArrowRight, Library, Zap, Clock, TrendingUp, Download, CheckCircle2 } from 'lucide-react';
+import { Search, ArrowRight, Library, Zap, Clock, TrendingUp, Download, CheckCircle2, BookOpen } from 'lucide-react';
 import Link from 'next/link';
-import Image from 'next/image';
 import { hubCategories, allResources, ResourceItem } from '@/lib/knowledge-hub-data';
 import { cn } from '@/lib/utils';
 
@@ -181,40 +180,35 @@ export default function KnowledgeHubPage() {
 }
 
 function ResourceCard({ item, featured = false }: { item: ResourceItem, featured?: boolean }) {
+  const Icon = item.icon || BookOpen;
   return (
     <Card className={cn(
-      "flex flex-col overflow-hidden transition-all duration-300 hover:shadow-xl group",
-      featured ? "border-primary/30 scale-100 hover:scale-[1.03]" : "hover:-translate-y-1 shadow-md"
+      "flex flex-col overflow-hidden transition-all duration-300 hover:shadow-xl group h-full",
+      featured ? "border-primary/40 shadow-lg ring-1 ring-primary/20" : "hover:-translate-y-1 shadow-md border-primary/10"
     )}>
-      <div className="relative aspect-video w-full">
-        {item.image && (
-          <Image 
-            src={item.image} 
-            alt={item.title} 
-            fill 
-            className="object-cover transition-transform duration-500 group-hover:scale-105"
-            data-ai-hint={item.imageHint || 'learning'}
-          />
-        )}
-        <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
-        <div className="absolute top-4 left-4 flex gap-2">
-          {item.trending && <Badge className="bg-amber-500">Trending</Badge>}
-          {item.popular && <Badge className="bg-rose-500">Popular</Badge>}
-          {item.isComingSoon && <Badge variant="secondary">Coming Soon</Badge>}
+      <div className={cn(
+        "p-6 flex items-center justify-between border-b",
+        featured ? "bg-primary/5" : "bg-muted/30"
+      )}>
+        <div className="bg-white p-3 rounded-xl shadow-sm border border-primary/10 transition-transform group-hover:scale-110">
+          <Icon className="h-8 w-8 text-primary" />
         </div>
-        <div className="absolute bottom-4 left-4">
-           <Badge variant="outline" className="bg-white/90 text-primary border-none">{hubCategories.find(c => c.id === item.category)?.title}</Badge>
+        <div className="flex flex-col items-end gap-2">
+           {item.trending && <Badge className="bg-amber-500">Trending</Badge>}
+           {item.popular && <Badge className="bg-rose-500">Popular</Badge>}
+           {item.isComingSoon && <Badge variant="secondary">Coming Soon</Badge>}
+           <Badge variant="outline" className="bg-white/90 text-primary border-none shadow-sm">{hubCategories.find(c => c.id === item.category)?.title}</Badge>
         </div>
       </div>
-      <CardHeader className="p-5">
-        <CardTitle className="text-xl font-bold leading-tight group-hover:text-primary transition-colors">{item.title}</CardTitle>
-        <CardDescription className="line-clamp-2 mt-2">{item.description}</CardDescription>
+      <CardHeader className="p-6">
+        <CardTitle className="text-2xl font-bold leading-tight group-hover:text-primary transition-colors">{item.title}</CardTitle>
+        <CardDescription className="line-clamp-3 mt-4 text-base leading-relaxed">{item.description}</CardDescription>
       </CardHeader>
-      <CardContent className="px-5 pb-5 flex-grow text-xs text-muted-foreground flex items-center gap-4">
-        {item.readTime && <span className="flex items-center gap-1"><Clock className="h-3 w-3" /> {item.readTime}</span>}
-        <span className="flex items-center gap-1"><CheckCircle2 className="h-3 w-3 text-green-500" /> Free Access</span>
+      <CardContent className="px-6 pb-6 flex-grow text-xs text-muted-foreground flex items-center gap-4">
+        {item.readTime && <span className="flex items-center gap-1 font-medium"><Clock className="h-3 w-3" /> {item.readTime}</span>}
+        <span className="flex items-center gap-1 font-medium"><CheckCircle2 className="h-3 w-3 text-green-500" /> Free Access</span>
       </CardContent>
-      <CardFooter className="p-5 pt-0 border-t bg-muted/10">
+      <CardFooter className="px-6 py-4 border-t bg-muted/10">
         <Button asChild variant="link" className="p-0 h-auto font-bold group-hover:translate-x-1 transition-transform">
           <Link href={item.href}>
             {item.downloadAvailable ? 'Download Resource' : 'Read Full Article'} 
