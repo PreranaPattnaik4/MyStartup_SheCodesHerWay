@@ -3,24 +3,34 @@ import Header from '@/components/header';
 import Footer from '@/components/footer';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle, CardFooter } from '@/components/ui/card';
-import { FileText, ArrowLeft, Download, CheckCircle2, Star } from 'lucide-react';
+import { FileText, ArrowLeft, Download, CheckCircle2, Star, Heart, Rocket } from 'lucide-react';
 import Link from 'next/link';
 import { Badge } from '@/components/ui/badge';
 
 const guides = [
   {
-    title: "Complete Guide to Building a Tech Career in 2026",
-    overview: "A strategic roadmap for navigating the evolving tech landscape. Learn about high-demand roles, required skills, and networking strategies.",
-    takeaways: ["Industry trends analysis", "Skill gap assessment", "Networking effectively"],
+    title: "Confidence & Leadership Foundations",
+    overview: "A comprehensive guide to finding your voice and leading with authenticity. Learn how to overcome imposter syndrome and step into your potential.",
+    takeaways: ["Building executive presence", "Self-advocacy skills", "Leading with empathy"],
     downloadLabel: "Download Guide (PDF)",
-    isReady: true
+    isReady: true,
+    icon: Heart
   },
   {
-    title: "Women in Tech Leadership Guide",
-    overview: "Actionable advice and strategies for women looking to step into leadership positions in the tech industry, covering negotiation, presence, and team building.",
-    takeaways: ["Developing executive presence", "Effective communication", "Navigating workplace politics"],
+    title: "Entrepreneurship & Business Mindset",
+    overview: "Moving from idea to execution: How to build a sustainable startup or small business while balancing life responsibilities.",
+    takeaways: ["Idea validation", "Customer discovery", "Revenue models"],
     downloadLabel: "Download Guide (Coming Soon)",
-    isReady: false
+    isReady: false,
+    icon: Rocket
+  },
+  {
+    title: "Complete Guide to Building a Tech Career in 2026",
+    overview: "A strategic roadmap for navigating the evolving tech landscape. Learn about high-demand roles and required digital skills.",
+    takeaways: ["Industry trends analysis", "Skill gap assessment", "Networking effectively"],
+    downloadLabel: "Download Guide (PDF)",
+    isReady: true,
+    icon: FileText
   }
 ];
 
@@ -34,7 +44,7 @@ export default function GuidesPage() {
             <FileText className="mx-auto h-12 w-12 text-primary" />
             <h1 className="mt-4 font-headline text-4xl font-bold md:text-5xl">Expert Guides</h1>
             <p className="mt-4 max-w-2xl mx-auto text-lg text-foreground/80">
-              In-depth references and handbooks for your learning and career journey.
+              In-depth references and handbooks for your learning, leadership, and entrepreneurship journey.
             </p>
             <Button asChild variant="outline" className="mt-8">
               <Link href="/knowledge-hub">
@@ -51,7 +61,7 @@ export default function GuidesPage() {
               <Card key={i} className="shadow-lg border-none bg-white">
                 <CardHeader>
                   <div className="flex items-center gap-2 mb-2">
-                    <Star className="h-4 w-4 text-amber-500 fill-amber-500" />
+                    <guide.icon className="h-5 w-5 text-primary" />
                     <span className="text-sm font-semibold uppercase tracking-wider text-muted-foreground">Expert Guide</span>
                   </div>
                   <CardTitle className="text-3xl font-headline">{guide.title}</CardTitle>
@@ -66,7 +76,7 @@ export default function GuidesPage() {
                     <ul className="grid sm:grid-cols-2 gap-3">
                       {guide.takeaways.map((take, j) => (
                         <li key={j} className="flex items-center gap-2 text-sm text-foreground/70">
-                          <CheckCircle2 className="h-4 w-4 text-primary" /> {take}
+                          <CheckCircle2 className="h-4 w-4 text-green-500" /> {take}
                         </li>
                       ))}
                     </ul>

@@ -1,5 +1,5 @@
 
-import { BookOpen, FileText, Bot, Code, Briefcase, Target, Wrench, Map, Star, Download, LucideIcon } from 'lucide-react';
+import { BookOpen, FileText, Bot, Code, Briefcase, Target, Wrench, Map, Star, Download, LucideIcon, Rocket, Heart, Sparkles, Zap } from 'lucide-react';
 
 export interface ResourceItem {
   id: string;
@@ -35,246 +35,244 @@ export const hubCategories = [
 export const allResources: ResourceItem[] = [
   // Tutorials
   {
-    id: 'tut-1',
-    title: "Getting Started with AI: A Beginner's Guide",
-    description: "An easy-to-follow introduction to Artificial Intelligence and how you can use it in your daily life.",
+    id: 'tut-vibe-1',
+    title: "Intro to Vibe Coding: Build without Fear",
+    description: "Learn how to use natural language and intent to create applications using AI-assisted tools.",
     category: 'tutorials',
-    icon: BookOpen,
+    icon: Zap,
     href: '/knowledge-hub/tutorials',
-    readTime: '5 min read',
-    dateAdded: '2025-11-01',
-    image: 'https://picsum.photos/seed/ai1/600/400',
-    imageHint: 'AI assistant'
+    readTime: '6 min read',
+    dateAdded: '2025-11-20',
+    trending: true,
+    image: 'https://picsum.photos/seed/vibe/600/400',
+    imageHint: 'coding vibe'
   },
   {
-    id: 'tut-2',
-    title: "Build Your First Personal Portfolio Website",
-    description: "Learn how to build a professional portfolio using HTML, CSS, and basic JavaScript from scratch.",
+    id: 'tut-canva-1',
+    title: "Canva for Creative Content: Design Basics",
+    description: "A step-by-step guide to creating professional social media graphics and brand assets.",
     category: 'tutorials',
-    icon: BookOpen,
+    icon: Sparkles,
     href: '/knowledge-hub/tutorials',
-    readTime: '15 min read',
-    dateAdded: '2025-11-05',
-    image: 'https://picsum.photos/seed/port/600/400',
-    imageHint: 'web portfolio'
+    readTime: '8 min read',
+    dateAdded: '2025-11-22',
+    image: 'https://picsum.photos/seed/canva/600/400',
+    imageHint: 'design creative'
   },
   // Guides
   {
-    id: 'gui-1',
-    title: "Complete Guide to Building a Tech Career in 2026",
-    description: "A strategic roadmap for navigating the evolving tech landscape and landing your dream role.",
+    id: 'gui-lead-1',
+    title: "Confidence & Leadership Foundations",
+    description: "A comprehensive guide to finding your voice and leading with authenticity in any field.",
     category: 'guides',
-    icon: FileText,
+    icon: Heart,
     href: '/knowledge-hub/guides',
-    dateAdded: '2025-11-10',
+    dateAdded: '2025-11-25',
     downloadAvailable: true,
-    image: 'https://picsum.photos/seed/career/600/400',
-    imageHint: 'tech career'
-  },
-  {
-    id: 'gui-2',
-    title: "Women in Tech Leadership Guide",
-    description: "Actionable advice and strategies for women looking to step into leadership positions in the tech industry.",
-    category: 'guides',
-    icon: FileText,
-    href: '/knowledge-hub/guides',
-    dateAdded: '2025-11-12',
-    downloadAvailable: false,
-    isComingSoon: true,
     image: 'https://picsum.photos/seed/lead/600/400',
     imageHint: 'leadership'
   },
+  {
+    id: 'gui-biz-1',
+    title: "Entrepreneurship & Business Mindset",
+    description: "Moving from idea to execution: How to build a sustainable startup or small business.",
+    category: 'guides',
+    icon: Rocket,
+    href: '/knowledge-hub/guides',
+    dateAdded: '2025-11-28',
+    image: 'https://picsum.photos/seed/biz/600/400',
+    imageHint: 'startup business'
+  },
   // AI & Tech
   {
-    id: 'ai-1',
-    title: "Prompt Engineering Basics for Beginners",
-    description: "Master the art of talking to AI models like ChatGPT and Gemini for maximum results.",
+    id: 'ai-resp-1',
+    title: "AI Literacy & Responsible AI Practices",
+    description: "Understand the ethics of AI, bias detection, and how to use generative models responsibly.",
     category: 'ai-tech',
     icon: Bot,
     href: '/knowledge-hub/ai-tech',
     trending: true,
-    readTime: '8 min read',
-    dateAdded: '2025-11-15',
-    image: 'https://picsum.photos/seed/prompt/600/400',
-    imageHint: 'AI chat'
+    readTime: '10 min read',
+    dateAdded: '2025-12-01',
+    image: 'https://picsum.photos/seed/respai/600/400',
+    imageHint: 'ethical AI'
   },
   {
-    id: 'ai-2',
-    title: "Top AI Tools Every Professional Should Know",
-    description: "Boost your productivity with these essential AI-powered tools across various domains.",
+    id: 'ai-tools-1',
+    title: "Mastering Prompt Writing as a Skill",
+    description: "How to craft clear, goal-oriented prompts for research, content, and digital productivity.",
     category: 'ai-tech',
     icon: Bot,
     href: '/knowledge-hub/ai-tech',
-    readTime: '6 min read',
-    dateAdded: '2025-11-18',
-    image: 'https://picsum.photos/seed/tools/600/400',
-    imageHint: 'productivity tools'
+    readTime: '7 min read',
+    dateAdded: '2025-12-05',
+    image: 'https://picsum.photos/seed/promptskill/600/400',
+    imageHint: 'writing prompts'
   },
   // Coding Resources
   {
-    id: 'cod-1',
-    title: "Essential Git & GitHub Cheat Sheet",
-    description: "The only reference you need for the most common Git commands and GitHub workflows.",
+    id: 'cod-fund-1',
+    title: "Coding & Technical Fundamentals",
+    description: "The core concepts of the web: HTML, CSS, and JavaScript for total beginners.",
     category: 'coding-resources',
     icon: Code,
     href: '/knowledge-hub/coding-resources',
-    dateAdded: '2025-11-20',
-    image: 'https://picsum.photos/seed/git/600/400',
-    imageHint: 'coding git'
+    dateAdded: '2025-12-08',
+    image: 'https://picsum.photos/seed/techfund/600/400',
+    imageHint: 'coding basics'
   },
   {
-    id: 'cod-2',
-    title: "Top Free Platforms to Learn Programming",
-    description: "A curated list of high-quality, free resources to learn coding from the best.",
+    id: 'cod-cloud-1',
+    title: "Google Firebase & Cloud Basics",
+    description: "A resource list for understanding hosting, databases, and authentication for your projects.",
     category: 'coding-resources',
     icon: Code,
     href: '/knowledge-hub/coding-resources',
-    dateAdded: '2025-11-22',
-    image: 'https://picsum.photos/seed/learn/600/400',
-    imageHint: 'code learning'
+    dateAdded: '2025-12-10',
+    image: 'https://picsum.photos/seed/cloudres/600/400',
+    imageHint: 'cloud tech'
   },
   // Career Development
   {
-    id: 'car-1',
-    title: "How to Create an ATS-Friendly Resume",
-    description: "Ensure your resume gets past the robots and into the hands of real recruiters.",
+    id: 'car-brand-1',
+    title: "Personal Branding & Digital Presence",
+    description: "Build an online identity that reflects your skills, values, and professional goals.",
     category: 'career-development',
     icon: Briefcase,
     href: '/knowledge-hub/career-development',
-    dateAdded: '2025-11-25',
-    image: 'https://picsum.photos/seed/resume/600/400',
-    imageHint: 'resume design'
+    dateAdded: '2025-12-12',
+    image: 'https://picsum.photos/seed/pbrand/600/400',
+    imageHint: 'branding identity'
   },
   {
-    id: 'car-2',
-    title: "LinkedIn Profile Optimization Checklist",
-    description: "Simple steps to make your profile stand out to recruiters and industry peers.",
+    id: 'car-soft-1',
+    title: "Emotional Intelligence & Self-Growth",
+    description: "Developing the soft skills necessary for resilience, teamwork, and long-term career success.",
     category: 'career-development',
     icon: Briefcase,
     href: '/knowledge-hub/career-development',
-    dateAdded: '2025-11-27',
-    downloadAvailable: true,
-    image: 'https://picsum.photos/seed/linked/600/400',
-    imageHint: 'linkedin profile'
+    dateAdded: '2025-12-15',
+    image: 'https://picsum.photos/seed/selfgrowth/600/400',
+    imageHint: 'growth mindset'
   },
   // Interview Preparation
   {
-    id: 'int-1',
-    title: "Top 50 Technical Interview Questions",
-    description: "The most common technical questions asked in interviews for software roles.",
+    id: 'int-tech-1',
+    title: "Coding Interview Walkthroughs",
+    description: "Practice solving common technical problems with guided logic and AI-assisted explanations.",
     category: 'interview-prep',
     icon: Target,
     href: '/knowledge-hub/interview-prep',
-    dateAdded: '2025-11-29',
-    image: 'https://picsum.photos/seed/interview/600/400',
-    imageHint: 'interview prep'
+    dateAdded: '2025-12-18',
+    image: 'https://picsum.photos/seed/intprep/600/400',
+    imageHint: 'interview coding'
   },
   {
-    id: 'int-2',
-    title: "HR Interview Preparation Guide",
-    description: "Master the behavioral and soft-skill questions that determine company fit.",
+    id: 'int-beh-1',
+    title: "Leadership & Behavioral Questions",
+    description: "How to demonstrate your leadership potential and emotional intelligence during interviews.",
     category: 'interview-prep',
     icon: Target,
     href: '/knowledge-hub/interview-prep',
-    dateAdded: '2025-12-01',
-    image: 'https://picsum.photos/seed/hr/600/400',
-    imageHint: 'hr interview'
+    dateAdded: '2025-12-20',
+    image: 'https://picsum.photos/seed/beh/600/400',
+    imageHint: 'behavioral interview'
   },
   // Templates & Toolkits
   {
-    id: 'tem-1',
-    title: "Professional Resume Template",
-    description: "A clean, modern, and high-impact resume template for any tech or creative role.",
+    id: 'tem-res-1',
+    title: "Tech-Ready Resume Template",
+    description: "A clean, structured template optimized for technical and digital career applications.",
     category: 'templates-toolkits',
     icon: Wrench,
     href: '/knowledge-hub/templates-toolkits',
-    dateAdded: '2025-12-03',
+    dateAdded: '2025-12-22',
     downloadAvailable: false,
     isComingSoon: true,
-    image: 'https://picsum.photos/seed/temp1/600/400',
+    image: 'https://picsum.photos/seed/restemp/600/400',
     imageHint: 'resume template'
   },
   {
-    id: 'tem-2',
-    title: "Project Planning Template",
-    description: "Keep your team and projects organized with this easy-to-use planning framework.",
+    id: 'tem-pitch-1',
+    title: "Startup Pitch Deck Toolkit",
+    description: "Essential slides and structure for presenting your business idea to partners and mentors.",
     category: 'templates-toolkits',
     icon: Wrench,
     href: '/knowledge-hub/templates-toolkits',
-    dateAdded: '2025-12-05',
+    dateAdded: '2025-12-25',
     downloadAvailable: false,
     isComingSoon: true,
-    image: 'https://picsum.photos/seed/temp2/600/400',
-    imageHint: 'project plan'
+    image: 'https://picsum.photos/seed/pitch/600/400',
+    imageHint: 'pitch deck'
   },
   // Learning Roadmaps
   {
-    id: 'roa-1',
-    title: "AI Engineer Roadmap",
-    description: "A step-by-step path from zero to becoming a proficient AI and machine learning engineer.",
+    id: 'roa-tech-1',
+    title: "Women in Tech Career Roadmap",
+    description: "From digital literacy to cloud-based application development: Your path into technology.",
     category: 'learning-roadmaps',
     icon: Map,
     href: '/knowledge-hub/learning-roadmaps',
-    dateAdded: '2025-12-07',
-    image: 'https://picsum.photos/seed/road1/600/400',
-    imageHint: 'ai roadmap'
+    dateAdded: '2025-12-28',
+    image: 'https://picsum.photos/seed/techroad/600/400',
+    imageHint: 'tech roadmap'
   },
   {
-    id: 'roa-2',
-    title: "Front-End Developer Roadmap",
-    description: "Master HTML, CSS, JavaScript, and modern frameworks like React with this guide.",
+    id: 'roa-cre-1',
+    title: "Creative Entrepreneur Roadmap",
+    description: "A step-by-step journey from storytelling to building a profitable digital audience.",
     category: 'learning-roadmaps',
     icon: Map,
     href: '/knowledge-hub/learning-roadmaps',
-    dateAdded: '2025-12-09',
-    image: 'https://picsum.photos/seed/road2/600/400',
-    imageHint: 'frontend roadmap'
+    dateAdded: '2025-12-30',
+    image: 'https://picsum.photos/seed/createroad/600/400',
+    imageHint: 'creative roadmap'
   },
   // Success Stories
   {
-    id: 'suc-1',
-    title: "From Beginner to Tech Professional",
-    description: "The inspiring journey of how one of our community members pivoted into tech.",
+    id: 'suc-comm-1',
+    title: "Community Impact through Real-World Projects",
+    description: "How one Sangini used her tech skills to solve a local problem and inspire others.",
     category: 'success-stories',
     icon: Star,
     href: '/knowledge-hub/success-stories',
-    dateAdded: '2025-12-11',
-    image: 'https://picsum.photos/seed/story1/600/400',
-    imageHint: 'success story'
+    dateAdded: '2026-01-02',
+    image: 'https://picsum.photos/seed/impact/600/400',
+    imageHint: 'community success'
   },
   {
-    id: 'suc-2',
-    title: "Building Confidence Through Learning",
-    description: "How structured learning and community support helped rebuild professional confidence.",
+    id: 'suc-break-1',
+    title: "Returning to Work with Digital Confidence",
+    description: "A story of resilience and rediscovery after a long career break.",
     category: 'success-stories',
     icon: Star,
     href: '/knowledge-hub/success-stories',
-    dateAdded: '2025-12-13',
-    image: 'https://picsum.photos/seed/story2/600/400',
-    imageHint: 'confidence growth'
+    dateAdded: '2026-01-05',
+    image: 'https://picsum.photos/seed/return/600/400',
+    imageHint: 'career return'
   },
   // Free Resources
   {
-    id: 'fre-1',
-    title: "AI Learning Starter Pack",
-    description: "Everything you need to kickstart your journey into the world of Artificial Intelligence.",
+    id: 'fre-prod-1',
+    title: "Digital Literacy & Productivity Starter Kit",
+    description: "Essential tools and workflows to manage your time and digital tasks effectively.",
     category: 'free-resources',
     icon: Download,
     href: '/knowledge-hub/free-resources',
     popular: true,
-    dateAdded: '2025-12-15',
-    image: 'https://picsum.photos/seed/free1/600/400',
-    imageHint: 'free bundle'
+    dateAdded: '2026-01-08',
+    image: 'https://picsum.photos/seed/prodkit/600/400',
+    imageHint: 'productivity kit'
   },
   {
-    id: 'fre-2',
-    title: "Career Growth Resource Bundle",
-    description: "A collection of guides and tools to accelerate your professional development.",
+    id: 'fre-ai-1',
+    title: "Ethical AI Checklist",
+    description: "A simple guide to ensure your AI-assisted work remains responsible and transparent.",
     category: 'free-resources',
     icon: Download,
     href: '/knowledge-hub/free-resources',
-    dateAdded: '2025-12-17',
-    image: 'https://picsum.photos/seed/free2/600/400',
-    imageHint: 'career bundle'
+    dateAdded: '2026-01-10',
+    image: 'https://picsum.photos/seed/ethic/600/400',
+    imageHint: 'ai checklist'
   },
 ];

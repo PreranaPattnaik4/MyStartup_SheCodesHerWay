@@ -3,30 +3,43 @@ import Header from '@/components/header';
 import Footer from '@/components/footer';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle, CardFooter } from '@/components/ui/card';
-import { Briefcase, ArrowLeft, CheckCircle2, Download, ListChecks } from 'lucide-react';
+import { Briefcase, ArrowLeft, CheckCircle2, Download, ListChecks, UserCircle, Heart } from 'lucide-react';
 import Link from 'next/link';
 
 const careerResources = [
   {
-    title: "How to Create an ATS-Friendly Resume",
-    description: "Learn the secrets to formatting and keyword optimization that will help your resume pass through Applicant Tracking Systems.",
+    title: "Personal Branding & Digital Presence",
+    description: "Learn how to build a digital identity that reflects your skills and values. From LinkedIn optimization to portfolio building.",
     steps: [
-      "Use standard section headings",
-      "Avoid complex graphics or tables",
-      "Include industry-specific keywords",
-      "Save as a clean PDF"
-    ]
+      "Define your unique value proposition",
+      "Optimize your social media handles",
+      "Build a project portfolio that shows, not tells",
+      "Engage authentically with your community"
+    ],
+    icon: UserCircle
+  },
+  {
+    title: "Emotional Intelligence & Self-Growth",
+    description: "The 'Inner Work' of a career: Building resilience, emotional strength, and a growth mindset.",
+    steps: [
+      "Practice self-reflection and journaling",
+      "Develop empathy in communication",
+      "Learn to manage stress and burnout",
+      "Identify and overcome imposter syndrome"
+    ],
+    icon: Heart
   },
   {
     title: "LinkedIn Profile Optimization Checklist",
-    description: "A point-by-point guide to making your professional profile attract the right recruiters and opportunities.",
+    description: "A point-by-point guide to making your professional profile attract the right recruiters.",
     steps: [
       "Professional headline with keywords",
       "Detailed 'About' section telling your story",
       "Skill endorsements and recommendations",
       "Portfolio samples in the 'Featured' section"
     ],
-    downloadable: true
+    downloadable: true,
+    icon: Briefcase
   }
 ];
 
@@ -40,7 +53,7 @@ export default function CareerDevelopmentPage() {
             <Briefcase className="mx-auto h-12 w-12 text-primary" />
             <h1 className="mt-4 font-headline text-4xl font-bold md:text-5xl">Career Development</h1>
             <p className="mt-4 max-w-2xl mx-auto text-lg text-foreground/80">
-              Guidance on personal branding, networking, and achieving your professional goals.
+              Guidance on personal branding, digital presence, and developing the emotional intelligence needed for success.
             </p>
             <Button asChild variant="outline" className="mt-8">
               <Link href="/knowledge-hub">
@@ -56,7 +69,12 @@ export default function CareerDevelopmentPage() {
             {careerResources.map((res, i) => (
               <Card key={i} className="bg-white shadow-md">
                 <CardHeader>
-                  <CardTitle className="text-2xl">{res.title}</CardTitle>
+                  <div className="flex items-center gap-3 mb-2">
+                    <div className="bg-primary/10 p-2 rounded-lg">
+                        <res.icon className="h-5 w-5 text-primary" />
+                    </div>
+                    <CardTitle className="text-2xl">{res.title}</CardTitle>
+                  </div>
                   <CardDescription className="text-base">{res.description}</CardDescription>
                 </CardHeader>
                 <CardContent className="space-y-6">

@@ -3,24 +3,35 @@ import Header from '@/components/header';
 import Footer from '@/components/footer';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle, CardFooter } from '@/components/ui/card';
-import { Code, ArrowLeft, ExternalLink, Bookmark } from 'lucide-react';
+import { Code, ArrowLeft, ExternalLink, Bookmark, Cpu, Database } from 'lucide-react';
 import Link from 'next/link';
 
 const resources = [
   {
-    title: "Essential Git & GitHub Cheat Sheet",
-    description: "A one-page reference for all the commands you need to master version control and collaboration.",
+    title: "Coding & Technical Fundamentals",
+    description: "The core concepts of the web: Mastering HTML5, responsive CSS3 layouts, and the basics of JavaScript programming logic.",
     links: [
       { label: "View Guide", href: "#" },
-      { label: "Cheat Sheet (PDF)", href: "#" }
-    ]
+      { label: "Practice Snippets", href: "#" }
+    ],
+    icon: Code
   },
   {
-    title: "Top Free Platforms to Learn Programming",
-    description: "The ultimate list of high-quality, zero-cost platforms to learn everything from web dev to data science.",
+    title: "Google Firebase & Cloud Basics",
+    description: "Everything you need to know about setting up Firebase Authentication, Firestore databases, and hosting for your first app.",
     links: [
-      { label: "Visit List", href: "#" }
-    ]
+      { label: "Setup Checklist", href: "#" },
+      { label: "Documentation", href: "#" }
+    ],
+    icon: Database
+  },
+  {
+    title: "Essential Git & GitHub Cheat Sheet",
+    description: "A one-page reference for all the commands you need to master version control and team collaboration.",
+    links: [
+      { label: "Cheat Sheet (PDF)", href: "#" }
+    ],
+    icon: Cpu
   }
 ];
 
@@ -34,7 +45,7 @@ export default function CodingResourcesPage() {
             <Code className="mx-auto h-12 w-12 text-primary" />
             <h1 className="mt-4 font-headline text-4xl font-bold md:text-5xl">Coding Resources</h1>
             <p className="mt-4 max-w-2xl mx-auto text-lg text-foreground/80">
-              Essential tools, code snippets, and references for web and software development.
+              Essential tools, code snippets, and technical references for web development and software ecosystems.
             </p>
             <Button asChild variant="outline" className="mt-8">
               <Link href="/knowledge-hub">
@@ -50,7 +61,12 @@ export default function CodingResourcesPage() {
             {resources.map((res, i) => (
               <Card key={i} className="bg-white shadow-md hover:shadow-lg transition-all">
                 <CardHeader className="flex flex-row items-start justify-between space-y-0">
-                  <CardTitle className="text-xl font-bold">{res.title}</CardTitle>
+                  <div className="flex items-center gap-3">
+                    <div className="bg-primary/10 p-2 rounded-lg">
+                        <res.icon className="h-5 w-5 text-primary" />
+                    </div>
+                    <CardTitle className="text-xl font-bold">{res.title}</CardTitle>
+                  </div>
                   <Button variant="ghost" size="icon" className="text-muted-foreground hover:text-primary">
                     <Bookmark className="h-4 w-4" />
                   </Button>
