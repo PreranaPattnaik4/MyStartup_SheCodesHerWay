@@ -1,13 +1,13 @@
-
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
 import { Bot, Image as ImageIcon, Code, FileText, ArrowRight } from 'lucide-react';
 import Link from 'next/link';
 import { Badge } from '../ui/badge';
+import { brand } from '@/lib/brand';
 
 const aiFeatures = [
     {
         icon: Bot,
-        title: "EmpowerFly AI Coach",
+        title: `${brand.appName} Coach`,
         description: "On-demand guidance for learning, clarity, and confidence.",
         href: "/ai-coaching",
         isReady: false,

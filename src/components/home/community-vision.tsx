@@ -1,4 +1,3 @@
-
 'use client';
 
 import {
@@ -12,10 +11,11 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Quote, Sparkles, Target, TrendingUp, Route, Heart, Users, Milestone, Library, Eye } from 'lucide-react';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 import Image from 'next/image';
+import { brand } from '@/lib/brand';
 
 const testimonials = [
     {
-        quote: "I joined SheCodesHerWay because I wanted a safe space to restart my career without judgment.",
+        quote: `I joined ${brand.name} because I wanted a safe space to restart my career without judgment.`,
         author: "Community Member"
     },
     {
@@ -23,7 +23,7 @@ const testimonials = [
         author: "Early Platform User"
     },
     {
-        quote: "SheCodesHerWay feels like a place where women are understood, not rushed.",
+        quote: `${brand.name} feels like a place where women are understood, not rushed.`,
         author: "Community Voice"
     }
 ];
@@ -91,15 +91,15 @@ export default function CommunityVision() {
                            <CardHeader>
                                 <CardTitle className="flex items-center gap-3">
                                     <Sparkles className="h-6 w-6 text-primary"/>
-                                     Why SheCodesHerWay Was Created
+                                     Why {brand.name} Was Created
                                 </CardTitle>
                             </CardHeader>
                             <CardContent className="flex-grow flex flex-col space-y-4 text-foreground/90 pt-4">
                                 <div className="flex-grow flex items-center justify-center text-primary/30">
                                     <Library className="h-24 w-24" />
                                 </div>
-                                <p>SheCodesHerWay was created after witnessing talented, capable women stepping back from their dreams due to career breaks, lack of guidance, self-doubt, or life responsibilities.</p>
-                                <p className="font-semibold text-primary">SheCodesHerWay exists to bridge that gap. Not with pressure, but with mentorship, community, and belief.</p>
+                                <p>{brand.name} was created after witnessing talented, capable women stepping back from their dreams due to career breaks, lack of guidance, self-doubt, or life responsibilities.</p>
+                                <p className="font-semibold text-primary">{brand.name} exists to bridge that gap. Not with pressure, but with mentorship, community, and belief.</p>
                             </CardContent>
                         </Card>
                     </CarouselItem>
@@ -116,7 +116,7 @@ export default function CommunityVision() {
                                 <div className="flex-grow flex items-center justify-center text-primary/30">
                                     <Milestone className="h-24 w-24" />
                                 </div>
-                                <p>We are currently preparing our first Sangini Udaan cohort. Our focus right now is not rapid scale, but strong foundations:</p>
+                                <p>We are currently preparing our first {brand.programName} cohort. Our focus right now is not rapid scale, but strong foundations:</p>
                                 <ul className="list-disc list-inside space-y-2 text-sm text-foreground/80">
                                     <li>Listening deeply to our community</li>
                                     <li>Building thoughtfully designed journeys</li>

@@ -1,4 +1,3 @@
-
 export const brand = {
   name: "SheCodesHerWays",
   appName: "EmpowerFly Assistant",

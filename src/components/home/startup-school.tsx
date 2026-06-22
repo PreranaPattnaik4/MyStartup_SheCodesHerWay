@@ -1,4 +1,3 @@
-
 import { Button } from "@/components/ui/button";
 import { brand } from "@/lib/brand";
 import { PlaceHolderImages } from "@/lib/placeholder-images";
@@ -29,18 +28,18 @@ export default function StartupSchool() {
        <div className="max-w-6xl mx-auto py-12">
         <div className="grid md:grid-cols-2 gap-16 items-center">
           <div>
-            <h2 className="font-headline text-4xl font-bold">Sangini Udaan : EmpowerFly — Flagship Program</h2>
+            <h2 className="font-headline text-4xl font-bold">{brand.programName} — Flagship Program</h2>
             <p className="mt-4 text-2xl text-primary italic">
               Empower Her to Fly Beyond Limits
             </p>
             <p className="mt-6 text-lg text-foreground/80">
-              Sangini Udaan : EmpowerFly is the soul of SheCodesHerWay — a guided mentorship and growth journey crafted to help women build skills, confidence, and clarity across technology, creativity, business, and leadership.
+              {brand.programName} is the soul of {brand.name} — a guided mentorship and growth journey crafted to help women build skills, confidence, and clarity across technology, creativity, business, and leadership.
             </p>
 
             <div className="mt-8 space-y-6">
                 <Card className="bg-muted/50 border-0">
                     <CardHeader>
-                        <CardTitle className="text-xl">What is Sangini Udaan : EmpowerFly?</CardTitle>
+                        <CardTitle className="text-xl">What is {brand.programName}?</CardTitle>
                     </CardHeader>
                     <CardContent>
                         <p>A holistic, women-centric program designed to nurture learners into leaders and creators into founders — with real guidance, real projects, and real growth.</p>
