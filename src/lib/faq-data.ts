@@ -13,23 +13,23 @@ export interface FaqCategory {
 
 export const faqData: FaqCategory[] = [
     {
-        title: "About SheCodesHerWay",
+        title: "About SheCodesHerWays",
         questions: [
             {
-                question: "What is SheCodesHerWay?",
-                answer: "SheCodesHerWay is a women-led empowerment startup and platform founded by Prerana Kailash Pattnaik. Its mission is to help women build their path, lead their way, and leave their mark by providing resources for growth in technology, creativity, entrepreneurship, leadership, and emotional strength.",
+                question: "What is SheCodesHerWays?",
+                answer: "SheCodesHerWays is a women-led empowerment startup and platform founded by Prerana Kailash Pattnaik. Its mission is to help women build their path, lead their way, and leave their mark by providing resources for growth in technology, creativity, entrepreneurship, leadership, and emotional strength.",
             },
             {
                 question: "What this platform is all about?",
-                answer: "SheCodesHerWay is a purpose-driven digital platform for women to learn, lead, and grow. It offers mentorship, skill-building programs, AI tools, and a supportive community to help women achieve their potential in technology, business, creativity, and leadership. Our mission is to provide the tools and confidence for every woman to build her own path to success."
+                answer: "SheCodesHerWays is a purpose-driven digital platform for women to learn, lead, and grow. It offers mentorship, skill-building programs, AI tools, and a supportive community to help women achieve their potential in technology, business, creativity, and leadership. Our mission is to provide the tools and confidence for every woman to build her own path to success."
             },
             {
-                question: "What is the mission and vision of SheCodesHerWay?",
+                question: "What is the mission and vision of SheCodesHerWays?",
                 answer: "Our mission is to empower women with digital learning, mentorship, leadership development, and emotional strength, while building a global community that celebrates creativity, collaboration, and courage. Our vision is to create a world where every woman has the resources, opportunities, and confidence to step into her fullest potential.",
             },
             {
-                question: "Who is the founder of SheCodesHerWay?",
-                answer: "SheCodesHerWay was founded by Prerana Kailash Pattnaik. As the founder and developer, she built more than just a platform—she created a community and a vision for women to discover their strength and skills. Her leadership blends compassion, courage, and a deep commitment to empowering women to pursue their dreams fearlessly.",
+                question: "Who is the founder of SheCodesHerWays?",
+                answer: "SheCodesHerWays was founded by Prerana Kailash Pattnaik. As the founder and developer, she built more than just a platform—she created a community and a vision for women to discover their strength and skills. Her leadership blends compassion, courage, and a deep commitment to empowering women to pursue their dreams fearlessly.",
             },
             {
                 question: "What is the founder's role in platform development?",
@@ -40,28 +40,28 @@ export const faqData: FaqCategory[] = [
                 answer: "Our core values are Empowerment (helping women find their voice), Innovation (merging technology with purpose), Community (building sisterhood), Inclusivity (welcoming every woman), and Courage (encouraging women to dream and lead).",
             },
             {
-                question: "What kind of platform is SheCodesHerWay?",
+                question: "What kind of platform is SheCodesHerWays?",
                 answer: "It is a purpose-driven digital platform built with Next.js, React, and Firebase. It serves as a central hub for our community, providing access to programs, resources, AI tools, and a collaborative network.",
             },
             {
-                question: "What is the overall purpose of SheCodesHerWay?",
+                question: "What is the overall purpose of SheCodesHerWays?",
                 answer: "The platform's purpose is to be a movement, a community, and a guiding light for women aspiring to grow. It provides a safe, supportive, and inspiring ecosystem where women can learn, evolve, and soar beyond limits.",
             },
             {
-                question: "How does SheCodesHerWay aim to make an impact?",
+                question: "How does SheCodesHerWays aim to make an impact?",
                 answer: "We measure our success not just in numbers, but in the confidence built, voices found, and lives transformed. Our goals for 2025-2026 include training 1,000+ women, building a network of 100+ mentors, and growing our community to over 5,000 members.",
             },
             {
-                question: "Is SheCodesHerWay just for women in tech?",
+                question: "Is SheCodesHerWays just for women in tech?",
                 answer: "No, while we have a strong focus on technology, our platform is for any woman looking to grow in creativity, entrepreneurship, leadership, or emotional strength. We offer diverse learning paths to cater to a wide range of interests and career goals.",
             },
             {
                 question: "What is the 'Sangini Network'?",
-                answer: "Every woman who joins SheCodesHerWay becomes a 'Sangini'—a friend, sister, and changemaker. The Sangini Network is our community, built on the principles of women supporting women, shared learning, and collaboration over competition.",
+                answer: "Every woman who joins SheCodesHerWays becomes a 'Sangini'—a friend, sister, and changemaker. The Sangini Network is our community, built on the principles of women supporting women, shared learning, and collaboration over competition.",
             },
             {
                 question: "The platform seems to be in an early stage. What does this mean?",
-                answer: "Yes, SheCodesHerWay is currently a pre-seed stage startup. This means we are in the foundational phase of building our platform and community. Joining now makes you part of our early journey, with opportunities to contribute, shape our direction, and grow with us.",
+                answer: "Yes, SheCodesHerWays is currently a pre-seed stage startup. This means we are in the foundational phase of building our platform and community. Joining now makes you part of our early journey, with opportunities to contribute, shape our direction, and grow with us.",
             },
         ]
     },
@@ -70,7 +70,7 @@ export const faqData: FaqCategory[] = [
         questions: [
             {
                 question: "What is the 'Sangini Udaan : EmpowerFly' program?",
-                answer: "It is the flagship empowerment and mentorship program of SheCodesHerWay. It's a guided journey created to help women build skills, confidence, and clarity across technology, creativity, business, and leadership.",
+                answer: "It is the flagship empowerment and mentorship program of SheCodesHerWays. It's a guided journey created to help women build skills, confidence, and clarity across technology, creativity, business, and leadership.",
             },
             {
                 question: "TELL ME ABOUT THE PROGRAM THAT THIS PLATFORM OFFER",
@@ -130,7 +130,7 @@ export const faqData: FaqCategory[] = [
         title: "Careers & Opportunities",
         questions: [
             {
-                question: "What kind of opportunities are available at SheCodesHerWay?",
+                question: "What kind of opportunities are available at SheCodesHerWays?",
                 answer: "We offer several ways to get involved: you can join our training-based Internship Program, become a Mentor, or collaborate with our Core Team as an 'Early Core Contributor'.",
             },
             {
@@ -154,7 +154,7 @@ export const faqData: FaqCategory[] = [
                 answer: "The initial collaboration period is 3 months, with an optional second phase of 3 months subject to reapplication and selection. High-performing contributors may continue for up to 1 year. This is a flexible, voluntary engagement, and you may conclude your participation at any time.",
             },
             {
-                question: "How should I represent my role at SheCodesHerWay?",
+                question: "How should I represent my role at SheCodesHerWays?",
                 answer: "You should identify yourself as a 'Contributor' or 'Intern.' This is an unpaid, learning-focused engagement, not a formal team role. You can tell others, 'I joined as a Contributor,' to accurately reflect your position.",
             },
             {
@@ -207,7 +207,7 @@ export const faqData: FaqCategory[] = [
                 answer: "Our platform is currently in a prototype stage. We are actively developing and testing our advanced AI features, like the AI Coach and Image Studio, to ensure they are powerful, responsible, and ready for our community. They will be rolled out gradually."
             },
             {
-                question: "How does SheCodesHerWay ensure AI is used responsibly?",
+                question: "How does SheCodesHerWays ensure AI is used responsibly?",
                 answer: "We are committed to developing AI tools that are ethical and responsible. We design our AI to assist, not replace, human creativity and potential, with a focus on fairness, transparency, and user privacy. Responsible AI principles are a mandatory foundation in all our programs."
             },
             {
@@ -221,11 +221,11 @@ export const faqData: FaqCategory[] = [
         questions: [
             {
                 question: "What is the inclusive participation policy?",
-                answer: "SheCodesHerWay welcomes both women and men to join us as Core Team Members, Early Core Contributors, and Mentors, contributing their skills, experience, and guidance to help build and grow the platform. However, our Women Empowerment Program — Sangini Udaan : EmpowerFly — is exclusively designed for women, and only women are eligible to enroll as participants in this program. As the platform evolves, we will be introducing Hackathons, Collaborative Projects, Community Events, and other platform activities that will be accessible to all genders, fostering an inclusive and collaborative learning ecosystem.",
+                answer: "SheCodesHerWays welcomes both women and men to join us as Core Team Members, Early Core Contributors, and Mentors, contributing their skills, experience, and guidance to help build and grow the platform. However, our Women Empowerment Program — Sangini Udaan : EmpowerFly — is exclusively designed for women, and only women are eligible to enroll as participants in this program. As the platform evolves, we will be introducing Hackathons, Collaborative Projects, Community Events, and other platform activities that will be accessible to all genders, fostering an inclusive and collaborative learning ecosystem.",
             },
              {
                 question: "Is this platform designed only for women, or are there opportunities and benefits available for men as well?",
-                answer: "Our Inclusive Approach: Building an ecosystem where everyone has a place to grow and contribute. Inclusive Participation Policy: SheCodesHerWay welcomes both women and men to join us as Early Core Contributors, and Mentors, contributing their skills, experience, and guidance to help build and grow the platform. However, our Women Empowerment Program — Sangini Udaan : EmpowerFly — is exclusively designed for women, and only women are eligible to enroll as participants in this program. As the platform evolves, we will be introducing Hackathons, Collaborative Projects, Community Events, and other platform activities that will be accessible to all genders, fostering an inclusive and collaborative learning ecosystem."
+                answer: "Our Inclusive Approach: Building an ecosystem where everyone has a place to grow and contribute. Inclusive Participation Policy: SheCodesHerWays welcomes both women and men to join us as Early Core Contributors, and Mentors, contributing their skills, experience, and guidance to help build and grow the platform. However, our Women Empowerment Program — Sangini Udaan : EmpowerFly — is exclusively designed for women, and only women are eligible to enroll as participants in this program. As the platform evolves, we will be introducing Hackathons, Collaborative Projects, Community Events, and other platform activities that will be accessible to all genders, fostering an inclusive and collaborative learning ecosystem."
             },
         ],
     },
@@ -278,7 +278,7 @@ export const faqData: FaqCategory[] = [
         title: "🎓 Certificates, Degrees, and Job Opportunities",
         questions: [
             {
-                question: "Does SheCodesHerWay offer certificates for course completion?",
+                question: "Does SheCodesHerWays offer certificates for course completion?",
                 answer: "Yes, upon successful completion of our programs, you will receive an official Certificate of Contribution or Completion that recognizes your learning and achievements."
             },
             {
@@ -286,24 +286,24 @@ export const faqData: FaqCategory[] = [
                 answer: "Our certificates are provided as editable templates, often in Canva. You can simply open the template, click on the name field, and type in your correct name before downloading it."
             },
             {
-                question: "Can I add the courses completed on SheCodesHerWay to my resume or LinkedIn profile?",
+                question: "Can I add the courses completed on SheCodesHerWays to my resume or LinkedIn profile?",
                 answer: "Absolutely! We encourage you to showcase your accomplishments. Adding our programs and the skills you've learned to your resume and LinkedIn profile is a great way to demonstrate your commitment to growth."
             },
             {
-                question: "Will completing courses on SheCodesHerWay help me earn a degree?",
+                question: "Will completing courses on SheCodesHerWays help me earn a degree?",
                 answer: "No, our programs are designed for skill-building, career readiness, and personal growth. They are not accredited degree programs and do not provide academic credits."
             },
             {
-                question: "Can I use the skills learned from SheCodesHerWay courses to improve my job prospects?",
+                question: "Can I use the skills learned from SheCodesHerWays courses to improve my job prospects?",
                 answer: "Yes, that is one of our primary goals. The hands-on projects, mentorship, and practical skills you gain are designed to make you more competitive in the job market and confident in your abilities."
             },
             {
-                question: "Are there any job placement services or career support available through SheCodesHerWay?",
+                question: "Are there any job placement services or career support available through SheCodesHerWays?",
                 answer: "We provide career support through mentorship, internship opportunities, and real-world projects. While we do not offer formal job placement services, our ecosystem is designed to prepare you for career opportunities and connect you with a professional network."
             },
             {
-                question: "Will completing courses on SheCodesHerWay provide any formal recognition or accreditation?",
-                answer: "The certificates we provide are a formal recognition from SheCodesHerWay of your participation and achievements. However, they are not formal academic accreditations. They serve as a valuable credential for your professional portfolio."
+                question: "Will completing courses on SheCodesHerWays provide any formal recognition or accreditation?",
+                answer: "The certificates we provide are a formal recognition from SheCodesHerWays of your participation and achievements. However, they are not formal academic accreditations. They serve as a valuable credential for your professional portfolio."
             }
         ]
     },
@@ -311,11 +311,11 @@ export const faqData: FaqCategory[] = [
         title: "📰 Sign Up and Newsletter",
         questions: [
             {
-                question: "How do I sign up for an account on SheCodesHerWay?",
+                question: "How do I sign up for an account on SheCodesHerWays?",
                 answer: "You can sign up for an account by clicking the 'Sign Up' button on our homepage. This will open a dialog where you can create an account using your email and a password."
             },
             {
-                question: "Is my personal information safe with SheCodesHerWay?",
+                question: "Is my personal information safe with SheCodesHerWays?",
                 answer: "Yes, protecting your privacy is a priority. We use secure systems like Firebase Authentication and follow our privacy policy to safeguard your data. We only use your information to provide and improve our services."
             },
             {
@@ -323,15 +323,15 @@ export const faqData: FaqCategory[] = [
                 answer: "If you forget your password, you can use the 'Forgot Password' link on the login screen. You will receive an email with instructions on how to reset it."
             },
             {
-                question: "What topics are covered on SheCodesHerWay?",
+                question: "What topics are covered on SheCodesHerWays?",
                 answer: "Our platform covers a wide range of topics including technology, AI, web development, entrepreneurship, creativity, content creation, leadership, and emotional intelligence."
             },
             {
-                question: "Can I unsubscribe from the SheCodesHerWay newsletter?",
+                question: "Can I unsubscribe from the SheCodesHerWays newsletter?",
                 answer: "Yes, you can unsubscribe at any time. Every newsletter we send includes an 'Unsubscribe' link at the bottom. Clicking it will remove you from our mailing list."
             },
             {
-                question: "What kind of content will I receive in the SheCodesHerWay newsletter?",
+                question: "What kind of content will I receive in the SheCodesHerWays newsletter?",
                 answer: "Our newsletter includes updates on new programs and courses, inspiring stories from our community, announcements about upcoming events, and valuable insights on tech, creativity, and leadership."
             }
         ]

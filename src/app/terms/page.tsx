@@ -1,6 +1,7 @@
 
 import Header from '@/components/header';
 import Footer from '@/components/footer';
+import { brand } from '@/lib/brand';
 
 export default function TermsPage() {
   return (
@@ -20,7 +21,7 @@ export default function TermsPage() {
             <div className="prose prose-stone dark:prose-invert max-w-4xl mx-auto">
                 <h2>1. Introduction</h2>
                 <p>
-                    Welcome to SheCodesHerWay ("Company", "we", "our", "us")! These Terms of Service ("Terms", "Terms of Service") govern your use of our website located at shecodesherway.com (together or individually "Service") operated by SheCodesHerWay.
+                    Welcome to {brand.name} ("Company", "we", "our", "us")! These Terms of Service ("Terms", "Terms of Service") govern your use of our website located at {brand.website} (together or individually "Service") operated by {brand.name}.
                 </p>
                 <p>
                     Our Privacy Policy also governs your use of our Service and explains how we collect, safeguard and disclose information that results from your use of our web pages.
@@ -41,7 +42,7 @@ export default function TermsPage() {
 
                 <h2>4. Intellectual Property</h2>
                 <p>
-                    The Service and its original content (excluding Content provided by users), features and functionality are and will remain the exclusive property of SheCodesHerWay and its licensors.
+                    The Service and its original content (excluding Content provided by users), features and functionality are and will remain the exclusive property of {brand.name} and its licensors.
                 </p>
 
                 <h2>5. Governing Law</h2>

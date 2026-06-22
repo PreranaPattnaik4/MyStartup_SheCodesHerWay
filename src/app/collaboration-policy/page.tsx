@@ -6,6 +6,7 @@ import { Badge } from '@/components/ui/badge';
 import { Sparkles, Handshake, Clock, Wrench, CheckCircle2, Star, Award, Gem, GraduationCap, Rocket, PartyPopper, ClipboardList, Construction, Lock, Scale, DollarSign, Briefcase, RefreshCw, FileText, Verified, Heart } from 'lucide-react';
 import { Separator } from '@/components/ui/separator';
 import Link from 'next/link';
+import { brand } from '@/lib/brand';
 
 const SectionCard = ({ icon, title, badgeText, children }: { icon: React.ElementType, title: string, badgeText?: string, children: React.ReactNode }) => (
     <Card className="shadow-lg">
@@ -42,7 +43,7 @@ export default function CollaborationPolicyPage() {
                 
                 <SectionCard icon={Sparkles} title="1. COLLABORATION">
                     <h3>About This Collaboration</h3>
-                    <p>SheCodesHerWay is a women-led, mission-driven platform currently at pre-seed stage. We invite passionate, purpose-aligned individuals to collaborate in building, shaping, and growing the platform. This collaboration is designed for individuals motivated by impact, learning, shared purpose, and real-world experience, rather than immediate monetary compensation.</p>
+                    <p>{brand.name} is a women-led, mission-driven platform currently at pre-seed stage. We invite passionate, purpose-aligned individuals to collaborate in building, shaping, and growing the platform. This collaboration is designed for individuals motivated by impact, learning, shared purpose, and real-world experience, rather than immediate monetary compensation.</p>
                     
                     <h4 className="flex items-center gap-2"><Handshake size={20} /> Nature of Engagement</h4>
                     <ul>
@@ -79,7 +80,7 @@ export default function CollaborationPolicyPage() {
                     <p>⚠️ <strong>Important:</strong> This six-month plan is not a training program, internship, or employment contract. It is a voluntary, experience-based collaboration framework.</p>
 
                     <h4 className="flex items-center gap-2"><Star size={20} /> Top Contributor Recognition</h4>
-                    <p>Contributors who demonstrate dedicated, consistent, and high-impact contributions will be recognized prominently on the SheCodesHerWay platform. Their names, roles, and achievements will appear at the top of every relevant section, program, or initiative, celebrating their exceptional commitment.</p>
+                    <p>Contributors who demonstrate dedicated, consistent, and high-impact contributions will be recognized prominently on the {brand.name} platform. Their names, roles, and achievements will appear at the top of every relevant section, program, or initiative, celebrating their exceptional commitment.</p>
                     <p>💡 This ensures high-performing contributors are visibly celebrated, motivating continued excellence and inspiring the community.</p>
 
                 </SectionCard>
@@ -130,7 +131,7 @@ export default function CollaborationPolicyPage() {
                     <p>Add experience to LinkedIn and professional portfolios. Recommended format: Role Title: Early Core Contributor – [Role], Employment Type: Part-time. Description: Voluntary, unpaid, collaboration-based role during pre-seed stage.</p>
                     
                     <h3 className="flex items-center gap-2"><PartyPopper size={20} /> Onboarding Participation Announcement (Optional)</h3>
-                    <p>Celebrate joining with the provided template. Add your photo, role, and optionally tag SheCodesHerWay on LinkedIn.</p>
+                    <p>Celebrate joining with the provided template. Add your photo, role, and optionally tag {brand.name} on LinkedIn.</p>
                 </SectionCard>
 
                 <Separator />
@@ -141,12 +142,12 @@ export default function CollaborationPolicyPage() {
                         <li>Contribute responsibly to assigned initiatives.</li>
                         <li>Communicate clearly and professionally.</li>
                         <li>Work with integrity, ownership, and accountability.</li>
-                        <li>Uphold mission, values, and ethics of SheCodesHerWay.</li>
+                        <li>Uphold mission, values, and ethics of {brand.name}.</li>
                         <li>Flexible hours; contributors manage their own time.</li>
                     </ul>
 
                     <h3 className="flex items-center gap-2"><Lock size={20} /> Confidentiality & Intellectual Property</h3>
-                    <p>Internal discussions, strategies, and materials are confidential. Work created belongs to SheCodesHerWay. Portfolio showcase allowed with prior written permission.</p>
+                    <p>Internal discussions, strategies, and materials are confidential. Work created belongs to {brand.name}. Portfolio showcase allowed with prior written permission.</p>
 
                     <h3 className="flex items-center gap-2"><Scale size={20} /> Code of Conduct</h3>
                     <p>We maintain a safe, inclusive, and respectful environment with zero tolerance for harassment, discrimination, or unethical behavior. Brand misuse is prohibited.</p>
@@ -174,14 +175,14 @@ export default function CollaborationPolicyPage() {
                 <Separator />
                 
                  <SectionCard icon={Heart} title="5. FINAL DISCLAIMER & FOUNDER’S NOTE">
-                     <p>Participation is voluntary and non-binding. All recognition, certificates, and announcements are for acknowledgment purposes only. SheCodesHerWay is built on trust, collaboration, and shared purpose. Every contributor plays a meaningful role in empowering women.</p>
+                     <p>Participation is voluntary and non-binding. All recognition, certificates, and announcements are for acknowledgment purposes only. {brand.name} is built on trust, collaboration, and shared purpose. Every contributor plays a meaningful role in empowering women.</p>
                      
                      <h4>Connect With Us</h4>
                      <p>
-                        <strong>Website:</strong> <Link href="https://shecodesherways.com" target="_blank" rel="noopener noreferrer">shecodesherways.com</Link><br/>
-                        <strong>Email:</strong> <a href="mailto:contact@shecodesherway.com">contact@shecodesherway.com</a><br/>
+                        <strong>Website:</strong> <Link href={`https://${brand.website}`} target="_blank" rel="noopener noreferrer">{brand.website}</Link><br/>
+                        <strong>Email:</strong> <a href={`mailto:${brand.email}`}>{brand.email}</a><br/>
                         <strong>Instagram:</strong> @shecodesherway<br/>
-                        <strong>LinkedIn:</strong> SheCodesHerWay
+                        <strong>LinkedIn:</strong> {brand.name}
                      </p>
                 </SectionCard>
 

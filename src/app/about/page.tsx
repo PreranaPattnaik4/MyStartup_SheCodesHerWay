@@ -152,7 +152,7 @@ export default function AboutPage() {
                                         <div className="relative w-[32rem] h-[32rem]">
                                             <Image
                                                 src="https://i.postimg.cc/VLnm9Pvt/Generated_Image_November_05_2025_8_01AM_Copy.png"
-                                                alt="SheCodesHerWay logo"
+                                                alt={`${brand.name} logo`}
                                                 fill
                                                 className="object-contain"
                                             />
@@ -163,7 +163,7 @@ export default function AboutPage() {
                                     <div className="text-2xl sm:text-4xl font-bold text-foreground/80 break-words">{brand.name}</div>
                                     <p className="font-headline text-lg text-foreground/80 mt-2">{brand.mission}</p>
                                     <p className="text-lg text-foreground mt-4">
-                                        SheCodesHerWay is officially stepping into a new chapter as a purpose-driven, women-led empowerment platform. Built to inspire, uplift, and guide women, the platform supports them in learning, leading, and rising—together.
+                                        {brand.name} is officially stepping into a new chapter as a purpose-driven, women-led empowerment platform. Built to inspire, uplift, and guide women, the platform supports them in learning, leading, and rising—together.
                                     </p>
                                      <div className="mt-6 flex items-center gap-4">
                                         <Link href="https://www.linkedin.com/company/shecodesherway/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" className="text-muted-foreground hover_text-primary"><Linkedin size={24}/></Link>
@@ -183,10 +183,10 @@ export default function AboutPage() {
                             <h2 className="text-center font-headline text-3xl font-bold md:text-4xl">Our Purpose</h2>
                             <div className="prose prose-lg dark:prose-invert max-w-none mx-auto mt-6 text-center text-foreground/80">
                                 <p>
-                                    SheCodesHerWay is a women-led empowerment startup founded by {brand.founder.name} with a clear vision: to help women build their path, lead their way, and leave their mark. It is more than a platform—it is a movement, a community, and a guiding light for women who aspire to grow in technology, creativity, entrepreneurship, leadership, and emotional strength.
+                                    {brand.name} is a women-led empowerment startup founded by {brand.founder.name} with a clear vision: to help women build their path, lead their way, and leave their mark. It is more than a platform—it is a movement, a community, and a guiding light for women who aspire to grow in technology, creativity, entrepreneurship, leadership, and emotional strength.
                                 </p>
                                 <p className="font-semibold text-foreground/90">
-                                    Every woman deserves the tools, confidence, and support to rise with courage. SheCodesHerWay was created to provide exactly that—a safe, supportive, and inspiring ecosystem where women can learn, evolve, and soar beyond limits.
+                                    Every woman deserves the tools, confidence, and support to rise with courage. {brand.name} was created to provide exactly that—a safe, supportive, and inspiring ecosystem where women can learn, evolve, and soar beyond limits.
                                 </p>
                             </div>
                         </section>
@@ -225,7 +225,7 @@ export default function AboutPage() {
                                 <h2 className="font-headline text-3xl font-bold md:text-4xl">Our Flagship Program: {brand.programName}</h2>
                                 <p className="mt-4 text-2xl text-primary italic">“Empower Her to Fly Beyond Limits.”</p>
                                 <p className="mt-6 text-lg text-foreground/80">
-                                    Sangini Udaan : EmpowerFly is the heart of SheCodesHerWay—a guided mentorship and growth journey created to help women build skills, confidence, and clarity across technology, creativity, business, and leadership. This is more than a learning experience; it is a women-led, supportive journey where growth is intentional, guidance is genuine, and every woman is encouraged to move forward at her own pace.
+                                    Sangini Udaan : EmpowerFly is the heart of {brand.name}—a guided mentorship and growth journey created to help women build skills, confidence, and clarity across technology, creativity, business, and leadership. This is more than a learning experience; it is a women-led, supportive journey where growth is intentional, guidance is genuine, and every woman is encouraged to move forward at her own pace.
                                 </p>
                                 <Button asChild size="lg" className="mt-8">
                                     <Link href="/sangini-udaan">Learn More About the Program</Link>
@@ -242,7 +242,7 @@ export default function AboutPage() {
                                     <div className="absolute top-0 left-0 w-4/5 h-4/5 rounded-lg overflow-hidden shadow-2xl">
                                     <Image
                                         src="https://i.postimg.cc/sXLGCQ8M/my-photo.png"
-                                        alt="Founder of SheCodesHerWay"
+                                        alt={`Founder of ${brand.name}`}
                                         fill
                                         className="object-cover"
                                         data-ai-hint="woman portrait"
@@ -264,14 +264,14 @@ export default function AboutPage() {
                                 <div>
                                     <h2 className="font-headline text-3xl font-bold">Our Founder</h2>
                                     <p className="mt-2 text-xl font-semibold text-primary">{brand.founder.name}</p>
-                                    <p className='italic text-muted-foreground'>Founder & Head of Platform Development | SheCodesHerWay</p>
-                                    <p className="mt-4 text-foreground/80">A visionary committed to building a world where women can rise with confidence. She believes in equal opportunities, creativity, innovation, emotional empowerment, and community-driven learning. Her leadership blends compassion, courage, and creativity—the true essence of SheCodesHerWay.</p>
+                                    <p className='italic text-muted-foreground'>Founder & Head of Platform Development | {brand.name}</p>
+                                    <p className="mt-4 text-foreground/80">A visionary committed to building a world where women can rise with confidence. She believes in equal opportunities, creativity, innovation, emotional empowerment, and community-driven learning. Her leadership blends compassion, courage, and creativity—the true essence of {brand.name}.</p>
                                     <div className="mt-4 flex items-center gap-4">
                                         <Link href="https://www.linkedin.com/in/prerana-pattnaik/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" className="text-muted-foreground hover_text-primary"><Linkedin size={20}/></Link>
                                         <Link href="https://medium.com/@preranakailashpattnaik" target="_blank" rel="noopener noreferrer" aria-label="Medium" className="text-muted-foreground hover_text-primary"><FileText size={20}/></Link>
                                         <Link href="https://x.com/preranakailash4" target="_blank" rel="noopener noreferrer" aria-label="Twitter" className="text-muted-foreground hover_text-primary"><Twitter size={20}/></Link>
                                     </div>
-                                    <p className="mt-4 text-foreground/80 font-semibold italic">Note of Gratitude: It takes a village to build a vision. This platform is a result of the efforts of our incredible early team members, mentors, and community voices who believed in this idea from day one. Their passion and dedication are the foundation of SheCodesHerWay.</p>
+                                    <p className="mt-4 text-foreground/80 font-semibold italic">Note of Gratitude: It takes a village to build a vision. This platform is a result of the efforts of our incredible early team members, mentors, and community voices who believed in this idea from day one. Their passion and dedication are the foundation of {brand.name}.</p>
                                 </div>
                             </div>
                         </section>
@@ -284,13 +284,13 @@ export default function AboutPage() {
                                 <Card className="shadow-xl">
                                     <CardContent className="p-8">
                                         <div className="prose prose-lg dark:prose-invert max-w-none text-foreground/80 space-y-4">
-                                            <p>SheCodesHerWay was born from a deeply personal journey of resilience, self-belief, and the courage to begin again.</p>
+                                            <p>{brand.name} was born from a deeply personal journey of resilience, self-belief, and the courage to begin again.</p>
                                             <p>During my academic years and the early phase of my career, I was confident, hardworking, and deeply passionate about coding. Technology was never just a skill for me—it was a way of thinking, creating, and solving problems. However, after a long career gap, I faced the reality that traditional career paths were no longer welcoming or flexible.</p>
                                             <p className="font-semibold text-foreground/90 italic">At that moment, I made a clear decision: If the existing paths no longer worked, I would create my own. I would code my way.</p>
                                             <p>By choosing not to hold myself back, I found my path forward. That courage, consistency, and belief led to success—and with that success came a deeper responsibility. If I could rise by believing in myself, it became my turn to pass that empowerment and self-belief on to others.</p>
-                                            <p>That belief became the foundation of SheCodesHerWay—a platform designed for women who want to restart, rebuild, or redefine their careers without pressure, comparison, or limitation. It is built on the idea that every woman deserves the freedom to grow at her own pace and design success on her own terms.</p>
+                                            <p>That belief became the foundation of {brand.name}—a platform designed for women who want to restart, rebuild, or redefine their careers without pressure, comparison, or limitation. It is built on the idea that every woman deserves the freedom to grow at her own pace and design success on her own terms.</p>
                                             <p>While shaping the platform, it became evident that true transformation requires more than technical skills alone. Women need emotional support, confidence-building, mentorship, and a strong sense of community. This realization led to the creation of our flagship women empowerment program, Sangini Udaan : EmpowerFly—a journey of companionship, growth, and empowerment.</p>
-                                            <p className="font-semibold text-foreground/90">SheCodesHerWay exists to remind women that career gaps do not define potential, and pauses do not erase talent. With the right guidance, skills, and support, every woman can rise—her way.</p>
+                                            <p className="font-semibold text-foreground/90">{brand.name} exists to remind women that career gaps do not define potential, and pauses do not erase talent. With the right guidance, skills, and support, every woman can rise—her way.</p>
                                         </div>
                                     </CardContent>
                                 </Card>
@@ -299,7 +299,7 @@ export default function AboutPage() {
                                         <div className="relative aspect-square w-full">
                                             <Image
                                                 src="https://i.postimg.cc/VLnm9Pvt/Generated_Image_November_05_2025_8_01AM_Copy.png"
-                                                alt="SheCodesHerWay inspirational image"
+                                                alt={`${brand.name} inspirational image`}
                                                 fill
                                                 className="object-contain"
                                             />
@@ -358,10 +358,10 @@ export default function AboutPage() {
                            <Card className="bg-accent/20 border-accent/50 shadow-lg">
                                 <CardHeader className="text-center">
                                     <CardTitle className="font-headline text-2xl md:text-3xl">
-                                        Join SheCodesHerWay – Early Core Contributors!
+                                        Join {brand.name} – Early Core Contributors!
                                     </CardTitle>
                                     <CardContent className="text-lg text-accent-foreground/90 pt-4">
-                                        We’re inviting passionate, purpose-driven individuals to collaborate with us at SheCodesHerWay, a women-led, mission-driven startup (pre-seed stage).
+                                        We’re inviting passionate, purpose-driven individuals to collaborate with us at {brand.name}, a women-led, mission-driven startup (pre-seed stage).
                                     </CardContent>
                                 </CardHeader>
                                 <CardContent>
@@ -407,7 +407,7 @@ export default function AboutPage() {
                         <section className="max-w-4xl mx-auto text-center">
                             <h2 className="font-headline text-3xl font-bold md:text-4xl">Join the Movement</h2>
                             <p className="mt-4 text-lg text-foreground/80">
-                                SheCodesHerWay isn’t just a startup — it’s a movement of women who dare to dream, build, and rise together. Whether you want to learn a new skill, start your career, or launch your own venture, we’re here to guide, mentor, and celebrate your journey.
+                                {brand.name} isn’t just a startup — it’s a movement of women who dare to dream, build, and rise together. Whether you want to learn a new skill, start your career, or launch your own venture, we’re here to guide, mentor, and celebrate your journey.
                             </p>
                              <Button asChild size="lg" className="mt-8">
                                 <Link href="/apply">Join Us - Let's Build Your Path</Link>
@@ -426,7 +426,7 @@ export default function AboutPage() {
                                                 <CardTitle>Inclusive Participation Policy</CardTitle>
                                             </CardHeader>
                                             <CardContent className="text-lg text-accent-foreground/90">
-                                                <p>SheCodesHerWay welcomes both women and men to join us as Early Core Contributors, and Mentors, contributing their skills, experience, and guidance to help build and grow the platform.</p>
+                                                <p>{brand.name} welcomes both women and men to join us as Early Core Contributors, and Mentors, contributing their skills, experience, and guidance to help build and grow the platform.</p>
                                                 <p className="mt-4">However, our Women Empowerment Program — Sangini Udaan : EmpowerFly — is exclusively designed for women, and only women are eligible to enroll as participants in this program.</p>
                                                 <p className="mt-4">As the platform evolves, we will be introducing Hackathons, Collaborative Projects, Community Events, and other platform activities that will be accessible to all genders, fostering an inclusive and collaborative learning ecosystem.</p>
                                             </CardContent>

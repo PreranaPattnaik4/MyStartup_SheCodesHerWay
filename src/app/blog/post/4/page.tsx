@@ -12,7 +12,7 @@ import { Separator } from '@/components/ui/separator';
 
 const post = {
     id: '4',
-    title: 'SheCodesHerWay: Where Women Build Their Path, Lead Their Way, and Leave Their Mark',
+    title: `${brand.name}: Where Women Build Their Path, Lead Their Way, and Leave Their Mark`,
     author: 'Prerana K.',
     authorAvatar: 'https://i.postimg.cc/HkLGWcM4/1718292767884.jpg',
     date: 'August 1, 2024',
@@ -56,9 +56,9 @@ export default function BlogPostPage4() {
                 </div>
 
                 <div className="prose prose-lg dark:prose-invert max-w-none">
-                    <p className="lead">SheCodesHerWay: Where Women Build Their Path, Lead Their Way, and Leave Their Mark</p>
-                    <p>Every movement begins with a spark — a spark of courage, vision, and hope. SheCodesHerWay was born from such a spark. A dream to create a space where women don’t just learn skills, but rise with confidence. Where they don’t simply follow paths — they build their own.</p>
-                    <p>Today, SheCodesHerWay is officially stepping into a bold new chapter as a women-led digital empowerment platform, designed to uplift, guide, and inspire women to learn, lead, and rise together — across India and beyond.</p>
+                    <p className="lead">{brand.name}: Where Women Build Their Path, Lead Their Way, and Leave Their Mark</p>
+                    <p>Every movement begins with a spark — a spark of courage, vision, and hope. {brand.name} was born from such a spark. A dream to create a space where women don’t just learn skills, but rise with confidence. Where they don’t simply follow paths — they build their own.</p>
+                    <p>Today, {brand.name} is officially stepping into a bold new chapter as a women-led digital empowerment platform, designed to uplift, guide, and inspire women to learn, lead, and rise together — across India and beyond.</p>
                     <p>This is more than a platform. It is a movement. It is a community. It is a shared rise.</p>
 
                     <Separator className="my-12" />
@@ -80,7 +80,7 @@ export default function BlogPostPage4() {
                     <section className="space-y-6">
                         <h2>{brand.programName} — Our Flagship Program</h2>
                         <blockquote>“Empower Her to Fly Beyond Limits.”</blockquote>
-                        <p>At the heart of SheCodesHerWay lies {brand.programName}, our flagship women-led empowerment journey. {brand.programName} is designed to help women rise with confidence, clarity, and purpose through mentorship, guided learning, community support, and real-world exposure.</p>
+                        <p>At the heart of {brand.name} lies {brand.programName}, our flagship women-led empowerment journey. {brand.programName} is designed to help women rise with confidence, clarity, and purpose through mentorship, guided learning, community support, and real-world exposure.</p>
                         <p>Whether a woman dreams of a career in tech, wants to build a business, hopes to grow as a creator, or is rediscovering her potential after a career break — {brand.programName} is her runway to flight.</p>
                         <p>Because when one woman takes flight, she inspires a thousand more to soar.</p>
                         
@@ -113,7 +113,7 @@ export default function BlogPostPage4() {
                     
                     <section className="space-y-6">
                         <h2>The Sangini Network — Our Community</h2>
-                        <p>Every woman who joins SheCodesHerWay becomes a Sangini — a friend, a sister, a changemaker.
+                        <p>Every woman who joins {brand.name} becomes a Sangini — a friend, a sister, a changemaker.
                         Our community is built on:</p>
                         <ul>
                             <li>Women supporting women</li>
@@ -127,8 +127,8 @@ export default function BlogPostPage4() {
                     <Separator className="my-12" />
 
                     <section className="space-y-6">
-                        <h2>What We Do at SheCodesHerWay</h2>
-                        <p>SheCodesHerWay offers a complete digital ecosystem to support women from learning → leadership → launch.
+                        <h2>What We Do at {brand.name}</h2>
+                        <p>{brand.name} offers a complete digital ecosystem to support women from learning → leadership → launch.
                         Key Platform Features:</p>
                         <ul>
                             <li>{brand.programName} Program</li>
@@ -144,12 +144,12 @@ export default function BlogPostPage4() {
                     <Separator className="my-12" />
 
                     <section className="space-y-6">
-                        <h2>New Updates — Grow With SheCodesHerWay</h2>
-                        <p>Where Passion Meets Purpose to Build Something Meaningful Together. Join our mission to build a world where every woman has the opportunity to soar. Grow With SheCodesHerWay invites passionate individuals to contribute their skills, creativity, and commitment toward building an inclusive, women-led empowerment ecosystem. This is your chance to grow alongside a purpose-driven platform — while creating real, meaningful impact.</p>
+                        <h2>New Updates — Grow With {brand.name}</h2>
+                        <p>Where Passion Meets Purpose to Build Something Meaningful Together. Join our mission to build a world where every woman has the opportunity to soar. Grow With {brand.name} invites passionate individuals to contribute their skills, creativity, and commitment toward building an inclusive, women-led empowerment ecosystem. This is your chance to grow alongside a purpose-driven platform — while creating real, meaningful impact.</p>
                         
                         <section className="mt-10 space-y-4">
-                            <h3>Early Core Contributor Application | SheCodesHerWay</h3>
-                            <p>Join the Founding Circle. We are inviting students, freshers, and working professionals to join SheCodesHerWay as Early Core Contributors on a part-time collaboration basis. As an Early Core Contributor, you will:</p>
+                            <h3>Early Core Contributor Application | {brand.name}</h3>
+                            <p>Join the Founding Circle. We are inviting students, freshers, and working professionals to join {brand.name} as Early Core Contributors on a part-time collaboration basis. As an Early Core Contributor, you will:</p>
                             <ul>
                                 <li>Take ownership of high-impact modules</li>
                                 <li>Build specialized tools, creative assets, and strategic systems</li>
@@ -180,7 +180,7 @@ export default function BlogPostPage4() {
                     <section className="space-y-6">
                         <h2>A Note of Gratitude to Our Founder</h2>
                         <p><strong>Founder: Prerana Kailash Pattnaik</strong></p>
-                        <p>SheCodesHerWay exists because of a belief — that every woman deserves the opportunity to rise. As the founder and developer, Prerana Kailash Pattnaik built more than a platform. She built a community, a vision, and a pathway for women to discover their strength, skills, and wings. From idea to impact, her dedication transformed a dream into a living ecosystem of empowerment.</p>
+                        <p>{brand.name} exists because of a belief — that every woman deserves the opportunity to rise. As the founder and developer, Prerana Kailash Pattnaik built more than a platform. She built a community, a vision, and a pathway for women to discover their strength, skills, and wings. From idea to impact, her dedication transformed a dream into a living ecosystem of empowerment.</p>
                     </section>
                     
                     <Separator className="my-12" />
@@ -195,7 +195,7 @@ export default function BlogPostPage4() {
 
                     <section className="space-y-6">
                         <h2>Join Us — Let’s Build a Future Where Women Rise Higher</h2>
-                        <p>SheCodesHerWay is more than a platform.
+                        <p>{brand.name} is more than a platform.
                         It is a movement of confidence, creativity, and courage.
                         Whether you join as a learner, mentor, or contributor, you become part of a story bigger than yourself — a story where women rise, lead, and inspire.</p>
                         <blockquote>Because when one woman rises… the world rises with her.</blockquote>
@@ -203,10 +203,10 @@ export default function BlogPostPage4() {
                         <section className="mt-10 space-y-4">
                             <h4>Connect With Us</h4>
                             <ul>
-                                <li><strong>Website:</strong> <a href="https://shecodesherways.com" target="_blank" rel="noopener noreferrer">https://shecodesherways.com</a></li>
-                                <li><strong>Email:</strong> contact@shecodesherway.com</li>
+                                <li><strong>Website:</strong> <a href={`https://${brand.website}`} target="_blank" rel="noopener noreferrer">{brand.website}</a></li>
+                                <li><strong>Email:</strong> {brand.email}</li>
                                 <li><strong>Instagram:</strong> @shecodesherway</li>
-                                <li><strong>LinkedIn:</strong> SheCodesHerWay</li>
+                                <li><strong>LinkedIn:</strong> {brand.name}</li>
                             </ul>
                         </section>
                     </section>

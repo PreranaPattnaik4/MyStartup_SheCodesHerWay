@@ -1,6 +1,7 @@
 
 import Header from '@/components/header';
 import Footer from '@/components/footer';
+import { brand } from '@/lib/brand';
 
 export default function PrivacyPage() {
   return (
@@ -20,7 +21,7 @@ export default function PrivacyPage() {
             <div className="prose prose-stone dark:prose-invert max-w-4xl mx-auto">
                 <h2>1. Introduction</h2>
                 <p>
-                    Welcome to SheCodesHerWay. We are committed to protecting your personal information and your right to privacy. If you have any questions or concerns about our policy, or our practices with regards to your personal information, please contact us.
+                    Welcome to {brand.name}. We are committed to protecting your personal information and your right to privacy. If you have any questions or concerns about our policy, or our practices with regards to your personal information, please contact us.
                 </p>
                 
                 <h2>2. Information We Collect</h2>

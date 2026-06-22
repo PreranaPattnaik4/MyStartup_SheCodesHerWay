@@ -179,13 +179,13 @@ export default function TeamCulturePage() {
                 <Separator />
 
                 <SectionCard icon={Info} title="Final Disclaimer & Founder’s Note 🌸">
-                    <p>Participation is voluntary and non-binding. Recognition, certificates, and announcements are for acknowledgment only. SheCodesHerWay is built on trust, collaboration, and shared purpose. Every contributor plays a meaningful role in empowering women.</p>
+                    <p>Participation is voluntary and non-binding. Recognition, certificates, and announcements are for acknowledgment only. {brand.name} is built on trust, collaboration, and shared purpose. Every contributor plays a meaningful role in empowering women.</p>
                     <h4 className="font-semibold mt-4">Connect With Us</h4>
                     <ul className="not-prose">
-                        <li>🌐 <strong>Website:</strong> <Link href="https://shecodesherways.com" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">shecodesherways.com</Link></li>
+                        <li>🌐 <strong>Website:</strong> <Link href={`https://${brand.website}`} target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">{brand.website}</Link></li>
                         <li>📩 <strong>Email:</strong> <a href={`mailto:${brand.email}`} className="text-primary hover:underline">{brand.email}</a></li>
                         <li>📸 <strong>Instagram:</strong> @shecodesherway</li>
-                        <li>🔗 <strong>LinkedIn:</strong> SheCodesHerWay</li>
+                        <li>🔗 <strong>LinkedIn:</strong> {brand.name}</li>
                     </ul>
                 </SectionCard>
 

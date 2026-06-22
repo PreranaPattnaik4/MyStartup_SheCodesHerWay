@@ -1,3 +1,4 @@
+
 import type { Metadata } from 'next';
 import { Toaster } from '@/components/ui/toaster';
 import { cn } from '@/lib/utils';
@@ -6,7 +7,7 @@ import { FirebaseClientProvider } from '@/firebase/client-provider';
 import ChatbotWidget from '@/components/chatbot/chatbot-widget';
 
 export const metadata: Metadata = {
-  title: 'EmpowerFly by SheCodesHerWay',
+  title: 'EmpowerFly by SheCodesHerWays',
   description: 'Build Your Path. Lead Your Way. Leave Your Mark.',
 };
 
