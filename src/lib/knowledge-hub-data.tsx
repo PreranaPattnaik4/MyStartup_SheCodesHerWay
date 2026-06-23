@@ -1,4 +1,4 @@
-import { BookOpen, FileText, Bot, Code, Briefcase, Target, Wrench, Map, Star, Download, LucideIcon, Rocket, Heart, Sparkles, Zap, ShieldCheck, PenTool, TrendingUp, Clock, CheckCircle2, Users, Mic } from 'lucide-react';
+import { BookOpen, FileText, Bot, Code, Briefcase, Target, Wrench, Map, Star, Download, LucideIcon, Rocket, Heart, Sparkles, Zap, ShieldCheck, PenTool, TrendingUp, Clock, CheckCircle2, Users, Mic, RefreshCw, Lightbulb, Pilcrow, Eye, Cpu, UserCheck, Goal } from 'lucide-react';
 import React from 'react';
 
 export interface ResourceItem {
@@ -333,6 +333,144 @@ export const allResources: ResourceItem[] = [
     )
   },
   {
+    id: 'gui-biz-1',
+    title: "Entrepreneurship & Business Mindset",
+    description: "Moving from idea to execution: How to build a sustainable startup or small business.",
+    category: 'guides',
+    icon: Rocket,
+    href: '/knowledge-hub/article/gui-biz-1',
+    readTime: '10 min read',
+    dateAdded: '2025-11-28',
+    content: (
+      <div className="space-y-8">
+        <section>
+          <h2 className="text-3xl font-bold mb-4">Introduction</h2>
+          <p className="text-lg text-foreground/80 leading-relaxed">
+            Entrepreneurship is more than starting a business—it's about identifying opportunities, solving problems, and creating value. An entrepreneurial mindset helps individuals think creatively, take initiative, and adapt to challenges.
+          </p>
+        </section>
+
+        <section className="bg-primary/5 p-8 rounded-2xl border border-primary/10">
+          <h2 className="text-2xl font-bold mb-6 flex items-center gap-2">
+            <Target className="text-primary" /> Learning Objectives
+          </h2>
+          <ul className="grid sm:grid-cols-2 gap-4">
+            {[
+              "Understand entrepreneurship fundamentals",
+              "Develop problem-solving skills",
+              "Learn how businesses create value",
+              "Build resilience and adaptability"
+            ].map(obj => (
+              <li key={obj} className="flex items-start gap-2 text-foreground/80">
+                <CheckCircle2 className="h-5 w-5 text-green-500 mt-1 flex-shrink-0" />
+                <span>{obj}</span>
+              </li>
+            ))}
+          </ul>
+        </section>
+
+        <section className="space-y-12">
+          <h2 className="text-2xl font-bold mb-4">Key Topics</h2>
+          
+          <div className="space-y-4">
+            <h3 className="text-xl font-bold text-primary flex items-center gap-2">
+              <Lightbulb className="h-6 w-6" /> What is Entrepreneurship?
+            </h3>
+            <p className="text-foreground/80">Entrepreneurship is driven by three core pillars:</p>
+            <ul className="list-disc list-inside space-y-2 text-foreground/70 ml-4">
+              <li><strong>Innovation and Creativity:</strong> Thinking differently to create new ideas.</li>
+              <li><strong>Identifying Opportunities:</strong> Recognizing gaps and needs in the market.</li>
+              <li><strong>Creating Solutions:</strong> Building something that solves a real problem.</li>
+            </ul>
+          </div>
+
+          <div className="bg-muted/30 p-8 rounded-2xl border">
+            <h3 className="text-xl font-bold mb-6">Characteristics of Successful Entrepreneurs</h3>
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+              {[
+                { t: "Leadership", i: Users },
+                { t: "Risk-taking", i: Rocket },
+                { t: "Persistence", i: Zap },
+                { t: "Adaptability", i: RefreshCw }
+              ].map(char => (
+                <div key={char.t} className="flex flex-col items-center text-center p-4 bg-white rounded-xl shadow-sm border">
+                  <char.i className="h-8 w-8 text-primary mb-3" />
+                  <span className="font-bold text-sm">{char.t}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          <div className="space-y-6">
+            <h3 className="text-xl font-bold text-primary">Design Thinking for Problem Solving</h3>
+            <p className="text-foreground/80">A human-centered approach to innovation:</p>
+            <div className="relative">
+               <div className="absolute left-4 top-0 bottom-0 w-0.5 bg-primary/20"></div>
+               <div className="space-y-6 ml-10">
+                 {[
+                   { t: "Empathize", d: "Understand your users' needs and motivations." },
+                   { t: "Define", d: "Clearly state the problem you want to solve." },
+                   { t: "Ideate", d: "Brainstorm creative solutions without judgment." },
+                   { t: "Prototype", d: "Build a simple, low-cost version of your solution." },
+                   { t: "Test", d: "Get feedback and iterate on your prototype." }
+                 ].map((step, i) => (
+                   <div key={step.t} className="relative">
+                     <div className="absolute -left-10 top-1 w-6 h-6 rounded-full bg-primary flex items-center justify-center text-white text-xs font-bold">{i+1}</div>
+                     <h4 className="font-bold text-lg">{step.t}</h4>
+                     <p className="text-foreground/70 text-sm">{step.d}</p>
+                   </div>
+                 ))}
+               </div>
+            </div>
+          </div>
+
+          <div className="bg-secondary/20 p-8 rounded-2xl border border-secondary/30">
+            <h3 className="text-xl font-bold mb-4">Business Model Basics</h3>
+            <div className="grid sm:grid-cols-2 gap-6">
+              <div className="space-y-2">
+                <h4 className="font-bold flex items-center gap-2"><Users className="h-4 w-4 text-primary" /> Customers</h4>
+                <p className="text-sm text-foreground/70">Who are you serving? What are their pain points?</p>
+              </div>
+              <div className="space-y-2">
+                <h4 className="font-bold flex items-center gap-2"><Briefcase className="h-4 w-4 text-primary" /> Products & Services</h4>
+                <p className="text-sm text-foreground/70">What are you offering? How does it create value?</p>
+              </div>
+              <div className="space-y-2">
+                <h4 className="font-bold flex items-center gap-2"><Zap className="h-4 w-4 text-primary" /> Revenue Streams</h4>
+                <p className="text-sm text-foreground/70">How will your business sustain itself financially?</p>
+              </div>
+              <div className="space-y-2">
+                <h4 className="font-bold flex items-center gap-2"><Rocket className="h-4 w-4 text-primary" /> Marketing</h4>
+                <p className="text-sm text-foreground/70">How will people find out about your solution?</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section>
+          <div className="bg-white p-8 rounded-2xl border border-dashed border-primary/40 text-center">
+            <h3 className="font-bold text-primary text-2xl mb-4 flex items-center justify-center gap-2">
+              <PenTool className="h-6 w-6" /> Practical Activity
+            </h3>
+            <p className="text-lg text-foreground/80 mb-6">
+              Identify a problem in your community and brainstorm three possible solutions.
+            </p>
+            <p className="text-sm text-muted-foreground italic">
+              "Every great impact begins with a single observant mind."
+            </p>
+          </div>
+        </section>
+
+        <section className="text-center pt-8 border-t">
+          <h2 className="text-3xl font-bold font-headline mb-4">Conclusion</h2>
+          <p className="text-xl text-foreground/80 leading-relaxed italic max-w-3xl mx-auto">
+            "Entrepreneurial thinking empowers individuals to transform challenges into opportunities and create meaningful impact. It's not just about business—it's a way of looking at the world."
+          </p>
+        </section>
+      </div>
+    )
+  },
+  {
     id: 'tut-vibe-1',
     title: "Intro to Vibe Coding: Build without Fear",
     description: "Learn how to use natural language and intent to create applications using AI-assisted tools.",
@@ -352,15 +490,6 @@ export const allResources: ResourceItem[] = [
     href: '/knowledge-hub/article/tut-canva-1',
     readTime: '8 min read',
     dateAdded: '2025-11-22',
-  },
-  {
-    id: 'gui-biz-1',
-    title: "Entrepreneurship & Business Mindset",
-    description: "Moving from idea to execution: How to build a sustainable startup or small business.",
-    category: 'guides',
-    icon: Rocket,
-    href: '/knowledge-hub/article/gui-biz-1',
-    dateAdded: '2025-11-28',
   },
   {
     id: 'ai-resp-1',
