@@ -35,7 +35,8 @@ import {
   ArrowRight,
   Settings,
   ListChecks,
-  UserCircle
+  UserCircle,
+  GraduationCap
 } from 'lucide-react';
 import React from 'react';
 import { cn } from '@/lib/utils';
@@ -77,6 +78,173 @@ export const hubCategories = [
 ];
 
 export const allResources: ResourceItem[] = [
+  {
+    id: 'women-empowerment-guide',
+    title: "Women Empowerment: Potential, Confidence & Change",
+    description: "Unlock your full potential with this essential guide on confidence, financial independence, leadership, and digital mastery.",
+    category: 'guides',
+    icon: Heart,
+    href: '/knowledge-hub/article/women-empowerment-guide',
+    readTime: '18 min read',
+    dateAdded: '2026-04-01',
+    trending: true,
+    popular: true,
+    content: (
+      <div className="space-y-12">
+        <section>
+          <h2 className="text-3xl font-bold mb-4 font-headline">Introduction</h2>
+          <p className="text-lg text-foreground/80 leading-relaxed">
+            Women empowerment is the process of enabling women and girls to gain confidence, develop skills, access opportunities, make informed decisions, and achieve their full potential. Empowerment begins with self-belief and grows through education, financial independence, leadership, and continuous personal development.
+          </p>
+          <div className="mt-8 bg-primary/10 p-6 rounded-2xl border border-primary/20 text-center">
+            <p className="text-xl font-bold text-primary italic font-headline">
+              "Empowered women contribute to stronger families, thriving communities, and innovative workplaces."
+            </p>
+          </div>
+        </section>
+
+        <section className="bg-muted/30 p-8 rounded-3xl border">
+          <h2 className="text-2xl font-bold mb-6 flex items-center gap-2">
+            <Eye className="text-primary" /> What is Women Empowerment?
+          </h2>
+          <p className="mb-6 leading-relaxed">It means giving women the knowledge, resources, opportunities, and confidence needed to take control of their lives and shape their futures. An empowered woman:</p>
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+             {[
+               { t: "Believes in Herself", i: Star },
+               { t: "Informed Decisions", i: Target },
+               { t: "Pursues Growth", i: GraduationCap },
+               { t: "Takes Leadership", i: Users },
+               { t: "Supports Others", i: Heart },
+               { t: "Social Impact", i: Globe }
+             ].map((item, i) => (
+               <div key={i} className="bg-white p-4 rounded-xl border flex items-center gap-3 shadow-sm">
+                 <div className="bg-primary/10 p-2 rounded-lg"><item.i className="h-5 w-5 text-primary"/></div>
+                 <span className="font-semibold text-sm">{item.t}</span>
+               </div>
+             ))}
+          </div>
+        </section>
+
+        <section className="space-y-8">
+           <h2 className="text-2xl font-bold font-headline">The 5 Pillars of Empowerment</h2>
+           <div className="grid gap-6">
+              {[
+                { 
+                  id: 1, 
+                  title: "Self-Confidence & Self-Belief", 
+                  desc: "Confidence is the foundation. Learn to celebrate achievements, practice positive self-talk, and step outside your comfort zone.",
+                  icon: Sparkles,
+                  color: "bg-blue-50 border-blue-100 text-blue-700"
+                },
+                { 
+                  id: 2, 
+                  title: "Education & Lifelong Learning", 
+                  desc: "Education opens doors to independence. Embrace a growth mindset and believe abilities are developed through effort.",
+                  icon: GraduationCap,
+                  color: "bg-green-50 border-green-100 text-green-700"
+                },
+                { 
+                  id: 3, 
+                  title: "Financial Independence", 
+                  desc: "Financial literacy empowers choice. Master budgeting, saving, and investing to build a secure future.",
+                  icon: DollarSign,
+                  color: "bg-amber-50 border-amber-100 text-amber-700"
+                },
+                { 
+                  id: 4, 
+                  title: "Leadership Development", 
+                  desc: "Leadership is impact. Develop communication and emotional intelligence to guide others toward positive goals.",
+                  icon: Users,
+                  color: "bg-rose-50 border-rose-100 text-rose-700"
+                },
+                { 
+                  id: 5, 
+                  title: "Digital Skills & Technology", 
+                  desc: "Technology creates pathways. Mastery of AI, content creation, and software tools bridges the opportunity gap.",
+                  icon: Cpu,
+                  color: "bg-indigo-50 border-indigo-100 text-indigo-700"
+                }
+              ].map(pillar => (
+                <Card key={pillar.id} className={cn("border shadow-sm", pillar.color)}>
+                  <CardHeader className="flex flex-row items-start gap-4 p-6">
+                    <div className="p-3 bg-white rounded-2xl shadow-sm">
+                      <pillar.icon className="h-6 w-6" />
+                    </div>
+                    <div>
+                      <CardTitle className="text-xl font-bold">{pillar.id}. {pillar.title}</CardTitle>
+                      <p className="mt-2 opacity-90 leading-relaxed">{pillar.desc}</p>
+                    </div>
+                  </CardHeader>
+                </Card>
+              ))}
+           </div>
+        </section>
+
+        <section className="bg-secondary/20 p-8 rounded-3xl border border-secondary/30">
+          <h2 className="text-2xl font-bold mb-6 font-headline">Overcoming Challenges</h2>
+          <div className="grid md:grid-cols-2 gap-8">
+            <div className="space-y-4">
+              <h3 className="text-lg font-bold flex items-center gap-2"><Target className="text-primary"/> Common Obstacles</h3>
+              <ul className="space-y-2 text-sm text-foreground/80">
+                <li className="flex items-center gap-2"><div className="h-1.5 w-1.5 rounded-full bg-rose-400"/> Self-doubt & Imposter Syndrome</li>
+                <li className="flex items-center gap-2"><div className="h-1.5 w-1.5 rounded-full bg-rose-400"/> Fear of failure</li>
+                <li className="flex items-center gap-2"><div className="h-1.5 w-1.5 rounded-full bg-rose-400"/> Limited access to opportunities</li>
+                <li className="flex items-center gap-2"><div className="h-1.5 w-1.5 rounded-full bg-rose-400"/> Societal expectations</li>
+              </ul>
+            </div>
+            <div className="space-y-4">
+              <h3 className="text-lg font-bold flex items-center gap-2"><CheckCircle2 className="text-primary"/> Strategies for Success</h3>
+              <ul className="space-y-2 text-sm text-foreground/80">
+                <li className="flex items-center gap-2 font-semibold text-primary">✔ Build support networks</li>
+                <li className="flex items-center gap-2 font-semibold text-primary">✔ Seek mentors proactively</li>
+                <li className="flex items-center gap-2 font-semibold text-primary">✔ Focus on continuous learning</li>
+                <li className="flex items-center gap-2 font-semibold text-primary">✔ Practice radical self-care</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        <section>
+          <div className="bg-white p-8 rounded-2xl border border-dashed border-primary/40 text-center space-y-6">
+            <h3 className="font-bold text-primary text-2xl flex items-center justify-center gap-2">
+              <PenTool className="h-6 w-6" /> Community Impact Activity
+            </h3>
+            <p className="text-lg text-foreground/80 max-w-2xl mx-auto">
+              Identify a challenge affecting women or girls in your community. Create a simple 5-step action plan: Problem Definition, Solution Mapping, Resource Gathering, Team Building, and Impact Measurement.
+            </p>
+            <Button variant="outline" className="font-bold">Download Impact Template <Download className="ml-2 h-4 w-4" /></Button>
+          </div>
+        </section>
+
+        <div className="bg-primary text-primary-foreground p-10 rounded-3xl space-y-8 shadow-xl">
+           <h2 className="text-3xl font-bold font-headline text-center">Action Plan for Personal Growth</h2>
+           <div className="grid gap-4">
+              {[
+                "Set one clear personal goal.",
+                "Define one specific learning objective.",
+                "Establish one career milestone.",
+                "Identify your resources and support systems.",
+                "Take consistent action every single week."
+              ].map((step, i) => (
+                <div key={i} className="flex items-center gap-4 bg-white/10 p-4 rounded-xl backdrop-blur-sm border border-white/20">
+                  <div className="bg-white text-primary w-8 h-8 rounded-full flex items-center justify-center font-bold flex-shrink-0">
+                    {i + 1}
+                  </div>
+                  <p className="font-medium">{step}</p>
+                </div>
+              ))}
+           </div>
+        </div>
+
+        <section className="text-center pt-8 border-t">
+          <h2 className="text-3xl font-bold font-headline mb-4">Conclusion</h2>
+          <p className="text-xl text-foreground/80 leading-relaxed italic max-w-3xl mx-auto">
+            "Women empowerment is a journey of growth, confidence, and leadership. Every woman has the potential to innovate and inspire. Remember: Empowered women empower women, and together they transform the world."
+          </p>
+        </section>
+      </div>
+    )
+  },
   {
     id: 'car-return-guide',
     title: "Returning to Work After a Career Break",
