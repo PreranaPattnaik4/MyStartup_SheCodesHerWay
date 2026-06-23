@@ -1,4 +1,3 @@
-
 import { BookOpen, FileText, Bot, Code, Briefcase, Target, Wrench, Map, Star, Download, LucideIcon, Rocket, Heart, Sparkles, Zap, ShieldCheck, PenTool, TrendingUp, Clock, CheckCircle2, Users, Mic } from 'lucide-react';
 import React from 'react';
 
@@ -35,7 +34,6 @@ export const hubCategories = [
 ];
 
 export const allResources: ResourceItem[] = [
-  // Interview Prep
   {
     id: 'hr-interview-prep',
     title: "HR Interview Preparation Guide",
@@ -137,29 +135,6 @@ export const allResources: ResourceItem[] = [
       </div>
     )
   },
-  // Tutorials
-  {
-    id: 'tut-vibe-1',
-    title: "Intro to Vibe Coding: Build without Fear",
-    description: "Learn how to use natural language and intent to create applications using AI-assisted tools.",
-    category: 'tutorials',
-    icon: Zap,
-    href: '/knowledge-hub/article/tut-vibe-1',
-    readTime: '6 min read',
-    dateAdded: '2025-11-20',
-    trending: true,
-  },
-  {
-    id: 'tut-canva-1',
-    title: "Canva for Creative Content: Design Basics",
-    description: "A step-by-step guide to creating professional social media graphics and brand assets.",
-    category: 'tutorials',
-    icon: Sparkles,
-    href: '/knowledge-hub/article/tut-canva-1',
-    readTime: '8 min read',
-    dateAdded: '2025-11-22',
-  },
-  // Guides
   {
     id: 'gui-lead-1',
     title: "Confidence & Leadership Foundations",
@@ -167,6 +142,7 @@ export const allResources: ResourceItem[] = [
     category: 'guides',
     icon: Heart,
     href: '/knowledge-hub/article/gui-lead-1',
+    readTime: '12 min read',
     dateAdded: '2025-11-25',
     downloadAvailable: true,
     content: (
@@ -204,7 +180,7 @@ export const allResources: ResourceItem[] = [
             {[
               { t: "1. Develop a Growth Mindset", d: "View mistakes as learning opportunities rather than failures. Every challenge helps you improve and become stronger." },
               { t: "2. Set Small Achievable Goals", d: "Start with manageable goals and gradually increase the difficulty. Achieving small successes boosts confidence over time." },
-              { t: "3. Practice Positive Self-Talk", d: "Replace negative thoughts with encouraging statements such as: 'I can learn this', 'I am improving every day'." },
+              { t: "3. Practice Positive Self-Talk", d: "Replace negative thoughts with encouraging statements such as: 'I can learn this', 'I am improving every day', and 'I am capable of handling challenges'." },
               { t: "4. Improve Communication Skills", d: "Practice speaking clearly, listening actively, and expressing your ideas confidently." }
             ].map(step => (
               <div key={step.t} className="bg-white p-6 rounded-xl border shadow-sm">
@@ -213,8 +189,8 @@ export const allResources: ResourceItem[] = [
               </div>
             ))}
           </div>
-          <div className="bg-accent/10 p-6 rounded-xl border border-accent/20 italic text-center text-accent-foreground">
-            "Step Outside Your Comfort Zone: Try new experiences, participate in discussions, and volunteer for projects."
+          <div className="bg-accent/10 p-6 rounded-xl border border-accent/20 italic text-center text-accent-foreground font-semibold">
+            "Step Outside Your Comfort Zone: Try new experiences, participate in discussions, volunteer for projects, and embrace opportunities for growth."
           </div>
         </section>
 
@@ -223,11 +199,11 @@ export const allResources: ResourceItem[] = [
           <p className="text-foreground/80 mb-6 leading-relaxed">
             Leadership is the ability to influence, motivate, and guide individuals or teams toward achieving a common goal. Leadership is not about authority; it is about responsibility, service, and creating a positive impact.
           </p>
-          <div className="bg-muted/50 p-8 rounded-2xl">
+          <div className="bg-muted/50 p-8 rounded-2xl border">
             <h3 className="text-xl font-bold mb-6 text-center">Characteristics of Effective Leaders</h3>
             <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
               {["Integrity", "Accountability", "Empathy", "Communication", "Problem-Solving", "Vision", "Adaptability", "Collaboration"].map(trait => (
-                <div key={trait} className="bg-white p-3 rounded-lg shadow-sm text-center text-sm font-semibold border">
+                <div key={trait} className="bg-white p-3 rounded-lg shadow-sm text-center text-sm font-semibold border border-primary/10">
                   {trait}
                 </div>
               ))}
@@ -261,11 +237,11 @@ export const allResources: ResourceItem[] = [
           <h2 className="text-2xl font-bold mb-8 text-center">Essential Leadership Skills</h2>
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
             {[
-              { t: "Communication", d: "Strong leaders communicate clearly, listen actively, and ensure everyone understands goals." },
+              { t: "Communication", d: "Strong leaders communicate clearly, listen actively, and ensure everyone understands goals and expectations." },
               { t: "Decision-Making", d: "Leaders evaluate options, consider consequences, and make informed decisions." },
-              { t: "Team Building", d: "Effective leaders encourage collaboration, trust, and mutual respect among members." },
+              { t: "Team Building", d: "Effective leaders encourage collaboration, trust, and mutual respect among team members." },
               { t: "Conflict Resolution", d: "Leaders address disagreements constructively and work toward positive solutions." },
-              { t: "Emotional Intelligence", d: "Understanding and managing emotions helps leaders build stronger relationships." }
+              { t: "Emotional Intelligence", d: "Understanding and managing emotions helps leaders build stronger relationships and make better decisions." }
             ].map(skill => (
               <div key={skill.t} className="space-y-2">
                 <h4 className="font-bold flex items-center gap-2">
@@ -275,6 +251,33 @@ export const allResources: ResourceItem[] = [
               </div>
             ))}
           </div>
+        </section>
+
+        <section>
+          <h2 className="text-2xl font-bold mb-4">Developing Leadership Skills</h2>
+          <div className="grid sm:grid-cols-2 gap-4">
+             {[
+               { t: "Take Initiative", d: "Volunteer for responsibilities and demonstrate willingness to lead projects or activities." },
+               { t: "Learn from Role Models", d: "Study successful leaders and identify qualities you can apply in your own life." },
+               { t: "Seek Feedback", d: "Constructive feedback helps identify strengths and areas for improvement." },
+               { t: "Practice Leadership Daily", d: "Leadership opportunities exist everywhere—in classrooms, communities, workplaces, and personal projects." }
+             ].map(item => (
+               <div key={item.t} className="p-4 bg-white border rounded-lg shadow-sm">
+                 <h4 className="font-bold text-primary mb-1">{item.t}</h4>
+                 <p className="text-sm text-foreground/70">{item.d}</p>
+               </div>
+             ))}
+          </div>
+        </section>
+
+        <section className="prose prose-primary max-w-none">
+          <h2 className="text-2xl font-bold mb-4">Confidence and Leadership in Action</h2>
+          <p className="text-lg text-foreground/80 leading-relaxed">
+            Imagine leading a team project. Confidence helps you present ideas and make decisions, while leadership enables you to organize tasks, motivate team members, and achieve project goals successfully.
+          </p>
+          <p className="text-lg text-foreground/80 leading-relaxed mt-4 font-medium">
+            Together, confidence and leadership create individuals who are prepared to face challenges, inspire others, and make meaningful contributions to society.
+          </p>
         </section>
 
         <section>
@@ -301,14 +304,54 @@ export const allResources: ResourceItem[] = [
           </div>
         </section>
 
-        <div className="bg-primary text-primary-foreground p-10 rounded-2xl text-center space-y-4">
-          <h2 className="text-3xl font-bold">Key Takeaways</h2>
-          <p className="text-primary-foreground/90 text-lg italic max-w-2xl mx-auto leading-relaxed">
-            "Confidence begins with self-belief. Leadership is about service and influence. Mistakes are simply opportunities for growth."
-          </p>
+        <div className="bg-primary text-primary-foreground p-10 rounded-3xl text-center space-y-6 shadow-xl ring-4 ring-primary/10">
+          <h2 className="text-3xl font-bold font-headline">Key Takeaways</h2>
+          <div className="grid sm:grid-cols-2 gap-4 text-left max-w-3xl mx-auto">
+            {[
+              "Confidence begins with self-belief and continuous learning.",
+              "Leadership is about influence, responsibility, and service.",
+              "Effective communication is essential for both.",
+              "Mistakes are opportunities for growth.",
+              "Leadership skills can be developed through practice.",
+              "Confident leaders inspire positive change."
+            ].map(tk => (
+              <div key={tk} className="flex items-start gap-2">
+                <CheckCircle2 className="h-5 w-5 text-primary-foreground/50 mt-1 flex-shrink-0" />
+                <span className="font-medium">{tk}</span>
+              </div>
+            ))}
+          </div>
         </div>
+
+        <section className="text-center pt-8 border-t">
+          <h2 className="text-3xl font-bold font-headline mb-4">Conclusion</h2>
+          <p className="text-xl text-foreground/80 leading-relaxed italic max-w-3xl mx-auto">
+            "Confidence and leadership are lifelong skills that empower individuals to achieve their goals, overcome challenges, and inspire others. By developing self-confidence, improving communication, and practicing leadership regularly, you can unlock your full potential and create a positive impact in both your personal and professional journey."
+          </p>
+        </section>
       </div>
     )
+  },
+  {
+    id: 'tut-vibe-1',
+    title: "Intro to Vibe Coding: Build without Fear",
+    description: "Learn how to use natural language and intent to create applications using AI-assisted tools.",
+    category: 'tutorials',
+    icon: Zap,
+    href: '/knowledge-hub/article/tut-vibe-1',
+    readTime: '6 min read',
+    dateAdded: '2025-11-20',
+    trending: true,
+  },
+  {
+    id: 'tut-canva-1',
+    title: "Canva for Creative Content: Design Basics",
+    description: "A step-by-step guide to creating professional social media graphics and brand assets.",
+    category: 'tutorials',
+    icon: Sparkles,
+    href: '/knowledge-hub/article/tut-canva-1',
+    readTime: '8 min read',
+    dateAdded: '2025-11-22',
   },
   {
     id: 'gui-biz-1',
@@ -319,7 +362,6 @@ export const allResources: ResourceItem[] = [
     href: '/knowledge-hub/article/gui-biz-1',
     dateAdded: '2025-11-28',
   },
-  // AI & Tech
   {
     id: 'ai-resp-1',
     title: "AI Literacy & Responsible AI Practices",
@@ -341,7 +383,6 @@ export const allResources: ResourceItem[] = [
     readTime: '7 min read',
     dateAdded: '2025-12-05',
   },
-  // Coding Resources
   {
     id: 'cod-fund-1',
     title: "Coding & Technical Fundamentals",
@@ -360,7 +401,6 @@ export const allResources: ResourceItem[] = [
     href: '/knowledge-hub/article/cod-cloud-1',
     dateAdded: '2025-12-10',
   },
-  // Career Development
   {
     id: 'car-brand-1',
     title: "Personal Branding & Digital Presence",
@@ -379,7 +419,6 @@ export const allResources: ResourceItem[] = [
     href: '/knowledge-hub/article/car-soft-1',
     dateAdded: '2025-12-15',
   },
-  // Interview Preparation
   {
     id: 'int-tech-1',
     title: "Coding Interview Walkthroughs",
@@ -389,7 +428,6 @@ export const allResources: ResourceItem[] = [
     href: '/knowledge-hub/article/int-tech-1',
     dateAdded: '2025-12-18',
   },
-  // Templates & Toolkits
   {
     id: 'tem-res-1',
     title: "Tech-Ready Resume Template",
@@ -412,7 +450,6 @@ export const allResources: ResourceItem[] = [
     downloadAvailable: false,
     isComingSoon: true,
   },
-  // Learning Roadmaps
   {
     id: 'roa-tech-1',
     title: "Women in Tech Career Roadmap",
@@ -431,7 +468,6 @@ export const allResources: ResourceItem[] = [
     href: '/knowledge-hub/article/roa-cre-1',
     dateAdded: '2025-12-30',
   },
-  // Success Stories
   {
     id: 'suc-comm-1',
     title: "Community Impact through Real-World Projects",
@@ -450,7 +486,6 @@ export const allResources: ResourceItem[] = [
     href: '/knowledge-hub/article/suc-break-1',
     dateAdded: '2026-01-05',
   },
-  // Free Resources
   {
     id: 'fre-prod-1',
     title: "Digital Literacy & Productivity Starter Kit",
