@@ -1,5 +1,44 @@
-import { BookOpen, FileText, Bot, Code, Briefcase, Target, Wrench, Map, Star, Download, LucideIcon, Rocket, Heart, Sparkles, Zap, ShieldCheck, PenTool, TrendingUp, Clock, CheckCircle2, Users, Mic, RefreshCw, Lightbulb, Pilcrow, Eye, Cpu, UserCheck, Goal } from 'lucide-react';
+import { 
+  BookOpen, 
+  FileText, 
+  Bot, 
+  Code, 
+  Briefcase, 
+  Target, 
+  Wrench, 
+  Map, 
+  Star, 
+  Download, 
+  LucideIcon, 
+  Rocket, 
+  Heart, 
+  Sparkles, 
+  Zap, 
+  ShieldCheck, 
+  PenTool, 
+  TrendingUp, 
+  Clock, 
+  CheckCircle2, 
+  Users, 
+  Mic, 
+  RefreshCw, 
+  Lightbulb, 
+  Pilcrow, 
+  Eye, 
+  Cpu, 
+  UserCheck, 
+  Goal, 
+  DollarSign, 
+  Megaphone, 
+  LayoutTemplate,
+  ShoppingBag,
+  ArrowRight
+} from 'lucide-react';
 import React from 'react';
+import { cn } from '@/lib/utils';
+import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from '@/components/ui/table';
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import { Badge } from '@/components/ui/badge';
 
 export interface ResourceItem {
   id: string;
@@ -35,6 +74,201 @@ export const hubCategories = [
 
 export const allResources: ResourceItem[] = [
   {
+    id: 'bus-basics-1',
+    title: "Business Basics: Value Creation & Finance",
+    description: "Learn the core components of a business and fundamental financial concepts like revenue, expenses, and profit.",
+    category: 'guides',
+    icon: Briefcase,
+    href: '/knowledge-hub/article/bus-basics-1',
+    readTime: '15 min read',
+    dateAdded: '2026-02-01',
+    trending: true,
+    content: (
+      <div className="space-y-12">
+        <section>
+          <h2 className="text-3xl font-bold mb-4 font-headline">Introduction</h2>
+          <p className="text-lg text-foreground/80 leading-relaxed">
+            Every successful business, whether a small startup, a global corporation, or a social enterprise, exists for one primary reason: <strong>to create value</strong>. Businesses solve problems, fulfill needs, and improve people's lives through products or services. Understanding how businesses create value and manage finances is essential for aspiring entrepreneurs, innovators, and future leaders.
+          </p>
+        </section>
+
+        <section className="bg-primary/5 p-8 rounded-2xl border border-primary/10">
+          <h2 className="text-2xl font-bold mb-6 flex items-center gap-2">
+            <Target className="text-primary" /> Learning Objectives
+          </h2>
+          <ul className="grid sm:grid-cols-2 gap-4">
+            {[
+              "Understand the concept of value creation",
+              "Identify the key components of a business",
+              "Explain how businesses generate revenue",
+              "Understand marketing and operations",
+              "Learn basic financial concepts (Profit, Budgeting)",
+              "Apply fundamentals to a real-world idea"
+            ].map(obj => (
+              <li key={obj} className="flex items-start gap-2 text-foreground/80">
+                <CheckCircle2 className="h-5 w-5 text-green-500 mt-1 flex-shrink-0" />
+                <span>{obj}</span>
+              </li>
+            ))}
+          </ul>
+        </section>
+
+        <section>
+          <h2 className="text-2xl font-bold mb-4 font-headline">What is Value Creation?</h2>
+          <p className="text-foreground/80 mb-6 leading-relaxed">
+            Value creation occurs when a business provides a solution that improves a customer's life, saves time, reduces costs, or fulfills a need. Customers choose products and services because they perceive them as valuable.
+          </p>
+          <div className="rounded-xl border shadow-sm overflow-hidden bg-white">
+            <Table>
+              <TableHeader className="bg-muted/50">
+                <TableRow>
+                  <TableHead className="font-bold">Need</TableHead>
+                  <TableHead className="font-bold">Solution</TableHead>
+                  <TableHead className="font-bold">Value Created</TableHead>
+                </TableRow>
+              </TableHeader>
+              <TableBody>
+                {[
+                  { n: "Learning new skills", s: "Online learning platform", v: "Convenient education" },
+                  { n: "Transportation", s: "Ride-sharing app", v: "Faster travel" },
+                  { n: "Communication", s: "Messaging application", v: "Instant connectivity" },
+                  { n: "Shopping", s: "E-commerce platform", v: "Convenience and variety" }
+                ].map((row, i) => (
+                  <TableRow key={i}>
+                    <TableCell>{row.n}</TableCell>
+                    <TableCell>{row.s}</TableCell>
+                    <TableCell className="font-medium text-primary">{row.v}</TableCell>
+                  </TableRow>
+                ))}
+              </TableBody>
+            </Table>
+          </div>
+        </section>
+
+        <section className="space-y-8">
+          <h2 className="text-2xl font-bold mb-4 font-headline">The Five Core Components of a Business</h2>
+          
+          <div className="grid gap-6">
+            {[
+              { id: 1, title: "Product or Service", desc: "What the business offers to solve a problem.", icon: ShoppingBag, color: "bg-blue-50 border-blue-100 text-blue-700" },
+              { id: 2, title: "Customers", desc: "Individuals or organizations that use the product.", icon: Users, color: "bg-green-50 border-green-100 text-green-700" },
+              { id: 3, title: "Revenue", desc: "Money generated from selling your offerings.", icon: DollarSign, color: "bg-amber-50 border-amber-100 text-amber-700" },
+              { id: 4, title: "Marketing", desc: "Reaching potential customers and communicating value.", icon: Megaphone, color: "bg-rose-50 border-rose-100 text-rose-700" },
+              { id: 5, title: "Operations", desc: "Activities required to deliver the product efficiently.", icon: Settings, color: "bg-indigo-50 border-indigo-100 text-indigo-700" }
+            ].map((comp) => (
+              <Card key={comp.id} className={cn("border-none shadow-sm", comp.color)}>
+                <CardHeader className="flex flex-row items-center gap-4 py-4">
+                  <div className="p-2 bg-white rounded-lg shadow-sm">
+                    <comp.icon className="h-6 w-6" />
+                  </div>
+                  <div>
+                    <CardTitle className="text-lg font-bold">{comp.id}. {comp.title}</CardTitle>
+                    <p className="text-sm opacity-90">{comp.desc}</p>
+                  </div>
+                </CardHeader>
+              </Card>
+            ))}
+          </div>
+        </section>
+
+        <section className="bg-secondary/30 p-8 rounded-2xl border">
+          <h2 className="text-2xl font-bold mb-6 font-headline text-center">Case Study: AI Learning Platform</h2>
+          <div className="grid sm:grid-cols-2 lg:grid-cols-5 gap-4 text-center">
+            {[
+              { t: "Product", d: "AI learning app", i: Bot },
+              { t: "Customers", d: "Students & Pros", i: Users },
+              { t: "Revenue", d: "Subscriptions", i: DollarSign },
+              { t: "Marketing", d: "Social Media", i: Megaphone },
+              { t: "Operations", d: "Cloud Hosting", i: RefreshCw }
+            ].map(item => (
+              <div key={item.t} className="bg-white p-4 rounded-xl border shadow-sm">
+                <item.i className="h-6 w-6 mx-auto mb-2 text-primary" />
+                <h4 className="font-bold text-xs uppercase tracking-wider text-muted-foreground">{item.t}</h4>
+                <p className="text-sm font-semibold mt-1">{item.d}</p>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        <section className="space-y-8">
+          <h2 className="text-2xl font-bold mb-4 font-headline">Financial Fundamentals</h2>
+          
+          <div className="grid md:grid-cols-3 gap-6">
+            <Card className="border-t-4 border-t-blue-500 shadow-lg">
+              <CardHeader>
+                <CardTitle className="text-xl flex items-center gap-2"><TrendingUp className="h-5 w-5 text-blue-500"/> Revenue</CardTitle>
+              </CardHeader>
+              <CardContent className="space-y-4">
+                <div className="bg-muted p-3 rounded text-sm font-mono">Revenue = Sales × Price</div>
+                <p className="text-sm text-foreground/70 italic">Total money earned before expenses.</p>
+              </CardContent>
+            </Card>
+
+            <Card className="border-t-4 border-t-rose-500 shadow-lg">
+              <CardHeader>
+                <CardTitle className="text-xl flex items-center gap-2"><Download className="h-5 w-5 text-rose-500"/> Expenses</CardTitle>
+              </CardHeader>
+              <CardContent className="space-y-4">
+                <div className="bg-muted p-3 rounded text-sm font-mono">Total Operating Costs</div>
+                <p className="text-sm text-foreground/70 italic">Hosting, salaries, marketing, etc.</p>
+              </CardContent>
+            </Card>
+
+            <Card className="border-t-4 border-t-green-500 shadow-lg">
+              <CardHeader>
+                <CardTitle className="text-xl flex items-center gap-2"><Zap className="h-5 w-5 text-green-500"/> Profit</CardTitle>
+              </CardHeader>
+              <CardContent className="space-y-4">
+                <div className="bg-muted p-3 rounded text-sm font-mono">Profit = Revenue - Expenses</div>
+                <p className="text-sm text-foreground/70 italic text-green-600 font-bold">The money you keep.</p>
+              </CardContent>
+            </Card>
+          </div>
+        </section>
+
+        <section>
+          <div className="bg-white p-8 rounded-2xl border border-dashed border-primary/40 text-center">
+            <h3 className="font-bold text-primary text-2xl mb-4 flex items-center justify-center gap-2">
+              <PenTool className="h-6 w-6" /> Practical Activity
+            </h3>
+            <p className="text-lg text-foreground/80 mb-6">
+              Download our <strong>Business Model Canvas</strong> and try to draft your first 1-month budget including estimated revenue and marketing costs.
+            </p>
+             <Button className="font-bold">
+               Download Template <Download className="ml-2 h-4 w-4" />
+             </Button>
+          </div>
+        </section>
+
+        <div className="bg-primary text-primary-foreground p-10 rounded-3xl text-center space-y-6 shadow-xl">
+          <h2 className="text-3xl font-bold font-headline">Key Takeaways</h2>
+          <div className="grid sm:grid-cols-2 gap-4 text-left max-w-3xl mx-auto">
+            {[
+              "Businesses create value by solving problems.",
+              "Revenue is gross income, Profit is what remains.",
+              "Marketing builds awareness; Operations builds delivery.",
+              "Budgeting is your financial roadmap.",
+              "High revenue doesn't always mean high profit.",
+              "Customers are the engine of every business."
+            ].map(tk => (
+              <div key={tk} className="flex items-start gap-2">
+                <CheckCircle2 className="h-5 w-5 text-primary-foreground/50 mt-1 flex-shrink-0" />
+                <span className="font-medium">{tk}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        <section className="text-center pt-8 border-t">
+          <h2 className="text-3xl font-bold font-headline mb-4">Conclusion</h2>
+          <p className="text-xl text-foreground/80 leading-relaxed italic max-w-3xl mx-auto">
+            "Successful businesses don't simply sell products—they solve problems, create value, and build lasting relationships with their customers."
+          </p>
+        </section>
+      </div>
+    )
+  },
+  {
     id: 'hr-interview-prep',
     title: "HR Interview Preparation Guide",
     description: "Master common HR questions, build confidence, and secure your dream job with this comprehensive guide.",
@@ -47,7 +281,7 @@ export const allResources: ResourceItem[] = [
     content: (
       <div className="space-y-8">
         <section>
-          <h2 className="text-3xl font-bold mb-4">Introduction</h2>
+          <h2 className="text-3xl font-bold mb-4 font-headline">Introduction</h2>
           <p className="text-lg text-foreground/80 leading-relaxed">
             The HR interview is often the final step of the recruitment process. While technical interviews assess your skills and knowledge, HR interviews evaluate your personality, communication abilities, cultural fit, attitude, and career aspirations.
           </p>
@@ -75,7 +309,7 @@ export const allResources: ResourceItem[] = [
         </section>
 
         <section>
-          <h2 className="text-2xl font-bold mb-4">Before the Interview</h2>
+          <h2 className="text-2xl font-bold mb-4 font-headline">Before the Interview</h2>
           <h3 className="text-xl font-bold text-primary mb-2">Research the Company</h3>
           <p className="text-foreground/80 mb-4">Learn about: Company mission and vision, products and services, company culture, recent achievements, and industry trends.</p>
           <div className="bg-muted p-6 rounded-xl border">
@@ -87,7 +321,7 @@ export const allResources: ResourceItem[] = [
         </section>
 
         <section className="space-y-6">
-          <h2 className="text-2xl font-bold mb-4">Common HR Interview Questions</h2>
+          <h2 className="text-2xl font-bold mb-4 font-headline">Common HR Interview Questions</h2>
           
           <div className="border-l-4 border-primary pl-6 space-y-4">
             <h3 className="text-xl font-bold">1. Tell Me About Yourself</h3>
@@ -111,7 +345,7 @@ export const allResources: ResourceItem[] = [
         </section>
 
         <section className="bg-secondary/30 p-8 rounded-2xl">
-          <h2 className="text-2xl font-bold mb-4 text-center">The STAR Method for Conflict Resolution</h2>
+          <h2 className="text-2xl font-bold mb-4 text-center font-headline">The STAR Method for Conflict Resolution</h2>
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
             {[
               { l: "S", t: "Situation", d: "Describe the problem." },
@@ -119,7 +353,7 @@ export const allResources: ResourceItem[] = [
               { l: "A", t: "Action", d: "Describe what you did." },
               { l: "R", t: "Result", d: "Share the positive outcome." }
             ].map(step => (
-              <div key={step.l} className="bg-white p-4 rounded-xl shadow-sm border">
+              <div key={step.l} className="bg-white p-4 rounded-xl shadow-sm border text-center">
                 <span className="text-3xl font-black text-primary/20">{step.l}</span>
                 <h4 className="font-bold text-primary">{step.t}</h4>
                 <p className="text-sm text-foreground/70">{step.d}</p>
@@ -148,14 +382,14 @@ export const allResources: ResourceItem[] = [
     content: (
       <div className="space-y-8">
         <section>
-          <h2 className="text-3xl font-bold mb-4">Introduction</h2>
+          <h2 className="text-3xl font-bold mb-4 font-headline">Introduction</h2>
           <p className="text-lg text-foreground/80 leading-relaxed">
             Confidence and leadership are two essential skills that help individuals succeed in academics, careers, entrepreneurship, and personal life. Confidence enables you to believe in your abilities, while leadership empowers you to inspire, guide, and positively influence others. Together, these skills form the foundation for personal and professional growth.
           </p>
         </section>
 
         <section>
-          <h2 className="text-2xl font-bold mb-4">What is Confidence?</h2>
+          <h2 className="text-2xl font-bold mb-4 font-headline">What is Confidence?</h2>
           <p className="text-foreground/80 mb-6 leading-relaxed">
             Confidence is the belief in your ability to handle challenges, make decisions, and achieve goals. Confident individuals are more willing to take initiative, communicate effectively, and embrace new opportunities.
           </p>
@@ -175,7 +409,7 @@ export const allResources: ResourceItem[] = [
         </section>
 
         <section className="space-y-6">
-          <h2 className="text-2xl font-bold mb-4">Building Self-Confidence</h2>
+          <h2 className="text-2xl font-bold mb-4 font-headline">Building Self-Confidence</h2>
           <div className="grid gap-6 md:grid-cols-2">
             {[
               { t: "1. Develop a Growth Mindset", d: "View mistakes as learning opportunities rather than failures. Every challenge helps you improve and become stronger." },
@@ -195,7 +429,7 @@ export const allResources: ResourceItem[] = [
         </section>
 
         <section>
-          <h2 className="text-2xl font-bold mb-4">Understanding Leadership</h2>
+          <h2 className="text-2xl font-bold mb-4 font-headline">Understanding Leadership</h2>
           <p className="text-foreground/80 mb-6 leading-relaxed">
             Leadership is the ability to influence, motivate, and guide individuals or teams toward achieving a common goal. Leadership is not about authority; it is about responsibility, service, and creating a positive impact.
           </p>
@@ -212,7 +446,7 @@ export const allResources: ResourceItem[] = [
         </section>
 
         <section>
-          <h2 className="text-2xl font-bold mb-4">Leadership Styles</h2>
+          <h2 className="text-2xl font-bold mb-4 font-headline">Leadership Styles</h2>
           <div className="space-y-4">
             {[
               { t: "Democratic Leadership", d: "Leaders involve team members in decision-making and encourage participation." },
@@ -234,7 +468,7 @@ export const allResources: ResourceItem[] = [
         </section>
 
         <section className="bg-secondary/30 p-8 rounded-2xl">
-          <h2 className="text-2xl font-bold mb-8 text-center">Essential Leadership Skills</h2>
+          <h2 className="text-2xl font-bold mb-8 text-center font-headline">Essential Leadership Skills</h2>
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
             {[
               { t: "Communication", d: "Strong leaders communicate clearly, listen actively, and ensure everyone understands goals and expectations." },
@@ -254,7 +488,7 @@ export const allResources: ResourceItem[] = [
         </section>
 
         <section>
-          <h2 className="text-2xl font-bold mb-4">Developing Leadership Skills</h2>
+          <h2 className="text-2xl font-bold mb-4 font-headline">Developing Leadership Skills</h2>
           <div className="grid sm:grid-cols-2 gap-4">
              {[
                { t: "Take Initiative", d: "Volunteer for responsibilities and demonstrate willingness to lead projects or activities." },
@@ -270,18 +504,8 @@ export const allResources: ResourceItem[] = [
           </div>
         </section>
 
-        <section className="prose prose-primary max-w-none">
-          <h2 className="text-2xl font-bold mb-4">Confidence and Leadership in Action</h2>
-          <p className="text-lg text-foreground/80 leading-relaxed">
-            Imagine leading a team project. Confidence helps you present ideas and make decisions, while leadership enables you to organize tasks, motivate team members, and achieve project goals successfully.
-          </p>
-          <p className="text-lg text-foreground/80 leading-relaxed mt-4 font-medium">
-            Together, confidence and leadership create individuals who are prepared to face challenges, inspire others, and make meaningful contributions to society.
-          </p>
-        </section>
-
         <section>
-          <h2 className="text-2xl font-bold mb-6">Practical Activities</h2>
+          <h2 className="text-2xl font-bold mb-6 font-headline">Practical Activities</h2>
           <div className="grid gap-6">
             <div className="bg-white p-6 rounded-xl border border-dashed border-primary/40">
               <h3 className="font-bold text-primary text-lg mb-2 flex items-center gap-2">
@@ -344,7 +568,7 @@ export const allResources: ResourceItem[] = [
     content: (
       <div className="space-y-8">
         <section>
-          <h2 className="text-3xl font-bold mb-4">Introduction</h2>
+          <h2 className="text-3xl font-bold mb-4 font-headline">Introduction</h2>
           <p className="text-lg text-foreground/80 leading-relaxed">
             Entrepreneurship is more than starting a business—it's about identifying opportunities, solving problems, and creating value. An entrepreneurial mindset helps individuals think creatively, take initiative, and adapt to challenges.
           </p>
@@ -370,7 +594,7 @@ export const allResources: ResourceItem[] = [
         </section>
 
         <section className="space-y-12">
-          <h2 className="text-2xl font-bold mb-4">Key Topics</h2>
+          <h2 className="text-2xl font-bold mb-4 font-headline">Key Topics</h2>
           
           <div className="space-y-4">
             <h3 className="text-xl font-bold text-primary flex items-center gap-2">
@@ -386,14 +610,14 @@ export const allResources: ResourceItem[] = [
 
           <div className="bg-muted/30 p-8 rounded-2xl border">
             <h3 className="text-xl font-bold mb-6">Characteristics of Successful Entrepreneurs</h3>
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
               {[
                 { t: "Leadership", i: Users },
                 { t: "Risk-taking", i: Rocket },
                 { t: "Persistence", i: Zap },
                 { t: "Adaptability", i: RefreshCw }
               ].map(char => (
-                <div key={char.t} className="flex flex-col items-center text-center p-4 bg-white rounded-xl shadow-sm border">
+                <div key={char.t} className="flex flex-col items-center p-4 bg-white rounded-xl shadow-sm border">
                   <char.i className="h-8 w-8 text-primary mb-3" />
                   <span className="font-bold text-sm">{char.t}</span>
                 </div>
@@ -402,25 +626,25 @@ export const allResources: ResourceItem[] = [
           </div>
 
           <div className="space-y-6">
-            <h3 className="text-xl font-bold text-primary">Design Thinking for Problem Solving</h3>
-            <p className="text-foreground/80">A human-centered approach to innovation:</p>
-            <div className="relative">
-               <div className="absolute left-4 top-0 bottom-0 w-0.5 bg-primary/20"></div>
-               <div className="space-y-6 ml-10">
-                 {[
-                   { t: "Empathize", d: "Understand your users' needs and motivations." },
-                   { t: "Define", d: "Clearly state the problem you want to solve." },
-                   { t: "Ideate", d: "Brainstorm creative solutions without judgment." },
-                   { t: "Prototype", d: "Build a simple, low-cost version of your solution." },
-                   { t: "Test", d: "Get feedback and iterate on your prototype." }
-                 ].map((step, i) => (
-                   <div key={step.t} className="relative">
-                     <div className="absolute -left-10 top-1 w-6 h-6 rounded-full bg-primary flex items-center justify-center text-white text-xs font-bold">{i+1}</div>
-                     <h4 className="font-bold text-lg">{step.t}</h4>
-                     <p className="text-foreground/70 text-sm">{step.d}</p>
-                   </div>
-                 ))}
-               </div>
+            <h3 className="text-xl font-bold text-primary font-headline text-center">Design Thinking for Problem Solving</h3>
+            <p className="text-foreground/80 text-center max-w-2xl mx-auto mb-8">A human-centered approach to innovation:</p>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4">
+              {[
+                { t: "Empathize", d: "Understand your users' needs and motivations.", i: Heart, c: "bg-rose-50 border-rose-100" },
+                { t: "Define", d: "Clearly state the problem you want to solve.", i: Target, c: "bg-blue-50 border-blue-100" },
+                { t: "Ideate", d: "Brainstorm creative solutions without judgment.", i: Lightbulb, c: "bg-amber-50 border-amber-100" },
+                { t: "Prototype", d: "Build a simple, low-cost version of your solution.", i: Wrench, c: "bg-teal-50 border-teal-100" },
+                { t: "Test", d: "Get feedback and iterate on your prototype.", i: CheckCircle2, c: "bg-indigo-50 border-indigo-100" }
+              ].map((step, i) => (
+                <div key={step.t} className={cn("p-6 rounded-2xl border text-center flex flex-col items-center", step.c)}>
+                  <div className="w-8 h-8 rounded-full bg-white flex items-center justify-center text-xs font-bold mb-4 shadow-sm border">
+                      {i + 1}
+                  </div>
+                  <step.i className="h-8 w-8 mb-4 opacity-70" />
+                  <h4 className="font-bold text-base mb-2">{step.t}</h4>
+                  <p className="text-xs text-foreground/70 leading-relaxed">{step.d}</p>
+                </div>
+              ))}
             </div>
           </div>
 
@@ -436,7 +660,7 @@ export const allResources: ResourceItem[] = [
                 <p className="text-sm text-foreground/70">What are you offering? How does it create value?</p>
               </div>
               <div className="space-y-2">
-                <h4 className="font-bold flex items-center gap-2"><Zap className="h-4 w-4 text-primary" /> Revenue Streams</h4>
+                <h4 className="font-bold flex items-center gap-2"><DollarSign className="h-4 w-4 text-primary" /> Revenue Streams</h4>
                 <p className="text-sm text-foreground/70">How will your business sustain itself financially?</p>
               </div>
               <div className="space-y-2">
