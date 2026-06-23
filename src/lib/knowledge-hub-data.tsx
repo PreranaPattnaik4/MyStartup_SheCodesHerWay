@@ -33,7 +33,9 @@ import {
   LayoutTemplate,
   ShoppingBag,
   ArrowRight,
-  Settings
+  Settings,
+  ListChecks,
+  UserCircle
 } from 'lucide-react';
 import React from 'react';
 import { cn } from '@/lib/utils';
@@ -75,6 +77,155 @@ export const hubCategories = [
 ];
 
 export const allResources: ResourceItem[] = [
+  {
+    id: 'car-return-guide',
+    title: "Returning to Work After a Career Break",
+    description: "Rebuild confidence, identify transferable skills, and successfully transition back into the professional world.",
+    category: 'career-development',
+    icon: RefreshCw,
+    href: '/knowledge-hub/article/car-return-guide',
+    readTime: '12 min read',
+    dateAdded: '2026-01-15',
+    trending: true,
+    content: (
+      <div className="space-y-12">
+        <section>
+          <h2 className="text-3xl font-bold mb-4 font-headline">Introduction</h2>
+          <p className="text-lg text-foreground/80 leading-relaxed">
+            Taking a career break is more common than ever. Whether you paused your professional journey due to family responsibilities, education, caregiving, health reasons, relocation, personal commitments, or other life circumstances, returning to work can feel both exciting and challenging.
+          </p>
+          <p className="mt-4 text-lg text-foreground/80 leading-relaxed font-semibold">
+            The good news is that a career break does not define your future. Your experiences, skills, resilience, and willingness to learn can become valuable strengths as you re-enter the workforce or begin a completely new career path.
+          </p>
+        </section>
+
+        <section className="bg-primary/5 p-8 rounded-2xl border border-primary/10">
+          <h2 className="text-2xl font-bold mb-6 flex items-center gap-2">
+            <ShieldCheck className="text-primary" /> Understanding Career Breaks
+          </h2>
+          <p className="mb-4">Common reasons for career breaks include:</p>
+          <div className="grid sm:grid-cols-2 gap-3">
+            {[
+              "Raising children", "Caring for family members", "Pursuing education",
+              "Personal development", "Relocation", "Health and wellness",
+              "Entrepreneurship", "Volunteering"
+            ].map(item => (
+              <li key={item} className="flex items-center gap-2 text-foreground/80">
+                <CheckCircle2 className="h-5 w-5 text-green-500" /> {item}
+              </li>
+            ))}
+          </div>
+          <p className="mt-6 text-sm italic text-muted-foreground">Many successful professionals have taken career breaks and later returned stronger and more focused.</p>
+        </section>
+
+        <section className="space-y-8">
+          <h2 className="text-2xl font-bold mb-4 font-headline">Changing Your Mindset</h2>
+          <div className="grid md:grid-cols-2 gap-8">
+            <Card className="bg-rose-50 border-rose-100">
+               <CardHeader>
+                  <CardTitle className="text-rose-700">Common Worries</CardTitle>
+               </CardHeader>
+               <CardContent className="text-rose-900/80 text-sm space-y-2">
+                  <p>• Being out of touch with trends</p>
+                  <p>• Fast technology changes</p>
+                  <p>• Competition from younger candidates</p>
+                  <p>• Explaining gaps in the resume</p>
+               </CardContent>
+            </Card>
+            <Card className="bg-green-50 border-green-100">
+               <CardHeader>
+                  <CardTitle className="text-green-700">Gained Strengths</CardTitle>
+               </CardHeader>
+               <CardContent className="text-green-900/80 text-sm space-y-2">
+                  <p>• Enhanced resilience & adaptability</p>
+                  <p>• Advanced problem-solving</p>
+                  <p>• Improved time management</p>
+                  <p>• Emotional intelligence & leadership</p>
+               </CardContent>
+            </Card>
+          </div>
+          <div className="bg-muted p-6 rounded-xl border text-center">
+            <p className="font-bold text-primary italic">"Your career is not defined by where you paused—it is defined by the courage to begin again."</p>
+          </div>
+        </section>
+
+        <section>
+          <h2 className="text-2xl font-bold mb-4 font-headline">Identifying Transferable Skills</h2>
+          <div className="grid sm:grid-cols-2 gap-6">
+            {[
+              { t: "Communication", d: "Managing family or community work improves clarity and empathy.", i: Megaphone },
+              { t: "Leadership", i: Users, d: "Coordinating events or responsibilities demonstrates authority." },
+              { t: "Problem-Solving", i: Lightbulb, d: "Daily life often requires creative, instant solutions." },
+              { t: "Project Management", i: LayoutTemplate, d: "Planning budgets and schedules is core project management." }
+            ].map(skill => (
+              <div key={skill.t} className="flex items-start gap-4 p-5 border rounded-xl bg-white shadow-sm">
+                <div className="bg-primary/10 p-2.5 rounded-full">
+                  <skill.i className="h-5 w-5 text-primary" />
+                </div>
+                <div>
+                  <h4 className="font-bold text-lg">{skill.t}</h4>
+                  <p className="text-sm text-foreground/70">{skill.d}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        <section className="bg-secondary/20 p-8 rounded-3xl border border-secondary/30">
+          <h2 className="text-2xl font-bold mb-6 font-headline">Action Plan for Re-entry</h2>
+          <div className="grid gap-4">
+             {[
+               "Assess your current skills and interests.",
+               "Choose a target career path (Tech, Marketing, etc.).",
+               "Identify and bridge skill gaps through upskilling.",
+               "Complete relevant training and certifications.",
+               "Update your resume and optimize your LinkedIn profile.",
+               "Build a portfolio or project showcase.",
+               "Start networking and engaging in communities.",
+               "Apply consistently and track your progress."
+             ].map((step, i) => (
+               <div key={i} className="flex items-center gap-4 bg-white p-4 rounded-xl border shadow-sm">
+                 <div className="bg-primary text-primary-foreground w-8 h-8 rounded-full flex items-center justify-center font-bold flex-shrink-0">
+                   {i + 1}
+                 </div>
+                 <p className="font-medium text-foreground/80">{step}</p>
+               </div>
+             ))}
+          </div>
+        </section>
+
+        <section>
+          <h2 className="text-2xl font-bold mb-6 font-headline">Professional Presence</h2>
+          <div className="grid md:grid-cols-2 gap-10">
+            <div className="space-y-4">
+              <h3 className="text-xl font-bold flex items-center gap-2"><FileText className="text-primary"/> The Resume</h3>
+              <p className="text-foreground/80">Don't hide the gap. Explain it confidently.</p>
+              <div className="bg-muted p-4 rounded-lg border italic text-sm">
+                "Career Break (2020–2025): Focused on family responsibilities while continuously developing skills through online learning, certifications, and personal projects."
+              </div>
+            </div>
+            <div className="space-y-4">
+              <h3 className="text-xl font-bold flex items-center gap-2"><Users className="text-primary"/> Networking</h3>
+              <p className="text-foreground/80">Relationships over job requests. Attend webinars, join Sangini circles, and connect with mentors on LinkedIn.</p>
+            </div>
+          </div>
+        </section>
+
+        <div className="bg-primary text-primary-foreground p-10 rounded-3xl text-center space-y-6 shadow-xl">
+          <h2 className="text-3xl font-bold font-headline">Reflection Activity</h2>
+          <p className="max-w-2xl mx-auto opacity-90">Take 10 minutes to write down: your top 3 strengths, 2 new skills you want to learn, and the first action you will take this week.</p>
+          <Button variant="secondary" className="font-bold">Download Reflection Sheet <Download className="ml-2 h-4 w-4" /></Button>
+        </div>
+
+        <section className="text-center pt-8 border-t">
+          <h2 className="text-3xl font-bold font-headline mb-4">Conclusion</h2>
+          <p className="text-xl text-foreground/80 leading-relaxed italic max-w-3xl mx-auto">
+            "By investing in learning, building confidence, and taking consistent action, you can successfully restart your career journey and create a future filled with new opportunities."
+          </p>
+        </section>
+      </div>
+    )
+  },
   {
     id: 'bus-basics-1',
     title: "Business Basics: Value Creation & Finance",
