@@ -8,6 +8,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 import { allResources } from '@/lib/knowledge-hub-data';
+import { Badge } from '@/components/ui/badge';
 
 export default function LearningRoadmapsPage() {
   const bgImage = PlaceHolderImages.find(p => p.id === 'vision-journey');
