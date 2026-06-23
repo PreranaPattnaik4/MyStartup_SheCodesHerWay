@@ -37,7 +37,10 @@ import {
   ListChecks,
   UserCircle,
   GraduationCap,
-  Globe
+  Globe,
+  AlertCircle,
+  MessageCircle,
+  Bookmark
 } from 'lucide-react';
 import React from 'react';
 import { cn } from '@/lib/utils';
@@ -79,6 +82,165 @@ export const hubCategories = [
 ];
 
 export const allResources: ResourceItem[] = [
+  {
+    id: 'challenges-women-face',
+    title: "Challenges Women Face During Education and After Long Career Breaks",
+    description: "An in-depth look at social, professional, and emotional obstacles women face, with actionable strategies to overcome them.",
+    category: 'guides',
+    icon: AlertCircle,
+    href: '/knowledge-hub/article/challenges-women-face',
+    readTime: '14 min read',
+    dateAdded: '2026-04-10',
+    trending: true,
+    content: (
+      <div className="space-y-12">
+        <section>
+          <h2 className="text-3xl font-bold mb-4 font-headline">Introduction</h2>
+          <p className="text-lg text-foreground/80 leading-relaxed">
+            Women often face unique challenges during their educational journey and later in life when returning to studies, work, or pursuing a new career after a long break. These challenges may arise from social expectations, family responsibilities, financial constraints, confidence issues, or limited access to opportunities.
+          </p>
+          <p className="mt-4 text-lg text-foreground/80 leading-relaxed">
+            Understanding these challenges is the first step toward overcoming them and building a path toward personal and professional success.
+          </p>
+        </section>
+
+        <section className="space-y-8">
+          <h2 className="text-2xl font-bold font-headline flex items-center gap-2">
+            <GraduationCap className="text-primary" /> Challenges During Education
+          </h2>
+          <div className="grid md:grid-cols-2 gap-6">
+            {[
+              { 
+                t: "Confidence & Self-Belief", 
+                d: "Underestimating abilities despite being capable. Leads to avoiding leadership roles or hesitating to ask questions.", 
+                s: "Practice positive self-talk and seek mentorship.", 
+                i: Sparkles,
+                c: "bg-blue-50 border-blue-100" 
+              },
+              { 
+                t: "Access to Resources", 
+                d: "Barriers like lack of internet, financial constraints, or limited technology resources.", 
+                s: "Utilize free online resources and apply for grants.", 
+                i: Globe,
+                c: "bg-green-50 border-green-100" 
+              },
+              { 
+                t: "Social Expectations", 
+                d: "Prioritizing household duties over studies, or pressure to conform to traditional roles.", 
+                s: "Set boundaries and seek family support.", 
+                i: Users,
+                c: "bg-amber-50 border-amber-100" 
+              },
+              { 
+                t: "Fear of Failure", 
+                d: "Avoiding challenges or competitions due to the fear of making mistakes.", 
+                s: "View failure as a vital part of the learning process.", 
+                i: Target,
+                c: "bg-rose-50 border-rose-100" 
+              }
+            ].map(item => (
+              <Card key={item.t} className={cn("border shadow-sm", item.c)}>
+                <CardHeader className="flex flex-row items-center gap-4">
+                  <div className="bg-white p-2.5 rounded-xl shadow-sm"><item.i className="h-5 w-5 text-primary"/></div>
+                  <CardTitle className="text-lg">{item.t}</CardTitle>
+                </CardHeader>
+                <CardContent className="space-y-4">
+                  <p className="text-sm opacity-90 leading-relaxed">{item.d}</p>
+                  <div className="text-sm font-semibold">
+                    <span className="text-primary">Solution:</span> {item.s}
+                  </div>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        </section>
+
+        <section className="bg-muted/30 p-8 rounded-3xl border space-y-8">
+          <h2 className="text-2xl font-bold font-headline flex items-center gap-2">
+            <RefreshCw className="text-primary" /> Challenges After a Long Career Break
+          </h2>
+          <p className="text-foreground/80 leading-relaxed">Whether for childcare, health, or relocation, returning can be intimidating. Here is how to navigate common hurdles:</p>
+          
+          <div className="space-y-6">
+            {[
+              { 
+                q: "Loss of Professional Confidence", 
+                r: "Your break didn't erase your skills. You gained time management and resilience.", 
+                ans: "Focus on transferable skills and start small." 
+              },
+              { 
+                q: "Technology Changes", 
+                r: "Industries evolve, but tools can be learned quickly through focus.", 
+                ans: "Take modern certifications and practice daily." 
+              },
+              { 
+                q: "The Resume Gap", 
+                r: "Employers today value life experience and growth during gaps.", 
+                ans: "Be honest. Example: 'Focused on responsibilities while upskilling through projects.'" 
+              },
+              { 
+                q: "Family & Career Balance", 
+                r: "Managing children and work is a high-level coordination skill.", 
+                ans: "Create routines, set priorities, and build a support system." 
+              }
+            ].map((item, i) => (
+              <div key={i} className="flex gap-6 items-start border-b pb-6 last:border-0">
+                <div className="bg-primary text-primary-foreground w-10 h-10 rounded-full flex items-center justify-center font-bold flex-shrink-0 text-xs">
+                  {i + 1}
+                </div>
+                <div className="space-y-2">
+                  <h4 className="font-bold text-lg">{item.q}</h4>
+                  <p className="text-foreground/70 italic text-sm">" {item.r} "</p>
+                  <p className="text-sm"><span className="font-bold text-primary">Success Strategy:</span> {item.ans}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        <section className="grid md:grid-cols-2 gap-8">
+          <Card className="bg-indigo-50 border-indigo-100 p-8 rounded-3xl flex flex-col items-center text-center space-y-4">
+             <div className="bg-white p-4 rounded-full shadow-md"><TrendingUp className="h-8 w-8 text-indigo-600" /></div>
+             <h3 className="text-2xl font-bold font-headline">Emotional Challenges</h3>
+             <p className="text-indigo-900/80 leading-relaxed">
+               Avoid comparing your journey with peers. Success is not a race. Everyone has a unique timeline. Imposter syndrome is common—focus on progress rather than perfection.
+             </p>
+          </Card>
+          <Card className="bg-emerald-50 border-emerald-100 p-8 rounded-3xl flex flex-col items-center text-center space-y-4">
+             <div className="bg-white p-4 rounded-full shadow-md"><Goal className="h-8 w-8 text-emerald-600" /></div>
+             <h3 className="text-2xl font-bold font-headline">Strategies for Success</h3>
+             <p className="text-emerald-900/80 leading-relaxed">
+               Invest in continuous learning, build a supportive professional network, and create a 3-tier career plan (Short, Mid, and Long term goals).
+             </p>
+          </Card>
+        </section>
+
+        <div className="bg-white p-8 rounded-2xl border border-dashed border-primary/40 text-center space-y-6">
+          <h3 className="font-bold text-primary text-2xl flex items-center justify-center gap-2">
+            <Star className="h-6 w-6" /> Celebrate Small Wins
+          </h3>
+          <p className="text-lg text-foreground/80 max-w-2xl mx-auto italic">
+            "Completing a course, updating your resume, or even attending a single webinar counts. Every step builds momentum toward your future."
+          </p>
+          <div className="flex flex-wrap justify-center gap-4">
+             <Badge variant="secondary" className="px-4 py-2">Updated Resume</Badge>
+             <Badge variant="secondary" className="px-4 py-2">LinkedIn Optimized</Badge>
+             <Badge variant="secondary" className="px-4 py-2">First Job Applied</Badge>
+          </div>
+        </div>
+
+        <section className="text-center pt-8 border-t">
+          <h2 className="text-3xl font-bold font-headline mb-4">Conclusion</h2>
+          <p className="text-xl text-foreground/80 leading-relaxed max-w-3xl mx-auto">
+            The journey of education and career growth may not always be easy, but it is absolutely possible. Embrace lifelong learning, build your confidence, and take consistent action.
+          </p>
+          <p className="mt-6 text-2xl font-bold text-primary font-headline italic">
+            "A career break is a pause in the journey, not the end of the story."
+          </p>
+        </section>
+      </div>
+    )
+  },
   {
     id: 'women-empowerment-guide',
     title: "Women Empowerment Guide: Unlocking Potential, Building Confidence, and Creating Change",
