@@ -83,8 +83,6 @@ export default function ArticlePage({ params }: { params: { slug: string } }) {
                 </div>
               )}
             </article>
-
-            {/* Floating Actions Sidebar - Future extension */}
           </div>
           
           <Separator className="my-16" />
