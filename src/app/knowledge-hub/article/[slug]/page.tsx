@@ -1,3 +1,4 @@
+
 import React from 'react';
 import Header from '@/components/header';
 import Footer from '@/components/footer';
@@ -10,8 +11,9 @@ import { Badge } from '@/components/ui/badge';
 import { Separator } from '@/components/ui/separator';
 import ShareDropdown from '@/components/knowledge-hub/share-dropdown';
 
-export default function ArticlePage({ params }: { params: { slug: string } }) {
-  const resource = allResources.find(r => r.id === params.slug);
+export default async function ArticlePage({ params }: { params: Promise<{ slug: string }> }) {
+  const { slug } = await params;
+  const resource = allResources.find(r => r.id === slug);
 
   if (!resource) {
     return notFound();
@@ -36,8 +38,8 @@ export default function ArticlePage({ params }: { params: { slug: string } }) {
               <Badge variant="outline" className="bg-white border-primary/20 text-primary px-3 py-1">
                 {resource.category.replace('-', ' ').toUpperCase()}
               </Badge>
-              {resource.trending && <Badge className="bg-amber-500">TRENDING</Badge>}
-              {resource.popular && <Badge className="bg-rose-500">POPULAR</Badge>}
+              {resource.trending && <Badge className="bg-amber-500 text-white">TRENDING</Badge>}
+              {resource.popular && <Badge className="bg-rose-500 text-white">POPULAR</Badge>}
             </div>
 
             <h1 className="font-headline text-4xl md:text-6xl font-bold leading-tight mb-8">
