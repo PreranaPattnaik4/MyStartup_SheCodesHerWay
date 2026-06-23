@@ -113,7 +113,7 @@ export const allResources: ResourceItem[] = [
         </section>
 
         <section className="bg-secondary/30 p-8 rounded-2xl">
-          <h2 className="text-2xl font-bold mb-4">The STAR Method for Conflict Resolution</h2>
+          <h2 className="text-2xl font-bold mb-4 text-center">The STAR Method for Conflict Resolution</h2>
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
             {[
               { l: "S", t: "Situation", d: "Describe the problem." },
@@ -127,25 +127,6 @@ export const allResources: ResourceItem[] = [
                 <p className="text-sm text-foreground/70">{step.d}</p>
               </div>
             ))}
-          </div>
-        </section>
-
-        <section className="grid md:grid-cols-2 gap-8">
-          <div className="space-y-4">
-            <h2 className="text-2xl font-bold">Body Language Tips</h2>
-            <ul className="space-y-2">
-              {["Maintain eye contact", "Sit confidently", "Smile naturally", "Listen carefully", "Show enthusiasm"].map(tip => (
-                <li key={tip} className="flex items-center gap-2 text-sm"><CheckCircle2 className="text-green-500 h-4 w-4" /> {tip}</li>
-              ))}
-            </ul>
-          </div>
-          <div className="space-y-4">
-            <h2 className="text-2xl font-bold">Virtual Interview Tips</h2>
-            <ul className="space-y-2">
-              {["Test mic & camera", "Check internet connection", "Professional background", "Join 10 mins early"].map(tip => (
-                <li key={tip} className="flex items-center gap-2 text-sm"><CheckCircle2 className="text-primary h-4 w-4" /> {tip}</li>
-              ))}
-            </ul>
           </div>
         </section>
 
@@ -188,6 +169,146 @@ export const allResources: ResourceItem[] = [
     href: '/knowledge-hub/article/gui-lead-1',
     dateAdded: '2025-11-25',
     downloadAvailable: true,
+    content: (
+      <div className="space-y-8">
+        <section>
+          <h2 className="text-3xl font-bold mb-4">Introduction</h2>
+          <p className="text-lg text-foreground/80 leading-relaxed">
+            Confidence and leadership are two essential skills that help individuals succeed in academics, careers, entrepreneurship, and personal life. Confidence enables you to believe in your abilities, while leadership empowers you to inspire, guide, and positively influence others. Together, these skills form the foundation for personal and professional growth.
+          </p>
+        </section>
+
+        <section>
+          <h2 className="text-2xl font-bold mb-4">What is Confidence?</h2>
+          <p className="text-foreground/80 mb-6 leading-relaxed">
+            Confidence is the belief in your ability to handle challenges, make decisions, and achieve goals. Confident individuals are more willing to take initiative, communicate effectively, and embrace new opportunities.
+          </p>
+          <div className="bg-primary/5 p-8 rounded-2xl border border-primary/10">
+            <h3 className="text-xl font-bold mb-6">Benefits of Confidence</h3>
+            <ul className="grid sm:grid-cols-2 gap-4">
+              {[
+                "Improves communication skills", "Enhances decision-making abilities", "Increases resilience during challenges",
+                "Encourages personal growth", "Builds a positive mindset", "Helps overcome fear and self-doubt"
+              ].map(benefit => (
+                <li key={benefit} className="flex items-center gap-2 text-foreground/80">
+                  <CheckCircle2 className="h-5 w-5 text-green-500" /> {benefit}
+                </li>
+              ))}
+            </ul>
+          </div>
+        </section>
+
+        <section className="space-y-6">
+          <h2 className="text-2xl font-bold mb-4">Building Self-Confidence</h2>
+          <div className="grid gap-6 md:grid-cols-2">
+            {[
+              { t: "1. Develop a Growth Mindset", d: "View mistakes as learning opportunities rather than failures. Every challenge helps you improve and become stronger." },
+              { t: "2. Set Small Achievable Goals", d: "Start with manageable goals and gradually increase the difficulty. Achieving small successes boosts confidence over time." },
+              { t: "3. Practice Positive Self-Talk", d: "Replace negative thoughts with encouraging statements such as: 'I can learn this', 'I am improving every day'." },
+              { t: "4. Improve Communication Skills", d: "Practice speaking clearly, listening actively, and expressing your ideas confidently." }
+            ].map(step => (
+              <div key={step.t} className="bg-white p-6 rounded-xl border shadow-sm">
+                <h3 className="font-bold text-lg mb-2">{step.t}</h3>
+                <p className="text-sm text-foreground/70 leading-relaxed">{step.d}</p>
+              </div>
+            ))}
+          </div>
+          <div className="bg-accent/10 p-6 rounded-xl border border-accent/20 italic text-center text-accent-foreground">
+            "Step Outside Your Comfort Zone: Try new experiences, participate in discussions, and volunteer for projects."
+          </div>
+        </section>
+
+        <section>
+          <h2 className="text-2xl font-bold mb-4">Understanding Leadership</h2>
+          <p className="text-foreground/80 mb-6 leading-relaxed">
+            Leadership is the ability to influence, motivate, and guide individuals or teams toward achieving a common goal. Leadership is not about authority; it is about responsibility, service, and creating a positive impact.
+          </p>
+          <div className="bg-muted/50 p-8 rounded-2xl">
+            <h3 className="text-xl font-bold mb-6 text-center">Characteristics of Effective Leaders</h3>
+            <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
+              {["Integrity", "Accountability", "Empathy", "Communication", "Problem-Solving", "Vision", "Adaptability", "Collaboration"].map(trait => (
+                <div key={trait} className="bg-white p-3 rounded-lg shadow-sm text-center text-sm font-semibold border">
+                  {trait}
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        <section>
+          <h2 className="text-2xl font-bold mb-4">Leadership Styles</h2>
+          <div className="space-y-4">
+            {[
+              { t: "Democratic Leadership", d: "Leaders involve team members in decision-making and encourage participation." },
+              { t: "Transformational Leadership", d: "Leaders inspire others through vision, innovation, and motivation." },
+              { t: "Servant Leadership", d: "Leaders focus on supporting and empowering their team members." },
+              { t: "Coaching Leadership", d: "Leaders guide individuals by mentoring and helping them develop their skills." }
+            ].map(style => (
+              <div key={style.t} className="flex items-start gap-4 p-5 border rounded-xl hover:bg-muted/30 transition-colors">
+                <div className="bg-primary/10 p-2.5 rounded-full">
+                  <Star className="h-5 w-5 text-primary" />
+                </div>
+                <div>
+                  <h4 className="font-bold text-lg">{style.t}</h4>
+                  <p className="text-foreground/70">{style.d}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        <section className="bg-secondary/30 p-8 rounded-2xl">
+          <h2 className="text-2xl font-bold mb-8 text-center">Essential Leadership Skills</h2>
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+            {[
+              { t: "Communication", d: "Strong leaders communicate clearly, listen actively, and ensure everyone understands goals." },
+              { t: "Decision-Making", d: "Leaders evaluate options, consider consequences, and make informed decisions." },
+              { t: "Team Building", d: "Effective leaders encourage collaboration, trust, and mutual respect among members." },
+              { t: "Conflict Resolution", d: "Leaders address disagreements constructively and work toward positive solutions." },
+              { t: "Emotional Intelligence", d: "Understanding and managing emotions helps leaders build stronger relationships." }
+            ].map(skill => (
+              <div key={skill.t} className="space-y-2">
+                <h4 className="font-bold flex items-center gap-2">
+                  <Zap className="h-4 w-4 text-primary" /> {skill.t}
+                </h4>
+                <p className="text-sm text-foreground/70 leading-relaxed">{skill.d}</p>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        <section>
+          <h2 className="text-2xl font-bold mb-6">Practical Activities</h2>
+          <div className="grid gap-6">
+            <div className="bg-white p-6 rounded-xl border border-dashed border-primary/40">
+              <h3 className="font-bold text-primary text-lg mb-2 flex items-center gap-2">
+                <PenTool className="h-5 w-5" /> Activity 1: Confidence Journal
+              </h3>
+              <p className="text-foreground/70">Write down: Three strengths you possess, one achievement you are proud of, and one goal you want to accomplish this week.</p>
+            </div>
+            <div className="bg-white p-6 rounded-xl border border-dashed border-primary/40">
+              <h3 className="font-bold text-primary text-lg mb-2 flex items-center gap-2">
+                <Users className="h-5 w-5" /> Activity 2: Leadership Challenge
+              </h3>
+              <p className="text-foreground/70">Lead a small group activity, discussion, or project and reflect on your experience.</p>
+            </div>
+            <div className="bg-white p-6 rounded-xl border border-dashed border-primary/40">
+              <h3 className="font-bold text-primary text-lg mb-2 flex items-center gap-2">
+                <Mic className="h-5 w-5" /> Activity 3: Public Speaking Practice
+              </h3>
+              <p className="text-foreground/70">Prepare a short 2-minute speech on a topic of your choice and present it to friends, classmates, or family members.</p>
+            </div>
+          </div>
+        </section>
+
+        <div className="bg-primary text-primary-foreground p-10 rounded-2xl text-center space-y-4">
+          <h2 className="text-3xl font-bold">Key Takeaways</h2>
+          <p className="text-primary-foreground/90 text-lg italic max-w-2xl mx-auto leading-relaxed">
+            "Confidence begins with self-belief. Leadership is about service and influence. Mistakes are simply opportunities for growth."
+          </p>
+        </div>
+      </div>
+    )
   },
   {
     id: 'gui-biz-1',
