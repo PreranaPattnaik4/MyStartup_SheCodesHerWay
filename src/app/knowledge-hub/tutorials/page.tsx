@@ -1,3 +1,4 @@
+
 import Header from '@/components/header';
 import Footer from '@/components/footer';
 import { Button } from '@/components/ui/button';
@@ -7,33 +8,11 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { Badge } from '@/components/ui/badge';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
-
-const tutorials = [
-  {
-    title: "Intro to Vibe Coding: Build without Fear",
-    summary: "Learn how to use natural language and intent to create applications using AI-assisted tools. Perfect for non-tech users.",
-    readTime: "6 min read",
-    difficulty: "Beginner",
-    icon: Zap
-  },
-  {
-    title: "Canva for Creative Content: Design Basics",
-    summary: "A step-by-step guide to creating professional social media graphics and brand assets using Canva's latest AI features.",
-    readTime: "8 min read",
-    difficulty: "Beginner",
-    icon: Sparkles
-  },
-  {
-    title: "Getting Started with AI: A Beginner's Guide",
-    summary: "An easy-to-follow introduction to Artificial Intelligence and how you can use it in your daily life to boost productivity.",
-    readTime: "5 min read",
-    difficulty: "Beginner",
-    icon: BookOpen
-  }
-];
+import { allResources } from '@/lib/knowledge-hub-data';
 
 export default function TutorialsPage() {
   const bgImage = PlaceHolderImages.find(p => p.id === 'feature-community');
+  const items = allResources.filter(r => r.category === 'tutorials');
 
   return (
     <div className="flex min-h-dvh flex-col">
@@ -67,8 +46,8 @@ export default function TutorialsPage() {
 
         <section className="container mx-auto px-4 py-16 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {tutorials.map((tut, i) => (
-              <Card key={i} className="flex flex-col overflow-hidden shadow-lg transition-transform hover:-translate-y-1 border-primary/10">
+            {items.map((tut, i) => (
+              <Card key={i} className="flex flex-col overflow-hidden shadow-lg transition-transform hover:-translate-y-1 border-primary/10 bg-white">
                 <div className="p-8 flex items-center justify-center bg-primary/5 border-b">
                    <div className="bg-white p-4 rounded-2xl shadow-sm border border-primary/10">
                       <tut.icon className="h-10 w-10 text-primary" />
@@ -79,16 +58,15 @@ export default function TutorialsPage() {
                     <div className="flex items-center gap-2 text-xs text-muted-foreground">
                         <Clock className="h-3 w-3" /> {tut.readTime}
                     </div>
-                    <Badge variant="secondary" className="bg-muted text-foreground">{tut.difficulty}</Badge>
                   </div>
                   <CardTitle className="text-2xl leading-tight group-hover:text-primary transition-colors">
                     {tut.title}
                   </CardTitle>
-                  <CardDescription className="line-clamp-3 mt-4 text-base">{tut.summary}</CardDescription>
+                  <CardDescription className="line-clamp-3 mt-4 text-base">{tut.description}</CardDescription>
                 </CardHeader>
                 <CardFooter className="mt-auto pt-6 border-t bg-muted/10">
                   <Button asChild variant="link" className="p-0 h-auto font-bold group">
-                    <Link href="#">
+                    <Link href={tut.href}>
                       Read Tutorial <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
                     </Link>
                   </Button>

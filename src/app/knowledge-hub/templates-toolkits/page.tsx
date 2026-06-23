@@ -1,30 +1,18 @@
+
 import Header from '@/components/header';
 import Footer from '@/components/footer';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle, CardFooter } from '@/components/ui/card';
-import { Wrench, ArrowLeft, Download, Eye, FileJson } from 'lucide-react';
+import { Wrench, ArrowLeft, Download, Eye, FileJson, ArrowRight } from 'lucide-react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { Badge } from '@/components/ui/badge';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
-
-const templates = [
-  {
-    title: "Modern Tech Resume Template",
-    description: "A clean, recruiter-approved design that highlights your technical skills and impact.",
-    format: "Google Docs / Word",
-    isReady: false
-  },
-  {
-    title: "Project Planning Toolkit",
-    description: "Templates for timelines, task assignment, and resource tracking to keep your builds on track.",
-    format: "Excel / Sheets",
-    isReady: false
-  }
-];
+import { allResources } from '@/lib/knowledge-hub-data';
 
 export default function TemplatesToolkitsPage() {
   const bgImage = PlaceHolderImages.find(p => p.id === 'inclusive-approach-3');
+  const items = allResources.filter(r => r.category === 'templates-toolkits');
 
   return (
     <div className="flex min-h-dvh flex-col">
@@ -58,25 +46,23 @@ export default function TemplatesToolkitsPage() {
 
         <section className="container mx-auto px-4 py-16 sm:px-6 lg:px-8">
           <div className="grid md:grid-cols-2 gap-8">
-            {templates.map((temp, i) => (
-              <Card key={i} className="group relative overflow-hidden bg-white border-none shadow-md hover:shadow-xl transition-all">
-                <CardHeader>
-                  <div className="flex justify-between items-center mb-2">
-                    <FileJson className="h-8 w-8 text-primary/40" />
-                    {!temp.isReady && <Badge variant="secondary">Coming Soon</Badge>}
+            {items.map((temp, i) => (
+              <Card key={i} className="group relative overflow-hidden bg-white border-primary/10 shadow-md hover:shadow-xl transition-all p-2">
+                <CardHeader className="p-6">
+                  <div className="flex justify-between items-center mb-4">
+                    <div className="bg-primary/10 p-3 rounded-xl">
+                      <temp.icon className="h-6 w-6 text-primary" />
+                    </div>
+                    {temp.isComingSoon && <Badge variant="secondary">Coming Soon</Badge>}
                   </div>
-                  <CardTitle className="text-xl">{temp.title}</CardTitle>
-                  <CardDescription>{temp.description}</CardDescription>
+                  <CardTitle className="text-2xl font-bold mb-2 leading-tight">{temp.title}</CardTitle>
+                  <CardDescription className="text-base leading-relaxed text-foreground/70">{temp.description}</CardDescription>
                 </CardHeader>
-                <CardContent>
-                  <p className="text-xs text-muted-foreground">Format: {temp.format}</p>
-                </CardContent>
-                <CardFooter className="gap-3">
-                  <Button variant="outline" size="sm" disabled={!temp.isReady}>
-                    <Eye className="mr-2 h-4 w-4" /> Preview
-                  </Button>
-                  <Button size="sm" disabled={!temp.isReady}>
-                    <Download className="mr-2 h-4 w-4" /> Download
+                <CardFooter className="p-6 pt-0 gap-3">
+                  <Button asChild className="w-full font-bold" disabled={temp.isComingSoon}>
+                    <Link href={temp.href}>
+                      Explore Toolkit <ArrowRight className="ml-2 h-4 w-4" />
+                    </Link>
                   </Button>
                 </CardFooter>
               </Card>

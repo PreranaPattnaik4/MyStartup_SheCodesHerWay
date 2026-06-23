@@ -1,43 +1,17 @@
+
 import Header from '@/components/header';
 import Footer from '@/components/footer';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle, CardFooter } from '@/components/ui/card';
-import { Code, ArrowLeft, ExternalLink, Bookmark, Cpu, Database } from 'lucide-react';
+import { Code, ArrowLeft, ExternalLink, Bookmark, Cpu, Database, ArrowRight } from 'lucide-react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
-
-const resources = [
-  {
-    title: "Coding & Technical Fundamentals",
-    description: "The core concepts of the web: Mastering HTML5, responsive CSS3 layouts, and the basics of JavaScript programming logic.",
-    links: [
-      { label: "View Guide", href: "#" },
-      { label: "Practice Snippets", href: "#" }
-    ],
-    icon: Code
-  },
-  {
-    title: "Google Firebase & Cloud Basics",
-    description: "Everything you need to know about setting up Firebase Authentication, Firestore databases, and hosting for your first app.",
-    links: [
-      { label: "Setup Checklist", href: "#" },
-      { label: "Documentation", href: "#" }
-    ],
-    icon: Database
-  },
-  {
-    title: "Essential Git & GitHub Cheat Sheet",
-    description: "A one-page reference for all the commands you need to master version control and team collaboration.",
-    links: [
-      { label: "Cheat Sheet (PDF)", href: "#" }
-    ],
-    icon: Cpu
-  }
-];
+import { allResources } from '@/lib/knowledge-hub-data';
 
 export default function CodingResourcesPage() {
   const bgImage = PlaceHolderImages.find(p => p.id === 'feature-workshops');
+  const items = allResources.filter(r => r.category === 'coding-resources');
 
   return (
     <div className="flex min-h-dvh flex-col">
@@ -71,30 +45,26 @@ export default function CodingResourcesPage() {
 
         <section className="container mx-auto px-4 py-16 sm:px-6 lg:px-8">
           <div className="grid md:grid-cols-2 gap-8">
-            {resources.map((res, i) => (
-              <Card key={i} className="bg-white shadow-md hover:shadow-lg transition-all">
-                <CardHeader className="flex flex-row items-start justify-between space-y-0">
-                  <div className="flex items-center gap-3">
-                    <div className="bg-primary/10 p-2 rounded-lg">
-                        <res.icon className="h-5 w-5 text-primary" />
+            {items.map((res, i) => (
+              <Card key={i} className="bg-white shadow-md hover:shadow-lg transition-all border-primary/10 group">
+                <CardHeader className="flex flex-row items-start justify-between space-y-0 p-8 pb-4">
+                  <div className="flex items-center gap-4">
+                    <div className="bg-primary/10 p-3 rounded-xl group-hover:bg-primary/20 transition-colors">
+                        <res.icon className="h-6 w-6 text-primary" />
                     </div>
-                    <CardTitle className="text-xl font-bold">{res.title}</CardTitle>
+                    <CardTitle className="text-xl font-bold leading-tight">{res.title}</CardTitle>
                   </div>
                   <Button variant="ghost" size="icon" className="text-muted-foreground hover:text-primary">
                     <Bookmark className="h-4 w-4" />
                   </Button>
                 </CardHeader>
-                <CardContent>
-                  <p className="text-foreground/80 mb-6">{res.description}</p>
-                  <div className="flex flex-wrap gap-4">
-                    {res.links.map((link, j) => (
-                      <Button key={j} variant="secondary" size="sm" asChild>
-                        <Link href={link.href}>
-                          {link.label} <ExternalLink className="ml-2 h-3 w-3" />
-                        </Link>
-                      </Button>
-                    ))}
-                  </div>
+                <CardContent className="p-8 pt-0">
+                  <p className="text-foreground/80 mb-8 leading-relaxed">{res.description}</p>
+                  <Button asChild className="w-full font-bold">
+                    <Link href={res.href}>
+                      Access Guide <ArrowRight className="ml-2 h-4 w-4" />
+                    </Link>
+                  </Button>
                 </CardContent>
               </Card>
             ))}

@@ -1,5 +1,6 @@
 
-import { BookOpen, FileText, Bot, Code, Briefcase, Target, Wrench, Map, Star, Download, LucideIcon, Rocket, Heart, Sparkles, Zap } from 'lucide-react';
+import { BookOpen, FileText, Bot, Code, Briefcase, Target, Wrench, Map, Star, Download, LucideIcon, Rocket, Heart, Sparkles, Zap, ShieldCheck, PenTool, TrendingUp, Clock, CheckCircle2 } from 'lucide-react';
+import React from 'react';
 
 export interface ResourceItem {
   id: string;
@@ -17,6 +18,7 @@ export interface ResourceItem {
   tags?: string[];
   downloadAvailable?: boolean;
   isComingSoon?: boolean;
+  content?: React.ReactNode;
 }
 
 export const hubCategories = [
@@ -33,6 +35,127 @@ export const hubCategories = [
 ];
 
 export const allResources: ResourceItem[] = [
+  // Interview Prep
+  {
+    id: 'hr-interview-prep',
+    title: "HR Interview Preparation Guide",
+    description: "Master common HR questions, build confidence, and secure your dream job with this comprehensive guide.",
+    category: 'interview-prep',
+    icon: Target,
+    href: '/knowledge-hub/article/hr-interview-prep',
+    readTime: '15 min read',
+    dateAdded: '2025-11-25',
+    trending: true,
+    content: (
+      <div className="space-y-8">
+        <section>
+          <h2 className="text-3xl font-bold mb-4">Introduction</h2>
+          <p className="text-lg text-foreground/80 leading-relaxed">
+            The HR interview is often the final step of the recruitment process. While technical interviews assess your skills and knowledge, HR interviews evaluate your personality, communication abilities, cultural fit, attitude, and career aspirations.
+          </p>
+          <p className="mt-4 text-lg text-foreground/80 leading-relaxed font-semibold">
+            A successful HR interview demonstrates that you are not only capable of performing the job but also a valuable addition to the organization.
+          </p>
+        </section>
+
+        <section className="bg-primary/5 p-8 rounded-2xl border border-primary/10">
+          <h2 className="text-2xl font-bold mb-6 flex items-center gap-2">
+            <ShieldCheck className="text-primary" /> Why HR Interviews Matter
+          </h2>
+          <p className="mb-4 font-medium">HR professionals assess:</p>
+          <ul className="grid sm:grid-cols-2 gap-3">
+            {[
+              "Communication Skills", "Teamwork & Collaboration", "Problem-Solving Ability",
+              "Professional Attitude", "Leadership Potential", "Adaptability & Flexibility",
+              "Long-Term Career Goals", "Cultural Fit"
+            ].map(item => (
+              <li key={item} className="flex items-center gap-2 text-foreground/80">
+                <CheckCircle2 className="h-5 w-5 text-green-500" /> {item}
+              </li>
+            ))}
+          </ul>
+        </section>
+
+        <section>
+          <h2 className="text-2xl font-bold mb-4">Before the Interview</h2>
+          <h3 className="text-xl font-bold text-primary mb-2">Research the Company</h3>
+          <p className="text-foreground/80 mb-4">Learn about: Company mission and vision, products and services, company culture, recent achievements, and industry trends.</p>
+          <div className="bg-muted p-6 rounded-xl border">
+            <p className="font-bold mb-2">Sample Answer: "Why do you want to work with us?"</p>
+            <p className="italic text-foreground/70">
+              "I admire the company's focus on innovation and customer satisfaction. I was particularly impressed by your recent initiatives in AI-driven solutions. I believe my skills and learning mindset align well with your mission and long-term vision."
+            </p>
+          </div>
+        </section>
+
+        <section className="space-y-6">
+          <h2 className="text-2xl font-bold mb-4">Common HR Interview Questions</h2>
+          
+          <div className="border-l-4 border-primary pl-6 space-y-4">
+            <h3 className="text-xl font-bold">1. Tell Me About Yourself</h3>
+            <p className="text-foreground/80 italic">"I recently completed my studies in Computer Science and have been focusing on developing skills in Artificial Intelligence, NLP, and Python. I enjoy learning new technologies and working on practical projects. My goal is to build a career in AI and contribute to innovative technology solutions."</p>
+            <div className="flex gap-4 text-sm font-medium">
+              <span className="text-green-600">✔ Keep it under 2 minutes</span>
+              <span className="text-green-600">✔ Focus on professional info</span>
+            </div>
+          </div>
+
+          <div className="border-l-4 border-primary pl-6 space-y-4">
+            <h3 className="text-xl font-bold">2. What Are Your Strengths?</h3>
+            <p className="text-foreground/80 italic">"My strengths include problem-solving, continuous learning, and effective communication. I enjoy tackling challenges, learning new technologies, and collaborating with others to achieve common goals."</p>
+          </div>
+
+          <div className="border-l-4 border-primary pl-6 space-y-4">
+            <h3 className="text-xl font-bold">3. What Are Your Weaknesses?</h3>
+            <p className="text-foreground/80 italic">"I used to hesitate when speaking in large groups. To improve, I actively participate in presentations and discussions, which has significantly increased my confidence."</p>
+            <p className="text-xs text-muted-foreground uppercase font-bold">Rule: Always mention steps taken to improve.</p>
+          </div>
+        </section>
+
+        <section className="bg-secondary/30 p-8 rounded-2xl">
+          <h2 className="text-2xl font-bold mb-4">The STAR Method for Conflict Resolution</h2>
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+            {[
+              { l: "S", t: "Situation", d: "Describe the problem." },
+              { l: "T", t: "Task", d: "Explain your responsibility." },
+              { l: "A", t: "Action", d: "Describe what you did." },
+              { l: "R", t: "Result", d: "Share the positive outcome." }
+            ].map(step => (
+              <div key={step.l} className="bg-white p-4 rounded-xl shadow-sm border">
+                <span className="text-3xl font-black text-primary/20">{step.l}</span>
+                <h4 className="font-bold text-primary">{step.t}</h4>
+                <p className="text-sm text-foreground/70">{step.d}</p>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        <section className="grid md:grid-cols-2 gap-8">
+          <div className="space-y-4">
+            <h2 className="text-2xl font-bold">Body Language Tips</h2>
+            <ul className="space-y-2">
+              {["Maintain eye contact", "Sit confidently", "Smile naturally", "Listen carefully", "Show enthusiasm"].map(tip => (
+                <li key={tip} className="flex items-center gap-2 text-sm"><CheckCircle2 className="text-green-500 h-4 w-4" /> {tip}</li>
+              ))}
+            </ul>
+          </div>
+          <div className="space-y-4">
+            <h2 className="text-2xl font-bold">Virtual Interview Tips</h2>
+            <ul className="space-y-2">
+              {["Test mic & camera", "Check internet connection", "Professional background", "Join 10 mins early"].map(tip => (
+                <li key={tip} className="flex items-center gap-2 text-sm"><CheckCircle2 className="text-primary h-4 w-4" /> {tip}</li>
+              ))}
+            </ul>
+          </div>
+        </section>
+
+        <div className="bg-primary text-primary-foreground p-8 rounded-2xl text-center">
+          <h2 className="text-2xl font-bold mb-2">Final Formula for Success</h2>
+          <p className="text-primary-foreground/90 text-lg italic">"Prepare • Practice • Communicate • Demonstrate • Follow Up"</p>
+        </div>
+      </div>
+    )
+  },
   // Tutorials
   {
     id: 'tut-vibe-1',
@@ -40,12 +163,10 @@ export const allResources: ResourceItem[] = [
     description: "Learn how to use natural language and intent to create applications using AI-assisted tools.",
     category: 'tutorials',
     icon: Zap,
-    href: '/knowledge-hub/tutorials',
+    href: '/knowledge-hub/article/tut-vibe-1',
     readTime: '6 min read',
     dateAdded: '2025-11-20',
     trending: true,
-    image: 'https://picsum.photos/seed/vibe/600/400',
-    imageHint: 'coding vibe'
   },
   {
     id: 'tut-canva-1',
@@ -53,11 +174,9 @@ export const allResources: ResourceItem[] = [
     description: "A step-by-step guide to creating professional social media graphics and brand assets.",
     category: 'tutorials',
     icon: Sparkles,
-    href: '/knowledge-hub/tutorials',
+    href: '/knowledge-hub/article/tut-canva-1',
     readTime: '8 min read',
     dateAdded: '2025-11-22',
-    image: 'https://picsum.photos/seed/canva/600/400',
-    imageHint: 'design creative'
   },
   // Guides
   {
@@ -66,11 +185,9 @@ export const allResources: ResourceItem[] = [
     description: "A comprehensive guide to finding your voice and leading with authenticity in any field.",
     category: 'guides',
     icon: Heart,
-    href: '/knowledge-hub/guides',
+    href: '/knowledge-hub/article/gui-lead-1',
     dateAdded: '2025-11-25',
     downloadAvailable: true,
-    image: 'https://picsum.photos/seed/lead/600/400',
-    imageHint: 'leadership'
   },
   {
     id: 'gui-biz-1',
@@ -78,10 +195,8 @@ export const allResources: ResourceItem[] = [
     description: "Moving from idea to execution: How to build a sustainable startup or small business.",
     category: 'guides',
     icon: Rocket,
-    href: '/knowledge-hub/guides',
+    href: '/knowledge-hub/article/gui-biz-1',
     dateAdded: '2025-11-28',
-    image: 'https://picsum.photos/seed/biz/600/400',
-    imageHint: 'startup business'
   },
   // AI & Tech
   {
@@ -90,12 +205,10 @@ export const allResources: ResourceItem[] = [
     description: "Understand the ethics of AI, bias detection, and how to use generative models responsibly.",
     category: 'ai-tech',
     icon: Bot,
-    href: '/knowledge-hub/ai-tech',
+    href: '/knowledge-hub/article/ai-resp-1',
     trending: true,
     readTime: '10 min read',
     dateAdded: '2025-12-01',
-    image: 'https://picsum.photos/seed/respai/600/400',
-    imageHint: 'ethical AI'
   },
   {
     id: 'ai-tools-1',
@@ -103,11 +216,9 @@ export const allResources: ResourceItem[] = [
     description: "How to craft clear, goal-oriented prompts for research, content, and digital productivity.",
     category: 'ai-tech',
     icon: Bot,
-    href: '/knowledge-hub/ai-tech',
+    href: '/knowledge-hub/article/ai-tools-1',
     readTime: '7 min read',
     dateAdded: '2025-12-05',
-    image: 'https://picsum.photos/seed/promptskill/600/400',
-    imageHint: 'writing prompts'
   },
   // Coding Resources
   {
@@ -116,10 +227,8 @@ export const allResources: ResourceItem[] = [
     description: "The core concepts of the web: HTML, CSS, and JavaScript for total beginners.",
     category: 'coding-resources',
     icon: Code,
-    href: '/knowledge-hub/coding-resources',
+    href: '/knowledge-hub/article/cod-fund-1',
     dateAdded: '2025-12-08',
-    image: 'https://picsum.photos/seed/techfund/600/400',
-    imageHint: 'coding basics'
   },
   {
     id: 'cod-cloud-1',
@@ -127,10 +236,8 @@ export const allResources: ResourceItem[] = [
     description: "A resource list for understanding hosting, databases, and authentication for your projects.",
     category: 'coding-resources',
     icon: Code,
-    href: '/knowledge-hub/coding-resources',
+    href: '/knowledge-hub/article/cod-cloud-1',
     dateAdded: '2025-12-10',
-    image: 'https://picsum.photos/seed/cloudres/600/400',
-    imageHint: 'cloud tech'
   },
   // Career Development
   {
@@ -139,10 +246,8 @@ export const allResources: ResourceItem[] = [
     description: "Build an online identity that reflects your skills, values, and professional goals.",
     category: 'career-development',
     icon: Briefcase,
-    href: '/knowledge-hub/career-development',
+    href: '/knowledge-hub/article/car-brand-1',
     dateAdded: '2025-12-12',
-    image: 'https://picsum.photos/seed/pbrand/600/400',
-    imageHint: 'branding identity'
   },
   {
     id: 'car-soft-1',
@@ -150,10 +255,8 @@ export const allResources: ResourceItem[] = [
     description: "Developing the soft skills necessary for resilience, teamwork, and long-term career success.",
     category: 'career-development',
     icon: Briefcase,
-    href: '/knowledge-hub/career-development',
+    href: '/knowledge-hub/article/car-soft-1',
     dateAdded: '2025-12-15',
-    image: 'https://picsum.photos/seed/selfgrowth/600/400',
-    imageHint: 'growth mindset'
   },
   // Interview Preparation
   {
@@ -162,21 +265,8 @@ export const allResources: ResourceItem[] = [
     description: "Practice solving common technical problems with guided logic and AI-assisted explanations.",
     category: 'interview-prep',
     icon: Target,
-    href: '/knowledge-hub/interview-prep',
+    href: '/knowledge-hub/article/int-tech-1',
     dateAdded: '2025-12-18',
-    image: 'https://picsum.photos/seed/intprep/600/400',
-    imageHint: 'interview coding'
-  },
-  {
-    id: 'int-beh-1',
-    title: "Leadership & Behavioral Questions",
-    description: "How to demonstrate your leadership potential and emotional intelligence during interviews.",
-    category: 'interview-prep',
-    icon: Target,
-    href: '/knowledge-hub/interview-prep',
-    dateAdded: '2025-12-20',
-    image: 'https://picsum.photos/seed/beh/600/400',
-    imageHint: 'behavioral interview'
   },
   // Templates & Toolkits
   {
@@ -185,12 +275,10 @@ export const allResources: ResourceItem[] = [
     description: "A clean, structured template optimized for technical and digital career applications.",
     category: 'templates-toolkits',
     icon: Wrench,
-    href: '/knowledge-hub/templates-toolkits',
+    href: '/knowledge-hub/article/tem-res-1',
     dateAdded: '2025-12-22',
     downloadAvailable: false,
     isComingSoon: true,
-    image: 'https://picsum.photos/seed/restemp/600/400',
-    imageHint: 'resume template'
   },
   {
     id: 'tem-pitch-1',
@@ -198,12 +286,10 @@ export const allResources: ResourceItem[] = [
     description: "Essential slides and structure for presenting your business idea to partners and mentors.",
     category: 'templates-toolkits',
     icon: Wrench,
-    href: '/knowledge-hub/templates-toolkits',
+    href: '/knowledge-hub/article/tem-pitch-1',
     dateAdded: '2025-12-25',
     downloadAvailable: false,
     isComingSoon: true,
-    image: 'https://picsum.photos/seed/pitch/600/400',
-    imageHint: 'pitch deck'
   },
   // Learning Roadmaps
   {
@@ -212,10 +298,8 @@ export const allResources: ResourceItem[] = [
     description: "From digital literacy to cloud-based application development: Your path into technology.",
     category: 'learning-roadmaps',
     icon: Map,
-    href: '/knowledge-hub/learning-roadmaps',
+    href: '/knowledge-hub/article/roa-tech-1',
     dateAdded: '2025-12-28',
-    image: 'https://picsum.photos/seed/techroad/600/400',
-    imageHint: 'tech roadmap'
   },
   {
     id: 'roa-cre-1',
@@ -223,10 +307,8 @@ export const allResources: ResourceItem[] = [
     description: "A step-by-step journey from storytelling to building a profitable digital audience.",
     category: 'learning-roadmaps',
     icon: Map,
-    href: '/knowledge-hub/learning-roadmaps',
+    href: '/knowledge-hub/article/roa-cre-1',
     dateAdded: '2025-12-30',
-    image: 'https://picsum.photos/seed/createroad/600/400',
-    imageHint: 'creative roadmap'
   },
   // Success Stories
   {
@@ -235,10 +317,8 @@ export const allResources: ResourceItem[] = [
     description: "How one Sangini used her tech skills to solve a local problem and inspire others.",
     category: 'success-stories',
     icon: Star,
-    href: '/knowledge-hub/success-stories',
+    href: '/knowledge-hub/article/suc-comm-1',
     dateAdded: '2026-01-02',
-    image: 'https://picsum.photos/seed/impact/600/400',
-    imageHint: 'community success'
   },
   {
     id: 'suc-break-1',
@@ -246,10 +326,8 @@ export const allResources: ResourceItem[] = [
     description: "A story of resilience and rediscovery after a long career break.",
     category: 'success-stories',
     icon: Star,
-    href: '/knowledge-hub/success-stories',
+    href: '/knowledge-hub/article/suc-break-1',
     dateAdded: '2026-01-05',
-    image: 'https://picsum.photos/seed/return/600/400',
-    imageHint: 'career return'
   },
   // Free Resources
   {
@@ -258,11 +336,9 @@ export const allResources: ResourceItem[] = [
     description: "Essential tools and workflows to manage your time and digital tasks effectively.",
     category: 'free-resources',
     icon: Download,
-    href: '/knowledge-hub/free-resources',
+    href: '/knowledge-hub/article/fre-prod-1',
     popular: true,
     dateAdded: '2026-01-08',
-    image: 'https://picsum.photos/seed/prodkit/600/400',
-    imageHint: 'productivity kit'
   },
   {
     id: 'fre-ai-1',
@@ -270,9 +346,7 @@ export const allResources: ResourceItem[] = [
     description: "A simple guide to ensure your AI-assisted work remains responsible and transparent.",
     category: 'free-resources',
     icon: Download,
-    href: '/knowledge-hub/free-resources',
+    href: '/knowledge-hub/article/fre-ai-1',
     dateAdded: '2026-01-10',
-    image: 'https://picsum.photos/seed/ethic/600/400',
-    imageHint: 'ai checklist'
   },
 ];

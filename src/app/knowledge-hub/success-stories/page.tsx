@@ -1,30 +1,18 @@
+
 import Header from '@/components/header';
 import Footer from '@/components/footer';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle, CardFooter } from '@/components/ui/card';
-import { Star, ArrowLeft, Quote, Heart } from 'lucide-react';
+import { Star, ArrowLeft, Quote, Heart, ArrowRight } from 'lucide-react';
 import Link from 'next/link';
 import Image from 'next/image';
-import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
+import { Avatar, AvatarFallback } from '@/components/ui/avatar';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
-
-const stories = [
-  {
-    name: "Aarti S.",
-    role: "Full-Stack Developer",
-    story: "I started as a total beginner with zero technical background. The structured curriculum and mentor support helped me build my confidence and a project that landed me my first job.",
-    lesson: "Never underestimate the power of a supportive community."
-  },
-  {
-    name: "Priya R.",
-    role: "AI Prompt Engineer",
-    story: "Rebuilding my career after a 5-year break felt impossible until I joined. The focus on modern AI tools gave me the edge I needed to return to the workforce stronger than ever.",
-    lesson: "A career gap is just a pause, not an erase."
-  }
-];
+import { allResources } from '@/lib/knowledge-hub-data';
 
 export default function SuccessStoriesPage() {
   const bgImage = PlaceHolderImages.find(p => p.id === 'vision-community-voices');
+  const items = allResources.filter(r => r.category === 'success-stories');
 
   return (
     <div className="flex min-h-dvh flex-col">
@@ -58,28 +46,27 @@ export default function SuccessStoriesPage() {
 
         <section className="container mx-auto px-4 py-16 sm:px-6 lg:px-8">
           <div className="grid md:grid-cols-2 gap-10">
-            {stories.map((s, i) => (
-              <Card key={i} className="bg-white border-none shadow-lg">
-                <CardHeader className="text-center">
-                  <Avatar className="h-20 w-20 mx-auto border-4 border-primary/20 mb-4">
-                    <AvatarFallback className="text-2xl">{s.name.charAt(0)}</AvatarFallback>
-                  </Avatar>
-                  <CardTitle className="text-2xl">{s.name}</CardTitle>
-                  <CardDescription className="text-primary font-semibold">{s.role}</CardDescription>
-                </CardHeader>
-                <CardContent className="space-y-6">
-                  <div className="relative p-6 bg-muted/30 rounded-2xl">
-                    <Quote className="h-8 w-8 text-primary/20 absolute top-2 left-2" />
-                    <p className="text-foreground/80 leading-relaxed italic">{s.story}</p>
+            {items.map((s, i) => (
+              <Card key={i} className="bg-white border-primary/10 shadow-lg hover:-translate-y-1 transition-all group">
+                <CardHeader className="p-8 text-center pb-4">
+                  <div className="bg-primary/10 p-4 rounded-full w-fit mx-auto mb-6 transition-colors group-hover:bg-primary/20">
+                    <s.icon className="h-8 w-8 text-primary" />
                   </div>
-                  <div className="flex items-start gap-3 p-4 border rounded-xl bg-primary/5">
-                    <Heart className="h-5 w-5 text-primary mt-1 flex-shrink-0" />
-                    <div>
-                      <p className="font-bold text-sm">Key Lesson Learned:</p>
-                      <p className="text-sm text-foreground/70">{s.lesson}</p>
-                    </div>
+                  <CardTitle className="text-2xl font-bold leading-tight">{s.title}</CardTitle>
+                </CardHeader>
+                <CardContent className="p-8 pt-0 flex-grow">
+                  <div className="relative p-6 bg-muted/30 rounded-2xl border border-dashed border-muted-foreground/20 italic text-foreground/80 leading-relaxed">
+                    <Quote className="h-8 w-8 text-primary/10 absolute -top-2 -left-2" />
+                    {s.description}
                   </div>
                 </CardContent>
+                <CardFooter className="p-8 pt-0">
+                  <Button asChild variant="link" className="p-0 h-auto font-bold group mx-auto">
+                    <Link href={s.href}>
+                      Read Her Story <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
+                    </Link>
+                  </Button>
+                </CardFooter>
               </Card>
             ))}
           </div>
