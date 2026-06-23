@@ -85,7 +85,7 @@ export const allResources: ResourceItem[] = [
     icon: RefreshCw,
     href: '/knowledge-hub/article/car-return-guide',
     readTime: '12 min read',
-    dateAdded: '2026-01-15',
+    dateAdded: '2026-03-01',
     trending: true,
     content: (
       <div className="space-y-12">
@@ -687,10 +687,10 @@ export const allResources: ResourceItem[] = [
             {[
               "Confidence begins with self-belief and continuous learning.",
               "Leadership is about influence, responsibility, and service.",
-              "Effective communication is essential for both.",
+              "Effective communication is essential for both confidence and leadership.",
               "Mistakes are opportunities for growth.",
               "Leadership skills can be developed through practice.",
-              "Confident leaders inspire positive change."
+              "Confident leaders inspire positive change and empower others."
             ].map(tk => (
               <div key={tk} className="flex items-start gap-2">
                 <CheckCircle2 className="h-5 w-5 text-primary-foreground/50 mt-1 flex-shrink-0" />
