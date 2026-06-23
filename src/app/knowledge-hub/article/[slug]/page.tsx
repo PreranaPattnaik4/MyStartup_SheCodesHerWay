@@ -1,4 +1,3 @@
-
 import React from 'react';
 import Header from '@/components/header';
 import Footer from '@/components/footer';
@@ -89,14 +88,14 @@ export default function ArticlePage({ params }: { params: { slug: string } }) {
           <Separator className="my-16" />
 
           {/* Footer of article */}
-          <div className="flex flex-col sm:flex-row items-center justify-between gap-8 py-8 px-8 bg-muted/30 rounded-3xl border">
+          <div className="flex flex-col sm:flex-row items-center justify-between gap-8 py-10 px-8 bg-muted/30 rounded-3xl border">
             <div>
-              <h4 className="font-bold text-lg mb-1">Found this helpful?</h4>
-              <p className="text-muted-foreground text-sm">Help other Sanginis find this resource.</p>
+              <h4 className="font-bold text-xl mb-1">Found this helpful?</h4>
+              <p className="text-muted-foreground">Help other Sanginis find this resource by sharing it.</p>
             </div>
-            <div className="flex gap-4">
+            <div className="flex flex-wrap gap-4">
               <ShareDropdown title={resource.title} />
-              <Button variant="outline" className="rounded-full">
+              <Button variant="outline" className="rounded-full px-6">
                 <Bookmark className="mr-2 h-4 w-4" /> Save for Later
               </Button>
             </div>
