@@ -3,12 +3,13 @@ import React from 'react';
 import Header from '@/components/header';
 import Footer from '@/components/footer';
 import { Button } from '@/components/ui/button';
-import { ArrowLeft, Clock, Calendar, Share2, Bookmark, CheckCircle2 } from 'lucide-react';
+import { ArrowLeft, Clock, Calendar, Bookmark } from 'lucide-react';
 import Link from 'next/link';
 import { allResources } from '@/lib/knowledge-hub-data';
 import { notFound } from 'next/navigation';
 import { Badge } from '@/components/ui/badge';
 import { Separator } from '@/components/ui/separator';
+import ShareDropdown from '@/components/knowledge-hub/share-dropdown';
 
 export default function ArticlePage({ params }: { params: { slug: string } }) {
   const resource = allResources.find(r => r.id === params.slug);
@@ -94,9 +95,7 @@ export default function ArticlePage({ params }: { params: { slug: string } }) {
               <p className="text-muted-foreground text-sm">Help other Sanginis find this resource.</p>
             </div>
             <div className="flex gap-4">
-              <Button variant="outline" className="rounded-full">
-                <Share2 className="mr-2 h-4 w-4" /> Share
-              </Button>
+              <ShareDropdown title={resource.title} />
               <Button variant="outline" className="rounded-full">
                 <Bookmark className="mr-2 h-4 w-4" /> Save for Later
               </Button>
